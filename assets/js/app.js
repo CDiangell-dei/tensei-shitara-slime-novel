@@ -1,241 +1,474 @@
 /**
- * TENSEI SHITARA SLIME DATTA KEN - APLICAÇÃO DE LEITURA & CATÁLOGO
- * Gerenciamento de Estado, Leitor, Progresso (LocalStorage), Temas e Ilustrações
+ * TENSEI SHITARA SLIME DATTA KEN — BIBLIOTECA & LEITOR COMPLETO EM PORTUGUÊS
+ * Motor de Leitura Separado (LN vs WN), Ilustrações Inline + Lightbox,
+ * Notas Culturais Interativas, Alternância de Edição (Drive Revisado vs Scan)
+ * e Persistência Completa em LocalStorage + Exportação/Importação JSON.
  */
 
-// Estado Global da Aplicação
+const STORAGE_KEYS = {
+  SETTINGS: 'tensura_reader_settings_v2',
+  PROGRESS_LAST: 'tensura_progress_last',
+  PROGRESS_LN: 'tensura_progress_ln',
+  PROGRESS_WN: 'tensura_progress_wn',
+  HISTORY: 'tensura_reading_history',
+  BOOKMARKS: 'tensura_bookmarks_v2',
+  COLOR_SCHEME: 'color-scheme',
+  PALETTE: 'tensura_palette'
+};
+
 const AppState = {
   catalog: null,
-  currentTab: 'light-novel', // 'light-novel' | 'web-novel' | 'comparison' | 'cultural' | 'amazon'
+  currentTab: 'light-novel',
+  searchQuery: '',
   currentReading: {
-    type: null, // 'light_novel' | 'web_novel'
-    id: null, // 'vol-1' ou número do capítulo
+    type: null,          // 'light_novel' | 'web_novel'
+    id: null,            // ex: 'vol-6', 'vol-6-scan', 'cap-018-5', 'extra-001'
+    baseVolumeId: null,  // ex: 'vol-6'
     chapterIndex: 0,
     data: null,
     scrollRatio: 0
   },
   settings: {
-    theme: 'dark',
-    font: 'sans',
-    fontSize: 18,
-    lineHeight: 1.85,
+    palette: 'system',   // 'system' | 'dark' | 'light' | 'sepia' | 'oled'
+    font: 'serif',       // 'serif' | 'sans' | 'dyslexic' | 'mono'
+    fontSize: 19,
     maxWidth: 820,
-    align: 'left'
+    culturalHints: true
   },
+  history: {},
   bookmarks: [],
-  currentModalGallery: []
-};
-
-// Chaves do LocalStorage
-const STORAGE_KEYS = {
-  PROGRESS: 'tensura_reading_progress',
-  SETTINGS: 'tensura_reader_settings',
-  BOOKMARKS: 'tensura_bookmarks'
+  pendingBookmark: null,
+  lightbox: {
+    items: [],
+    index: 0
+  }
 };
 
 // ==========================================================================
-// INICIALIZAÇÃO
+// INICIALIZAÇÃO & FALLBACKS MODERNOS
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', async () => {
-  loadUserSettings();
-  applyUserSettings();
-  loadBookmarks();
-  setupEventListeners();
+  initDialogLightDismissFallback();
+  initScrollProgressFallback();
+  initScrollEndFallback();
+
+  loadStateFromStorage();
+  applySettingsToDOM();
+  bindGlobalEvents();
 
   try {
     const res = await fetch('data/catalog.json');
-    if (!res.ok) throw new Error('Falha ao carregar catálogo.');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     AppState.catalog = await res.json();
-    
-    renderAllViews();
-    checkContinueReading();
-    handleHashNavigation();
+
+    renderAllCatalogViews();
+    refreshContinueBanners();
+    updateBookmarkBadge();
+    handleInitialHash();
   } catch (err) {
-    console.error('Erro na inicialização:', err);
-    document.getElementById('content-area').innerHTML = `
-      <div style="text-align: center; padding: 4rem 1rem;">
-        <h2 style="color: #ef4444; margin-bottom: 1rem;">Erro ao Carregar Biblioteca</h2>
-        <p style="color: #94a3b8;">Não foi possível carregar os dados de catálogo. Verifique se o arquivo data/catalog.json existe.</p>
-      </div>
-    `;
+    console.error('Erro ao carregar data/catalog.json:', err);
+    const main = document.getElementById('content-area');
+    if (main) {
+      main.innerHTML = `
+        <section class="section-hero">
+          <h2>Não foi possível carregar o catálogo local</h2>
+          <p>
+            Se você abriu o arquivo <code>index.html</code> diretamente via <code>file://</code>, o navegador bloqueia requisições <code>fetch()</code> por segurança.
+            Execute o arquivo <strong>Iniciar_Leitor.bat</strong> (ou rode <code>python -m http.server 8000</code> na pasta do projeto e acesse <code>http://localhost:8000</code>).
+          </p>
+        </section>
+      `;
+    }
   }
 });
 
-// ==========================================================================
-// CONFIGURAÇÕES DO USUÁRIO & LOCALSTORAGE
-// ==========================================================================
-
-function loadUserSettings() {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEYS.SETTINGS);
-    if (saved) {
-      AppState.settings = { ...AppState.settings, ...JSON.parse(saved) };
+/**
+ * Fallback obrigatório para <dialog closedby="any"> onde HTMLDialogElement.prototype.closedBy não existe.
+ * Exige pointerdown E pointerup fora do retângulo do dialog para não fechar ao arrastar seleção de texto.
+ */
+function initDialogLightDismissFallback() {
+  if (!('closedBy' in HTMLDialogElement.prototype)) {
+    const isOutside = (e, dialog) => {
+      const r = dialog.getBoundingClientRect();
+      return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+    };
+    for (const dialog of document.querySelectorAll('dialog[closedby="any"]')) {
+      let pressedOutside = false;
+      dialog.addEventListener('pointerdown', (e) => {
+        pressedOutside = isOutside(e, dialog);
+      });
+      dialog.addEventListener('pointerup', (e) => {
+        if (pressedOutside && isOutside(e, dialog)) {
+          dialog.close();
+        }
+      });
     }
-  } catch (e) {
-    console.warn('Erro ao ler configurações do localStorage:', e);
+  }
+
+  for (const dialog of document.querySelectorAll('dialog')) {
+    dialog.addEventListener('close', () => {
+      dialog.returnValue = '';
+    });
   }
 }
 
-function saveUserSettings() {
+/**
+ * Fallback para navegadores sem suporte a CSS Scroll-Driven Animations (animation-timeline: scroll()).
+ */
+function initScrollProgressFallback() {
+  if (!window.CSS || !CSS.supports('animation-timeline', 'scroll()')) {
+    const bar = document.getElementById('reading-progress-bar');
+    if (!bar) return;
+    window.addEventListener('scroll', () => {
+      bar.style.transform = `scaleX(${getScrollRatio()})`;
+    }, { passive: true });
+  }
+}
+
+/**
+ * Fallback para o evento nativo scrollend em navegadores antigos.
+ */
+function initScrollEndFallback() {
+  if (!('onscrollend' in window)) {
+    let timer = null;
+    window.addEventListener('scroll', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        window.dispatchEvent(new CustomEvent('scrollend'));
+      }, 120);
+    }, { passive: true });
+  }
+}
+
+// ==========================================================================
+// ARMAZENAMENTO LOCAL (SETTINGS, PROGRESSO DUPLO LN/WN, HISTÓRICO & MARCADORES)
+// ==========================================================================
+
+function loadStateFromStorage() {
+  try {
+    const rawSettings = localStorage.getItem(STORAGE_KEYS.SETTINGS);
+    if (rawSettings) {
+      AppState.settings = { ...AppState.settings, ...JSON.parse(rawSettings) };
+    }
+    const rawHist = localStorage.getItem(STORAGE_KEYS.HISTORY);
+    if (rawHist) {
+      AppState.history = JSON.parse(rawHist) || {};
+    }
+    const rawBm = localStorage.getItem(STORAGE_KEYS.BOOKMARKS);
+    if (rawBm) {
+      AppState.bookmarks = JSON.parse(rawBm) || [];
+    } else {
+      // Migrar marcadores da v1 caso existam
+      const legacyBm = localStorage.getItem('tensura_bookmarks');
+      if (legacyBm) AppState.bookmarks = JSON.parse(legacyBm) || [];
+    }
+  } catch (e) {
+    console.warn('Aviso ao ler LocalStorage:', e);
+  }
+}
+
+function saveSettingsToStorage() {
   try {
     localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(AppState.settings));
   } catch (e) {
-    console.warn('Erro ao salvar configurações:', e);
+    console.warn('Aviso ao salvar configurações:', e);
   }
 }
 
-function applyUserSettings() {
+function applySettingsToDOM() {
   const root = document.documentElement;
-  root.setAttribute('data-theme', AppState.settings.theme);
-  root.setAttribute('data-font', AppState.settings.font);
-  root.style.setProperty('--reader-size', `${AppState.settings.fontSize}px`);
-  root.style.setProperty('--reader-line-height', AppState.settings.lineHeight);
-  root.style.setProperty('--reader-max-width', `${AppState.settings.maxWidth}px`);
-  root.style.setProperty('--reader-align', AppState.settings.align);
+  const metaScheme = document.querySelector('meta[name="color-scheme"]');
+  const p = AppState.settings.palette;
 
-  // Atualizar visual dos botões de configuração
+  // Mapear paleta escolhida para <meta name="color-scheme"> + data-palette
+  let schemeContent = 'light dark';
+  let customPalette = '';
+  if (p === 'dark') {
+    schemeContent = 'dark';
+  } else if (p === 'light') {
+    schemeContent = 'light';
+  } else if (p === 'sepia') {
+    schemeContent = 'light';
+    customPalette = 'sepia';
+  } else if (p === 'oled') {
+    schemeContent = 'dark';
+    customPalette = 'oled';
+  }
+
+  if (metaScheme) metaScheme.content = schemeContent;
+  if (customPalette) {
+    root.dataset.palette = customPalette;
+  } else {
+    delete root.dataset.palette;
+  }
+
+  try {
+    if (p === 'system') {
+      localStorage.removeItem(STORAGE_KEYS.COLOR_SCHEME);
+      localStorage.removeItem(STORAGE_KEYS.PALETTE);
+    } else {
+      localStorage.setItem(STORAGE_KEYS.COLOR_SCHEME, schemeContent);
+      if (customPalette) {
+        localStorage.setItem(STORAGE_KEYS.PALETTE, customPalette);
+      } else {
+        localStorage.removeItem(STORAGE_KEYS.PALETTE);
+      }
+    }
+  } catch (_) {}
+
+  root.dataset.font = AppState.settings.font;
+  root.style.setProperty('--reader-size', `${AppState.settings.fontSize}px`);
+  root.style.setProperty('--reader-max-width', `${AppState.settings.maxWidth}px`);
+
+  // Sincronizar botões do painel de configurações
   document.querySelectorAll('.btn-theme-opt').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.theme === AppState.settings.theme);
+    btn.classList.toggle('active', btn.dataset.palette === AppState.settings.palette);
   });
   document.querySelectorAll('.btn-font-opt').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.font === AppState.settings.font);
   });
-  const sizeDisplay = document.getElementById('font-size-val');
-  if (sizeDisplay) sizeDisplay.textContent = `${AppState.settings.fontSize}px`;
+  document.querySelectorAll('.btn-width-opt').forEach(btn => {
+    btn.classList.toggle('active', Number(btn.dataset.width) === Number(AppState.settings.maxWidth));
+  });
+
+  const sizeEl = document.getElementById('font-size-val');
+  if (sizeEl) sizeEl.textContent = `${AppState.settings.fontSize}px`;
+
+  const chkHints = document.getElementById('chk-cultural-hints');
+  if (chkHints) chkHints.checked = Boolean(AppState.settings.culturalHints);
 }
 
-// ==========================================================================
-// SALVAMENTO DE PROGRESSO AUTOMÁTICO (CONTINUAR LEITURA)
-// ==========================================================================
+function getScrollRatio() {
+  const h = document.documentElement;
+  const maxScroll = h.scrollHeight - h.clientHeight;
+  if (maxScroll <= 0) return 0;
+  return Math.min(Math.max(window.scrollY / maxScroll, 0), 1);
+}
 
-function saveReadingProgress(scrollRatio = null) {
-  if (!AppState.currentReading.type || !AppState.currentReading.id) return;
+function findFirstVisibleParagraphIndex() {
+  const paras = document.querySelectorAll('#reader-text-container .novel-paragraph');
+  for (const p of paras) {
+    const rect = p.getBoundingClientRect();
+    if (rect.bottom > 90) {
+      return Number(p.dataset.pidx || 0);
+    }
+  }
+  return 0;
+}
 
-  const currentScroll = scrollRatio !== null ? scrollRatio : getScrollRatio();
-  
-  let title = '';
-  if (AppState.currentReading.type === 'light_novel' && AppState.currentReading.data) {
-    const ch = AppState.currentReading.data.chapters[AppState.currentReading.chapterIndex];
-    title = `${AppState.currentReading.data.title} - ${ch ? ch.title : 'Capítulo'}`;
-  } else if (AppState.currentReading.type === 'web_novel' && AppState.currentReading.data) {
-    title = `Web Novel - ${AppState.currentReading.data.title}`;
+function persistReadingProgress(explicitRatio = null) {
+  const cur = AppState.currentReading;
+  if (!cur.type || !cur.id || !cur.data) return;
+
+  const ratio = explicitRatio !== null ? explicitRatio : getScrollRatio();
+  const visibleP = findFirstVisibleParagraphIndex();
+
+  let label = '';
+  if (cur.type === 'light_novel') {
+    const ch = cur.data.chapters[cur.chapterIndex];
+    label = `${cur.data.title} — ${ch ? ch.title : 'Seção'}`;
+  } else {
+    label = `Web Novel — ${cur.data.display_num || `Cap. ${cur.data.number}`}: ${cur.data.title}`;
   }
 
-  const progress = {
-    type: AppState.currentReading.type,
-    id: AppState.currentReading.id,
-    chapterIndex: AppState.currentReading.chapterIndex,
-    scrollRatio: Math.min(Math.max(currentScroll, 0), 1),
-    title: title,
+  const record = {
+    type: cur.type,
+    id: cur.id,
+    baseVolumeId: cur.baseVolumeId || cur.id,
+    chapterIndex: cur.chapterIndex,
+    scrollRatio: ratio,
+    pIndex: visibleP,
+    title: label,
     timestamp: Date.now()
   };
 
   try {
-    localStorage.setItem(STORAGE_KEYS.PROGRESS, JSON.stringify(progress));
-    updateContinueBanner(progress);
+    localStorage.setItem(STORAGE_KEYS.PROGRESS_LAST, JSON.stringify(record));
+    if (cur.type === 'light_novel') {
+      localStorage.setItem(STORAGE_KEYS.PROGRESS_LN, JSON.stringify(record));
+      const baseKey = `ln:${cur.baseVolumeId || cur.id.replace('-scan', '')}`;
+      const totalCh = Math.max(cur.data.chapters.length, 1);
+      const overallPct = Math.min(100, Math.round(((cur.chapterIndex + ratio) / totalCh) * 100));
+      AppState.history[baseKey] = {
+        chapterIndex: cur.chapterIndex,
+        scrollRatio: ratio,
+        pct: overallPct,
+        updatedAt: Date.now()
+      };
+    } else {
+      localStorage.setItem(STORAGE_KEYS.PROGRESS_WN, JSON.stringify(record));
+      AppState.history[`wn:${cur.id}`] = {
+        scrollRatio: ratio,
+        pct: Math.round(ratio * 100),
+        updatedAt: Date.now()
+      };
+    }
+    localStorage.setItem(STORAGE_KEYS.HISTORY, JSON.stringify(AppState.history));
   } catch (e) {
     console.warn('Erro ao salvar progresso:', e);
   }
 }
 
-function getScrollRatio() {
-  const h = document.documentElement;
-  const b = document.body;
-  const st = 'scrollTop' in h ? h.scrollTop : b.scrollTop;
-  const sh = 'scrollHeight' in h ? h.scrollHeight : b.scrollHeight;
-  const ch = h.clientHeight;
-  const maxScroll = sh - ch;
-  return maxScroll > 0 ? st / maxScroll : 0;
-}
-
-function checkContinueReading() {
+function getSavedTrackProgress(key) {
   try {
-    const saved = localStorage.getItem(STORAGE_KEYS.PROGRESS);
-    if (saved) {
-      const progress = JSON.parse(saved);
-      if (progress && progress.title) {
-        updateContinueBanner(progress);
-        const banner = document.getElementById('continue-banner');
-        if (banner) banner.style.display = 'block';
-      }
-    }
-  } catch (e) {
-    console.warn(e);
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : null;
+  } catch (_) {
+    return null;
   }
 }
 
-function updateContinueBanner(progress) {
+function refreshContinueBanners() {
+  const last = getSavedTrackProgress(STORAGE_KEYS.PROGRESS_LAST);
+  const lnSave = getSavedTrackProgress(STORAGE_KEYS.PROGRESS_LN);
+  const wnSave = getSavedTrackProgress(STORAGE_KEYS.PROGRESS_WN);
+
   const banner = document.getElementById('continue-banner');
   const titleEl = document.getElementById('continue-title');
-  const percentEl = document.getElementById('continue-percent');
-  if (!banner || !titleEl) return;
+  const pctEl = document.getElementById('continue-percent');
+  const trackBadge = document.getElementById('continue-track-badge');
+  const otherBtn = document.getElementById('btn-resume-other-track');
 
-  const pct = Math.round((progress.scrollRatio || 0) * 100);
-  titleEl.textContent = progress.title || 'Última Leitura';
-  if (percentEl) percentEl.textContent = `${pct}% concluído`;
-  banner.style.display = 'block';
+  if (banner && last && last.title) {
+    trackBadge.textContent = last.type === 'light_novel' ? '📘 Light Novel • Última Leitura' : '📜 Web Novel • Última Leitura';
+    titleEl.textContent = last.title;
+    pctEl.textContent = `(${Math.round((last.scrollRatio || 0) * 100)}% do capítulo)`;
+    banner.hidden = false;
+
+    const other = last.type === 'light_novel' ? wnSave : lnSave;
+    if (other && other.title) {
+      otherBtn.hidden = false;
+      otherBtn.textContent = other.type === 'light_novel' ? '📘 Retomar Light Novel' : '📜 Retomar Web Novel';
+      otherBtn.dataset.targetTrack = other.type;
+    } else {
+      otherBtn.hidden = true;
+    }
+  }
+
+  // Resumos individuais dentro dos Heros separados de LN e WN
+  const lnHeroBox = document.getElementById('ln-specific-resume');
+  if (lnHeroBox) {
+    if (lnSave && lnSave.title) {
+      lnHeroBox.hidden = false;
+      lnHeroBox.innerHTML = `
+        <span>🔖 <strong>Progresso na Light Novel:</strong> ${escapeHtml(lnSave.title)} (${Math.round((lnSave.scrollRatio || 0) * 100)}%)</span>
+        <button type="button" class="btn-continue" data-action="resume-ln">Continuar Light Novel →</button>
+      `;
+    } else {
+      lnHeroBox.hidden = true;
+    }
+  }
+
+  const wnHeroBox = document.getElementById('wn-specific-resume');
+  if (wnHeroBox) {
+    if (wnSave && wnSave.title) {
+      wnHeroBox.hidden = false;
+      wnHeroBox.innerHTML = `
+        <span>🔖 <strong>Progresso na Web Novel:</strong> ${escapeHtml(wnSave.title)} (${Math.round((wnSave.scrollRatio || 0) * 100)}%)</span>
+        <button type="button" class="btn-continue" data-action="resume-wn">Continuar Web Novel →</button>
+      `;
+    } else {
+      wnHeroBox.hidden = true;
+    }
+  }
 }
 
-function resumeReading() {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEYS.PROGRESS);
-    if (!saved) return;
-    const progress = JSON.parse(saved);
-
-    if (progress.type === 'light_novel') {
-      openLightNovel(progress.id, progress.chapterIndex, progress.scrollRatio);
-    } else if (progress.type === 'web_novel') {
-      openWebNovelChapter(progress.id, progress.scrollRatio);
-    }
-  } catch (e) {
-    console.error('Erro ao restaurar leitura:', e);
+function resumeSavedRecord(record) {
+  if (!record) return;
+  if (record.type === 'light_novel') {
+    openLightNovel(record.id, record.chapterIndex || 0, record.scrollRatio || 0);
+  } else if (record.type === 'web_novel') {
+    openWebNovelChapter(record.id, record.scrollRatio || 0);
   }
 }
 
 // ==========================================================================
-// RENDERIZAÇÃO DAS TELAS PRINCIPAIS
+// RENDERIZAÇÃO DO CATÁLOGO (LN, WN, COMPARADOR, CULTURAL, AMAZON)
 // ==========================================================================
 
-function renderAllViews() {
-  renderLightNovelView();
-  renderWebNovelView();
-  renderComparisonView();
-  renderCulturalView();
-  renderAmazonView();
+function renderAllCatalogViews() {
+  renderLightNovelCatalog();
+  renderWebNovelCatalog();
+  renderComparisonCatalog();
+  renderCulturalCatalog();
+  renderAmazonCatalog();
 }
 
-// 1. Light Novel (Volumes com ilustrações e capítulos)
-function renderLightNovelView() {
-  const container = document.getElementById('ln-volumes-grid');
-  if (!container || !AppState.catalog) return;
+function matchesSearch(text) {
+  if (!AppState.searchQuery) return true;
+  return String(text || '').toLowerCase().includes(AppState.searchQuery);
+}
 
-  const volumes = AppState.catalog.light_novel.volumes || [];
-  container.innerHTML = volumes.map(vol => {
-    const hasIllus = vol.illustrations_count > 0;
-    const illusBadge = hasIllus ? `<span style="background: rgba(245,158,11,0.15); color: #f59e0b; padding: 0.2rem 0.5rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 700;">🖼️ ${vol.illustrations_count} Ilustrações</span>` : '';
-    
+// 1. Catálogo da Light Novel (21 Volumes Offline + Capas WebP + Barra de Progresso)
+function renderLightNovelCatalog() {
+  const grid = document.getElementById('ln-volumes-grid');
+  const futureGrid = document.getElementById('ln-future-grid');
+  const statsEl = document.getElementById('ln-hero-stats');
+  if (!grid || !AppState.catalog) return;
+
+  const info = AppState.catalog.light_novel.info;
+  if (statsEl && info) {
+    statsEl.textContent = `${info.available_volumes_count} Volumes Offline • ${(info.total_illustrations || 0).toLocaleString('pt-BR')} Ilustrações WebP • ${(info.total_footnotes || 0)} Notas Culturais`;
+  }
+
+  const volumes = (AppState.catalog.light_novel.volumes || []).filter(v =>
+    matchesSearch(`${v.title} ${v.desc} ${v.edition} volume ${v.volume_number}`)
+  );
+
+  grid.innerHTML = volumes.map((vol, idx) => {
+    const deferredCls = idx >= 6 ? 'deferred-card' : '';
+    const hist = AppState.history[`ln:${vol.id}`];
+    const pct = hist ? hist.pct : 0;
+    const readBtnLabel = hist ? `Continuar (${pct}%) →` : 'Ler Volume →';
+
+    const coverHtml = vol.cover_image
+      ? `<div class="vol-cover-wrap" data-action="open-ln" data-vol="${vol.id}">
+           <img src="${escapeAttr(vol.cover_image)}" alt="Capa oficial — ${escapeAttr(vol.title)}" width="192" height="288" ${idx >= 4 ? 'loading="lazy"' : ''}>
+         </div>`
+      : '';
+
+    const coloredBadge = vol.is_colored_edition
+      ? `<span class="badge-colored">🎨 Edição Colorida</span>`
+      : '';
+    const dualBadge = vol.has_scan_alternative
+      ? `<span class="badge-dual">⇄ 2 Traduções</span>`
+      : '';
+    const illusBtn = vol.illustrations_count > 0
+      ? `<button type="button" class="meta-pill-illus" data-action="open-gallery" data-vol="${vol.id}">🖼️ ${vol.illustrations_count} artes</button>`
+      : '';
+
+    const amzVol = Math.floor(Number(vol.volume_number)) || 1;
+
     return `
-      <article class="volume-card">
+      <article class="volume-card ${deferredCls}">
         <div>
-          <div class="volume-badge">
-            <span class="badge-num">Volume ${vol.volume_number}</span>
-            <span class="badge-status">Pronto para Ler</span>
+          <div class="vol-card-top">
+            ${coverHtml}
+            <div class="vol-card-info">
+              <div class="volume-badge">
+                <span class="badge-num">Vol. ${vol.volume_number}</span>
+                ${coloredBadge}
+                ${dualBadge}
+              </div>
+              <h3>${escapeHtml(vol.title)}</h3>
+              <div class="volume-kanji">${escapeHtml(vol.kanji || '')} • ${escapeHtml(vol.edition || '')}</div>
+            </div>
           </div>
-          <h3>${vol.title}</h3>
-          <div class="volume-kanji">${vol.kanji || ''}</div>
-          <p class="volume-desc">${vol.desc}</p>
+          <p class="volume-desc" style="margin-top: 0.75rem;">${escapeHtml(vol.desc)}</p>
         </div>
+
         <div>
+          ${pct > 0 ? `<div class="vol-progress-strip" aria-hidden="true"><div class="vol-progress-fill" style="width:${pct}%"></div></div>` : ''}
           <div class="volume-meta">
-            <span>📖 ${vol.chapter_count} Seções (${vol.paragraph_count.toLocaleString()} §)</span>
-            ${illusBadge}
+            <span>📖 ${vol.chapter_count} seções • ${(vol.paragraph_count || 0).toLocaleString('pt-BR')} §</span>
+            ${illusBtn}
           </div>
           <div class="volume-actions">
-            <button class="btn-read" onclick="openLightNovel('${vol.id}', 0)">
-              <span>Ler Agora</span> →
+            <button type="button" class="btn-read" data-action="open-ln" data-vol="${vol.id}">
+              ${readBtnLabel}
             </button>
-            <a href="https://www.amazon.com.br/s?k=That+Time+I+Got+Reincarnated+as+a+Slime+Vol+${vol.volume_number}+light+novel" target="_blank" rel="noopener" class="btn-amazon-quick" title="Ver ou comprar edição oficial na Amazon Brasil">
+            <a href="https://www.amazon.com.br/s?k=That+Time+I+Got+Reincarnated+as+a+Slime+Vol+${amzVol}+light+novel" target="_blank" rel="noopener" class="btn-amazon-quick">
               🛒 Amazon
             </a>
           </div>
@@ -243,565 +476,1141 @@ function renderLightNovelView() {
       </article>
     `;
   }).join('');
+
+  if (futureGrid) {
+    const fut = (AppState.catalog.light_novel.future_volumes || []).filter(f =>
+      matchesSearch(`${f.title} ${f.desc}`)
+    );
+    futureGrid.innerHTML = fut.map(f => `
+      <article class="future-card deferred-card">
+        <span class="badge-num">Volume ${f.num} • ${escapeHtml(f.status)}</span>
+        <h4>${escapeHtml(f.title)}</h4>
+        <p>${escapeHtml(f.desc)}</p>
+      </article>
+    `).join('');
+  }
 }
 
-// 2. Web Novel (Arcos e 255 Capítulos)
-function renderWebNovelView() {
+// 2. Catálogo da Web Novel (303 Capítulos em <details>/<summary> nativos)
+function renderWebNovelCatalog() {
   const container = document.getElementById('wn-arcs-container');
+  const statsEl = document.getElementById('wn-hero-stats');
   if (!container || !AppState.catalog) return;
 
+  const info = AppState.catalog.web_novel.info;
+  if (statsEl && info) {
+    statsEl.textContent = `${info.downloaded_count}/${info.total_chapters} Capítulos Offline • ${info.main_chapters_count} Principais + ${info.extra_chapters_count} Extras`;
+  }
+
   const arcs = AppState.catalog.web_novel.arcs || [];
-  const chapters = AppState.catalog.web_novel.chapters || [];
+  const allChapters = AppState.catalog.web_novel.chapters || [];
 
   container.innerHTML = arcs.map((arc, idx) => {
-    const arcChapters = chapters.filter(c => c.arc_id === arc.id);
-    const isOpen = idx === 0 ? 'open' : '';
+    const arcChs = allChapters.filter(c => c.arc_id === arc.id && matchesSearch(`${c.display_num} ${c.title} ${arc.title}`));
+    if (AppState.searchQuery && arcChs.length === 0) return '';
 
-    const chaptersHtml = arcChapters.map(ch => {
-      const isDownloaded = ch.is_downloaded;
-      const statusIcon = isDownloaded ? `<span class="ch-status-dot" title="Texto completo baixado e disponível para leitura offline"></span>` : `<span style="font-size: 0.7rem; color: #94a3b8;">🌐 Online</span>`;
-      
+    const shouldOpen = AppState.searchQuery ? 'open' : (idx === 0 ? 'open' : '');
+    const extraCls = arc.is_extra ? 'is-extra-arc' : '';
+
+    const chButtons = arcChs.map(ch => {
+      const chId = ch.id || `cap-${String(ch.num).padStart(3, '0')}`;
+      const hist = AppState.history[`wn:${chId}`];
+      const readCls = hist && hist.pct >= 85 ? 'is-read' : '';
+      const statusLabel = hist
+        ? (hist.pct >= 85 ? '✓ Lido' : `${hist.pct}%`)
+        : (ch.is_downloaded ? 'Offline' : 'Online');
+
       return `
-        <button class="chapter-item-btn" onclick="openWebNovelChapter(${ch.num})">
-          <div class="ch-info">
-            <span class="ch-num">Capítulo ${ch.num}</span>
-            <span class="ch-title" title="${ch.title}">${ch.title}</span>
-          </div>
-          ${statusIcon}
+        <button type="button" class="chapter-item-btn ${readCls}" data-action="open-wn" data-chid="${escapeAttr(chId)}">
+          <span class="ch-info">
+            <span class="ch-num">${escapeHtml(ch.display_num || `Capítulo ${ch.num}`)}</span>
+            <span class="ch-title">${escapeHtml(ch.title)}</span>
+          </span>
+          <span class="ch-status-pill">${statusLabel}</span>
         </button>
       `;
     }).join('');
 
     return `
-      <div class="arc-container ${isOpen}" id="arc-card-${arc.id}">
-        <div class="arc-header" onclick="toggleArc('${arc.id}')">
-          <div class="arc-title-area">
-            <h3>${arc.title}</h3>
-            <p>${arc.desc} (${arcChapters.length} capítulos)</p>
-          </div>
-          <span class="arc-toggle-icon">▼</span>
-        </div>
+      <details class="arc-details ${extraCls}" ${shouldOpen}>
+        <summary class="arc-summary">
+          <span>
+            <span class="arc-title-text">${escapeHtml(arc.title)} (${arcChs.length} capítulos)</span>
+            <span class="arc-desc-text">${escapeHtml(arc.desc)}</span>
+          </span>
+        </summary>
         <div class="chapter-list">
-          ${chaptersHtml}
+          ${chButtons}
         </div>
-      </div>
+      </details>
     `;
   }).join('');
 }
 
-function toggleArc(arcId) {
-  const el = document.getElementById(`arc-card-${arcId}`);
-  if (el) el.classList.toggle('open');
-}
-
-// 3. Comparador WN vs LN
-function renderComparisonView() {
-  const overviewEl = document.getElementById('comparison-overview-text');
-  const gridEl = document.getElementById('comparison-diffs-list');
+// 3. Comparador (Auditoria Drive vs TSSDK Scan + Diferenças WN vs LN)
+function renderComparisonCatalog() {
   if (!AppState.catalog) return;
-
   const comp = AppState.catalog.comparison;
-  if (overviewEl) overviewEl.textContent = comp.overview;
+  if (!comp) return;
 
-  if (gridEl) {
-    gridEl.innerHTML = comp.key_differences.map(diff => `
-      <div class="comparison-card">
-        <h3>⚖️ ${diff.topic}</h3>
-        <div class="comparison-grid">
-          <div class="comparison-column col-wn">
-            <div class="col-header">📜 Web Novel (Original da Internet)</div>
-            <div class="col-body">${diff.wn}</div>
+  const ovEl = document.getElementById('comparison-overview-text');
+  if (ovEl) ovEl.textContent = comp.overview;
+
+  const audit = comp.translation_audit;
+  if (audit) {
+    const aOv = document.getElementById('audit-overview-text');
+    if (aOv) {
+      const countTxt = audit.total_paragraphs_repaired
+        ? ` Mais de ${audit.total_paragraphs_repaired.toLocaleString('pt-BR')} parágrafos e títulos foram revisados automaticamente nos 15 EPUBs.`
+        : '';
+      aOv.textContent = audit.overview + countTxt;
+    }
+
+    const tbody = document.getElementById('audit-table-body');
+    if (tbody && audit.edition_comparison) {
+      tbody.innerHTML = audit.edition_comparison.map(row => `
+        <tr>
+          <td><strong>${escapeHtml(row.aspect)}</strong></td>
+          <td>${escapeHtml(row.tssdk_scan)}</td>
+          <td>${escapeHtml(row.drive_original)}</td>
+          <td>${escapeHtml(row.repaired_repo)}</td>
+        </tr>
+      `).join('');
+    }
+
+    const hlGrid = document.getElementById('audit-highlights-grid');
+    if (hlGrid && audit.curated_highlights) {
+      hlGrid.innerHTML = audit.curated_highlights
+        .filter(h => matchesSearch(`${h.category} ${h.before} ${h.after} ${h.why}`))
+        .map(h => `
+          <article class="repair-card">
+            <div class="repair-cat">${escapeHtml(h.category)}</div>
+            <div class="repair-before"><strong>Antes (Drive):</strong> ${escapeHtml(h.before)}</div>
+            <div class="repair-after"><strong>Revisado PT-BR:</strong> ${escapeHtml(h.after)}</div>
+            <p class="repair-why">${escapeHtml(h.why)}</p>
+          </article>
+        `).join('');
+    }
+
+    const samplesDetails = document.getElementById('audit-samples-details');
+    const samplesGrid = document.getElementById('audit-real-samples-grid');
+    if (samplesDetails && samplesGrid && Array.isArray(audit.real_samples) && audit.real_samples.length > 0) {
+      const filteredSamples = audit.real_samples.filter(s =>
+        matchesSearch(`${s.volume} ${s.chapter || ''} ${s.before || ''} ${s.after || ''}`)
+      );
+      samplesDetails.hidden = filteredSamples.length === 0;
+      samplesGrid.innerHTML = filteredSamples.map(s => `
+        <article class="repair-card">
+          <div class="repair-cat">${escapeHtml(s.volume)}${s.chapter ? ` • ${escapeHtml(s.chapter)}` : ''}</div>
+          <div class="repair-before"><strong>Original do Drive:</strong> ${escapeHtml(s.before)}</div>
+          <div class="repair-after"><strong>Revisado PT-BR:</strong> ${escapeHtml(s.after)}</div>
+        </article>
+      `).join('');
+    }
+  }
+
+  const diffsEl = document.getElementById('comparison-diffs-list');
+  if (diffsEl && comp.key_differences) {
+    diffsEl.innerHTML = comp.key_differences
+      .filter(d => matchesSearch(`${d.topic} ${d.wn} ${d.ln}`))
+      .map((diff, i) => `
+        <article class="comparison-card ${i >= 3 ? 'deferred-card' : ''}">
+          <h4>⚖️ ${escapeHtml(diff.topic)}</h4>
+          <div class="comparison-grid">
+            <div class="comparison-column col-wn">
+              <div class="col-header">📜 Web Novel (Original)</div>
+              <div class="col-body">${escapeHtml(diff.wn)}</div>
+            </div>
+            <div class="comparison-column col-ln">
+              <div class="col-header">📘 Light Novel (Oficial)</div>
+              <div class="col-body">${escapeHtml(diff.ln)}</div>
+            </div>
           </div>
-          <div class="comparison-column col-ln">
-            <div class="col-header">📘 Light Novel (Oficial & Revisada)</div>
-            <div class="col-body">${diff.ln}</div>
-          </div>
-        </div>
-      </div>
-    `).join('');
+        </article>
+      `).join('');
   }
 }
 
-// 4. Guia Cultural & Termos Japoneses
-function renderCulturalView() {
-  if (!AppState.catalog) return;
-  const guide = AppState.catalog.cultural_guide;
-  if (!guide) return;
+// 4. Guia Cultural Japonês & Nomes Canônicos
+function renderCulturalCatalog() {
+  if (!AppState.catalog || !AppState.catalog.cultural_guide) return;
+  const g = AppState.catalog.cultural_guide;
 
   const honEl = document.getElementById('cultural-honorifics-list');
   const conEl = document.getElementById('cultural-concepts-list');
   const aspEl = document.getElementById('cultural-aspects-list');
 
   if (honEl) {
-    honEl.innerHTML = guide.honorifics.map(h => `
-      <div class="term-card">
-        <div class="term-name">${h.term}</div>
-        <div class="term-desc">${h.meaning}</div>
-      </div>
-    `).join('');
+    honEl.innerHTML = (g.honorifics || [])
+      .filter(h => matchesSearch(`${h.term} ${h.meaning}`))
+      .map(h => `
+        <article class="term-card">
+          <div class="term-name">${escapeHtml(h.term)}</div>
+          <div class="term-desc">${escapeHtml(h.meaning)}</div>
+        </article>
+      `).join('');
   }
 
   if (conEl) {
-    conEl.innerHTML = guide.tensura_concepts.map(c => `
-      <div class="term-card">
-        <div class="term-name">${c.term}</div>
-        <div class="term-desc">${c.desc}</div>
-      </div>
-    `).join('');
+    conEl.innerHTML = (g.tensura_concepts || [])
+      .filter(c => matchesSearch(`${c.term} ${c.desc}`))
+      .map(c => `
+        <article class="term-card">
+          <div class="term-name">${escapeHtml(c.term)}</div>
+          <div class="term-desc">${escapeHtml(c.desc)}</div>
+        </article>
+      `).join('');
   }
 
   if (aspEl) {
-    aspEl.innerHTML = guide.cultural_aspects.map(a => `
-      <div class="term-card">
-        <div class="term-name">${a.element}</div>
-        <div class="term-desc">${a.desc}</div>
-      </div>
-    `).join('');
+    aspEl.innerHTML = (g.cultural_aspects || [])
+      .filter(a => matchesSearch(`${a.element} ${a.desc}`))
+      .map(a => `
+        <article class="term-card">
+          <div class="term-name">${escapeHtml(a.element)}</div>
+          <div class="term-desc">${escapeHtml(a.desc)}</div>
+        </article>
+      `).join('');
   }
 }
 
-// 5. Loja Oficial Amazon Brasil
-function renderAmazonView() {
-  const gridEl = document.getElementById('amazon-volumes-grid');
-  if (!gridEl || !AppState.catalog) return;
+// 5. Loja Amazon Brasil
+function renderAmazonCatalog() {
+  const grid = document.getElementById('amazon-volumes-grid');
+  if (!grid || !AppState.catalog || !AppState.catalog.amazon_br) return;
 
-  const items = AppState.catalog.amazon_br.volumes || [];
-  gridEl.innerHTML = items.map(item => `
-    <div class="amazon-card">
+  const desc = document.getElementById('amazon-store-desc');
+  if (desc && AppState.catalog.amazon_br.store_info) {
+    desc.textContent = AppState.catalog.amazon_br.store_info;
+  }
+
+  const vols = (AppState.catalog.amazon_br.volumes || []).filter(v =>
+    matchesSearch(`${v.title} volume ${v.volume}`)
+  );
+
+  grid.innerHTML = vols.map((item, idx) => `
+    <article class="amazon-card ${idx >= 8 ? 'deferred-card' : ''}">
       <div>
-        <span style="font-size: 0.72rem; font-weight: 800; color: #f59e0b; text-transform: uppercase;">Volume ${item.volume}</span>
-        <h4>${item.title}</h4>
-        <div class="amazon-formats">Formatos: ${item.formats.join(' • ')}</div>
+        <span class="badge-num">Volume ${item.volume}</span>
+        <h3>${escapeHtml(item.title)}</h3>
+        <div class="amazon-formats">${escapeHtml((item.formats || []).join(' • '))}</div>
       </div>
-      <a href="${item.search_url}" target="_blank" rel="noopener" class="btn-amazon-buy">
-        🛒 Comprar na Amazon.com.br
+      <a href="${escapeAttr(item.search_url)}" target="_blank" rel="noopener" class="btn-amazon-buy">
+        🛒 Ver na Amazon.com.br
       </a>
-    </div>
+    </article>
   `).join('');
 }
 
 // ==========================================================================
-// MECANISMO DE LEITURA (READER ENGINE)
+// MOTOR DE LEITURA (LIGHT NOVEL & WEB NOVEL)
 // ==========================================================================
 
-async function openLightNovel(volumeId, chapterIndex = 0, initialScrollRatio = 0) {
+async function openLightNovel(volumeId, chapterIndex = 0, initialScrollRatio = 0, preferredChapterTitle = '') {
   try {
-    showLoading();
     const res = await fetch(`data/light_novel/${volumeId}.json`);
-    if (!res.ok) throw new Error(`Arquivo data/light_novel/${volumeId}.json não encontrado.`);
+    if (!res.ok) throw new Error(`Volume ${volumeId} não encontrado.`);
     const data = await res.json();
+
+    const safeIdx = Math.min(Math.max(Number(chapterIndex) || 0, 0), Math.max(data.chapters.length - 1, 0));
+    const baseId = data.base_volume_id || volumeId.replace(/-scan$/, '');
+
+    // Se o usuário alternou edição (Drive Revisado <-> TSSDK Scan), parear capítulo equivalente pelo título
+    let targetIdx = safeIdx;
+    let targetScroll = initialScrollRatio;
+    if (preferredChapterTitle) {
+      const mCap = preferredChapterTitle.match(/\b(cap[íi]tulo\s*\d+|pr[óo]logo|ep[íi]logo|interl[úu]dio|posf[áa]cio|capa)/i);
+      if (mCap) {
+        const key = mCap[1].toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        const matchedIdx = data.chapters.findIndex(c =>
+          (c.title || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(key)
+        );
+        if (matchedIdx >= 0) targetIdx = matchedIdx;
+      }
+    } else if (chapterIndex === null && AppState.history[`ln:${baseId}`]) {
+      targetIdx = Math.min(AppState.history[`ln:${baseId}`].chapterIndex || 0, Math.max(data.chapters.length - 1, 0));
+      targetScroll = AppState.history[`ln:${baseId}`].scrollRatio || 0;
+    }
 
     AppState.currentReading = {
       type: 'light_novel',
       id: volumeId,
-      chapterIndex: chapterIndex,
-      data: data,
-      scrollRatio: initialScrollRatio
+      baseVolumeId: baseId,
+      chapterIndex: targetIdx,
+      data,
+      scrollRatio: targetScroll
     };
 
-    renderReaderContent();
-    window.location.hash = `#ln-${volumeId}-${chapterIndex}`;
-    saveReadingProgress(initialScrollRatio);
+    renderReaderScreen();
+    history.replaceState(null, '', `#ln/${volumeId}/${targetIdx}`);
+    persistReadingProgress(targetScroll);
   } catch (err) {
-    console.error('Erro ao abrir volume da Light Novel:', err);
-    alert(`Não foi possível carregar este volume: ${err.message}`);
-  } finally {
-    hideLoading();
+    console.error('Erro ao abrir Light Novel:', err);
+    showCulturalNoteDialog('Erro ao Carregar Volume', err.message);
   }
 }
 
-async function openWebNovelChapter(chapterNum, initialScrollRatio = 0) {
+async function openWebNovelChapter(chapterIdOrNum, initialScrollRatio = 0) {
   try {
-    showLoading();
-    const padNum = String(chapterNum).padStart(3, '0');
-    const res = await fetch(`data/web_novel/capitulo_${padNum}.json`);
-    
-    let data;
-    if (res.ok) {
-      data = await res.json();
+    const chList = AppState.catalog ? AppState.catalog.web_novel.chapters : [];
+    let meta = null;
+
+    if (typeof chapterIdOrNum === 'number' || /^\d+$/.test(String(chapterIdOrNum))) {
+      const n = Number(chapterIdOrNum);
+      meta = chList.find(c => !c.is_extra && Number(c.num) === n);
     } else {
-      // Se ainda não foi baixado localmente, redireciona ou oferece link
-      const chMeta = AppState.catalog.web_novel.chapters.find(c => c.num === chapterNum);
-      const url = chMeta ? chMeta.url : `https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-${chapterNum}/`;
-      
-      const confirmOpen = confirm(`O Capítulo ${chapterNum} ainda não foi baixado para leitura offline local.\n\nDeseja abrir a leitura online oficial no Central Novel?`);
-      if (confirmOpen) {
-        window.open(url, '_blank');
+      meta = chList.find(c => c.id === chapterIdOrNum);
+    }
+
+    const fileName = meta ? meta.file : `capitulo_${String(chapterIdOrNum).padStart(3, '0')}.json`;
+    const resolvedId = meta ? meta.id : `cap-${String(chapterIdOrNum).padStart(3, '0')}`;
+
+    const res = await fetch(`data/web_novel/${fileName}`);
+    if (!res.ok) {
+      if (meta && meta.url) {
+        window.open(meta.url, '_blank', 'noopener');
       }
-      hideLoading();
       return;
     }
+    const data = await res.json();
 
     AppState.currentReading = {
       type: 'web_novel',
-      id: chapterNum,
+      id: resolvedId,
+      baseVolumeId: null,
       chapterIndex: 0,
-      data: data,
+      data,
       scrollRatio: initialScrollRatio
     };
 
-    renderReaderContent();
-    window.location.hash = `#wn-${chapterNum}`;
-    saveReadingProgress(initialScrollRatio);
+    renderReaderScreen();
+    history.replaceState(null, '', `#wn/${resolvedId}`);
+    persistReadingProgress(initialScrollRatio);
   } catch (err) {
-    console.error('Erro ao abrir capítulo da Web Novel:', err);
-    alert(`Erro ao abrir capítulo: ${err.message}`);
-  } finally {
-    hideLoading();
+    console.error('Erro ao abrir Web Novel:', err);
+    showCulturalNoteDialog('Erro ao Carregar Capítulo', err.message);
   }
 }
 
-function renderReaderContent() {
+function renderReaderScreen() {
   const readerView = document.getElementById('reader-view');
-  const mainContent = document.getElementById('content-area');
-  const container = document.getElementById('reader-text-container');
-  const headerInfo = document.getElementById('reader-header-area');
+  const mainArea = document.getElementById('content-area');
+  const banner = document.getElementById('continue-banner');
+  const headerArea = document.getElementById('reader-header-area');
+  const proseArea = document.getElementById('reader-text-container');
   const footerNav = document.getElementById('reader-footer-nav');
-  const currentTitleNav = document.getElementById('reader-toolbar-title');
+  const toolbarTitle = document.getElementById('reader-toolbar-title');
+  const trackPill = document.getElementById('reader-track-pill');
+  const chSelect = document.getElementById('reader-chapter-select');
+  const btnGallery = document.getElementById('btn-reader-gallery');
 
-  if (!readerView || !container) return;
+  if (!readerView || !proseArea) return;
 
-  // Trocar visualização
-  mainContent.style.display = 'none';
-  readerView.style.display = 'block';
-  window.scrollTo(0, 0);
+  mainArea.hidden = true;
+  if (banner) banner.hidden = true;
+  readerView.hidden = false;
 
-  let paragraphs = [];
-  let headingTitle = '';
-  let subHeading = '';
-  let metaInfo = '';
-  let volMeta = null;
+  const cur = AppState.currentReading;
+  const inlineGlossary = (AppState.catalog && AppState.catalog.cultural_guide && AppState.catalog.cultural_guide.inline_glossary) || {};
+  const seenTermsInChapter = new Set();
 
-  if (AppState.currentReading.type === 'light_novel') {
-    const vol = AppState.currentReading.data;
-    const ch = vol.chapters[AppState.currentReading.chapterIndex];
-    if (!ch) return;
+  if (cur.type === 'light_novel') {
+    const vol = cur.data;
+    const ch = vol.chapters[cur.chapterIndex] || vol.chapters[0];
+    const baseVolMeta = AppState.catalog.light_novel.volumes.find(v => v.id === cur.baseVolumeId);
 
-    headingTitle = ch.title;
-    subHeading = vol.title;
-    paragraphs = ch.paragraphs || [];
-    volMeta = AppState.catalog.light_novel.volumes.find(v => v.id === vol.id);
-    
-    metaInfo = `Capítulo ${AppState.currentReading.chapterIndex + 1} de ${vol.chapters.length} • ${paragraphs.length} parágrafos • Tempo estimado: ~${Math.ceil(paragraphs.length / 8)} min`;
-    currentTitleNav.textContent = `${vol.title} - ${ch.title}`;
+    trackPill.textContent = '📘 Light Novel';
+    trackPill.classList.remove('is-wn');
+    toolbarTitle.textContent = `${vol.title} — ${ch.title}`;
+
+    // Preencher seletor de seções/capítulos do volume
+    chSelect.innerHTML = vol.chapters.map((c, idx) =>
+      `<option value="${idx}" ${idx === cur.chapterIndex ? 'selected' : ''}>${idx + 1}. ${escapeHtml(c.title)}</option>`
+    ).join('');
+
+    // Botão de galeria
+    const illusList = (vol.illustrations && vol.illustrations.length > 0)
+      ? vol.illustrations
+      : (baseVolMeta && baseVolMeta.illustrations ? baseVolMeta.illustrations : []);
+    btnGallery.hidden = illusList.length === 0;
+    btnGallery.dataset.vol = cur.baseVolumeId;
+
+    // Alternador de Edição nos Volumes 6 a 13 (Drive Revisado vs TSSDK Scan)
+    let editionHtml = '';
+    if (baseVolMeta && baseVolMeta.has_scan_alternative) {
+      const isScanNow = cur.id.endsWith('-scan');
+      editionHtml = `
+        <div class="edition-switcher" role="group" aria-label="Alternar tradução deste volume">
+          <span class="edition-switcher-label">Tradução ativa:</span>
+          <button type="button" class="btn-edition-opt ${!isScanNow ? 'active' : ''}" data-action="switch-edition" data-vol="${baseVolMeta.id}">
+            ✨ Edição Ilustrada Revisada (Drive)
+          </button>
+          <button type="button" class="btn-edition-opt ${isScanNow ? 'active' : ''}" data-action="switch-edition" data-vol="${baseVolMeta.scan_alternative_id}">
+            👥 Tradução de Fã (TSSDK Scan)
+          </button>
+        </div>
+      `;
+    }
+
+    const pCount = (ch.paragraphs || []).length;
+    const estMin = Math.max(1, Math.ceil(pCount / 10));
+
+    headerArea.innerHTML = `
+      <div class="vol-title">${escapeHtml(vol.title)} • ${escapeHtml(vol.edition || '')}</div>
+      <h2 class="ch-main-heading">${escapeHtml(ch.title)}</h2>
+      <div class="ch-meta-row">
+        <span>Seção ${cur.chapterIndex + 1} de ${vol.chapters.length}</span>
+        <span>•</span>
+        <span>Leitura estimada: ~${estMin} min</span>
+        ${illusList.length > 0 ? `<button type="button" class="meta-pill-illus" data-action="open-gallery-current">🖼️ Galeria do Volume (${illusList.length})</button>` : ''}
+      </div>
+      ${editionHtml}
+    `;
+
+    // Renderizar blocos estruturados (parágrafos, ilustrações inline e quebras de cena)
+    const blocks = ch.blocks && ch.blocks.length > 0
+      ? ch.blocks
+      : (ch.paragraphs || []).map(t => ({ type: 'p', text: t }));
+
+    let pCounter = 0;
+    proseArea.innerHTML = blocks.map(block => {
+      if (block.type === 'hr') {
+        const hardCls = block.variant === 'hard' ? 'scene-break-hard' : '';
+        return `<hr class="scene-break ${hardCls}">`;
+      }
+      if (block.type === 'img') {
+        const imgIdx = illusList.findIndex(it => it.src === block.src);
+        const w = block.width || 800;
+        const h = block.height || 1100;
+        return `
+          <figure class="novel-illustration">
+            <img
+              src="${escapeAttr(block.src)}"
+              alt="${escapeAttr(block.alt || block.caption || 'Ilustração oficial')}"
+              width="${w}"
+              height="${h}"
+              loading="lazy"
+              data-action="zoom-inline-img"
+              data-imgidx="${imgIdx >= 0 ? imgIdx : 0}"
+              data-src="${escapeAttr(block.src)}"
+            >
+            ${block.caption ? `<figcaption>${escapeHtml(block.caption)} — clique na imagem para ampliar</figcaption>` : ''}
+          </figure>
+        `;
+      }
+      const pidx = pCounter++;
+      const isBm = AppState.bookmarks.some(
+        b => b.type === 'light_novel' && b.readingId === cur.id && b.chapterIndex === cur.chapterIndex && b.pIndex === pidx
+      );
+      const richHtml = formatRichParagraph(block.text, vol.footnotes || {}, inlineGlossary, seenTermsInChapter);
+      return `
+        <p class="novel-paragraph ${isBm ? 'bookmarked' : ''}" id="p-${pidx}" data-pidx="${pidx}">
+          <button type="button" class="btn-bm-inline" data-action="bookmark-para" data-pidx="${pidx}" aria-label="Salvar marcador neste parágrafo">🔖</button>${richHtml}
+        </p>
+      `;
+    }).join('');
+
+    AppState.lightbox.items = illusList;
   } else {
-    const ch = AppState.currentReading.data;
-    headingTitle = ch.title;
-    subHeading = 'Tensei Shitara Slime Datta Ken (Web Novel)';
-    paragraphs = ch.paragraphs || [];
-    metaInfo = `Capítulo ${ch.number} • ${paragraphs.length} parágrafos • Central Novel PT-BR`;
-    currentTitleNav.textContent = `Web Novel - Cap. ${ch.number}: ${ch.title}`;
+    // WEB NOVEL
+    const ch = cur.data;
+    const wnChapters = AppState.catalog.web_novel.chapters || [];
+
+    trackPill.textContent = ch.is_extra ? '📜 Web Novel • Extra' : '📜 Web Novel';
+    trackPill.classList.add('is-wn');
+    toolbarTitle.textContent = `${ch.display_num || `Cap. ${ch.number}`} — ${ch.title}`;
+    btnGallery.hidden = true;
+
+    chSelect.innerHTML = wnChapters.map(c =>
+      `<option value="${escapeAttr(c.id)}" ${c.id === cur.id ? 'selected' : ''}>${escapeHtml(c.display_num)}: ${escapeHtml(c.title)}</option>`
+    ).join('');
+
+    const paras = ch.paragraphs || [];
+    const estMin = Math.max(1, Math.ceil(paras.length / 10));
+
+    headerArea.innerHTML = `
+      <div class="vol-title" style="color: var(--wn-accent);">Tensei Shitara Slime Datta Ken — Web Novel Original</div>
+      <h2 class="ch-main-heading">${escapeHtml(ch.display_num || `Capítulo ${ch.number}`)}: ${escapeHtml(ch.title)}</h2>
+      <div class="ch-meta-row">
+        <span>${paras.length} parágrafos</span>
+        <span>•</span>
+        <span>Leitura estimada: ~${estMin} min</span>
+        <span>•</span>
+        <span>Fonte: Central Novel PT-BR</span>
+      </div>
+    `;
+
+    proseArea.innerHTML = paras.map((p, pidx) => {
+      if (p.trim() === '* * *' || p.trim() === '***') {
+        return `<hr class="scene-break">`;
+      }
+      const isBm = AppState.bookmarks.some(
+        b => b.type === 'web_novel' && b.readingId === cur.id && b.pIndex === pidx
+      );
+      const richHtml = formatRichParagraph(p, {}, inlineGlossary, seenTermsInChapter);
+      return `
+        <p class="novel-paragraph ${isBm ? 'bookmarked' : ''}" id="p-${pidx}" data-pidx="${pidx}">
+          <button type="button" class="btn-bm-inline" data-action="bookmark-para" data-pidx="${pidx}" aria-label="Salvar marcador neste parágrafo">🔖</button>${richHtml}
+        </p>
+      `;
+    }).join('');
   }
 
-  // Ilustrações disponíveis?
-  let illusBtn = '';
-  if (volMeta && volMeta.illustrations && volMeta.illustrations.length > 0) {
-    illusBtn = `
-      <button onclick="openIllustrationsModal('${volMeta.id}')" style="margin-top: 1rem; background: linear-gradient(135deg, #f59e0b, #d97706); color: #000; font-weight: 700; border: none; padding: 0.5rem 1rem; border-radius: 9999px; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; box-shadow: 0 2px 6px rgba(245, 158, 11, 0.4);">
-        🖼️ Ver Ilustrações Oficiais deste Volume (${volMeta.illustrations.length})
+  renderReaderFooterNav(footerNav);
+
+  // Posicionar scroll no topo ou no ponto salvo
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  if (cur.scrollRatio > 0.01) {
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        const maxS = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        if (maxS > 0) {
+          window.scrollTo({ top: maxS * cur.scrollRatio, behavior: 'smooth' });
+        }
+      }, 90);
+    });
+  }
+}
+
+/**
+ * Formata texto escapado com:
+ * 1. Notas de rodapé culturais {{FN:N}} -> botão interativo [Nota N]
+ * 2. Voz do Grande Sábio / Raphael / Ciel «...» -> .voice-sage
+ * 3. Comunicação por Pensamento ‹...› -> .voice-telepathy
+ * 4. Destaque opcional na 1ª ocorrência de termos culturais japoneses
+ */
+function formatRichParagraph(rawText, footnotesMap, inlineGlossary, seenTermsSet) {
+  let safe = escapeHtml(rawText || '');
+
+  // 1. Notas de rodapé {{FN:N}}
+  safe = safe.replace(/\{\{FN:(\d+)\}\}/g, (_, num) => {
+    if (footnotesMap && footnotesMap[num]) {
+      return `<button type="button" class="fn-badge" data-action="show-fn" data-fn="${num}">[Nota ${num}]</button>`;
+    }
+    return '';
+  });
+
+  // 2. Voz de Grande Sábio / Raphael / Ciel «...»
+  safe = safe.replace(/«([^»]+)»/g, '<span class="voice-sage">«$1»</span>');
+
+  // 3. Telepatia ‹...›
+  safe = safe.replace(/‹([^›]+)›/g, '<span class="voice-telepathy">‹$1›</span>');
+
+  // 4. Glossário cultural discreto (apenas 1ª ocorrência por capítulo se ativo)
+  if (AppState.settings.culturalHints && inlineGlossary) {
+    const terms = Object.keys(inlineGlossary);
+    for (const term of terms) {
+      if (seenTermsSet.has(term)) continue;
+      const isSuffix = ['sama', 'dono', 'sensei'].includes(term);
+      const regex = isSuffix
+        ? new RegExp(`(-${term})\\b`, 'i')
+        : new RegExp(`\\b(${term})\\b`, 'i');
+      if (regex.test(safe)) {
+        seenTermsSet.add(term);
+        safe = safe.replace(regex, `<button type="button" class="cultural-term" data-action="show-term" data-term="${term}">$1</button>`);
+      }
+    }
+  }
+
+  return safe;
+}
+
+function renderReaderFooterNav(footerNav) {
+  if (!footerNav) return;
+  const cur = AppState.currentReading;
+
+  if (cur.type === 'light_novel') {
+    const vol = cur.data;
+    const allVols = AppState.catalog.light_novel.volumes || [];
+    const volPos = allVols.findIndex(v => v.id === cur.baseVolumeId);
+
+    const hasPrevCh = cur.chapterIndex > 0;
+    const hasNextCh = cur.chapterIndex < vol.chapters.length - 1;
+    const prevVol = !hasPrevCh && volPos > 0 ? allVols[volPos - 1] : null;
+    const nextVol = !hasNextCh && volPos >= 0 && volPos < allVols.length - 1 ? allVols[volPos + 1] : null;
+
+    const prevDisabled = !hasPrevCh && !prevVol ? 'disabled' : '';
+    const nextDisabled = !hasNextCh && !nextVol ? 'disabled' : '';
+    const prevLabel = hasPrevCh ? '← Seção Anterior' : (prevVol ? `← Vol. ${prevVol.volume_number}` : '← Início');
+    const nextLabel = hasNextCh ? 'Próxima Seção →' : (nextVol ? `Ir para Vol. ${nextVol.volume_number} →` : 'Fim dos Volumes');
+
+    footerNav.innerHTML = `
+      <button type="button" class="btn-nav-ch" data-action="ln-prev" ${prevDisabled}>${prevLabel}</button>
+      <button type="button" class="btn-nav-ch" data-action="close-reader">📚 Índice da Biblioteca</button>
+      <button type="button" class="btn-nav-ch" data-action="ln-next" ${nextDisabled}>${nextLabel}</button>
+    `;
+  } else {
+    const wnChapters = AppState.catalog.web_novel.chapters || [];
+    const idx = wnChapters.findIndex(c => c.id === cur.id);
+    const prevCh = idx > 0 ? wnChapters[idx - 1] : null;
+    const nextCh = idx >= 0 && idx < wnChapters.length - 1 ? wnChapters[idx + 1] : null;
+
+    footerNav.innerHTML = `
+      <button type="button" class="btn-nav-ch" data-action="wn-nav" data-chid="${prevCh ? escapeAttr(prevCh.id) : ''}" ${!prevCh ? 'disabled' : ''}>
+        ← ${prevCh ? escapeHtml(prevCh.display_num) : 'Início'}
+      </button>
+      <button type="button" class="btn-nav-ch" data-action="close-reader">📚 Índice da Web Novel</button>
+      <button type="button" class="btn-nav-ch" data-action="wn-nav" data-chid="${nextCh ? escapeAttr(nextCh.id) : ''}" ${!nextCh ? 'disabled' : ''}>
+        ${nextCh ? escapeHtml(nextCh.display_num) : 'Fim'} →
       </button>
     `;
   }
-
-  // Header do Leitor
-  headerInfo.innerHTML = `
-    <div class="vol-title">${subHeading}</div>
-    <h1 class="ch-main-heading">${headingTitle}</h1>
-    <div class="ch-meta-row">${metaInfo}</div>
-    ${illusBtn}
-  `;
-
-  // Renderizar Parágrafos com identificadores para clique e bookmark
-  container.innerHTML = paragraphs.map((p, idx) => {
-    return `<p class="novel-paragraph" id="p-${idx}" onclick="handleParagraphClick(${idx})">${escapeHtml(p)}</p>`;
-  }).join('');
-
-  // Renderizar Botões de Navegação (Anterior / Próximo)
-  renderFooterNav(footerNav);
-
-  // Restaurar Scroll Salvo (se houver)
-  if (AppState.currentReading.scrollRatio > 0) {
-    setTimeout(() => {
-      const sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      if (sh > 0) {
-        window.scrollTo({
-          top: sh * AppState.currentReading.scrollRatio,
-          behavior: 'smooth'
-        });
-      }
-    }, 150);
-  }
-}
-
-function renderFooterNav(container) {
-  if (!container) return;
-  const isLN = AppState.currentReading.type === 'light_novel';
-  
-  let hasPrev = false;
-  let hasNext = false;
-  let prevAction = '';
-  let nextAction = '';
-
-  if (isLN) {
-    const vol = AppState.currentReading.data;
-    const curIdx = AppState.currentReading.chapterIndex;
-    hasPrev = curIdx > 0;
-    hasNext = curIdx < vol.chapters.length - 1;
-    prevAction = `openLightNovel('${vol.id}', ${curIdx - 1})`;
-    nextAction = `openLightNovel('${vol.id}', ${curIdx + 1})`;
-  } else {
-    const curNum = AppState.currentReading.data.number;
-    hasPrev = curNum > 0;
-    hasNext = curNum < 249;
-    prevAction = `openWebNovelChapter(${curNum - 1})`;
-    nextAction = `openWebNovelChapter(${curNum + 1})`;
-  }
-
-  container.innerHTML = `
-    <button class="btn-nav-ch" ${hasPrev ? `onclick="${prevAction}"` : 'disabled'}>
-      ← Capítulo Anterior
-    </button>
-    <button class="btn-nav-ch" onclick="closeReader()">
-      📚 Voltar ao Índice
-    </button>
-    <button class="btn-nav-ch" ${hasNext ? `onclick="${nextAction}"` : 'disabled'}>
-      Próximo Capítulo →
-    </button>
-  `;
 }
 
 function closeReader() {
-  saveReadingProgress();
+  persistReadingProgress();
   const readerView = document.getElementById('reader-view');
-  const mainContent = document.getElementById('content-area');
-  if (readerView) readerView.style.display = 'none';
-  if (mainContent) mainContent.style.display = 'block';
-  window.location.hash = AppState.currentTab;
-  checkContinueReading();
+  const mainArea = document.getElementById('content-area');
+  if (readerView) readerView.hidden = true;
+  if (mainArea) mainArea.hidden = false;
+
+  AppState.currentReading.type = null;
+  renderAllCatalogViews();
+  refreshContinueBanners();
+  history.replaceState(null, '', `#${AppState.currentTab}`);
 }
 
 // ==========================================================================
-// ROLAGEM, PROGRESSO E MARCADORES
+// MODAIS NATIVOS (<dialog>.showModal()): GALERIA, LIGHTBOX, NOTAS & MARCADORES
 // ==========================================================================
 
-let scrollTimeout = null;
-window.addEventListener('scroll', () => {
-  const progressBar = document.getElementById('reading-progress-bar');
-  const ratio = getScrollRatio();
+function openVolumeGalleryModal(volumeId) {
+  let illus = [];
+  let titleText = 'Galeria Oficial de Ilustrações';
 
-  if (progressBar) {
-    progressBar.style.width = `${Math.min(ratio * 100, 100)}%`;
+  if (AppState.currentReading.type === 'light_novel' && AppState.currentReading.data &&
+      (AppState.currentReading.id === volumeId || AppState.currentReading.baseVolumeId === volumeId)) {
+    illus = AppState.currentReading.data.illustrations || [];
+    titleText = `🖼️ Ilustrações — ${AppState.currentReading.data.title}`;
+  } else if (AppState.catalog) {
+    const vol = AppState.catalog.light_novel.volumes.find(v => v.id === volumeId);
+    if (vol) {
+      illus = vol.illustrations || [];
+      titleText = `🖼️ Ilustrações — ${vol.title}`;
+    }
   }
 
-  // Debounce para não sobrecarregar o localStorage
-  if (AppState.currentReading.type) {
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-      saveReadingProgress(ratio);
-    }, 400);
-  }
-});
+  if (!illus.length) return;
+  AppState.lightbox.items = illus;
 
-function handleParagraphClick(pIndex) {
-  const pEl = document.getElementById(`p-${pIndex}`);
-  if (!pEl) return;
+  const dialog = document.getElementById('gallery-dialog');
+  const titleEl = document.getElementById('gallery-dialog-title');
+  const grid = document.getElementById('gallery-dialog-grid');
+  if (!dialog || !grid) return;
 
-  const note = prompt('Adicionar anotação ou marcador neste parágrafo:\n\n' + pEl.textContent.slice(0, 100) + '...', '');
-  if (note !== null) {
-    const bm = {
-      id: Date.now(),
-      type: AppState.currentReading.type,
-      readingId: AppState.currentReading.id,
-      chapterIndex: AppState.currentReading.chapterIndex,
-      pIndex: pIndex,
-      textSnippet: pEl.textContent.slice(0, 120),
-      note: note.trim(),
-      date: new Date().toLocaleDateString('pt-BR')
-    };
-    AppState.bookmarks.push(bm);
-    saveBookmarks();
-    pEl.classList.add('bookmarked');
-    alert('Marcador salvo com sucesso!');
-  }
+  titleEl.textContent = titleText;
+  grid.innerHTML = illus.map((item, idx) => `
+    <button type="button" class="gallery-card" data-action="open-lightbox-idx" data-idx="${idx}">
+      <img src="${escapeAttr(item.src)}" alt="${escapeAttr(item.caption || `Ilustração ${idx + 1}`)}" width="${item.width || 400}" height="${item.height || 560}" loading="lazy">
+      <span>${escapeHtml(item.caption || `Ilustração ${idx + 1}`)}</span>
+    </button>
+  `).join('');
+
+  if (!dialog.open) dialog.showModal();
 }
 
-function loadBookmarks() {
-  try {
-    const b = localStorage.getItem(STORAGE_KEYS.BOOKMARKS);
-    if (b) AppState.bookmarks = JSON.parse(b);
-  } catch (e) {
-    console.warn(e);
-  }
+function openLightboxAtIndex(idx) {
+  const items = AppState.lightbox.items || [];
+  if (!items.length) return;
+  AppState.lightbox.index = (idx + items.length) % items.length;
+  updateLightboxDOM();
+
+  const dialog = document.getElementById('lightbox-dialog');
+  if (dialog && !dialog.open) dialog.showModal();
 }
 
-function saveBookmarks() {
-  try {
-    localStorage.setItem(STORAGE_KEYS.BOOKMARKS, JSON.stringify(AppState.bookmarks));
-  } catch (e) {
-    console.warn(e);
+function updateLightboxDOM() {
+  const items = AppState.lightbox.items || [];
+  const item = items[AppState.lightbox.index];
+  if (!item) return;
+
+  const img = document.getElementById('lightbox-img');
+  const cap = document.getElementById('lightbox-caption');
+  const counter = document.getElementById('lightbox-counter');
+  if (img) {
+    img.src = item.src;
+    img.alt = item.caption || 'Ilustração oficial ampliada';
+    if (item.width) img.width = item.width;
+    if (item.height) img.height = item.height;
   }
+  if (cap) cap.textContent = item.caption || '';
+  if (counter) counter.textContent = `${AppState.lightbox.index + 1} / ${items.length}`;
 }
 
-// ==========================================================================
-// MODAL DE ILUSTRAÇÕES (MITZ VAH ART GALLERY)
-// ==========================================================================
+function showCulturalNoteDialog(heading, bodyText) {
+  const dialog = document.getElementById('note-dialog');
+  const hEl = document.getElementById('note-dialog-title');
+  const pEl = document.getElementById('note-dialog-content');
+  if (!dialog || !hEl || !pEl) return;
+  hEl.textContent = heading;
+  pEl.textContent = bodyText;
+  if (!dialog.open) dialog.showModal();
+}
 
-function openIllustrationsModal(volumeId) {
-  const vol = AppState.catalog.light_novel.volumes.find(v => v.id === volumeId);
-  if (!vol || !vol.illustrations || vol.illustrations.length === 0) {
-    alert('Nenhuma ilustração disponível para este volume.');
+function openBookmarksModal(pendingContext = null) {
+  const dialog = document.getElementById('bookmarks-dialog');
+  const form = document.getElementById('bookmark-add-form');
+  const quoteEl = document.getElementById('bookmark-quote-preview');
+  const noteInput = document.getElementById('bookmark-note-input');
+  if (!dialog) return;
+
+  AppState.pendingBookmark = pendingContext;
+  if (pendingContext && form) {
+    form.hidden = false;
+    quoteEl.textContent = pendingContext.snippet;
+    noteInput.value = '';
+  } else if (form) {
+    form.hidden = true;
+  }
+
+  renderBookmarksListInsideDialog();
+  if (!dialog.open) dialog.showModal();
+  if (pendingContext && noteInput) noteInput.focus();
+}
+
+function renderBookmarksListInsideDialog() {
+  const tracksEl = document.getElementById('saved-tracks-summary');
+  const listEl = document.getElementById('bookmarks-list-container');
+
+  const lnSave = getSavedTrackProgress(STORAGE_KEYS.PROGRESS_LN);
+  const wnSave = getSavedTrackProgress(STORAGE_KEYS.PROGRESS_WN);
+
+  if (tracksEl) {
+    tracksEl.innerHTML = `
+      <div class="track-save-card">
+        <strong>📘 Ponto Salvo na Light Novel</strong>
+        <p>${lnSave ? escapeHtml(lnSave.title) : 'Nenhuma leitura iniciada ainda.'}</p>
+        ${lnSave ? `<button type="button" class="btn-continue" style="margin-top:0.5rem;" data-action="resume-ln">Ir para Light Novel →</button>` : ''}
+      </div>
+      <div class="track-save-card">
+        <strong>📜 Ponto Salvo na Web Novel</strong>
+        <p>${wnSave ? escapeHtml(wnSave.title) : 'Nenhuma leitura iniciada ainda.'}</p>
+        ${wnSave ? `<button type="button" class="btn-continue" style="margin-top:0.5rem;" data-action="resume-wn">Ir para Web Novel →</button>` : ''}
+      </div>
+    `;
+  }
+
+  if (!listEl) return;
+  if (!AppState.bookmarks.length) {
+    listEl.innerHTML = `<p style="color: var(--text-muted); font-size: 0.86rem;">Nenhum parágrafo marcado ainda. Passe o mouse sobre qualquer parágrafo durante a leitura e clique em 🔖 para salvar!</p>`;
     return;
   }
 
-  AppState.currentModalGallery = vol.illustrations;
-  const modal = document.getElementById('illustrations-modal');
-  const title = document.getElementById('illus-modal-title');
-  const grid = document.getElementById('illus-modal-grid');
-
-  if (title) title.textContent = `Ilustrações Oficiais - ${vol.title} (Arte: Mitz Vah)`;
-  if (grid) {
-    grid.innerHTML = vol.illustrations.map((imgUrl, i) => `
-      <div style="background: #111827; border-radius: 8px; overflow: hidden; border: 1px solid #374151; display: flex; flex-direction: column;">
-        <a href="${imgUrl}" target="_blank" rel="noopener">
-          <img src="${imgUrl}" alt="Ilustração oficial ${i + 1}" loading="lazy" style="width: 100%; height: auto; display: block; cursor: zoom-in;" />
-        </a>
-        <div style="padding: 0.5rem; font-size: 0.75rem; color: #9ca3af; text-align: center;">Ilustração ${i + 1}</div>
+  listEl.innerHTML = AppState.bookmarks.slice().reverse().map(bm => `
+    <article class="bookmark-item">
+      <div>
+        <div class="bm-meta">${bm.type === 'light_novel' ? '📘 Light Novel' : '📜 Web Novel'} • ${escapeHtml(bm.label || bm.readingId)} • ${escapeHtml(bm.date || '')}</div>
+        <div class="bm-snippet">“${escapeHtml(bm.textSnippet)}”</div>
+        ${bm.note ? `<div class="bm-note">📝 ${escapeHtml(bm.note)}</div>` : ''}
       </div>
-    `).join('');
-  }
-
-  if (modal) modal.style.display = 'flex';
+      <div class="bm-actions">
+        <button type="button" class="btn-secondary-pill" data-action="jump-bm" data-bmid="${bm.id}">Abrir</button>
+        <button type="button" class="btn-secondary-pill" data-action="del-bm" data-bmid="${bm.id}" aria-label="Excluir marcador">🗑️</button>
+      </div>
+    </article>
+  `).join('');
 }
 
-function closeIllustrationsModal() {
-  const modal = document.getElementById('illustrations-modal');
-  if (modal) modal.style.display = 'none';
-}
-
-// ==========================================================================
-// MODAL DE CONFIGURAÇÕES DO LEITOR
-// ==========================================================================
-
-function toggleSettingsModal() {
-  const modal = document.getElementById('settings-modal');
-  if (modal) modal.classList.toggle('open');
-}
-
-function changeTheme(themeName) {
-  AppState.settings.theme = themeName;
-  saveUserSettings();
-  applyUserSettings();
-}
-
-function changeFont(fontName) {
-  AppState.settings.font = fontName;
-  saveUserSettings();
-  applyUserSettings();
-}
-
-function adjustFontSize(delta) {
-  const newSize = Math.min(Math.max(AppState.settings.fontSize + delta, 14), 28);
-  AppState.settings.fontSize = newSize;
-  saveUserSettings();
-  applyUserSettings();
+function updateBookmarkBadge() {
+  const badge = document.getElementById('bookmark-count-badge');
+  if (!badge) return;
+  const count = AppState.bookmarks.length;
+  badge.hidden = count === 0;
+  badge.textContent = String(count);
 }
 
 // ==========================================================================
-// ROTEAMENTO POR ABAS
+// NAVEGAÇÃO DE ABAS E ROTEAMENTO POR HASH
 // ==========================================================================
 
 function switchTab(tabName) {
+  if (!['light-novel', 'web-novel', 'comparison', 'cultural', 'amazon'].includes(tabName)) return;
   AppState.currentTab = tabName;
 
-  // Esconder leitor se estiver ativo
   const readerView = document.getElementById('reader-view');
-  const mainContent = document.getElementById('content-area');
-  if (readerView) readerView.style.display = 'none';
-  if (mainContent) mainContent.style.display = 'block';
+  const mainArea = document.getElementById('content-area');
+  if (readerView && !readerView.hidden) {
+    persistReadingProgress();
+    readerView.hidden = true;
+    mainArea.hidden = false;
+  }
 
-  // Atualizar abas visuais
-  document.querySelectorAll('.nav-tab').forEach(tab => {
-    tab.classList.toggle('active', tab.dataset.tab === tabName);
+  document.querySelectorAll('.nav-tab').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tab === tabName);
   });
-
-  // Mostrar seção
   document.querySelectorAll('.view-section').forEach(sec => {
-    sec.classList.remove('active');
+    sec.classList.toggle('active', sec.id === `view-${tabName}`);
   });
-  const activeSec = document.getElementById(`view-${tabName}`);
-  if (activeSec) activeSec.classList.add('active');
 
-  window.location.hash = `#${tabName}`;
+  refreshContinueBanners();
+  history.replaceState(null, '', `#${tabName}`);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function handleHashNavigation() {
-  const hash = window.location.hash.replace('#', '');
+function handleInitialHash() {
+  const hash = window.location.hash.replace(/^#/, '');
   if (!hash) return;
 
   if (['light-novel', 'web-novel', 'comparison', 'cultural', 'amazon'].includes(hash)) {
     switchTab(hash);
-  } else if (hash.startsWith('ln-')) {
-    const parts = hash.split('-');
-    const volId = `vol-${parts[1]}`;
-    const chIdx = parts[2] ? parseInt(parts[2]) : 0;
-    openLightNovel(volId, chIdx);
-  } else if (hash.startsWith('wn-')) {
-    const chNum = parseInt(hash.replace('wn-', ''));
-    if (!isNaN(chNum)) openWebNovelChapter(chNum);
+  } else if (hash.startsWith('ln/')) {
+    const [, volId, chStr] = hash.split('/');
+    openLightNovel(volId, Number(chStr) || 0, 0);
+  } else if (hash.startsWith('wn/')) {
+    const [, chId] = hash.split('/');
+    openWebNovelChapter(chId, 0);
   }
 }
 
 // ==========================================================================
-// EVENT LISTENERS GERAIS
+// EXPORTAR / IMPORTAR PROGRESSO JSON (PORTABILIDADE GITHUB PAGES)
 // ==========================================================================
 
-function setupEventListeners() {
-  // Abas de navegação
-  document.querySelectorAll('.nav-tab').forEach(tab => {
-    tab.addEventListener('click', () => switchTab(tab.dataset.tab));
-  });
+function exportUserProgressJson() {
+  const payload = {
+    exportedAt: new Date().toISOString(),
+    settings: AppState.settings,
+    progressLast: getSavedTrackProgress(STORAGE_KEYS.PROGRESS_LAST),
+    progressLN: getSavedTrackProgress(STORAGE_KEYS.PROGRESS_LN),
+    progressWN: getSavedTrackProgress(STORAGE_KEYS.PROGRESS_WN),
+    history: AppState.history,
+    bookmarks: AppState.bookmarks
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `tensura_progresso_${new Date().toISOString().slice(0, 10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
 
-  // Fechar modals ao clicar fora
-  window.addEventListener('click', (e) => {
-    const sModal = document.getElementById('settings-modal');
-    const sBtn = document.getElementById('btn-open-settings');
-    if (sModal && sModal.classList.contains('open') && !sModal.contains(e.target) && e.target !== sBtn && !sBtn.contains(e.target)) {
-      sModal.classList.remove('open');
-    }
-
-    const iModal = document.getElementById('illustrations-modal');
-    if (iModal && e.target === iModal) {
-      closeIllustrationsModal();
-    }
-  });
-
-  // Teclas de atalho no leitor
-  window.addEventListener('keydown', (e) => {
-    if (AppState.currentReading.type) {
-      if (e.key === 'Escape') {
-        closeReader();
+function importUserProgressJson(file) {
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const data = JSON.parse(String(reader.result));
+      if (data.settings) {
+        AppState.settings = { ...AppState.settings, ...data.settings };
+        saveSettingsToStorage();
+        applySettingsToDOM();
       }
+      if (data.progressLast) localStorage.setItem(STORAGE_KEYS.PROGRESS_LAST, JSON.stringify(data.progressLast));
+      if (data.progressLN) localStorage.setItem(STORAGE_KEYS.PROGRESS_LN, JSON.stringify(data.progressLN));
+      if (data.progressWN) localStorage.setItem(STORAGE_KEYS.PROGRESS_WN, JSON.stringify(data.progressWN));
+      if (data.history) {
+        AppState.history = data.history;
+        localStorage.setItem(STORAGE_KEYS.HISTORY, JSON.stringify(AppState.history));
+      }
+      if (Array.isArray(data.bookmarks)) {
+        AppState.bookmarks = data.bookmarks;
+        localStorage.setItem(STORAGE_KEYS.BOOKMARKS, JSON.stringify(AppState.bookmarks));
+      }
+      renderAllCatalogViews();
+      refreshContinueBanners();
+      updateBookmarkBadge();
+      showCulturalNoteDialog('Progresso Restaurado!', 'Seus pontos de leitura da Light Novel e Web Novel, preferências e marcadores foram importados com sucesso.');
+    } catch (e) {
+      showCulturalNoteDialog('Arquivo Inválido', 'Não foi possível ler o arquivo JSON selecionado.');
+    }
+  };
+  reader.readAsText(file);
+}
+
+// ==========================================================================
+// EVENT DELEGATION CENTRALIZADA (ZERO INLINE ONCLICK)
+// ==========================================================================
+
+function bindGlobalEvents() {
+  // Abas principais
+  document.querySelectorAll('.nav-tab').forEach(btn => {
+    btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+  });
+
+  document.getElementById('logo-home-link')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    switchTab('light-novel');
+  });
+
+  // Abrir diálogos principais
+  const settingsDialog = document.getElementById('settings-dialog');
+  document.getElementById('btn-open-settings')?.addEventListener('click', () => settingsDialog?.showModal());
+  document.getElementById('btn-reader-settings')?.addEventListener('click', () => settingsDialog?.showModal());
+
+  document.getElementById('btn-open-bookmarks')?.addEventListener('click', () => openBookmarksModal(null));
+  document.getElementById('btn-reader-bookmarks')?.addEventListener('click', () => openBookmarksModal(null));
+
+  document.getElementById('btn-reader-back')?.addEventListener('click', closeReader);
+  document.getElementById('btn-reader-gallery')?.addEventListener('click', (e) => {
+    openVolumeGalleryModal(e.currentTarget.dataset.vol);
+  });
+
+  // Banner Continuar Leitura
+  document.getElementById('btn-resume-main')?.addEventListener('click', () => {
+    resumeSavedRecord(getSavedTrackProgress(STORAGE_KEYS.PROGRESS_LAST));
+  });
+  document.getElementById('btn-resume-other-track')?.addEventListener('click', (e) => {
+    const t = e.currentTarget.dataset.targetTrack;
+    resumeSavedRecord(getSavedTrackProgress(t === 'light_novel' ? STORAGE_KEYS.PROGRESS_LN : STORAGE_KEYS.PROGRESS_WN));
+  });
+  document.getElementById('btn-dismiss-banner')?.addEventListener('click', () => {
+    document.getElementById('continue-banner').hidden = true;
+  });
+
+  // Busca instantânea
+  const searchInput = document.getElementById('catalog-search-input');
+  const clearBtn = document.getElementById('btn-clear-search');
+  searchInput?.addEventListener('input', () => {
+    AppState.searchQuery = searchInput.value.trim().toLowerCase();
+    if (clearBtn) clearBtn.hidden = !AppState.searchQuery;
+    renderAllCatalogViews();
+  });
+  clearBtn?.addEventListener('click', () => {
+    if (!searchInput) return;
+    searchInput.value = '';
+    AppState.searchQuery = '';
+    clearBtn.hidden = true;
+    renderAllCatalogViews();
+    searchInput.focus();
+  });
+
+  // Expandir / Recolher Arcos da Web Novel
+  document.getElementById('btn-expand-all-arcs')?.addEventListener('click', () => {
+    document.querySelectorAll('#wn-arcs-container details').forEach(d => { d.open = true; });
+  });
+  document.getElementById('btn-collapse-all-arcs')?.addEventListener('click', () => {
+    document.querySelectorAll('#wn-arcs-container details').forEach(d => { d.open = false; });
+  });
+
+  // Seletor de capítulo na barra do leitor
+  document.getElementById('reader-chapter-select')?.addEventListener('change', (e) => {
+    const val = e.target.value;
+    if (AppState.currentReading.type === 'light_novel') {
+      openLightNovel(AppState.currentReading.id, Number(val), 0);
+    } else if (AppState.currentReading.type === 'web_novel') {
+      openWebNovelChapter(val, 0);
+    }
+  });
+
+  // Controles de Configurações
+  document.querySelectorAll('.btn-theme-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      AppState.settings.palette = btn.dataset.palette;
+      saveSettingsToStorage();
+      applySettingsToDOM();
+    });
+  });
+  document.querySelectorAll('.btn-font-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      AppState.settings.font = btn.dataset.font;
+      saveSettingsToStorage();
+      applySettingsToDOM();
+    });
+  });
+  document.querySelectorAll('.btn-width-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      AppState.settings.maxWidth = Number(btn.dataset.width);
+      saveSettingsToStorage();
+      applySettingsToDOM();
+    });
+  });
+  document.getElementById('btn-font-dec')?.addEventListener('click', () => {
+    AppState.settings.fontSize = Math.max(14, AppState.settings.fontSize - 1);
+    saveSettingsToStorage();
+    applySettingsToDOM();
+  });
+  document.getElementById('btn-font-inc')?.addEventListener('click', () => {
+    AppState.settings.fontSize = Math.min(28, AppState.settings.fontSize + 1);
+    saveSettingsToStorage();
+    applySettingsToDOM();
+  });
+  document.getElementById('chk-cultural-hints')?.addEventListener('change', (e) => {
+    AppState.settings.culturalHints = e.target.checked;
+    saveSettingsToStorage();
+    if (AppState.currentReading.type) renderReaderScreen();
+  });
+
+  // Exportar / Importar JSON
+  document.getElementById('btn-export-progress')?.addEventListener('click', exportUserProgressJson);
+  document.getElementById('input-import-progress')?.addEventListener('change', (e) => {
+    if (e.target.files && e.target.files[0]) {
+      importUserProgressJson(e.target.files[0]);
+      e.target.value = '';
+    }
+  });
+
+  // Lightbox Anterior / Próxima
+  document.getElementById('btn-lightbox-prev')?.addEventListener('click', () => {
+    openLightboxAtIndex(AppState.lightbox.index - 1);
+  });
+  document.getElementById('btn-lightbox-next')?.addEventListener('click', () => {
+    openLightboxAtIndex(AppState.lightbox.index + 1);
+  });
+
+  // Formulário de Marcador de Parágrafo
+  document.getElementById('btn-cancel-bm-form')?.addEventListener('click', () => {
+    AppState.pendingBookmark = null;
+    document.getElementById('bookmark-add-form').hidden = true;
+  });
+  document.getElementById('bookmark-add-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const ctx = AppState.pendingBookmark;
+    if (!ctx) return;
+    const note = document.getElementById('bookmark-note-input')?.value.trim() || '';
+
+    AppState.bookmarks.push({
+      id: Date.now(),
+      type: ctx.type,
+      readingId: ctx.readingId,
+      chapterIndex: ctx.chapterIndex,
+      pIndex: ctx.pIndex,
+      label: ctx.label,
+      textSnippet: ctx.snippet,
+      note,
+      date: new Date().toLocaleDateString('pt-BR')
+    });
+    localStorage.setItem(STORAGE_KEYS.BOOKMARKS, JSON.stringify(AppState.bookmarks));
+
+    const pEl = document.getElementById(`p-${ctx.pIndex}`);
+    if (pEl) pEl.classList.add('bookmarked');
+
+    AppState.pendingBookmark = null;
+    document.getElementById('bookmark-add-form').hidden = true;
+    updateBookmarkBadge();
+    renderBookmarksListInsideDialog();
+  });
+
+  // Event Delegation Geral para cliques em elementos renderizados dinamicamente
+  document.addEventListener('click', (e) => {
+    const target = e.target.closest('[data-action]');
+    if (!target) return;
+    const action = target.dataset.action;
+
+    if (action === 'open-ln') {
+      openLightNovel(target.dataset.vol, null, 0);
+    } else if (action === 'open-wn') {
+      openWebNovelChapter(target.dataset.chid, 0);
+    } else if (action === 'open-gallery') {
+      openVolumeGalleryModal(target.dataset.vol);
+    } else if (action === 'open-gallery-current') {
+      openVolumeGalleryModal(AppState.currentReading.baseVolumeId);
+    } else if (action === 'open-lightbox-idx') {
+      openLightboxAtIndex(Number(target.dataset.idx) || 0);
+    } else if (action === 'zoom-inline-img') {
+      openLightboxAtIndex(Number(target.dataset.imgidx) || 0);
+    } else if (action === 'switch-edition') {
+      const targetVolId = target.dataset.vol;
+      if (targetVolId && targetVolId !== AppState.currentReading.id) {
+        const curChTitle = AppState.currentReading.data?.chapters?.[AppState.currentReading.chapterIndex]?.title || '';
+        openLightNovel(targetVolId, AppState.currentReading.chapterIndex, getScrollRatio(), curChTitle);
+      }
+    } else if (action === 'show-fn') {
+      const fnNum = target.dataset.fn;
+      const fnTxt = AppState.currentReading.data?.footnotes?.[fnNum];
+      if (fnTxt) showCulturalNoteDialog(`📖 Nota Cultural / Tradução [${fnNum}]`, fnTxt);
+    } else if (action === 'show-term') {
+      const term = target.dataset.term;
+      const gl = AppState.catalog?.cultural_guide?.inline_glossary?.[term];
+      if (gl) showCulturalNoteDialog(`🌸 Termo Cultural: ${term}`, gl);
+    } else if (action === 'bookmark-para') {
+      const pidx = Number(target.dataset.pidx);
+      const pEl = document.getElementById(`p-${pidx}`);
+      if (!pEl) return;
+      const cleanTxt = pEl.textContent.replace(/^🔖\s*/, '').trim();
+      const cur = AppState.currentReading;
+      const lbl = cur.type === 'light_novel'
+        ? `${cur.data.title} — ${cur.data.chapters[cur.chapterIndex]?.title || ''}`
+        : `${cur.data.display_num || ''}: ${cur.data.title}`;
+      openBookmarksModal({
+        type: cur.type,
+        readingId: cur.id,
+        chapterIndex: cur.chapterIndex,
+        pIndex: pidx,
+        label: lbl,
+        snippet: cleanTxt.slice(0, 160)
+      });
+    } else if (action === 'jump-bm') {
+      const bm = AppState.bookmarks.find(b => String(b.id) === String(target.dataset.bmid));
+      if (!bm) return;
+      document.getElementById('bookmarks-dialog')?.close();
+      if (bm.type === 'light_novel') {
+        openLightNovel(bm.readingId, bm.chapterIndex || 0, 0).then(() => {
+          setTimeout(() => document.getElementById(`p-${bm.pIndex}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 150);
+        });
+      } else {
+        openWebNovelChapter(bm.readingId, 0).then(() => {
+          setTimeout(() => document.getElementById(`p-${bm.pIndex}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 150);
+        });
+      }
+    } else if (action === 'del-bm') {
+      AppState.bookmarks = AppState.bookmarks.filter(b => String(b.id) !== String(target.dataset.bmid));
+      localStorage.setItem(STORAGE_KEYS.BOOKMARKS, JSON.stringify(AppState.bookmarks));
+      updateBookmarkBadge();
+      renderBookmarksListInsideDialog();
+    } else if (action === 'resume-ln') {
+      document.getElementById('bookmarks-dialog')?.close();
+      resumeSavedRecord(getSavedTrackProgress(STORAGE_KEYS.PROGRESS_LN));
+    } else if (action === 'resume-wn') {
+      document.getElementById('bookmarks-dialog')?.close();
+      resumeSavedRecord(getSavedTrackProgress(STORAGE_KEYS.PROGRESS_WN));
+    } else if (action === 'close-reader') {
+      closeReader();
+    } else if (action === 'ln-prev') {
+      const cur = AppState.currentReading;
+      if (cur.chapterIndex > 0) {
+        openLightNovel(cur.id, cur.chapterIndex - 1, 0);
+      } else {
+        const vols = AppState.catalog.light_novel.volumes || [];
+        const pos = vols.findIndex(v => v.id === cur.baseVolumeId);
+        if (pos > 0) openLightNovel(vols[pos - 1].id, 0, 0);
+      }
+    } else if (action === 'ln-next') {
+      const cur = AppState.currentReading;
+      if (cur.chapterIndex < cur.data.chapters.length - 1) {
+        openLightNovel(cur.id, cur.chapterIndex + 1, 0);
+      } else {
+        const vols = AppState.catalog.light_novel.volumes || [];
+        const pos = vols.findIndex(v => v.id === cur.baseVolumeId);
+        if (pos >= 0 && pos < vols.length - 1) openLightNovel(vols[pos + 1].id, 0, 0);
+      }
+    } else if (action === 'wn-nav') {
+      if (target.dataset.chid) openWebNovelChapter(target.dataset.chid, 0);
+    }
+  });
+
+  // Salvar progresso somente quando a rolagem repousar (scrollend)
+  window.addEventListener('scrollend', () => {
+    if (AppState.currentReading.type) {
+      persistReadingProgress();
+    }
+  });
+
+  // Sincronizar entre múltiplas abas abertas (storage event)
+  window.addEventListener('storage', (e) => {
+    if (e.key === STORAGE_KEYS.SETTINGS || e.key === STORAGE_KEYS.COLOR_SCHEME || e.key === STORAGE_KEYS.PALETTE) {
+      loadStateFromStorage();
+      applySettingsToDOM();
+    } else if (e.key === STORAGE_KEYS.PROGRESS_LAST || e.key === STORAGE_KEYS.HISTORY) {
+      loadStateFromStorage();
+      refreshContinueBanners();
     }
   });
 }
 
-function showLoading() {
-  const loader = document.getElementById('global-loader');
-  if (loader) loader.style.display = 'flex';
-}
-
-function hideLoading() {
-  const loader = document.getElementById('global-loader');
-  if (loader) loader.style.display = 'none';
-}
+// ==========================================================================
+// UTILITÁRIOS DE SEGURANÇA HTML
+// ==========================================================================
 
 function escapeHtml(str) {
-  if (!str) return '';
-  return str
+  return String(str ?? '')
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
+    .replace(/'/g, '&#39;');
+}
+
+function escapeAttr(str) {
+  return escapeHtml(str);
 }

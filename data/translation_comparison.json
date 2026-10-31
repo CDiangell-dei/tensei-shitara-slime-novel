@@ -1,0 +1,124 @@
+{
+  "total_paragraphs_repaired": 2386,
+  "epubs_repaired_count": 15,
+  "overlapping_volumes": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "samples": [
+    {
+      "volume": "Volume 6",
+      "context": "Capítulo 1: Encontro entre Homem e Monstro",
+      "raw_drive": "Mas ele disse com toda a confiança que isso não era nada. Eu acho que é provavelmente devido ao seu Ultimate Skill evoluído “Investigation King Faust”.",
+      "repaired_ptbr": "Mas ele disse com toda a confiança que isso não era nada. Eu acho que é provavelmente devido ao seu Habilidade Suprema evoluído “Rei da Investigação Faust”."
+    },
+    {
+      "volume": "Volume 6",
+      "context": "Capítulo 3: A Véspera da Batalha",
+      "raw_drive": "Eu tenho a Ultimate Skill 'Rei da Sabedoria Rafael'. Estarei bem contra qualquer desafio com a ajuda do Raphael.",
+      "repaired_ptbr": "Eu tenho a Habilidade Suprema 'Rei da Sabedoria Rafael'. Estarei bem contra qualquer desafio com a ajuda do Raphael."
+    },
+    {
+      "volume": "Volume 6",
+      "context": "Interlúdio: Os Lordes Demônios",
+      "raw_drive": "Assim como Guy e Milim, não deveria ser nenhuma surpresa se eles obtiveram algumas Ultimate Skills.",
+      "repaired_ptbr": "Assim como Guy e Milim, não deveria ser nenhuma surpresa se eles obtiveram algumas Habilidades Supremas."
+    },
+    {
+      "volume": "Volume 6",
+      "context": "Interlúdio: Os Lordes Demônios",
+      "raw_drive": "Devido a algumas circunstâncias especiais, ele obteve sua Ultimate Skill.",
+      "repaired_ptbr": "Devido a algumas circunstâncias especiais, ele obteve sua Habilidade Suprema."
+    },
+    {
+      "volume": "Volume 6",
+      "context": "Interlúdio: Os Lordes Demônios",
+      "raw_drive": "Aqueles que possuem Ultimate Skills não podem ser afetados por habilidades de baixo nível.",
+      "repaired_ptbr": "Aqueles que possuem Habilidades Supremas não podem ser afetados por habilidades de baixo nível."
+    },
+    {
+      "volume": "Volume 6",
+      "context": "Interlúdio: Os Lordes Demônios",
+      "raw_drive": "Eles ainda deveriam estar sujeitos a ataques elementais que poderiam atingir suas fraquezas. Mas falando nisso, não há como o controle da mente funcionar. Qualquer pessoa com mente tão frágil que possa ser manipulada com tal habilidade nunca poderá obter Ultimate Skills.",
+      "repaired_ptbr": "Eles ainda deveriam estar sujeitos a ataques elementais que poderiam atingir suas fraquezas. Mas falando nisso, não há como o controle da mente funcionar. Qualquer pessoa com mente tão frágil que possa ser manipulada com tal habilidade nunca poderá obter Habilidades Supremas."
+    },
+    {
+      "volume": "Volume 6",
+      "context": "Interlúdio: Os Lordes Demônios",
+      "raw_drive": "Ultimate Skills, como são chamados, são dispositivos que concedem acesso aos princípios fundamentais deste mundo.",
+      "repaired_ptbr": "Habilidades Supremas, como são chamados, são dispositivos que concedem acesso aos princípios fundamentais deste mundo."
+    },
+    {
+      "volume": "Volume 6",
+      "context": "Capítulo 4: No Lugar do Destino",
+      "raw_drive": "Esta dupla bizarra é - “Palhaço irritado (Pierrot irritado)” Lacaio, “Palhaço rasgando (lágrima)” Teare.",
+      "repaired_ptbr": "Esta dupla bizarra é - “Pierrot Furioso” Footman, “Palhaça Chorona” Tear."
+    },
+    {
+      "volume": "Volume 6",
+      "context": "Capítulo 4: No Lugar do Destino",
+      "raw_drive": "“Faz muito tempo que não nos vemos, Lacaio. Você se lembra de mim?\"",
+      "repaired_ptbr": "“Faz muito tempo que não nos vemos, Footman. Você se lembra de mim?\""
+    },
+    {
+      "volume": "Volume 6",
+      "context": "Capítulo 4: No Lugar do Destino",
+      "raw_drive": "Lacaio fala com zombaria, mas sua expressão não é tão relaxada quanto suas palavras.",
+      "repaired_ptbr": "Footman fala com zombaria, mas sua expressão não é tão relaxada quanto suas palavras."
+    },
+    {
+      "volume": "Volume 6",
+      "context": "Capítulo 5: Walpurgis",
+      "raw_drive": "Seu método de ocultação é extremamente inteligente e pessoas diferentes de mim, que não possuem uma Ultimate Skill, não seriam capazes de enxergar.",
+      "repaired_ptbr": "Seu método de ocultação é extremamente inteligente e pessoas diferentes de mim, que não possuem uma Habilidade Suprema, não seriam capazes de enxergar."
+    },
+    {
+      "volume": "Volume 6",
+      "context": "Capítulo 5: Walpurgis",
+      "raw_drive": "“Cara, Ramiris parece querer dizer alguma coisa.”",
+      "repaired_ptbr": "“Guy, Ramiris parece querer dizer alguma coisa.”"
+    },
+    {
+      "volume": "Volume 6",
+      "context": "Capítulo 5: Walpurgis",
+      "raw_drive": "Em outras palavras, ele tem uma habilidade semelhante à minha – Ultimate Skill.",
+      "repaired_ptbr": "Em outras palavras, ele tem uma habilidade semelhante à minha – Habilidade Suprema."
+    },
+    {
+      "volume": "Volume 6",
+      "context": "Capítulo 5: Walpurgis",
+      "raw_drive": "O cara está vazando informações falsas para outras pessoas – é para contrariar o Ultimate Skills?",
+      "repaired_ptbr": "O cara está vazando informações falsas para outras pessoas – é para contrariar o Habilidades Supremas?"
+    },
+    {
+      "volume": "Volume 6",
+      "context": "Capítulo 5: Walpurgis",
+      "raw_drive": "Com essa lógica, Guy naturalmente também tem uma Ultimate Skill.",
+      "repaired_ptbr": "Com essa lógica, Guy naturalmente também tem uma Habilidade Suprema."
+    },
+    {
+      "volume": "Volume 6",
+      "context": "Capítulo 5: Walpurgis",
+      "raw_drive": "Além disso, preciso presumir que Guy também percebeu que tenho uma Ultimate Skill.",
+      "repaired_ptbr": "Além disso, preciso presumir que Guy também percebeu que tenho uma Habilidade Suprema."
+    },
+    {
+      "volume": "Volume 6",
+      "context": "Capítulo 5: Walpurgis",
+      "raw_drive": "Para ser mais específico, preciso esconder o 'Rei da Sabedoria Rafael'. Não vai doer se outros virem minhas outras Ultimate Skills, se eu sempre tiver Raphael como meu trunfo.",
+      "repaired_ptbr": "Para ser mais específico, preciso esconder o 'Rei da Sabedoria Rafael'. Não vai doer se outros virem minhas outras Habilidades Supremas, se eu sempre tiver Raphael como meu trunfo."
+    },
+    {
+      "volume": "Volume 6",
+      "context": "Capítulo 5: Walpurgis",
+      "raw_drive": "Isso é o que posso fazer com a posse de quatro Ultimate Skills diferentes, uma forma bastante ousada de esconder minhas habilidades.",
+      "repaired_ptbr": "Isso é o que posso fazer com a posse de quatro Habilidades Supremas diferentes, uma forma bastante ousada de esconder minhas habilidades."
+    }
+  ]
+}

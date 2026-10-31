@@ -6,6 +6,10 @@ __pycache__/
 .venv/
 venv/
 
+# Arquivos EPUB brutos locais e cópias EPUB revisadas (o site usa os JSONs + WebP otimizados em data/ e assets/)
+drive_files/*.epub
+drive_files_corrigidos/
+
 # Sistema
 .DS_Store
 Thumbs.db

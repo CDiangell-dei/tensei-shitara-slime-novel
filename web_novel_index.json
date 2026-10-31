@@ -1,1277 +1,3335 @@
 [
   {
+    "id": "cap-000",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 0,
+    "display_num": "Capítulo 0",
+    "raw_label": "Vol. 1 Cap. 0",
+    "title": "Prólogo - Morte e Reencarnação",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-0/",
-    "title": "Primeiro Capítulo Vol. 1 Cap. 0"
+    "file": "capitulo_000.json"
   },
   {
+    "id": "cap-001",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 1,
+    "display_num": "Capítulo 1",
+    "raw_label": "Vol. 1 Cap. 1",
+    "title": "Vamos Descobrir o que Posso Fazer",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-1/",
-    "title": "Vol. 1 Cap. 1 Vamos Descobrir o que Posso Fazer novembro 29, 2021"
+    "file": "capitulo_001.json"
   },
   {
+    "id": "cap-002",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 2,
+    "display_num": "Capítulo 2",
+    "raw_label": "Vol. 1 Cap. 2",
+    "title": "Primeiro Contato",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-2/",
-    "title": "Vol. 1 Cap. 2 Primeiro Contato novembro 29, 2021"
+    "file": "capitulo_002.json"
   },
   {
+    "id": "cap-003",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 3,
+    "display_num": "Capítulo 3",
+    "raw_label": "Vol. 1 Cap. 3",
+    "title": "Primeira Conversa",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-3/",
-    "title": "Vol. 1 Cap. 3 Primeira Conversa novembro 29, 2021"
+    "file": "capitulo_003.json"
   },
   {
+    "id": "cap-004",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 4,
+    "display_num": "Capítulo 4",
+    "raw_label": "Vol. 1 Cap. 4",
+    "title": "Primeiro Amigo",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-4/",
-    "title": "Vol. 1 Cap. 4 Primeiro Amigo novembro 29, 2021"
+    "file": "capitulo_004.json"
   },
   {
+    "id": "cap-005",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 5,
+    "display_num": "Capítulo 5",
+    "raw_label": "Vol. 1 Cap. 5",
+    "title": "Primeiros Passos",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-5/",
-    "title": "Vol. 1 Cap. 5 Primeiros Passos novembro 29, 2021"
+    "file": "capitulo_005.json"
   },
   {
+    "id": "cap-006",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 6,
+    "display_num": "Capítulo 6",
+    "raw_label": "Vol. 1 Cap. 6",
+    "title": "Aquisição de Habilidades",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-6/",
-    "title": "Vol. 1 Cap. 6 Aquisição de Habilidades novembro 29, 2021"
+    "file": "capitulo_006.json"
   },
   {
+    "id": "cap-007",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 7,
+    "display_num": "Capítulo 7",
+    "raw_label": "Vol. 1 Cap. 7",
+    "title": "Primeira Batalha",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-7/",
-    "title": "Vol. 1 Cap. 7 Primeira Batalha novembro 29, 2021"
+    "file": "capitulo_007.json"
   },
   {
+    "id": "cap-008",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 8,
+    "display_num": "Capítulo 8",
+    "raw_label": "Vol. 1 Cap. 8",
+    "title": "O Poder em Minhas Mãos",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-8/",
-    "title": "Vol. 1 Cap. 8 O Poder em Minhas Mãos novembro 29, 2021"
+    "file": "capitulo_008.json"
   },
   {
+    "id": "cap-009",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 9,
+    "display_num": "Capítulo 9",
+    "raw_label": "Vol. 1 Cap. 9",
+    "title": "Negociação com os Goblins",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-9/",
-    "title": "Vol. 1 Cap. 9 Negociação com os Goblins novembro 29, 2021"
+    "file": "capitulo_009.json"
   },
   {
+    "id": "cap-010",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 10,
+    "display_num": "Capítulo 10",
+    "raw_label": "Vol. 1 Cap. 10",
+    "title": "Batalha na Vila dos Goblins",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-10/",
-    "title": "Vol. 1 Cap. 10 Batalha na Vila dos Goblins novembro 29, 2021"
+    "file": "capitulo_010.json"
   },
   {
+    "id": "cap-011",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 11,
+    "display_num": "Capítulo 11",
+    "raw_label": "Vol. 1 Cap. 11",
+    "title": "Evolução dos Monstros",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-11/",
-    "title": "Vol. 1 Cap. 11 Evolução dos Monstros dezembro 4, 2021"
+    "file": "capitulo_011.json"
   },
   {
+    "id": "cap-012",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 12,
+    "display_num": "Capítulo 12",
+    "raw_label": "Vol. 1 Cap. 12",
+    "title": "Preparando o Nosso Lar",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-12/",
-    "title": "Vol. 1 Cap. 12 Preparando o Nosso Lar dezembro 4, 2021"
+    "file": "capitulo_012.json"
   },
   {
+    "id": "cap-013",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 13,
+    "display_num": "Capítulo 13",
+    "raw_label": "Vol. 1 Cap. 13",
+    "title": "Para o Reino dos Anões",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-13/",
-    "title": "Vol. 1 Cap. 13 Para o Reino dos Anões dezembro 4, 2021"
+    "file": "capitulo_013.json"
   },
   {
+    "id": "cap-014",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 14,
+    "display_num": "Capítulo 14",
+    "raw_label": "Vol. 1 Cap. 14",
+    "title": "Problema",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-14/",
-    "title": "Vol. 1 Cap. 14 Problema dezembro 4, 2021"
+    "file": "capitulo_014.json"
   },
   {
+    "id": "cap-015",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 15,
-    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-15-5/",
-    "title": "Vol. 1 Cap. 15.5 História Paralela 1 dezembro 4, 2021"
-  },
-  {
-    "num": 15,
+    "display_num": "Capítulo 15",
+    "raw_label": "Vol. 1 Cap. 15",
+    "title": "Um Acordo com os Guardas",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-15/",
-    "title": "Vol. 1 Cap. 15 Um Acordo com os Guardas dezembro 4, 2021"
+    "file": "capitulo_015.json"
   },
   {
+    "id": "cap-015-5",
+    "is_extra": false,
+    "vol_wn": 1,
+    "num": 15.5,
+    "display_num": "Capítulo 15.5",
+    "raw_label": "Vol. 1 Cap. 15.5",
+    "title": "História Paralela 1",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-15-5/",
+    "file": "capitulo_015_5.json"
+  },
+  {
+    "id": "cap-016",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 16,
+    "display_num": "Capítulo 16",
+    "raw_label": "Vol. 1 Cap. 16",
+    "title": "O Ferreiro Anão",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-16/",
-    "title": "Vol. 1 Cap. 16 O Ferreiro Anão dezembro 4, 2021"
+    "file": "capitulo_016.json"
   },
   {
+    "id": "cap-017",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 17,
+    "display_num": "Capítulo 17",
+    "raw_label": "Vol. 1 Cap. 17",
+    "title": "O Resultado da Promessa",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-17/",
-    "title": "Vol. 1 Cap. 17 O Resultado da Promessa dezembro 4, 2021"
+    "file": "capitulo_017.json"
   },
   {
+    "id": "cap-018",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 18,
-    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-18-5/",
-    "title": "Vol. 1 Cap. 18.5 Intermissão ~Casulo Gobuta~ dezembro 4, 2021"
-  },
-  {
-    "num": 18,
+    "display_num": "Capítulo 18",
+    "raw_label": "Vol. 1 Cap. 18",
+    "title": "Fim do Tumulto",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-18/",
-    "title": "Vol. 1 Cap. 18 Fim do Tumulto dezembro 4, 2021"
+    "file": "capitulo_018.json"
   },
   {
+    "id": "cap-018-5",
+    "is_extra": false,
+    "vol_wn": 1,
+    "num": 18.5,
+    "display_num": "Capítulo 18.5",
+    "raw_label": "Vol. 1 Cap. 18.5",
+    "title": "Intermissão ~Casulo Gobuta~",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-18-5/",
+    "file": "capitulo_018_5.json"
+  },
+  {
+    "id": "cap-019",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 19,
+    "display_num": "Capítulo 19",
+    "raw_label": "Vol. 1 Cap. 19",
+    "title": "Retorno à Vila",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-19/",
-    "title": "Vol. 1 Cap. 19 Retorno à Vila dezembro 4, 2021"
+    "file": "capitulo_019.json"
   },
   {
+    "id": "cap-020",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 20,
+    "display_num": "Capítulo 20",
+    "raw_label": "Vol. 1 Cap. 20",
+    "title": "Rumo ao Renascimento da Aldeia",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-20/",
-    "title": "Vol. 1 Cap. 20 Rumo ao Renascimento da Aldeia dezembro 4, 2021"
+    "file": "capitulo_020.json"
   },
   {
+    "id": "cap-021",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 21,
+    "display_num": "Capítulo 21",
+    "raw_label": "Vol. 1 Cap. 21",
+    "title": "Novo Movimento",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-21/",
-    "title": "Vol. 1 Cap. 21 Novo Movimento maio 13, 2022"
+    "file": "capitulo_021.json"
   },
   {
+    "id": "cap-022",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 22,
+    "display_num": "Capítulo 22",
+    "raw_label": "Vol. 1 Cap. 22",
+    "title": "Os Aventureiros que Finalmente Chegaram",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-22/",
-    "title": "Vol. 1 Cap. 22 Os Aventureiros que Finalmente Chegaram maio 13, 2022"
+    "file": "capitulo_022.json"
   },
   {
+    "id": "cap-023",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 23,
+    "display_num": "Capítulo 23",
+    "raw_label": "Vol. 1 Cap. 23",
+    "title": "Gigante de Chamas",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-23/",
-    "title": "Vol. 1 Cap. 23 Gigante de Chamas maio 13, 2022"
+    "file": "capitulo_023.json"
   },
   {
+    "id": "cap-024",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 24,
+    "display_num": "Capítulo 24",
+    "raw_label": "Vol. 1 Cap. 24",
+    "title": "Reminiscente ~ Marcha Fúnebre",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-24/",
-    "title": "Vol. 1 Cap. 24 Reminiscente ~ Marcha Fúnebre maio 13, 2022"
+    "file": "capitulo_024.json"
   },
   {
+    "id": "cap-025",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 25,
+    "display_num": "Capítulo 25",
+    "raw_label": "Vol. 1 Cap. 25",
+    "title": "Transformação Humana",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-25/",
-    "title": "Vol. 1 Cap. 25 Transformação Humana maio 13, 2022"
+    "file": "capitulo_025.json"
   },
   {
+    "id": "cap-026",
+    "is_extra": false,
+    "vol_wn": 1,
     "num": 26,
+    "display_num": "Capítulo 26",
+    "raw_label": "Vol. 1 Cap. 26",
+    "title": "Novas habilidades",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-26/",
-    "title": "Vol. 1 Cap. 26 Novas habilidades maio 13, 2022"
+    "file": "capitulo_026.json"
   },
   {
+    "id": "cap-027",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 27,
+    "display_num": "Capítulo 27",
+    "raw_label": "Vol. 2 Cap. 27",
+    "title": "A Tribo dos Ogros",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-27/",
-    "title": "Vol. 2 Cap. 27 A Tribo dos Ogros maio 13, 2022"
+    "file": "capitulo_027.json"
   },
   {
+    "id": "cap-028",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 28,
+    "display_num": "Capítulo 28",
+    "raw_label": "Vol. 2 Cap. 28",
+    "title": "Trabalhos",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-28/",
-    "title": "Vol. 2 Cap. 28 Trabalhos maio 13, 2022"
+    "file": "capitulo_028.json"
   },
   {
+    "id": "cap-029",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 29,
+    "display_num": "Capítulo 29",
+    "raw_label": "Vol. 2 Cap. 29",
+    "title": "Incursão dos Homens-Lagarto",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-29/",
-    "title": "Vol. 2 Cap. 29 Incursão dos Homens-Lagarto maio 13, 2022"
+    "file": "capitulo_029.json"
   },
   {
+    "id": "cap-030",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 30,
+    "display_num": "Capítulo 30",
+    "raw_label": "Vol. 2 Cap. 30",
+    "title": "Enviado",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-30/",
-    "title": "Vol. 2 Cap. 30 Enviado maio 13, 2022"
+    "file": "capitulo_030.json"
   },
   {
+    "id": "cap-031",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 31,
+    "display_num": "Capítulo 31",
+    "raw_label": "Vol. 2 Cap. 31",
+    "title": "Reunião de Emergência",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-31/",
-    "title": "Vol. 2 Cap. 31 Reunião de Emergência maio 13, 2022"
+    "file": "capitulo_031.json"
   },
   {
+    "id": "cap-032",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 32,
+    "display_num": "Capítulo 32",
+    "raw_label": "Vol. 2 Cap. 32",
+    "title": "As Cortinas do Palco se Elevam",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-32/",
-    "title": "Vol. 2 Cap. 32 As Cortinas do Palco se Elevam maio 13, 2022"
+    "file": "capitulo_032.json"
   },
   {
+    "id": "cap-033",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 33,
+    "display_num": "Capítulo 33",
+    "raw_label": "Vol. 2 Cap. 33",
+    "title": "Audiência",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-33/",
-    "title": "Vol. 2 Cap. 33 Audiência maio 13, 2022"
+    "file": "capitulo_033.json"
   },
   {
+    "id": "cap-034",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 34,
+    "display_num": "Capítulo 34",
+    "raw_label": "Vol. 2 Cap. 34",
+    "title": "A Eclosão da Guerra",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-34/",
-    "title": "Vol. 2 Cap. 34 A Eclosão da Guerra maio 13, 2022"
+    "file": "capitulo_034.json"
   },
   {
+    "id": "cap-035",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 35,
+    "display_num": "Capítulo 35",
+    "raw_label": "Vol. 2 Cap. 35",
+    "title": "Preparação para a Batalha",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-35/",
-    "title": "Vol. 2 Cap. 35 Preparação para a Batalha maio 13, 2022"
+    "file": "capitulo_035.json"
   },
   {
+    "id": "cap-036",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 36,
+    "display_num": "Capítulo 36",
+    "raw_label": "Vol. 2 Cap. 36",
+    "title": "Participação na Guerra",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-36/",
-    "title": "Vol. 2 Cap. 36 Participação na Guerra maio 13, 2022"
+    "file": "capitulo_036.json"
   },
   {
+    "id": "cap-037",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 37,
+    "display_num": "Capítulo 37",
+    "raw_label": "Vol. 2 Cap. 37",
+    "title": "Encontro -Benimaru e Ranga-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-37/",
-    "title": "Vol. 2 Cap. 37 Encontro -Benimaru e Ranga- maio 13, 2022"
+    "file": "capitulo_037.json"
   },
   {
+    "id": "cap-038",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 38,
+    "display_num": "Capítulo 38",
+    "raw_label": "Vol. 2 Cap. 38",
+    "title": "Demônio Gelmudo",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-38/",
-    "title": "Vol. 2 Cap. 38 Demônio Gelmudo maio 13, 2022"
+    "file": "capitulo_038.json"
   },
   {
+    "id": "cap-039",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 39,
+    "display_num": "Capítulo 39",
+    "raw_label": "Vol. 2 Cap. 39",
+    "title": "Engrenagens do Destino",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-39/",
-    "title": "Vol. 2 Cap. 39 Engrenagens do Destino maio 13, 2022"
+    "file": "capitulo_039.json"
   },
   {
+    "id": "cap-040",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 40,
+    "display_num": "Capítulo 40",
+    "raw_label": "Vol. 2 Cap. 40",
+    "title": "Orc Desastre",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-40/",
-    "title": "Vol. 2 Cap. 40 Orc Desastre maio 13, 2022"
+    "file": "capitulo_040.json"
   },
   {
+    "id": "cap-041",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 41,
+    "display_num": "Capítulo 41",
+    "raw_label": "Vol. 2 Cap. 41",
+    "title": "Predador",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-41/",
-    "title": "Vol. 2 Cap. 41 Predador maio 13, 2022"
+    "file": "capitulo_041.json"
   },
   {
+    "id": "cap-042",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 42,
+    "display_num": "Capítulo 42",
+    "raw_label": "Vol. 2 Cap. 42",
+    "title": "A Coalizão da Grande Floresta Jura",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-42/",
-    "title": "Vol. 2 Cap. 42 A Coalizão da Grande Floresta Jura maio 13, 2022"
+    "file": "capitulo_042.json"
   },
   {
+    "id": "cap-043",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 43,
+    "display_num": "Capítulo 43",
+    "raw_label": "Vol. 2 Cap. 43",
+    "title": "Reparações de Guerra",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-43/",
-    "title": "Vol. 2 Cap. 43 Reparações de Guerra maio 13, 2022"
+    "file": "capitulo_043.json"
   },
   {
+    "id": "cap-044",
+    "is_extra": false,
+    "vol_wn": 2,
     "num": 44,
+    "display_num": "Capítulo 44",
+    "raw_label": "Vol. 2 Cap. 44",
+    "title": "E Assim Terminamos a Cidade",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-44/",
-    "title": "Vol. 2 Cap. 44 E Assim Terminamos a Cidade maio 13, 2022"
+    "file": "capitulo_044.json"
   },
   {
+    "id": "cap-045",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 45,
+    "display_num": "Capítulo 45",
+    "raw_label": "Vol. 3 Cap. 45",
+    "title": "Aqueles que Observam",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-45/",
-    "title": "Vol. 3 Cap. 45 Aqueles que Observam maio 13, 2022"
+    "file": "capitulo_045.json"
   },
   {
+    "id": "cap-046",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 46,
+    "display_num": "Capítulo 46",
+    "raw_label": "Vol. 3 Cap. 46",
+    "title": "Um Nome de País e Dois Tratados",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-46/",
-    "title": "Vol. 3 Cap. 46 Um Nome de País e Dois Tratados maio 13, 2022"
+    "file": "capitulo_046.json"
   },
   {
+    "id": "cap-047",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 47,
+    "display_num": "Capítulo 47",
+    "raw_label": "Vol. 3 Cap. 47",
+    "title": "Uma Especialidade da Cidade",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-47/",
-    "title": "Vol. 3 Cap. 47 Uma Especialidade da Cidade maio 13, 2022"
+    "file": "capitulo_047.json"
   },
   {
+    "id": "cap-048",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 48,
+    "display_num": "Capítulo 48",
+    "raw_label": "Vol. 3 Cap. 48",
+    "title": "Invasão dos Lordes Demônios",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-48/",
-    "title": "Vol. 3 Cap. 48 Invasão dos Lordes Demônios maio 13, 2022"
+    "file": "capitulo_048.json"
   },
   {
+    "id": "cap-049",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 49,
+    "display_num": "Capítulo 49",
+    "raw_label": "Vol. 3 Cap. 49",
+    "title": "Furacão Milim",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-49/",
-    "title": "Vol. 3 Cap. 49 Furacão Milim maio 13, 2022"
+    "file": "capitulo_049.json"
   },
   {
+    "id": "cap-050",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 50,
+    "display_num": "Capítulo 50",
+    "raw_label": "Vol. 3 Cap. 50",
+    "title": "Guarnição da Fronteira",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-50/",
-    "title": "Vol. 3 Cap. 50 Guarnição da Fronteira maio 13, 2022"
+    "file": "capitulo_050.json"
   },
   {
+    "id": "cap-051",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 51,
+    "display_num": "Capítulo 51",
+    "raw_label": "Vol. 3 Cap. 51",
+    "title": "Para a Cidade Humana",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-51/",
-    "title": "Vol. 3 Cap. 51 Para a Cidade Humana outubro 21, 2022"
+    "file": "capitulo_051.json"
   },
   {
+    "id": "cap-052",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 52,
+    "display_num": "Capítulo 52",
+    "raw_label": "Vol. 3 Cap. 52",
+    "title": "Viagem",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-52/",
-    "title": "Vol. 3 Cap. 52 Viagem outubro 21, 2022"
+    "file": "capitulo_052.json"
   },
   {
+    "id": "cap-053",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 53,
+    "display_num": "Capítulo 53",
+    "raw_label": "Vol. 3 Cap. 53",
+    "title": "Associação da Liberdade",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-53/",
-    "title": "Vol. 3 Cap. 53 Associação da Liberdade outubro 21, 2022"
+    "file": "capitulo_053.json"
   },
   {
+    "id": "cap-054",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 54,
+    "display_num": "Capítulo 54",
+    "raw_label": "Vol. 3 Cap. 54",
+    "title": "Negócios ~ O Início de um Comércio",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-54/",
-    "title": "Vol. 3 Cap. 54 Negócios ~ O Início de um Comércio outubro 21, 2022"
+    "file": "capitulo_054.json"
   },
   {
+    "id": "cap-055",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 55,
+    "display_num": "Capítulo 55",
+    "raw_label": "Vol. 3 Cap. 55",
+    "title": "Registro de Aventureiro",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-55/",
-    "title": "Vol. 3 Cap. 55 Registro de Aventureiro outubro 21, 2022"
+    "file": "capitulo_055.json"
   },
   {
+    "id": "cap-056",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 56,
+    "display_num": "Capítulo 56",
+    "raw_label": "Vol. 3 Cap. 56",
+    "title": "Reino Ingracia",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-56/",
-    "title": "Vol. 3 Cap. 56 Reino Ingracia outubro 21, 2022"
+    "file": "capitulo_056.json"
   },
   {
+    "id": "cap-057",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 57,
+    "display_num": "Capítulo 57",
+    "raw_label": "Vol. 3 Cap. 57",
+    "title": "Para Aprender Magia",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-57/",
-    "title": "Vol. 3 Cap. 57 Para Aprender Magia outubro 21, 2022"
+    "file": "capitulo_057.json"
   },
   {
+    "id": "cap-058",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 58,
+    "display_num": "Capítulo 58",
+    "raw_label": "Vol. 3 Cap. 58",
+    "title": "Os Convocados ~ Aqueles que São Chamados de Heróis ~",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-58/",
-    "title": "Vol. 3 Cap. 58 Os Convocados ~ Aqueles que São Chamados de Heróis ~ outubro 21, 2022"
+    "file": "capitulo_058.json"
   },
   {
+    "id": "cap-059",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 59,
+    "display_num": "Capítulo 59",
+    "raw_label": "Vol. 3 Cap. 59",
+    "title": "A Igreja se Move",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-59/",
-    "title": "Vol. 3 Cap. 59 A Igreja se Move outubro 21, 2022"
+    "file": "capitulo_059.json"
   },
   {
+    "id": "cap-060",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 60,
+    "display_num": "Capítulo 60",
+    "raw_label": "Vol. 3 Cap. 60",
+    "title": "É Repentino, Mas Vamos Ter um Teste Agora",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-60/",
-    "title": "Vol. 3 Cap. 60 É Repentino, Mas Vamos Ter um Teste Agora outubro 21, 2022"
+    "file": "capitulo_060.json"
   },
   {
+    "id": "cap-061",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 61,
+    "display_num": "Capítulo 61",
+    "raw_label": "Vol. 3 Cap. 61",
+    "title": "A Primeira Conquista da Masmorra",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-61/",
-    "title": "Vol. 3 Cap. 61 A Primeira Conquista da Masmorra julho 19, 2024"
+    "file": "capitulo_061.json"
   },
   {
+    "id": "cap-062",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 62,
+    "display_num": "Capítulo 62",
+    "raw_label": "Vol. 3 Cap. 62",
+    "title": "Um Espírito é...",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-62/",
-    "title": "Vol. 3 Cap. 62 Um Espírito é... julho 19, 2024"
+    "file": "capitulo_062.json"
   },
   {
+    "id": "cap-063",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 63,
+    "display_num": "Capítulo 63",
+    "raw_label": "Vol. 3 Cap. 63",
+    "title": "Crianças e Fantasmas",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-63/",
-    "title": "Vol. 3 Cap. 63 Crianças e Fantasmas julho 19, 2024"
+    "file": "capitulo_063.json"
   },
   {
+    "id": "cap-064",
+    "is_extra": false,
+    "vol_wn": 3,
     "num": 64,
+    "display_num": "Capítulo 64",
+    "raw_label": "Vol. 3 Cap. 64",
+    "title": "Últimos Dias na Capital Real",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-64/",
-    "title": "Vol. 3 Cap. 64 Últimos Dias na Capital Real julho 19, 2024"
+    "file": "capitulo_064.json"
   },
   {
+    "id": "cap-065",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 65,
+    "display_num": "Capítulo 65",
+    "raw_label": "Vol. 4 Cap. 65",
+    "title": "Prelúdio do Desastre",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-65/",
-    "title": "Vol. 4 Cap. 65 Prelúdio do Desastre julho 19, 2024"
+    "file": "capitulo_065.json"
   },
   {
+    "id": "cap-066",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 66,
+    "display_num": "Capítulo 66",
+    "raw_label": "Vol. 4 Cap. 66",
+    "title": "Reunião por Acaso",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-66/",
-    "title": "Vol. 4 Cap. 66 Reunião por Acaso julho 19, 2024"
+    "file": "capitulo_066.json"
   },
   {
+    "id": "cap-067",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 67,
+    "display_num": "Capítulo 67",
+    "raw_label": "Vol. 4 Cap. 67",
+    "title": "Saqueadores da Floresta",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-67/",
-    "title": "Vol. 4 Cap. 67 Saqueadores da Floresta julho 19, 2024"
+    "file": "capitulo_067.json"
   },
   {
+    "id": "cap-068",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 68,
+    "display_num": "Capítulo 68",
+    "raw_label": "Vol. 4 Cap. 68",
+    "title": "Alma e Esperança",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-68/",
-    "title": "Vol. 4 Cap. 68 Alma e Esperança julho 19, 2024"
+    "file": "capitulo_068.json"
   },
   {
+    "id": "cap-069",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 69,
+    "display_num": "Capítulo 69",
+    "raw_label": "Vol. 4 Cap. 69",
+    "title": "Nascimento de um Lorde Demônio",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-69/",
-    "title": "Vol. 4 Cap. 69 Nascimento de um Lorde Demônio julho 19, 2024"
+    "file": "capitulo_069.json"
   },
   {
+    "id": "cap-070",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 70,
+    "display_num": "Capítulo 70",
+    "raw_label": "Vol. 4 Cap. 70",
+    "title": "Festival da Colheita",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-70/",
-    "title": "Vol. 4 Cap. 70 Festival da Colheita julho 19, 2024"
+    "file": "capitulo_070.json"
   },
   {
+    "id": "cap-071",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 71,
+    "display_num": "Capítulo 71",
+    "raw_label": "Vol. 4 Cap. 71",
+    "title": "Eu, Aquele que Havia Despertado",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-71/",
-    "title": "Vol. 4 Cap. 71 Eu, Aquele que Havia Despertado julho 19, 2024"
+    "file": "capitulo_071.json"
   },
   {
+    "id": "cap-072",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 72,
+    "display_num": "Capítulo 72",
+    "raw_label": "Vol. 4 Cap. 72",
+    "title": "Ao Despertar",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-72/",
-    "title": "Vol. 4 Cap. 72 Ao Despertar julho 19, 2024"
+    "file": "capitulo_072.json"
   },
   {
+    "id": "cap-073",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 73,
+    "display_num": "Capítulo 73",
+    "raw_label": "Vol. 4 Cap. 73",
+    "title": "O Libertado",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-73/",
-    "title": "Vol. 4 Cap. 73 O Libertado julho 19, 2024"
+    "file": "capitulo_073.json"
   },
   {
+    "id": "cap-074",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 74,
+    "display_num": "Capítulo 74",
+    "raw_label": "Vol. 4 Cap. 74",
+    "title": "Veldora",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-74/",
-    "title": "Vol. 4 Cap. 74 Veldora julho 19, 2024"
+    "file": "capitulo_074.json"
   },
   {
+    "id": "cap-075",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 75,
+    "display_num": "Capítulo 75",
+    "raw_label": "Vol. 4 Cap. 75",
+    "title": "Conferência",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-75/",
-    "title": "Vol. 4 Cap. 75 Conferência julho 19, 2024"
+    "file": "capitulo_075.json"
   },
   {
+    "id": "cap-076",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 76,
+    "display_num": "Capítulo 76",
+    "raw_label": "Vol. 4 Cap. 76",
+    "title": "Conferência ・ Ato Principal",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-76/",
-    "title": "Vol. 4 Cap. 76 Conferência ・ Ato Principal julho 19, 2024"
+    "file": "capitulo_076.json"
   },
   {
+    "id": "cap-077",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 77,
+    "display_num": "Capítulo 77",
+    "raw_label": "Vol. 4 Cap. 77",
+    "title": "Relatório da Ramiris",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-77/",
-    "title": "Vol. 4 Cap. 77 Relatório da Ramiris julho 19, 2024"
+    "file": "capitulo_077.json"
   },
   {
+    "id": "cap-078",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 78,
+    "display_num": "Capítulo 78",
+    "raw_label": "Vol. 4 Cap. 78",
+    "title": "Lordes Demônios",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-78/",
-    "title": "Vol. 4 Cap. 78 Lordes Demônios julho 19, 2024"
+    "file": "capitulo_078.json"
   },
   {
+    "id": "cap-079",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 79,
+    "display_num": "Capítulo 79",
+    "raw_label": "Vol. 4 Cap. 79",
+    "title": "Dino e Dagruel",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-79/",
-    "title": "Vol. 4 Cap. 79 Dino e Dagruel julho 19, 2024"
+    "file": "capitulo_079.json"
   },
   {
+    "id": "cap-080",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 80,
+    "display_num": "Capítulo 80",
+    "raw_label": "Vol. 4 Cap. 80",
+    "title": "O Incidente Antes do Banquete",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-80/",
-    "title": "Vol. 4 Cap. 80 O Incidente Antes do Banquete julho 19, 2024"
+    "file": "capitulo_080.json"
   },
   {
+    "id": "cap-081",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 81,
+    "display_num": "Capítulo 81",
+    "raw_label": "Vol. 4 Cap. 81",
+    "title": "O Banquete",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-81/",
-    "title": "Vol. 4 Cap. 81 O Banquete julho 19, 2024"
+    "file": "capitulo_081.json"
   },
   {
+    "id": "cap-082",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 82,
+    "display_num": "Capítulo 82",
+    "raw_label": "Vol. 4 Cap. 82",
+    "title": "Igualdade na Morte",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-82/",
-    "title": "Vol. 4 Cap. 82 Igualdade na Morte julho 19, 2024"
+    "file": "capitulo_082.json"
   },
   {
+    "id": "cap-083",
+    "is_extra": false,
+    "vol_wn": 4,
     "num": 83,
+    "display_num": "Capítulo 83",
+    "raw_label": "Vol. 4 Cap. 83",
+    "title": "Lordes Demônios das Oito Estrelas",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-83/",
-    "title": "Vol. 4 Cap. 83 Lordes Demônios das Oito Estrelas julho 19, 2024"
+    "file": "capitulo_083.json"
   },
   {
+    "id": "cap-084",
+    "is_extra": false,
+    "vol_wn": 5,
     "num": 84,
+    "display_num": "Capítulo 84",
+    "raw_label": "Vol. 5 Cap. 84",
+    "title": "A Queda do Reino Farmas",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-84/",
-    "title": "Vol. 5 Cap. 84 A Queda do Reino Farmas julho 19, 2024"
+    "file": "capitulo_084.json"
   },
   {
+    "id": "cap-085",
+    "is_extra": false,
+    "vol_wn": 5,
     "num": 85,
+    "display_num": "Capítulo 85",
+    "raw_label": "Vol. 5 Cap. 85",
+    "title": "Palavras que Alcançam",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-85/",
-    "title": "Vol. 5 Cap. 85 Palavras que Alcançam julho 19, 2024"
+    "file": "capitulo_085.json"
   },
   {
+    "id": "cap-086",
+    "is_extra": false,
+    "vol_wn": 5,
     "num": 86,
+    "display_num": "Capítulo 86",
+    "raw_label": "Vol. 5 Cap. 86",
+    "title": "Aquele que se Move no Escuro",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-86/",
-    "title": "Vol. 5 Cap. 86 Aquele que se Move no Escuro julho 19, 2024"
+    "file": "capitulo_086.json"
   },
   {
+    "id": "cap-087",
+    "is_extra": false,
+    "vol_wn": 5,
     "num": 87,
+    "display_num": "Capítulo 87",
+    "raw_label": "Vol. 5 Cap. 87",
+    "title": "A Cidade Sagrada",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-87/",
-    "title": "Vol. 5 Cap. 87 A Cidade Sagrada julho 19, 2024"
+    "file": "capitulo_087.json"
   },
   {
+    "id": "cap-088",
+    "is_extra": false,
+    "vol_wn": 5,
     "num": 88,
+    "display_num": "Capítulo 88",
+    "raw_label": "Vol. 5 Cap. 88",
+    "title": "Rumo a um Segundo Encontro",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-88/",
-    "title": "Vol. 5 Cap. 88 Rumo a um Segundo Encontro julho 19, 2024"
+    "file": "capitulo_088.json"
   },
   {
+    "id": "cap-089",
+    "is_extra": false,
+    "vol_wn": 5,
     "num": 89,
+    "display_num": "Capítulo 89",
+    "raw_label": "Vol. 5 Cap. 89",
+    "title": "Planos Diferentes",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-89/",
-    "title": "Vol. 5 Cap. 89 Planos Diferentes julho 19, 2024"
+    "file": "capitulo_089.json"
   },
   {
+    "id": "cap-090",
+    "is_extra": false,
+    "vol_wn": 5,
     "num": 90,
+    "display_num": "Capítulo 90",
+    "raw_label": "Vol. 5 Cap. 90",
+    "title": "vs. Cavaleiros Sagrados Parte 1",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-90/",
-    "title": "Vol. 5 Cap. 90 vs Cavaleiros Sagrados Parte 1 julho 19, 2024"
+    "file": "capitulo_090.json"
   },
   {
+    "id": "cap-091",
+    "is_extra": false,
+    "vol_wn": 5,
     "num": 91,
+    "display_num": "Capítulo 91",
+    "raw_label": "Vol. 5 Cap. 91",
+    "title": "vs. Cavaleiros Sagrados Parte 2",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-91/",
-    "title": "Vol. 5 Cap. 91 vs Cavaleiros Sagrados Parte 2 julho 19, 2024"
+    "file": "capitulo_091.json"
   },
   {
+    "id": "cap-092",
+    "is_extra": false,
+    "vol_wn": 5,
     "num": 92,
+    "display_num": "Capítulo 92",
+    "raw_label": "Vol. 5 Cap. 92",
+    "title": "vs. Cavaleiros Sagrados Parte 3",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-92/",
-    "title": "Vol. 5 Cap. 92 vs Cavaleiros Sagrados Parte 3 julho 19, 2024"
+    "file": "capitulo_092.json"
   },
   {
+    "id": "cap-093",
+    "is_extra": false,
+    "vol_wn": 5,
     "num": 93,
+    "display_num": "Capítulo 93",
+    "raw_label": "Vol. 5 Cap. 93",
+    "title": "vs. Cavaleiros Sagrados Parte 4",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-93/",
-    "title": "Vol. 5 Cap. 93 vs Cavaleiros Sagrados Parte 4 julho 19, 2024"
+    "file": "capitulo_093.json"
   },
   {
+    "id": "cap-094",
+    "is_extra": false,
+    "vol_wn": 5,
     "num": 94,
+    "display_num": "Capítulo 94",
+    "raw_label": "Vol. 5 Cap. 94",
+    "title": "Mentor",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-94/",
-    "title": "Vol. 5 Cap. 94 Mentor julho 19, 2024"
+    "file": "capitulo_094.json"
   },
   {
+    "id": "cap-095",
+    "is_extra": false,
+    "vol_wn": 5,
     "num": 95,
+    "display_num": "Capítulo 95",
+    "raw_label": "Vol. 5 Cap. 95",
+    "title": "Vitória Completa",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-95/",
-    "title": "Vol. 5 Cap. 95 Vitória Completa julho 19, 2024"
+    "file": "capitulo_095.json"
   },
   {
+    "id": "cap-096",
+    "is_extra": false,
+    "vol_wn": 5,
     "num": 96,
+    "display_num": "Capítulo 96",
+    "raw_label": "Vol. 5 Cap. 96",
+    "title": "Oportunidade para Falar",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-96/",
-    "title": "Vol. 5 Cap. 96 Oportunidade para Falar julho 19, 2024"
+    "file": "capitulo_096.json"
   },
   {
+    "id": "cap-097",
+    "is_extra": false,
+    "vol_wn": 5,
     "num": 97,
+    "display_num": "Capítulo 97",
+    "raw_label": "Vol. 5 Cap. 97",
+    "title": "Compensação e Relações Futuras!",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-97/",
-    "title": "Vol. 5 Cap. 97 Compensação e Relações Futuras! julho 19, 2024"
+    "file": "capitulo_097.json"
   },
   {
+    "id": "cap-098",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 98,
+    "display_num": "Capítulo 98",
+    "raw_label": "Vol. 6 Cap. 98",
+    "title": "Carta de Convite",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-98/",
-    "title": "Vol. 6 Cap. 98 Carta de Convite julho 19, 2024"
+    "file": "capitulo_098.json"
   },
   {
+    "id": "cap-099",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 99,
+    "display_num": "Capítulo 99",
+    "raw_label": "Vol. 6 Cap. 99",
+    "title": "Preparações para o Torneio",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-99/",
-    "title": "Vol. 6 Cap. 99 Preparações para o Torneio julho 19, 2024"
+    "file": "capitulo_099.json"
   },
   {
+    "id": "cap-100",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 100,
+    "display_num": "Capítulo 100",
+    "raw_label": "Vol. 6 Cap. 100",
+    "title": "Labirinto Subterrâneo",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-100/",
-    "title": "Vol. 6 Cap. 100 Labirinto Subterrâneo julho 19, 2024"
+    "file": "capitulo_100.json"
   },
   {
+    "id": "cap-101",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 101,
+    "display_num": "Capítulo 101",
+    "raw_label": "Vol. 6 Cap. 101",
+    "title": "Plano Suave",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-101/",
-    "title": "Vol. 6 Cap. 101 Plano Suave julho 19, 2024"
+    "file": "capitulo_101.json"
   },
   {
+    "id": "cap-102",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 102,
+    "display_num": "Capítulo 102",
+    "raw_label": "Vol. 6 Cap. 102",
+    "title": "Audiência com os Monstros",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-102/",
-    "title": "Vol. 6 Cap. 102 Audiência com os Monstros julho 19, 2024"
+    "file": "capitulo_102.json"
   },
   {
+    "id": "cap-103",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 103,
+    "display_num": "Capítulo 103",
+    "raw_label": "Vol. 6 Cap. 103",
+    "title": "Escravos Monstros",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-103/",
-    "title": "Vol. 6 Cap. 103 Escravos Monstros julho 19, 2024"
+    "file": "capitulo_103.json"
   },
   {
+    "id": "cap-104",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 104,
+    "display_num": "Capítulo 104",
+    "raw_label": "Vol. 6 Cap. 104",
+    "title": "A Noite Anterior",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-104/",
-    "title": "Vol. 6 Cap. 104 A Noite Anterior julho 19, 2024"
+    "file": "capitulo_104.json"
   },
   {
+    "id": "cap-105",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 105,
+    "display_num": "Capítulo 105",
+    "raw_label": "Vol. 6 Cap. 105",
+    "title": "Torneio – Preliminar",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-105/",
-    "title": "Vol. 6 Cap. 105 Torneio – Preliminar julho 19, 2024"
+    "file": "capitulo_105.json"
   },
   {
+    "id": "cap-106",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 106,
+    "display_num": "Capítulo 106",
+    "raw_label": "Vol. 6 Cap. 106",
+    "title": "Torneio - Finais |Parte 1|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-106/",
-    "title": "Vol. 6 Cap. 106 Torneio - Finais |Parte 1| julho 19, 2024"
+    "file": "capitulo_106.json"
   },
   {
+    "id": "cap-107",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 107,
+    "display_num": "Capítulo 107",
+    "raw_label": "Vol. 6 Cap. 107",
+    "title": "Torneio - Finais |Parte 2|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-107/",
-    "title": "Vol. 6 Cap. 107 Torneio - Finais |Parte 2| julho 19, 2024"
+    "file": "capitulo_107.json"
   },
   {
+    "id": "cap-108",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 108,
+    "display_num": "Capítulo 108",
+    "raw_label": "Vol. 6 Cap. 108",
+    "title": "Torneio - Finais |Parte 3|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-108/",
-    "title": "Vol. 6 Cap. 108 Torneio - Finais |Parte 3| julho 19, 2024"
+    "file": "capitulo_108.json"
   },
   {
+    "id": "cap-109",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 109,
+    "display_num": "Capítulo 109",
+    "raw_label": "Vol. 6 Cap. 109",
+    "title": "Torneio - Finais |Parte 4|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-109/",
-    "title": "Vol. 6 Cap. 109 Torneio - Finais |Parte 4| julho 19, 2024"
+    "file": "capitulo_109.json"
   },
   {
+    "id": "cap-110",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 110,
+    "display_num": "Capítulo 110",
+    "raw_label": "Vol. 6 Cap. 110",
+    "title": "Torneio - Finais |Parte 5|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-110/",
-    "title": "Vol. 6 Cap. 110 Torneio - Finais |Parte 5| julho 19, 2024"
+    "file": "capitulo_110.json"
   },
   {
+    "id": "cap-111",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 111,
+    "display_num": "Capítulo 111",
+    "raw_label": "Vol. 6 Cap. 111",
+    "title": "Torneio - Finais |Parte 6|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-111/",
-    "title": "Vol. 6 Cap. 111 Torneio - Finais |Parte 6| julho 19, 2024"
+    "file": "capitulo_111.json"
   },
   {
+    "id": "cap-112",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 112,
+    "display_num": "Capítulo 112",
+    "raw_label": "Vol. 6 Cap. 112",
+    "title": "Torneio - Finais |Parte 7|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-112/",
-    "title": "Vol. 6 Cap. 112 Torneio - Finais |Parte 7| julho 19, 2024"
+    "file": "capitulo_112.json"
   },
   {
+    "id": "cap-113",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 113,
+    "display_num": "Capítulo 113",
+    "raw_label": "Vol. 6 Cap. 113",
+    "title": "Torneio - Finais |Parte 8|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-113/",
-    "title": "Vol. 6 Cap. 113 Torneio - Finais |Parte 8| julho 19, 2024"
+    "file": "capitulo_113.json"
   },
   {
+    "id": "cap-114",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 114,
+    "display_num": "Capítulo 114",
+    "raw_label": "Vol. 6 Cap. 114",
+    "title": "Torneio - Finais |Parte 9|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-114/",
-    "title": "Vol. 6 Cap. 114 Torneio - Finais |Parte 9| julho 19, 2024"
+    "file": "capitulo_114.json"
   },
   {
+    "id": "cap-115",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 115,
+    "display_num": "Capítulo 115",
+    "raw_label": "Vol. 6 Cap. 115",
+    "title": "Grupo de Exploração do Labirinto Subterrâneo",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-115/",
-    "title": "Vol. 6 Cap. 115 Grupo de Exploração do Labirinto Subterrâneo julho 19, 2024"
+    "file": "capitulo_115.json"
   },
   {
+    "id": "cap-116",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 116,
+    "display_num": "Capítulo 116",
+    "raw_label": "Vol. 6 Cap. 116",
+    "title": "Reunião de Avaliação",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-116/",
-    "title": "Vol. 6 Cap. 116 Reunião de Avaliação julho 19, 2024"
+    "file": "capitulo_116.json"
   },
   {
+    "id": "cap-117",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 117,
+    "display_num": "Capítulo 117",
+    "raw_label": "Vol. 6 Cap. 117",
+    "title": "Navegação Suave",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-117/",
-    "title": "Vol. 6 Cap. 117 Navegação Suave julho 19, 2024"
+    "file": "capitulo_117.json"
   },
   {
+    "id": "cap-118",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 118,
+    "display_num": "Capítulo 118",
+    "raw_label": "Vol. 6 Cap. 118",
+    "title": "Labirinto e Confiança",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-118/",
-    "title": "Vol. 6 Cap. 118 Labirinto e Confiança julho 19, 2024"
+    "file": "capitulo_118.json"
   },
   {
+    "id": "cap-119",
+    "is_extra": false,
+    "vol_wn": 6,
     "num": 119,
+    "display_num": "Capítulo 119",
+    "raw_label": "Vol. 6 Cap. 119",
+    "title": "Como Desfrutar de Uma Masmorra",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-119/",
-    "title": "Vol. 6 Cap. 119 Como Desfrutar de Uma Masmorra julho 19, 2024"
+    "file": "capitulo_119.json"
   },
   {
+    "id": "cap-120",
+    "is_extra": false,
+    "vol_wn": 7,
     "num": 120,
+    "display_num": "Capítulo 120",
+    "raw_label": "Vol. 7 Cap. 120",
+    "title": "Desligando",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-120/",
-    "title": "Vol. 7 Cap. 120 Desligando julho 19, 2024"
+    "file": "capitulo_120.json"
   },
   {
+    "id": "cap-121",
+    "is_extra": false,
+    "vol_wn": 7,
     "num": 121,
+    "display_num": "Capítulo 121",
+    "raw_label": "Vol. 7 Cap. 121",
+    "title": "Hinata e as Crianças",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-121/",
-    "title": "Vol. 7 Cap. 121 Hinata e as Crianças julho 19, 2024"
+    "file": "capitulo_121.json"
   },
   {
+    "id": "cap-122",
+    "is_extra": false,
+    "vol_wn": 7,
     "num": 122,
+    "display_num": "Capítulo 122",
+    "raw_label": "Vol. 7 Cap. 122",
+    "title": "Hinata e Yuuki",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-122/",
-    "title": "Vol. 7 Cap. 122 Hinata e Yuuki julho 19, 2024"
+    "file": "capitulo_122.json"
   },
   {
+    "id": "cap-123",
+    "is_extra": false,
+    "vol_wn": 7,
     "num": 123,
+    "display_num": "Capítulo 123",
+    "raw_label": "Vol. 7 Cap. 123",
+    "title": "Destino Predestinado",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-123/",
-    "title": "Vol. 7 Cap. 123 Destino Predestinado julho 19, 2024"
+    "file": "capitulo_123.json"
   },
   {
+    "id": "cap-124",
+    "is_extra": false,
+    "vol_wn": 7,
     "num": 124,
+    "display_num": "Capítulo 124",
+    "raw_label": "Vol. 7 Cap. 124",
+    "title": "Nascimento de uma Heroína",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-124/",
-    "title": "Vol. 7 Cap. 124 Nascimento de uma Heroína julho 19, 2024"
+    "file": "capitulo_124.json"
   },
   {
+    "id": "cap-125",
+    "is_extra": false,
+    "vol_wn": 7,
     "num": 125,
+    "display_num": "Capítulo 125",
+    "raw_label": "Vol. 7 Cap. 125",
+    "title": "As Memórias da Heroína",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-125/",
-    "title": "Vol. 7 Cap. 125 As Memórias da Heroína julho 19, 2024"
+    "file": "capitulo_125.json"
   },
   {
+    "id": "cap-126",
+    "is_extra": false,
+    "vol_wn": 7,
     "num": 126,
+    "display_num": "Capítulo 126",
+    "raw_label": "Vol. 7 Cap. 126",
+    "title": "O Início da Rebelião",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-126/",
-    "title": "Vol. 7 Cap. 126 O Início da Rebelião julho 19, 2024"
+    "file": "capitulo_126.json"
   },
   {
+    "id": "cap-127",
+    "is_extra": false,
+    "vol_wn": 7,
     "num": 127,
+    "display_num": "Capítulo 127",
+    "raw_label": "Vol. 7 Cap. 127",
+    "title": "Desculpa e Reflexão",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-127/",
-    "title": "Vol. 7 Cap. 127 Desculpa e Reflexão julho 19, 2024"
+    "file": "capitulo_127.json"
   },
   {
+    "id": "cap-128",
+    "is_extra": false,
+    "vol_wn": 7,
     "num": 128,
+    "display_num": "Capítulo 128",
+    "raw_label": "Vol. 7 Cap. 128",
+    "title": "Aliança dos Três Reinos",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-128/",
-    "title": "Vol. 7 Cap. 128 Aliança dos Três Reinos julho 19, 2024"
+    "file": "capitulo_128.json"
   },
   {
+    "id": "cap-129",
+    "is_extra": false,
+    "vol_wn": 7,
     "num": 129,
+    "display_num": "Capítulo 129",
+    "raw_label": "Vol. 7 Cap. 129",
+    "title": "Guerra de Subjugação do Yuuki",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-129/",
-    "title": "Vol. 7 Cap. 129 Guerra de Subjugação do Yuuki julho 19, 2024"
+    "file": "capitulo_129.json"
   },
   {
+    "id": "cap-130",
+    "is_extra": false,
+    "vol_wn": 7,
     "num": 130,
+    "display_num": "Capítulo 130",
+    "raw_label": "Vol. 7 Cap. 130",
+    "title": "Um Convite Repentino",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-130/",
-    "title": "Vol. 7 Cap. 130 Um Convite Repentino julho 19, 2024"
+    "file": "capitulo_130.json"
   },
   {
+    "id": "cap-131",
+    "is_extra": false,
+    "vol_wn": 7,
     "num": 131,
+    "display_num": "Capítulo 131",
+    "raw_label": "Vol. 7 Cap. 131",
+    "title": "Lorde Demônio Leon",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-131/",
-    "title": "Vol. 7 Cap. 131 Lorde Demônio Leon julho 19, 2024"
+    "file": "capitulo_131.json"
   },
   {
+    "id": "cap-132",
+    "is_extra": false,
+    "vol_wn": 7,
     "num": 132,
+    "display_num": "Capítulo 132",
+    "raw_label": "Vol. 7 Cap. 132",
+    "title": "Kagurazaka Yuuki",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-132/",
-    "title": "Vol. 7 Cap. 132 Kagurazaka Yuuki julho 19, 2024"
+    "file": "capitulo_132.json"
   },
   {
+    "id": "cap-133",
+    "is_extra": false,
+    "vol_wn": 7,
     "num": 133,
+    "display_num": "Capítulo 133",
+    "raw_label": "Vol. 7 Cap. 133",
+    "title": "Leon vs. Yuuki |Parte 1|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-133/",
-    "title": "Vol. 7 Cap. 133 Leon vs Yuuki |Parte 1| julho 19, 2024"
+    "file": "capitulo_133.json"
   },
   {
+    "id": "cap-134",
+    "is_extra": false,
+    "vol_wn": 7,
     "num": 134,
+    "display_num": "Capítulo 134",
+    "raw_label": "Vol. 7 Cap. 134",
+    "title": "Leon vs. Yuuki |Parte 2|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-134/",
-    "title": "Vol. 7 Cap. 134 Leon vs Yuuki |Parte 2| julho 19, 2024"
+    "file": "capitulo_134.json"
   },
   {
+    "id": "cap-135",
+    "is_extra": false,
+    "vol_wn": 7,
     "num": 135,
+    "display_num": "Capítulo 135",
+    "raw_label": "Vol. 7 Cap. 135",
+    "title": "Após o Incidente",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-135/",
-    "title": "Vol. 7 Cap. 135 Após o Incidente julho 19, 2024"
+    "file": "capitulo_135.json"
   },
   {
+    "id": "cap-136",
+    "is_extra": false,
+    "vol_wn": 7,
     "num": 136,
+    "display_num": "Capítulo 136",
+    "raw_label": "Vol. 7 Cap. 136",
+    "title": "Império Oriental",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-136/",
-    "title": "Vol. 7 Cap. 136 Império Oriental julho 19, 2024"
+    "file": "capitulo_136.json"
   },
   {
+    "id": "cap-137",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 137,
+    "display_num": "Capítulo 137",
+    "raw_label": "Vol. 8 Cap. 137",
+    "title": "Um Ano de Progresso",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-137/",
-    "title": "Vol. 8 Cap. 137 Um Ano de Progresso julho 19, 2024"
+    "file": "capitulo_137.json"
   },
   {
+    "id": "cap-138",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 138,
+    "display_num": "Capítulo 138",
+    "raw_label": "Vol. 8 Cap. 138",
+    "title": "Um Pedido do Conselho",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-138/",
-    "title": "Vol. 8 Cap. 138 Um Pedido do Conselho julho 19, 2024"
+    "file": "capitulo_138.json"
   },
   {
+    "id": "cap-139",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 139,
+    "display_num": "Capítulo 139",
+    "raw_label": "Vol. 8 Cap. 139",
+    "title": "Toda a História da Assembleia",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-139/",
-    "title": "Vol. 8 Cap. 139 Toda a História da Assembleia julho 19, 2024"
+    "file": "capitulo_139.json"
   },
   {
+    "id": "cap-140",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 140,
+    "display_num": "Capítulo 140",
+    "raw_label": "Vol. 8 Cap. 140",
+    "title": "Resultados da Pesquisa",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-140/",
-    "title": "Vol. 8 Cap. 140 Resultados da Pesquisa julho 19, 2024"
+    "file": "capitulo_140.json"
   },
   {
+    "id": "cap-141",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 141,
+    "display_num": "Capítulo 141",
+    "raw_label": "Vol. 8 Cap. 141",
+    "title": "Um Convidado Inesperado",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-141/",
-    "title": "Vol. 8 Cap. 141 Um Convidado Inesperado julho 19, 2024"
+    "file": "capitulo_141.json"
   },
   {
+    "id": "cap-142",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 142,
+    "display_num": "Capítulo 142",
+    "raw_label": "Vol. 8 Cap. 142",
+    "title": "Assuntos Militares",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-142/",
-    "title": "Vol. 8 Cap. 142 Assuntos Militares julho 19, 2024"
+    "file": "capitulo_142.json"
   },
   {
+    "id": "cap-143",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 143,
-    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-143-5/",
-    "title": "Vol. 8 Cap. 143.5 Intermissão -História do Venom- julho 19, 2024"
-  },
-  {
-    "num": 143,
+    "display_num": "Capítulo 143",
+    "raw_label": "Vol. 8 Cap. 143",
+    "title": "Os Temíveis Corpos Militares",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-143/",
-    "title": "Vol. 8 Cap. 143 Os Temíveis Corpos Militares julho 19, 2024"
+    "file": "capitulo_143.json"
   },
   {
+    "id": "cap-143-5",
+    "is_extra": false,
+    "vol_wn": 8,
+    "num": 143.5,
+    "display_num": "Capítulo 143.5",
+    "raw_label": "Vol. 8 Cap. 143.5",
+    "title": "Intermissão -História do Venom-",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-143-5/",
+    "file": "capitulo_143_5.json"
+  },
+  {
+    "id": "cap-144",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 144,
+    "display_num": "Capítulo 144",
+    "raw_label": "Vol. 8 Cap. 144",
+    "title": "Captura do Labirinto Subterrâneo -Pelotão de Batedores-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-144/",
-    "title": "Vol. 8 Cap. 144 Captura do Labirinto Subterrâneo -Pelotão de Batedores- julho 19, 2024"
+    "file": "capitulo_144.json"
   },
   {
+    "id": "cap-145",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 145,
+    "display_num": "Capítulo 145",
+    "raw_label": "Vol. 8 Cap. 145",
+    "title": "Captura do Labirinto Subterrâneo -Captura da Força Irresistível-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-145/",
-    "title": "Vol. 8 Cap. 145 Captura do Labirinto Subterrâneo -Captura da Força Irresistível- julho 19, 2024"
+    "file": "capitulo_145.json"
   },
   {
+    "id": "cap-146",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 146,
+    "display_num": "Capítulo 146",
+    "raw_label": "Vol. 8 Cap. 146",
+    "title": "Captura do Labirinto Subterrâneo -Resultado e Conclusão-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-146/",
-    "title": "Vol. 8 Cap. 146 Captura do Labirinto Subterrâneo -Resultado e Conclusão- julho 19, 2024"
+    "file": "capitulo_146.json"
   },
   {
+    "id": "cap-147",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 147,
+    "display_num": "Capítulo 147",
+    "raw_label": "Vol. 8 Cap. 147",
+    "title": "O Império que Começa a se Mover",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-147/",
-    "title": "Vol. 8 Cap. 147 O Império que Começa a se Mover julho 19, 2024"
+    "file": "capitulo_147.json"
   },
   {
+    "id": "cap-148",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 148,
+    "display_num": "Capítulo 148",
+    "raw_label": "Vol. 8 Cap. 148",
+    "title": "Uma Decisão Tomada Tarde Demais",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-148/",
-    "title": "Vol. 8 Cap. 148 Uma Decisão Tomada Tarde Demais julho 19, 2024"
+    "file": "capitulo_148.json"
   },
   {
+    "id": "cap-149",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 149,
+    "display_num": "Capítulo 149",
+    "raw_label": "Vol. 8 Cap. 149",
+    "title": "Noite Antes do Início da Guerra",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-149/",
-    "title": "Vol. 8 Cap. 149 Noite Antes do Início da Guerra julho 19, 2024"
+    "file": "capitulo_149.json"
   },
   {
+    "id": "cap-150",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 150,
+    "display_num": "Capítulo 150",
+    "raw_label": "Vol. 8 Cap. 150",
+    "title": "Expectativas que se Tornam Verdadeiras",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-150/",
-    "title": "Vol. 8 Cap. 150 Expectativas que se Tornam Verdadeiras julho 19, 2024"
+    "file": "capitulo_150.json"
   },
   {
+    "id": "cap-151",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 151,
+    "display_num": "Capítulo 151",
+    "raw_label": "Vol. 8 Cap. 151",
+    "title": "Explosão da Grande Guerra -Início-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-151/",
-    "title": "Vol. 8 Cap. 151 Explosão da Grande Guerra -Início- julho 19, 2024"
+    "file": "capitulo_151.json"
   },
   {
+    "id": "cap-152",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 152,
+    "display_num": "Capítulo 152",
+    "raw_label": "Vol. 8 Cap. 152",
+    "title": "Explosão da Grande Guerra -Agitação e Resolução-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-152/",
-    "title": "Vol. 8 Cap. 152 Explosão da Grande Guerra -Agitação e Resolução- julho 19, 2024"
+    "file": "capitulo_152.json"
   },
   {
+    "id": "cap-153",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 153,
+    "display_num": "Capítulo 153",
+    "raw_label": "Vol. 8 Cap. 153",
+    "title": "Explosão da Grande Guerra -Começou o Pisoteio-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-153/",
-    "title": "Vol. 8 Cap. 153 Explosão da Grande Guerra -Começou o Pisoteio- julho 19, 2024"
+    "file": "capitulo_153.json"
   },
   {
+    "id": "cap-154",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 154,
+    "display_num": "Capítulo 154",
+    "raw_label": "Vol. 8 Cap. 154",
+    "title": "Explosão da Grande Guerra -O Demônio Sorridente-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-154/",
-    "title": "Vol. 8 Cap. 154 Explosão da Grande Guerra -O Demônio Sorridente- julho 19, 2024"
+    "file": "capitulo_154.json"
   },
   {
+    "id": "cap-155",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 155,
+    "display_num": "Capítulo 155",
+    "raw_label": "Vol. 8 Cap. 155",
+    "title": "Vitória na Primeira Partida e Força Principal Inimiga",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-155/",
-    "title": "Vol. 8 Cap. 155 Vitória na Primeira Partida e Força Principal Inimiga julho 19, 2024"
+    "file": "capitulo_155.json"
   },
   {
+    "id": "cap-156",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 156,
+    "display_num": "Capítulo 156",
+    "raw_label": "Vol. 8 Cap. 156",
+    "title": "Conferência Dentro do Labirinto",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-156/",
-    "title": "Vol. 8 Cap. 156 Conferência Dentro do Labirinto julho 19, 2024"
+    "file": "capitulo_156.json"
   },
   {
+    "id": "cap-157",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 157,
+    "display_num": "Capítulo 157",
+    "raw_label": "Vol. 8 Cap. 157",
+    "title": "Batalha Dentro do Labirinto",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-157/",
-    "title": "Vol. 8 Cap. 157 Batalha Dentro do Labirinto julho 19, 2024"
+    "file": "capitulo_157.json"
   },
   {
+    "id": "cap-158",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 158,
+    "display_num": "Capítulo 158",
+    "raw_label": "Vol. 8 Cap. 158",
+    "title": "As Pessoas Absolutamente Fortes do Labirinto",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-158/",
-    "title": "Vol. 8 Cap. 158 As Pessoas Absolutamente Fortes do Labirinto julho 19, 2024"
+    "file": "capitulo_158.json"
   },
   {
+    "id": "cap-159",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 159,
+    "display_num": "Capítulo 159",
+    "raw_label": "Vol. 8 Cap. 159",
+    "title": "Batalha Defensiva Capital",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-159/",
-    "title": "Vol. 8 Cap. 159 Batalha Defensiva Capital julho 19, 2024"
+    "file": "capitulo_159.json"
   },
   {
+    "id": "cap-160",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 160,
+    "display_num": "Capítulo 160",
+    "raw_label": "Vol. 8 Cap. 160",
+    "title": "Guerra de Aniquilação Extensa",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-160/",
-    "title": "Vol. 8 Cap. 160 Guerra de Aniquilação Extensa julho 19, 2024"
+    "file": "capitulo_160.json"
   },
   {
+    "id": "cap-161",
+    "is_extra": false,
+    "vol_wn": 8,
     "num": 161,
-    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-161-5/",
-    "title": "Vol. 8 Cap. 161.5 Intermissão -História do Shinji- julho 19, 2024"
-  },
-  {
-    "num": 161,
+    "display_num": "Capítulo 161",
+    "raw_label": "Vol. 8 Cap. 161",
+    "title": "O Ato do Ímpio Lorde Demônio",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-161/",
-    "title": "Vol. 8 Cap. 161 O Ato do Ímpio Lorde Demônio julho 19, 2024"
+    "file": "capitulo_161.json"
   },
   {
+    "id": "cap-161-5",
+    "is_extra": false,
+    "vol_wn": 8,
+    "num": 161.5,
+    "display_num": "Capítulo 161.5",
+    "raw_label": "Vol. 8 Cap. 161.5",
+    "title": "Intermissão -História do Shinji-",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-161-5/",
+    "file": "capitulo_161_5.json"
+  },
+  {
+    "id": "cap-162",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 162,
+    "display_num": "Capítulo 162",
+    "raw_label": "Vol. 9 Cap. 162",
+    "title": "Recompensas e Evolução I",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-162/",
-    "title": "Vol. 9 Cap. 162 Recompensas e Evolução I julho 19, 2024"
+    "file": "capitulo_162.json"
   },
   {
+    "id": "cap-163",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 163,
+    "display_num": "Capítulo 163",
+    "raw_label": "Vol. 9 Cap. 163",
+    "title": "Recompensas e Evolução II",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-163/",
-    "title": "Vol. 9 Cap. 163 Recompensas e Evolução II julho 19, 2024"
+    "file": "capitulo_163.json"
   },
   {
+    "id": "cap-164",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 164,
+    "display_num": "Capítulo 164",
+    "raw_label": "Vol. 9 Cap. 164",
+    "title": "Recompensas e Evolução III",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-164/",
-    "title": "Vol. 9 Cap. 164 Recompensas e Evolução III julho 19, 2024"
+    "file": "capitulo_164.json"
   },
   {
+    "id": "cap-165",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 165,
+    "display_num": "Capítulo 165",
+    "raw_label": "Vol. 9 Cap. 165",
+    "title": "As Engrenagens Fora de Controle",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-165/",
-    "title": "Vol. 9 Cap. 165 As Engrenagens Fora de Controle julho 19, 2024"
+    "file": "capitulo_165.json"
   },
   {
+    "id": "cap-166",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 166,
+    "display_num": "Capítulo 166",
+    "raw_label": "Vol. 9 Cap. 166",
+    "title": "Um Golpe de Estado na Capital Imperial",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-166/",
-    "title": "Vol. 9 Cap. 166 Um Golpe de Estado na Capital Imperial julho 19, 2024"
+    "file": "capitulo_166.json"
   },
   {
+    "id": "cap-167",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 167,
+    "display_num": "Capítulo 167",
+    "raw_label": "Vol. 9 Cap. 167",
+    "title": "O Ponto de Segregação da Era",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-167/",
-    "title": "Vol. 9 Cap. 167 O Ponto de Segregação da Era julho 19, 2024"
+    "file": "capitulo_167.json"
   },
   {
+    "id": "cap-168",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 168,
+    "display_num": "Capítulo 168",
+    "raw_label": "Vol. 9 Cap. 168",
+    "title": "Guy Crimson",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-168/",
-    "title": "Vol. 9 Cap. 168 Guy Crimson julho 19, 2024"
+    "file": "capitulo_168.json"
   },
   {
+    "id": "cap-169",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 169,
+    "display_num": "Capítulo 169",
+    "raw_label": "Vol. 9 Cap. 169",
+    "title": "Negociações com o Guy",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-169/",
-    "title": "Vol. 9 Cap. 169 Negociações com o Guy julho 19, 2024"
+    "file": "capitulo_169.json"
   },
   {
+    "id": "cap-170",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 170,
+    "display_num": "Capítulo 170",
+    "raw_label": "Vol. 9 Cap. 170",
+    "title": "Uma Agradável Festa do Chá",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-170/",
-    "title": "Vol. 9 Cap. 170 Uma Agradável Festa do Chá julho 19, 2024"
+    "file": "capitulo_170.json"
   },
   {
+    "id": "cap-171",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 171,
+    "display_num": "Capítulo 171",
+    "raw_label": "Vol. 9 Cap. 171",
+    "title": "Confronto! Dragão da Tempestade vs. Dragão Escaldante -Primeira Parte-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-171/",
-    "title": "Vol. 9 Cap. 171 Confronto! Dragão da Tempestade vs Dragão Escaldante -Primeira Parte- julho 19, 2024"
+    "file": "capitulo_171.json"
   },
   {
+    "id": "cap-172",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 172,
+    "display_num": "Capítulo 172",
+    "raw_label": "Vol. 9 Cap. 172",
+    "title": "Confronto! Dragão da Tempestade vs. Dragão Escaldante -Última Metade-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-172/",
-    "title": "Vol. 9 Cap. 172 Confronto! Dragão da Tempestade vs Dragão Escaldante -Última Metade- julho 19, 2024"
+    "file": "capitulo_172.json"
   },
   {
+    "id": "cap-173",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 173,
+    "display_num": "Capítulo 173",
+    "raw_label": "Vol. 9 Cap. 173",
+    "title": "Fúria",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-173/",
-    "title": "Vol. 9 Cap. 173 Fúria julho 19, 2024"
+    "file": "capitulo_173.json"
   },
   {
+    "id": "cap-174",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 174,
+    "display_num": "Capítulo 174",
+    "raw_label": "Vol. 9 Cap. 174",
+    "title": "Rimuru vs. Dragão da Tempestade e Dragão Escaldante",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-174/",
-    "title": "Vol. 9 Cap. 174 Rimuru vs Dragão da Tempestade e Dragão Escaldante julho 19, 2024"
+    "file": "capitulo_174.json"
   },
   {
+    "id": "cap-175",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 175,
+    "display_num": "Capítulo 175",
+    "raw_label": "Vol. 9 Cap. 175",
+    "title": "Libertando Veldora",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-175/",
-    "title": "Vol. 9 Cap. 175 Libertando Veldora julho 19, 2024"
+    "file": "capitulo_175.json"
   },
   {
+    "id": "cap-176",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 176,
+    "display_num": "Capítulo 176",
+    "raw_label": "Vol. 9 Cap. 176",
+    "title": "Espada da Tempestade",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-176/",
-    "title": "Vol. 9 Cap. 176 Espada da Tempestade julho 19, 2024"
+    "file": "capitulo_176.json"
   },
   {
+    "id": "cap-177",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 177,
+    "display_num": "Capítulo 177",
+    "raw_label": "Vol. 9 Cap. 177",
+    "title": "Corpo Negro (Números Negros)",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-177/",
-    "title": "Vol. 9 Cap. 177 Corpo Negro (Números Negros) julho 19, 2024"
+    "file": "capitulo_177.json"
   },
   {
+    "id": "cap-178",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 178,
+    "display_num": "Capítulo 178",
+    "raw_label": "Vol. 9 Cap. 178",
+    "title": "Corpo Negro vs. o Exército Imperial -Primeira Parte-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-178/",
-    "title": "Vol. 9 Cap. 178 Corpo Negro vs o Exército Imperial -Primeira Parte- julho 19, 2024"
+    "file": "capitulo_178.json"
   },
   {
+    "id": "cap-179",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 179,
+    "display_num": "Capítulo 179",
+    "raw_label": "Vol. 9 Cap. 179",
+    "title": "Corpo Negro vs. o Exército Imperial -Última Parte-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-179/",
-    "title": "Vol. 9 Cap. 179 Corpo Negro vs o Exército Imperial -Ultima Parte- julho 19, 2024"
+    "file": "capitulo_179.json"
   },
   {
+    "id": "cap-180",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 180,
+    "display_num": "Capítulo 180",
+    "raw_label": "Vol. 9 Cap. 180",
+    "title": "Duelo no Dirigível",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-180/",
-    "title": "Vol. 9 Cap. 180 Duelo no Dirigível julho 19, 2024"
+    "file": "capitulo_180.json"
   },
   {
+    "id": "cap-181",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 181,
+    "display_num": "Capítulo 181",
+    "raw_label": "Vol. 9 Cap. 181",
+    "title": "Em Direção ao Estágio Final",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-181/",
-    "title": "Vol. 9 Cap. 181 Em Direção ao Estágio Final julho 19, 2024"
+    "file": "capitulo_181.json"
   },
   {
+    "id": "cap-182",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 182,
+    "display_num": "Capítulo 182",
+    "raw_label": "Vol. 9 Cap. 182",
+    "title": "A Vontade Confiada",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-182/",
-    "title": "Vol. 9 Cap. 182 A Vontade Confiada julho 19, 2024"
+    "file": "capitulo_182.json"
   },
   {
+    "id": "cap-183",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 183,
+    "display_num": "Capítulo 183",
+    "raw_label": "Vol. 9 Cap. 183",
+    "title": "Estabelecendo um Contrato",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-183/",
-    "title": "Vol. 9 Cap. 183 Estabelecendo um Contrato julho 19, 2024"
+    "file": "capitulo_183.json"
   },
   {
+    "id": "cap-184",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 184,
+    "display_num": "Capítulo 184",
+    "raw_label": "Vol. 9 Cap. 184",
+    "title": "O Discurso",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-184/",
-    "title": "Vol. 9 Cap. 184 O Discurso julho 19, 2024"
+    "file": "capitulo_184.json"
   },
   {
+    "id": "cap-185",
+    "is_extra": false,
+    "vol_wn": 9,
     "num": 185,
-    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-185-5/",
-    "title": "Vol. 9 Cap. 185.5 Intermissão -Guy Crimson- julho 19, 2024"
-  },
-  {
-    "num": 185,
+    "display_num": "Capítulo 185",
+    "raw_label": "Vol. 9 Cap. 185",
+    "title": "O Início de Um novo Jogo",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-185/",
-    "title": "Vol. 9 Cap. 185 O Inicio de Um novo Jogo julho 19, 2024"
+    "file": "capitulo_185.json"
   },
   {
+    "id": "cap-185-5",
+    "is_extra": false,
+    "vol_wn": 9,
+    "num": 185.5,
+    "display_num": "Capítulo 185.5",
+    "raw_label": "Vol. 9 Cap. 185.5",
+    "title": "Intermissão -Guy Crimson-",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-185-5/",
+    "file": "capitulo_185_5.json"
+  },
+  {
+    "id": "cap-186",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 186,
+    "display_num": "Capítulo 186",
+    "raw_label": "Vol. 10 Cap. 186",
+    "title": "O Primeiro Movimento",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-186/",
-    "title": "Vol. 10 Cap. 186 O Primeiro Movimento julho 19, 2024"
+    "file": "capitulo_186.json"
   },
   {
+    "id": "cap-187",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 187,
+    "display_num": "Capítulo 187",
+    "raw_label": "Vol. 10 Cap. 187",
+    "title": "Aquele que Observa",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-187/",
-    "title": "Vol. 10 Cap. 187 Aquele que Observa julho 19, 2024"
+    "file": "capitulo_187.json"
   },
   {
+    "id": "cap-188",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 188,
+    "display_num": "Capítulo 188",
+    "raw_label": "Vol. 10 Cap. 188",
+    "title": "Apóstolo do Fim",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-188/",
-    "title": "Vol. 10 Cap. 188 Apostolo do Fim julho 19, 2024"
+    "file": "capitulo_188.json"
   },
   {
+    "id": "cap-189",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 189,
+    "display_num": "Capítulo 189",
+    "raw_label": "Vol. 10 Cap. 189",
+    "title": "Exército no Céu",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-189/",
-    "title": "Vol. 10 Cap. 189 Exército no Céu julho 19, 2024"
+    "file": "capitulo_189.json"
   },
   {
+    "id": "cap-190",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 190,
+    "display_num": "Capítulo 190",
+    "raw_label": "Vol. 10 Cap. 190",
+    "title": "Habilidade Suprema",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-190/",
-    "title": "Vol. 10 Cap. 190 Habilidade Suprema julho 19, 2024"
+    "file": "capitulo_190.json"
   },
   {
+    "id": "cap-191",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 191,
+    "display_num": "Capítulo 191",
+    "raw_label": "Vol. 10 Cap. 191",
+    "title": "A Síntese de Habilidade de Ciel-Sensei",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-191/",
-    "title": "Vol. 10 Cap. 191 A Síntese de Habilidade de Ciel-Sensei julho 19, 2024"
+    "file": "capitulo_191.json"
   },
   {
+    "id": "cap-192",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 192,
+    "display_num": "Capítulo 192",
+    "raw_label": "Vol. 10 Cap. 192",
+    "title": "Walpurgis",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-192/",
-    "title": "Vol. 10 Cap. 192 Walpurgis julho 19, 2024"
+    "file": "capitulo_192.json"
   },
   {
+    "id": "cap-193",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 193,
+    "display_num": "Capítulo 193",
+    "raw_label": "Vol. 10 Cap. 193",
+    "title": "Para cada Preparação",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-193/",
-    "title": "Vol. 10 Cap. 193 Para cada Preparação julho 19, 2024"
+    "file": "capitulo_193.json"
   },
   {
+    "id": "cap-194",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 194,
+    "display_num": "Capítulo 194",
+    "raw_label": "Vol. 10 Cap. 194",
+    "title": "Rompante Mundial",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-194/",
-    "title": "Vol. 10 Cap. 194 Rompante Mundial julho 19, 2024"
+    "file": "capitulo_194.json"
   },
   {
+    "id": "cap-195",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 195,
+    "display_num": "Capítulo 195",
+    "raw_label": "Vol. 10 Cap. 195",
+    "title": "Caos e Contra-Plano",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-195/",
-    "title": "Vol. 10 Cap. 195 Caos e Contra-Plano julho 19, 2024"
+    "file": "capitulo_195.json"
   },
   {
+    "id": "cap-196",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 196,
+    "display_num": "Capítulo 196",
+    "raw_label": "Vol. 10 Cap. 196",
+    "title": "O Rei Leão vs. Vega dos Quatro Demônios dos Comandos Celestiais",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-196/",
-    "title": "Vol. 10 Cap. 196 O Rei Leão vs Vega dos Quatro Demônios dos Comandos Celestiais julho 19, 2024"
+    "file": "capitulo_196.json"
   },
   {
+    "id": "cap-197",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 197,
+    "display_num": "Capítulo 197",
+    "raw_label": "Vol. 10 Cap. 197",
+    "title": "Demônio vs. Anjo",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-197/",
-    "title": "Vol. 10 Cap. 197 Demônio vs Anjo julho 19, 2024"
+    "file": "capitulo_197.json"
   },
   {
+    "id": "cap-198",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 198,
+    "display_num": "Capítulo 198",
+    "raw_label": "Vol. 10 Cap. 198",
+    "title": "Gobuta e Karion vs. Vega dos Quatro Demônios dos Comandos Celestiais",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-198/",
-    "title": "Vol. 10 Cap. 198 Gobuta e Karion vs Vega dos Quatro Demônios dos Comandos Celestiais julho 19, 2024"
+    "file": "capitulo_198.json"
   },
   {
+    "id": "cap-199",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 199,
+    "display_num": "Capítulo 199",
+    "raw_label": "Vol. 10 Cap. 199",
+    "title": "Desaparecimento de Rimuru",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-199/",
-    "title": "Vol. 10 Cap. 199 Desaparecimento de Rimuru julho 19, 2024"
+    "file": "capitulo_199.json"
   },
   {
+    "id": "cap-200",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 200,
+    "display_num": "Capítulo 200",
+    "raw_label": "Vol. 10 Cap. 200",
+    "title": "Cada uma das Suas Reações",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-200/",
-    "title": "Vol. 10 Cap. 200 Cada uma das Suas Reações julho 19, 2024"
+    "file": "capitulo_200.json"
   },
   {
+    "id": "cap-201",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 201,
+    "display_num": "Capítulo 201",
+    "raw_label": "Vol. 10 Cap. 201",
+    "title": "Preparativos do Lado de Leão",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-201/",
-    "title": "Vol. 10 Cap. 201 Preparativos do Lado de Leão julho 19, 2024"
+    "file": "capitulo_201.json"
   },
   {
+    "id": "cap-202",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 202,
+    "display_num": "Capítulo 202",
+    "raw_label": "Vol. 10 Cap. 202",
+    "title": "Trupe Moderada de Palhaços",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-202/",
-    "title": "Vol. 10 Cap. 202 Trupe Moderada de Palhaços julho 19, 2024"
+    "file": "capitulo_202.json"
   },
   {
+    "id": "cap-203",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 203,
+    "display_num": "Capítulo 203",
+    "raw_label": "Vol. 10 Cap. 203",
+    "title": "Grande Lorde Demônio Kazaream",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-203/",
-    "title": "Vol. 10 Cap. 203 Grande Lorde Demônio Kazaream julho 19, 2024"
+    "file": "capitulo_203.json"
   },
   {
+    "id": "cap-204",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 204,
+    "display_num": "Capítulo 204",
+    "raw_label": "Vol. 10 Cap. 204",
+    "title": "O Mundo Confuso",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-204/",
-    "title": "Vol. 10 Cap. 204 O Mundo Confuso julho 19, 2024"
+    "file": "capitulo_204.json"
   },
   {
+    "id": "cap-205",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 205,
+    "display_num": "Capítulo 205",
+    "raw_label": "Vol. 10 Cap. 205",
+    "title": "vs. Dagruel |Parte 1|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-205/",
-    "title": "Vol. 10 Cap. 205 Vs Dagruel |Parte 1| julho 19, 2024"
+    "file": "capitulo_205.json"
   },
   {
+    "id": "cap-206",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 206,
+    "display_num": "Capítulo 206",
+    "raw_label": "Vol. 10 Cap. 206",
+    "title": "vs. Dagruel |Parte 2|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-206/",
-    "title": "Vol. 10 Cap. 206 Vs Dagruel |Parte 2| julho 19, 2024"
+    "file": "capitulo_206.json"
   },
   {
+    "id": "cap-207",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 207,
+    "display_num": "Capítulo 207",
+    "raw_label": "Vol. 10 Cap. 207",
+    "title": "vs. Dagruel |Parte 3|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-207/",
-    "title": "Vol. 10 Cap. 207 Vs Dagruel |Parte 3| julho 19, 2024"
+    "file": "capitulo_207.json"
   },
   {
+    "id": "cap-208",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 208,
+    "display_num": "Capítulo 208",
+    "raw_label": "Vol. 10 Cap. 208",
+    "title": "vs. Dagruel |Parte 4|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-208/",
-    "title": "Vol. 10 Cap. 208 Vs Dagruel |Parte 4| julho 19, 2024"
+    "file": "capitulo_208.json"
   },
   {
+    "id": "cap-209",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 209,
+    "display_num": "Capítulo 209",
+    "raw_label": "Vol. 10 Cap. 209",
+    "title": "Broto da Inveja",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-209/",
-    "title": "Vol. 10 Cap. 209 Broto da Inveja julho 19, 2024"
+    "file": "capitulo_209.json"
   },
   {
+    "id": "cap-210",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 210,
+    "display_num": "Capítulo 210",
+    "raw_label": "Vol. 10 Cap. 210",
+    "title": "Os Sentimentos do Leon",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-210/",
-    "title": "Vol. 10 Cap. 210 Os Sentimentos do Leon julho 19, 2024"
+    "file": "capitulo_210.json"
   },
   {
+    "id": "cap-211",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 211,
+    "display_num": "Capítulo 211",
+    "raw_label": "Vol. 10 Cap. 211",
+    "title": "Cálculo que Leva ao Erro",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-211/",
-    "title": "Vol. 10 Cap. 211 Cálculo que Leva ao Erro julho 19, 2024"
+    "file": "capitulo_211.json"
   },
   {
+    "id": "cap-212",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 212,
+    "display_num": "Capítulo 212",
+    "raw_label": "Vol. 10 Cap. 212",
+    "title": "Kazaream Tolo",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-212/",
-    "title": "Vol. 10 Cap. 212 Kazaream Tolo julho 19, 2024"
+    "file": "capitulo_212.json"
   },
   {
+    "id": "cap-213",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 213,
+    "display_num": "Capítulo 213",
+    "raw_label": "Vol. 10 Cap. 213",
+    "title": "Final Injusto",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-213/",
-    "title": "Vol. 10 Cap. 213 Final Injusto julho 19, 2024"
+    "file": "capitulo_213.json"
   },
   {
+    "id": "cap-214",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 214,
+    "display_num": "Capítulo 214",
+    "raw_label": "Vol. 10 Cap. 214",
+    "title": "O Mundo Fechado",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-214/",
-    "title": "Vol. 10 Cap. 214 O Mundo Fechado julho 19, 2024"
+    "file": "capitulo_214.json"
   },
   {
+    "id": "cap-215",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 215,
+    "display_num": "Capítulo 215",
+    "raw_label": "Vol. 10 Cap. 215",
+    "title": "Tempo Acelerado",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-215/",
-    "title": "Vol. 10 Cap. 215 Tempo Acelerado julho 19, 2024"
+    "file": "capitulo_215.json"
   },
   {
+    "id": "cap-216",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 216,
+    "display_num": "Capítulo 216",
+    "raw_label": "Vol. 10 Cap. 216",
+    "title": "vs. Dagruel |Parte 5|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-216/",
-    "title": "Vol. 10 Cap. 216 Vs Dagruel |Parte 5| julho 19, 2024"
+    "file": "capitulo_216.json"
   },
   {
+    "id": "cap-217",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 217,
+    "display_num": "Capítulo 217",
+    "raw_label": "Vol. 10 Cap. 217",
+    "title": "vs. Dagruel |Parte 6|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-217/",
-    "title": "Vol. 10 Cap. 217 Vs Dagruel |Parte 6| julho 19, 2024"
+    "file": "capitulo_217.json"
   },
   {
+    "id": "cap-218",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 218,
+    "display_num": "Capítulo 218",
+    "raw_label": "Vol. 10 Cap. 218",
+    "title": "vs. Dagruel |Parte 7|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-218/",
-    "title": "Vol. 10 Cap. 218 Vs Dagruel |Parte 7| julho 19, 2024"
+    "file": "capitulo_218.json"
   },
   {
+    "id": "cap-219",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 219,
+    "display_num": "Capítulo 219",
+    "raw_label": "Vol. 10 Cap. 219",
+    "title": "vs. Dagruel |Parte 8| - Conclusão",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-219/",
-    "title": "Vol. 10 Cap. 219 Vs Dagruel |Parte 8| - Conclusão julho 19, 2024"
+    "file": "capitulo_219.json"
   },
   {
+    "id": "cap-220",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 220,
+    "display_num": "Capítulo 220",
+    "raw_label": "Vol. 10 Cap. 220",
+    "title": "Distúrbio da Capital Real",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-220/",
-    "title": "Vol. 10 Cap. 220 Distúrbio da Capital Real julho 19, 2024"
+    "file": "capitulo_220.json"
   },
   {
+    "id": "cap-221",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 221,
+    "display_num": "Capítulo 221",
+    "raw_label": "Vol. 10 Cap. 221",
+    "title": "Distúrbio na Capital Real -Herói-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-221/",
-    "title": "Vol. 10 Cap. 221 Distúrbio na Capital Real -Herói- julho 19, 2024"
+    "file": "capitulo_221.json"
   },
   {
+    "id": "cap-222",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 222,
+    "display_num": "Capítulo 222",
+    "raw_label": "Vol. 10 Cap. 222",
+    "title": "Distúrbio na Capital Real - Mudança Súbita",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-222/",
-    "title": "Vol. 10 Cap. 222 Distúrbio na Capital Real - Mudança Súbita julho 19, 2024"
+    "file": "capitulo_222.json"
   },
   {
+    "id": "cap-223",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 223,
+    "display_num": "Capítulo 223",
+    "raw_label": "Vol. 10 Cap. 223",
+    "title": "Distúrbio na Capital Real -Evacuação-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-223/",
-    "title": "Vol. 10 Cap. 223 Distúrbio na Capital Real -Evacuação- julho 19, 2024"
+    "file": "capitulo_223.json"
   },
   {
+    "id": "cap-224",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 224,
+    "display_num": "Capítulo 224",
+    "raw_label": "Vol. 10 Cap. 224",
+    "title": "Distúrbio na Capital Real -Derrota-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-224/",
-    "title": "Vol. 10 Cap. 224 Distúrbio na Capital Real -Derrota- julho 19, 2024"
+    "file": "capitulo_224.json"
   },
   {
+    "id": "cap-225",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 225,
+    "display_num": "Capítulo 225",
+    "raw_label": "Vol. 10 Cap. 225",
+    "title": "Xeque-mate na Interseção",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-225/",
-    "title": "Vol. 10 Cap. 225 Xeque-mate na Interseção julho 19, 2024"
+    "file": "capitulo_225.json"
   },
   {
+    "id": "cap-226",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 226,
+    "display_num": "Capítulo 226",
+    "raw_label": "Vol. 10 Cap. 226",
+    "title": "Invasão ao Labirinto |Parte 1|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-226/",
-    "title": "Vol. 10 Cap. 226 Invasão ao Labirinto |Parte 1| julho 19, 2024"
+    "file": "capitulo_226.json"
   },
   {
+    "id": "cap-227",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 227,
+    "display_num": "Capítulo 227",
+    "raw_label": "Vol. 10 Cap. 227",
+    "title": "Invasão ao Labirinto |Parte 2|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-227/",
-    "title": "Vol. 10 Cap. 227 Invasão ao Labirinto |Parte 2| julho 19, 2024"
+    "file": "capitulo_227.json"
   },
   {
+    "id": "cap-228",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 228,
+    "display_num": "Capítulo 228",
+    "raw_label": "Vol. 10 Cap. 228",
+    "title": "Invasão do Labirinto |Parte 3|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-228/",
-    "title": "Vol. 10 Cap. 228 Invasão do Labirinto |Parte 3| julho 19, 2024"
+    "file": "capitulo_228.json"
   },
   {
+    "id": "cap-229",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 229,
+    "display_num": "Capítulo 229",
+    "raw_label": "Vol. 10 Cap. 229",
+    "title": "Invasão do Labirinto |Parte 4|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-229/",
-    "title": "Vol. 10 Cap. 229 Invasão do Labirinto |Parte 4| julho 19, 2024"
+    "file": "capitulo_229.json"
   },
   {
+    "id": "cap-230",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 230,
+    "display_num": "Capítulo 230",
+    "raw_label": "Vol. 10 Cap. 230",
+    "title": "Invasão do Labirinto |Parte 5|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-230/",
-    "title": "Vol. 10 Cap. 230 Invasão do Labirinto |Parte 5| julho 19, 2024"
+    "file": "capitulo_230.json"
   },
   {
+    "id": "cap-231",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 231,
+    "display_num": "Capítulo 231",
+    "raw_label": "Vol. 10 Cap. 231",
+    "title": "Invasão do Labirinto |Parte 6|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-231/",
-    "title": "Vol. 10 Cap. 231 Invasão do Labirinto |Parte 6| julho 19, 2024"
+    "file": "capitulo_231.json"
   },
   {
+    "id": "cap-232",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 232,
+    "display_num": "Capítulo 232",
+    "raw_label": "Vol. 10 Cap. 232",
+    "title": "Invasão do Labirinto |Parte 7|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-232/",
-    "title": "Vol. 10 Cap. 232 Invasão do Labirinto |Parte 7| julho 19, 2024"
+    "file": "capitulo_232.json"
   },
   {
+    "id": "cap-233",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 233,
+    "display_num": "Capítulo 233",
+    "raw_label": "Vol. 10 Cap. 233",
+    "title": "Invasão do Labirinto |Parte 8| - Conclusão",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-233/",
-    "title": "Vol. 10 Cap. 233 Invasão do Labirinto |Parte 8| - Conclusão julho 19, 2024"
+    "file": "capitulo_233.json"
   },
   {
+    "id": "cap-234",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 234,
+    "display_num": "Capítulo 234",
+    "raw_label": "Vol. 10 Cap. 234",
+    "title": "Domínio do Arcanjo",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-234/",
-    "title": "Vol. 10 Cap. 234 Domínio do Arcanjo julho 19, 2024"
+    "file": "capitulo_234.json"
   },
   {
+    "id": "cap-235",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 235,
+    "display_num": "Capítulo 235",
+    "raw_label": "Vol. 10 Cap. 235",
+    "title": "Na Terra do Norte -Primeira Parte-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-235/",
-    "title": "Vol. 10 Cap. 235 Na Terra do Norte -Primeira Parte- julho 19, 2024"
+    "file": "capitulo_235.json"
   },
   {
+    "id": "cap-236",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 236,
+    "display_num": "Capítulo 236",
+    "raw_label": "Vol. 10 Cap. 236",
+    "title": "Na Terra do Norte -Parte Intermediária-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-236/",
-    "title": "Vol. 10 Cap. 236 Na Terra do Norte -Parte Intermediária- julho 19, 2024"
+    "file": "capitulo_236.json"
   },
   {
+    "id": "cap-237",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 237,
+    "display_num": "Capítulo 237",
+    "raw_label": "Vol. 10 Cap. 237",
+    "title": "Na Terra do Norte -Última Parte-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-237/",
-    "title": "Vol. 10 Cap. 237 Na Terra do Norte -Última Parte- julho 19, 2024"
+    "file": "capitulo_237.json"
   },
   {
+    "id": "cap-238",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 238,
+    "display_num": "Capítulo 238",
+    "raw_label": "Vol. 10 Cap. 238",
+    "title": "Justiça e Contradição",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-238/",
-    "title": "Vol. 10 Cap. 238 Justiça e Contradição julho 19, 2024"
+    "file": "capitulo_238.json"
   },
   {
+    "id": "cap-239",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 239,
+    "display_num": "Capítulo 239",
+    "raw_label": "Vol. 10 Cap. 239",
+    "title": "O Muro Elevado",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-239/",
-    "title": "Vol. 10 Cap. 239 O Muro Elevado julho 19, 2024"
+    "file": "capitulo_239.json"
   },
   {
+    "id": "cap-240",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 240,
+    "display_num": "Capítulo 240",
+    "raw_label": "Vol. 10 Cap. 240",
+    "title": "Batalha Decisiva Final |Parte 1|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-240/",
-    "title": "Vol. 10 Cap. 240 Batalha Decisiva Final |Parte 1| julho 19, 2024"
+    "file": "capitulo_240.json"
   },
   {
+    "id": "cap-241",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 241,
+    "display_num": "Capítulo 241",
+    "raw_label": "Vol. 10 Cap. 241",
+    "title": "Batalha Decisiva Final |Parte 2|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-241/",
-    "title": "Vol. 10 Cap. 241 Batalha Decisiva Final |Parte 2| julho 19, 2024"
+    "file": "capitulo_241.json"
   },
   {
+    "id": "cap-242",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 242,
+    "display_num": "Capítulo 242",
+    "raw_label": "Vol. 10 Cap. 242",
+    "title": "Batalha Decisiva Final |Parte 3|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-242/",
-    "title": "Vol. 10 Cap. 242 Batalha Decisiva Final |Parte 3| julho 19, 2024"
+    "file": "capitulo_242.json"
   },
   {
+    "id": "cap-243",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 243,
+    "display_num": "Capítulo 243",
+    "raw_label": "Vol. 10 Cap. 243",
+    "title": "Batalha Decisiva Final |Parte 4|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-243/",
-    "title": "Vol. 10 Cap. 243 Batalha Decisiva Final |Parte 4| julho 19, 2024"
+    "file": "capitulo_243.json"
   },
   {
+    "id": "cap-244",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 244,
+    "display_num": "Capítulo 244",
+    "raw_label": "Vol. 10 Cap. 244",
+    "title": "Batalha Decisiva Final |Parte 5|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-244/",
-    "title": "Vol. 10 Cap. 244 Batalha Decisiva Final |Parte 5| julho 19, 2024"
+    "file": "capitulo_244.json"
   },
   {
+    "id": "cap-245",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 245,
+    "display_num": "Capítulo 245",
+    "raw_label": "Vol. 10 Cap. 245",
+    "title": "Batalha Decisiva Final |Parte 6|",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-245/",
-    "title": "Vol. 10 Cap. 245 Batalha Decisiva Final |Parte 6| julho 19, 2024"
+    "file": "capitulo_245.json"
   },
   {
+    "id": "cap-246",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 246,
+    "display_num": "Capítulo 246",
+    "raw_label": "Vol. 10 Cap. 246",
+    "title": "Rimuru vs. Yuuki -Primeira Parte-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-246/",
-    "title": "Vol. 10 Cap. 246 Rimuru vs Yuuki -Primeira Parte- julho 19, 2024"
+    "file": "capitulo_246.json"
   },
   {
+    "id": "cap-247",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 247,
+    "display_num": "Capítulo 247",
+    "raw_label": "Vol. 10 Cap. 247",
+    "title": "Rimuru vs. Yuuki -Parte Intermediária-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-247/",
-    "title": "Vol. 10 Cap. 247 Rimuru vs Yuuki -Parte Intermediária- julho 19, 2024"
+    "file": "capitulo_247.json"
   },
   {
+    "id": "cap-248",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 248,
+    "display_num": "Capítulo 248",
+    "raw_label": "Vol. 10 Cap. 248",
+    "title": "Rimuru vs. Yuuki -Última Parte-",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-248/",
-    "title": "Vol. 10 Cap. 248 Rimuru vs Yuuki -Última Parte- julho 19, 2024"
+    "file": "capitulo_248.json"
   },
   {
+    "id": "cap-249",
+    "is_extra": false,
+    "vol_wn": 10,
     "num": 249,
+    "display_num": "Capítulo 249",
+    "raw_label": "Vol. 10 Cap. 249 [Fim]",
+    "title": "Epílogo ~ Sobre Minha Reencarnação ~",
     "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-capitulo-249/",
-    "title": "Vol. 10 Cap. 249 [Fim] Epílogo ~ Sobre Minha Reencarnação ~ julho 19, 2024"
+    "file": "capitulo_249.json"
+  },
+  {
+    "id": "extra-001",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 1,
+    "display_num": "Extra 01",
+    "raw_label": "Vol. Extra Cap. 1",
+    "title": "Jogo de Fuga Elegante do Rimuru – 01",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-1/",
+    "file": "extra_001.json"
+  },
+  {
+    "id": "extra-002",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 2,
+    "display_num": "Extra 02",
+    "raw_label": "Vol. Extra Cap. 2",
+    "title": "Jogo de Fuga Elegante do Rimuru – 02",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-2/",
+    "file": "extra_002.json"
+  },
+  {
+    "id": "extra-003",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 3,
+    "display_num": "Extra 03",
+    "raw_label": "Vol. Extra Cap. 3",
+    "title": "Jogo de Fuga Elegante do Rimuru – 03",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-3/",
+    "file": "extra_003.json"
+  },
+  {
+    "id": "extra-004",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 4,
+    "display_num": "Extra 04",
+    "raw_label": "Vol. Extra Cap. 4",
+    "title": "Jogo de Fuga Elegante do Rimuru – 04",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-4/",
+    "file": "extra_004.json"
+  },
+  {
+    "id": "extra-005",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 5,
+    "display_num": "Extra 05",
+    "raw_label": "Vol. Extra Cap. 5",
+    "title": "Jogo de Fuga Elegante do Rimuru – 05",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-5/",
+    "file": "extra_005.json"
+  },
+  {
+    "id": "extra-006",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 6,
+    "display_num": "Extra 06",
+    "raw_label": "Vol. Extra Cap. 6",
+    "title": "Jogo de Fuga Elegante do Rimuru – 06",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-6/",
+    "file": "extra_006.json"
+  },
+  {
+    "id": "extra-007",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 7,
+    "display_num": "Extra 07",
+    "raw_label": "Vol. Extra Cap. 7",
+    "title": "Jogo de Fuga Elegante do Rimuru – 07",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-7/",
+    "file": "extra_007.json"
+  },
+  {
+    "id": "extra-008",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 8,
+    "display_num": "Extra 08",
+    "raw_label": "Vol. Extra Cap. 8",
+    "title": "Jogo de Fuga Elegante do Rimuru – 08",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-8/",
+    "file": "extra_008.json"
+  },
+  {
+    "id": "extra-009",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 9,
+    "display_num": "Extra 09",
+    "raw_label": "Vol. Extra Cap. 9",
+    "title": "Jogo de Fuga Elegante do Rimuru – 09",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-9/",
+    "file": "extra_009.json"
+  },
+  {
+    "id": "extra-010",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 10,
+    "display_num": "Extra 10",
+    "raw_label": "Vol. Extra Cap. 10",
+    "title": "Jogo de Fuga Elegante do Rimuru – 10",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-10/",
+    "file": "extra_010.json"
+  },
+  {
+    "id": "extra-011",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 11,
+    "display_num": "Extra 11",
+    "raw_label": "Vol. Extra Cap. 11",
+    "title": "Jogo de Fuga Elegante do Rimuru – 11",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-11/",
+    "file": "extra_011.json"
+  },
+  {
+    "id": "extra-012",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 12,
+    "display_num": "Extra 12",
+    "raw_label": "Vol. Extra Cap. 12",
+    "title": "Jogo de Fuga Elegante do Rimuru – 12",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-12/",
+    "file": "extra_012.json"
+  },
+  {
+    "id": "extra-013",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 13,
+    "display_num": "Extra 13",
+    "raw_label": "Vol. Extra Cap. 13",
+    "title": "Jogo de Fuga Elegante do Rimuru – 13",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-13/",
+    "file": "extra_013.json"
+  },
+  {
+    "id": "extra-014",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 14,
+    "display_num": "Extra 14",
+    "raw_label": "Vol. Extra Cap. 14",
+    "title": "Jogo de Fuga Elegante do Rimuru – 14",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-14/",
+    "file": "extra_014.json"
+  },
+  {
+    "id": "extra-015",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 15,
+    "display_num": "Extra 15",
+    "raw_label": "Vol. Extra Cap. 15",
+    "title": "Jogo de Fuga Elegante do Rimuru – 15",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-15/",
+    "file": "extra_015.json"
+  },
+  {
+    "id": "extra-016",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 16,
+    "display_num": "Extra 16",
+    "raw_label": "Vol. Extra Cap. 16",
+    "title": "Jogo de Fuga Elegante do Rimuru – 16",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-16/",
+    "file": "extra_016.json"
+  },
+  {
+    "id": "extra-017",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 17,
+    "display_num": "Extra 17",
+    "raw_label": "Vol. Extra Cap. 17",
+    "title": "Jogo de Fuga Elegante do Rimuru – 17",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-17/",
+    "file": "extra_017.json"
+  },
+  {
+    "id": "extra-018",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 18,
+    "display_num": "Extra 18",
+    "raw_label": "Vol. Extra Cap. 18",
+    "title": "Jogo de Fuga Elegante do Rimuru – 18",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-18/",
+    "file": "extra_018.json"
+  },
+  {
+    "id": "extra-019",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 19,
+    "display_num": "Extra 19",
+    "raw_label": "Vol. Extra Cap. 19",
+    "title": "Jogo de Fuga Elegante do Rimuru – 19",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-19/",
+    "file": "extra_019.json"
+  },
+  {
+    "id": "extra-020",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 20,
+    "display_num": "Extra 20",
+    "raw_label": "Vol. Extra Cap. 20",
+    "title": "Jogo de Fuga Elegante do Rimuru – 20",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-20/",
+    "file": "extra_020.json"
+  },
+  {
+    "id": "extra-021",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 21,
+    "display_num": "Extra 21",
+    "raw_label": "Vol. Extra Cap. 21",
+    "title": "Jogo de Fuga Elegante do Rimuru – 21",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-21/",
+    "file": "extra_021.json"
+  },
+  {
+    "id": "extra-022",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 22,
+    "display_num": "Extra 22",
+    "raw_label": "Vol. Extra Cap. 22",
+    "title": "Jogo de Fuga Elegante do Rimuru – 22",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-22/",
+    "file": "extra_022.json"
+  },
+  {
+    "id": "extra-023",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 23,
+    "display_num": "Extra 23",
+    "raw_label": "Vol. Extra Cap. 23",
+    "title": "Jogo de Fuga Elegante do Rimuru – 23",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-23/",
+    "file": "extra_023.json"
+  },
+  {
+    "id": "extra-024",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 24,
+    "display_num": "Extra 24",
+    "raw_label": "Vol. Extra Cap. 24",
+    "title": "Jogo de Fuga Elegante do Rimuru – 24",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-24/",
+    "file": "extra_024.json"
+  },
+  {
+    "id": "extra-025",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 25,
+    "display_num": "Extra 25",
+    "raw_label": "Vol. Extra Cap. 25",
+    "title": "A Vida Diária de Alguns Aventureiros",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-25/",
+    "file": "extra_025.json"
+  },
+  {
+    "id": "extra-026",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 26,
+    "display_num": "Extra 26",
+    "raw_label": "Vol. Extra Cap. 26",
+    "title": "SS – Borboleta Noturna (Anfitriã) - Primeiro Volume - Privilégio Empresarial do Toranoana-sama",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-26/",
+    "file": "extra_026.json"
+  },
+  {
+    "id": "extra-027",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 27,
+    "display_num": "Extra 27",
+    "raw_label": "Vol. Extra Cap. 27",
+    "title": "Visita ao Desconhecido - 01 Portal para Outro Mundo",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-27/",
+    "file": "extra_027.json"
+  },
+  {
+    "id": "extra-028",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 28,
+    "display_num": "Extra 28",
+    "raw_label": "Vol. Extra Cap. 28",
+    "title": "Visita ao Desconhecido - 02 Primeiro Contato",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-28/",
+    "file": "extra_028.json"
+  },
+  {
+    "id": "extra-029",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 29,
+    "display_num": "Extra 29",
+    "raw_label": "Vol. Extra Cap. 29",
+    "title": "Visita ao Desconhecido - 03 Situação Alimentar",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-29/",
+    "file": "extra_029.json"
+  },
+  {
+    "id": "extra-030",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 30,
+    "display_num": "Extra 30",
+    "raw_label": "Vol. Extra Cap. 30",
+    "title": "Visita ao Desconhecido - 04 Circunstâncias do Império e Okonomiyaki",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-30/",
+    "file": "extra_030.json"
+  },
+  {
+    "id": "extra-031",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 31,
+    "display_num": "Extra 31",
+    "raw_label": "Vol. Extra Cap. 31",
+    "title": "Visita ao Desconhecido - 05 Reclamação do Veldora",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-31/",
+    "file": "extra_031.json"
+  },
+  {
+    "id": "extra-032",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 32,
+    "display_num": "Extra 32",
+    "raw_label": "Vol. Extra Cap. 32",
+    "title": "Visita ao Desconhecido - 06 Ataque",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-32/",
+    "file": "extra_032.json"
+  },
+  {
+    "id": "extra-033",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 33,
+    "display_num": "Extra 33",
+    "raw_label": "Vol. Extra Cap. 33",
+    "title": "Visita ao Desconhecido - 07 Contra-Ataque e Encontro",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-33/",
+    "file": "extra_033.json"
+  },
+  {
+    "id": "extra-034",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 34,
+    "display_num": "Extra 34",
+    "raw_label": "Vol. Extra Cap. 34",
+    "title": "Visita ao Desconhecido - 08 Michelle",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-34/",
+    "file": "extra_034.json"
+  },
+  {
+    "id": "extra-035",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 35,
+    "display_num": "Extra 35",
+    "raw_label": "Vol. Extra Cap. 35",
+    "title": "Visita ao Desconhecido - 09 Negociações com a Michelle",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-35/",
+    "file": "extra_035.json"
+  },
+  {
+    "id": "extra-036",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 36,
+    "display_num": "Extra 36",
+    "raw_label": "Vol. Extra Cap. 36",
+    "title": "Visita ao Desconhecido - 10 Manifestação Maliciosa e Invasão da Super Besta",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-36/",
+    "file": "extra_036.json"
+  },
+  {
+    "id": "extra-037",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 37,
+    "display_num": "Extra 37",
+    "raw_label": "Vol. Extra Cap. 37",
+    "title": "Visita ao Desconhecido - 11 Segredo das Super Bestas",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-37/",
+    "file": "extra_037.json"
+  },
+  {
+    "id": "extra-038",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 38,
+    "display_num": "Extra 38",
+    "raw_label": "Vol. Extra Cap. 38",
+    "title": "Visita ao Desconhecido - 12 Grandes Remodelações no Antigo Campo de Batalha",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-38/",
+    "file": "extra_038.json"
+  },
+  {
+    "id": "extra-039",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 39,
+    "display_num": "Extra 39",
+    "raw_label": "Vol. Extra Cap. 39",
+    "title": "Visita ao Desconhecido - 13 Mudanças e Visitantes",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-39/",
+    "file": "extra_039.json"
+  },
+  {
+    "id": "extra-040",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 40,
+    "display_num": "Extra 40",
+    "raw_label": "Vol. Extra Cap. 40",
+    "title": "Visita ao Desconhecido - 14 Armadilha Aterrorizante",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-40/",
+    "file": "extra_040.json"
+  },
+  {
+    "id": "extra-041",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 41,
+    "display_num": "Extra 41",
+    "raw_label": "Vol. Extra Cap. 41",
+    "title": "Visita ao Desconhecido - 15 Exterior da Aeronave Dragão",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-41/",
+    "file": "extra_041.json"
+  },
+  {
+    "id": "extra-042",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 42,
+    "display_num": "Extra 42",
+    "raw_label": "Vol. Extra Cap. 42",
+    "title": "Visita ao Desconhecido - 16 Criança Irracional Enviada pelo Céu",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-42/",
+    "file": "extra_042.json"
+  },
+  {
+    "id": "extra-043",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 43,
+    "display_num": "Extra 43",
+    "raw_label": "Vol. Extra Cap. 43",
+    "title": "Visita ao Desconhecido - 17 Portas Para a Destruição",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-43/",
+    "file": "extra_043.json"
+  },
+  {
+    "id": "extra-044",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 44,
+    "display_num": "Extra 44",
+    "raw_label": "Vol. Extra Cap. 44",
+    "title": "Visita ao Desconhecido - 18 Resgate",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-44/",
+    "file": "extra_044.json"
+  },
+  {
+    "id": "extra-045",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 45,
+    "display_num": "Extra 45",
+    "raw_label": "Vol. Extra Cap. 45",
+    "title": "Visita ao Desconhecido - 19 Dia da Regeneração",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-45/",
+    "file": "extra_045.json"
+  },
+  {
+    "id": "extra-046",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 46,
+    "display_num": "Extra 46",
+    "raw_label": "Vol. Extra Cap. 46",
+    "title": "História Especial - 『Onsen』 - Segundo Volume - Privilégio Empresarial do Toranoana-sama",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-46/",
+    "file": "extra_046.json"
+  },
+  {
+    "id": "extra-047",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 47,
+    "display_num": "Extra 47",
+    "raw_label": "Vol. Extra Cap. 47",
+    "title": "História Especial - 『Cenário Rosa』 - Terceiro Volume - Privilégio Empresarial para Jogadores",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-47/",
+    "file": "extra_047.json"
+  },
+  {
+    "id": "extra-048",
+    "is_extra": true,
+    "vol_wn": 11,
+    "num": 48,
+    "display_num": "Extra 48",
+    "raw_label": "Vol. Extra Cap. 48 [Fim]",
+    "title": "História Especial - 『Evento - Festival da Academia Tempest』 - A Loteria com Mais Benefício",
+    "url": "https://centralnovel.com/tensei-shitara-slime-datta-ken-extra-48/",
+    "file": "extra_048.json"
   }
 ]

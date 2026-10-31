@@ -1,276 +1,457 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark" data-font="sans">
+<html lang="pt-BR" data-font="serif">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tensei Shitara Slime Datta Ken | Biblioteca & Leitor Oficial</title>
-  <meta name="description" content="Biblioteca completa de Tensei Shitara Slime Datta Ken em Português. Leia a Light Novel, Web Novel, compare versões, visualize ilustrações oficiais e salve seu progresso.">
-  
-  <!-- Fontes do Google -->
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try {
+      const savedScheme = localStorage.getItem('color-scheme');
+      if (savedScheme === 'light' || savedScheme === 'dark') {
+        document.querySelector('meta[name="color-scheme"]').content = savedScheme;
+      }
+      const savedPalette = localStorage.getItem('tensura_palette');
+      if (savedPalette) {
+        document.documentElement.dataset.palette = savedPalette;
+      }
+    } catch (_) {}
+  </script>
+  <title>Tensei Shitara Slime Datta Ken | Biblioteca &amp; Leitor Completo em Português</title>
+  <meta name="description" content="Biblioteca completa em Português de Tensei Shitara Slime Datta Ken: Light Novel (Vols. 1 a 20 + 8.5 ilustrados e revisados), Web Novel completa (303 capítulos), comparador, guia cultural japonês, progresso salvo e links oficiais da Amazon Brasil.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
-  
-  <!-- Estilos Customizados -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" type="image/svg+xml" href="assets/images/slime.svg">
 </head>
 <body>
 
-  <!-- Barra de Progresso Superior de Leitura -->
-  <div id="reading-progress-bar" role="progressbar" aria-label="Progresso da leitura atual"></div>
+  <!-- Barra decorativa de progresso de rolagem (compositor-thread scaleX) -->
+  <div id="reading-progress-bar" aria-hidden="true"></div>
 
   <!-- Cabeçalho Principal -->
-  <header class="main-header">
+  <header class="main-header" id="site-header">
     <div class="header-container">
-      <a href="#light-novel" class="logo-link" onclick="switchTab('light-novel')">
-        <img src="assets/images/slime.svg" alt="Rimuru Slime" class="logo-icon">
+      <a href="#light-novel" class="logo-link" id="logo-home-link">
+        <img src="assets/images/slime.svg" alt="" aria-hidden="true" width="42" height="42" class="logo-icon">
         <div class="logo-text">
-          <h1>TENSEI SHITARA SLIME</h1>
-          <span>Biblioteca & Leitor em Português</span>
+          <h1>Tensei Shitara Slime</h1>
+          <span>Biblioteca &amp; Leitor PT-BR</span>
         </div>
       </a>
 
-      <!-- Navegação Principal por Abas -->
-      <nav class="main-nav" aria-label="Navegação da Biblioteca">
-        <button class="nav-tab active" data-tab="light-novel">
-          <span>📘</span> Light Novel (LN)
+      <nav class="main-nav" aria-label="Seções principais da biblioteca">
+        <button type="button" class="nav-tab active" data-tab="light-novel">
+          <span aria-hidden="true">📘</span> Light Novel
         </button>
-        <button class="nav-tab" data-tab="web-novel">
-          <span>📜</span> Web Novel (WN)
+        <button type="button" class="nav-tab" data-tab="web-novel">
+          <span aria-hidden="true">📜</span> Web Novel
         </button>
-        <button class="nav-tab" data-tab="comparison">
-          <span>⚖️</span> Comparador WN x LN
+        <button type="button" class="nav-tab" data-tab="comparison">
+          <span aria-hidden="true">⚖️</span> Comparador
         </button>
-        <button class="nav-tab" data-tab="cultural">
-          <span>🌸</span> Guia Cultural & Termos
+        <button type="button" class="nav-tab" data-tab="cultural">
+          <span aria-hidden="true">🌸</span> Guia Cultural
         </button>
-        <button class="nav-tab" data-tab="amazon">
-          <span>🛒</span> Amazon Brasil
+        <button type="button" class="nav-tab" data-tab="amazon">
+          <span aria-hidden="true">🛒</span> Amazon BR
         </button>
       </nav>
 
-      <!-- Ações do Cabeçalho -->
       <div class="header-actions">
-        <button class="btn-icon" id="btn-open-settings" onclick="toggleSettingsModal()" title="Configurações de Leitura (Temas, Fontes, Tamanho)" aria-label="Configurações">
-          ⚙️
+        <button type="button" class="btn-header-pill" id="btn-open-bookmarks" aria-label="Abrir marcadores, anotações e histórico de leitura">
+          <span aria-hidden="true">🔖</span>
+          <span class="pill-text">Marcadores</span>
+          <span class="bookmark-count-badge" id="bookmark-count-badge" hidden>0</span>
+        </button>
+        <button type="button" class="btn-icon" id="btn-open-settings" aria-label="Abrir configurações de leitura e aparência">
+          <span aria-hidden="true">⚙️</span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Banner de Salvar / Continuar Leitura -->
-  <div id="continue-banner">
+  <!-- Banner Inteligente de Continuar Leitura (Progresso Salvo Separado LN / WN) -->
+  <aside id="continue-banner" class="continue-banner" aria-label="Continuar leitura salva" hidden>
     <div class="continue-container">
       <div class="continue-info">
-        <span class="continue-icon">🔖</span>
-        <div class="continue-text">
-          Você parou em: <strong id="continue-title">Carregando...</strong> (<span id="continue-percent">0%</span>)
+        <span class="continue-icon" aria-hidden="true">🔖</span>
+        <div class="continue-details">
+          <span class="continue-kicker" id="continue-track-badge">Última leitura salva</span>
+          <p class="continue-text">
+            Você parou em <strong id="continue-title">—</strong>
+            <span class="continue-pct" id="continue-percent">(0%)</span>
+          </p>
         </div>
       </div>
       <div class="continue-actions">
-        <button class="btn-continue" onclick="resumeReading()">
-          <span>Continuar Lendo Agora</span> →
+        <button type="button" class="btn-continue" id="btn-resume-main">
+          Continuar de Onde Parei →
         </button>
-        <button class="btn-dismiss" onclick="document.getElementById('continue-banner').style.display='none'" title="Fechar aviso">
+        <button type="button" class="btn-continue-alt" id="btn-resume-other-track" hidden>
+          Retomar Outra Versão
+        </button>
+        <button type="button" class="btn-dismiss" id="btn-dismiss-banner" aria-label="Ocultar aviso de leitura">
           ✕
         </button>
       </div>
     </div>
-  </div>
+  </aside>
 
-  <!-- Área de Conteúdo Principal (Abas) -->
+  <!-- Conteúdo Principal do Catálogo -->
   <main class="content-area" id="content-area">
 
-    <!-- SEÇÃO 1: LIGHT NOVEL (LN) -->
-    <section id="view-light-novel" class="view-section active">
-      <div class="section-hero">
-        <span class="hero-tag">Edição Definitiva Oficial</span>
-        <h2>Light Novel (転生したらスライムだった件)</h2>
+    <!-- Barra Global de Busca e Filtro -->
+    <search class="catalog-search-bar" id="catalog-search-wrapper">
+      <label for="catalog-search-input" class="sr-only">Pesquisar volumes, capítulos, personagens ou termos culturais</label>
+      <span class="search-icon" aria-hidden="true">🔍</span>
+      <input
+        type="search"
+        id="catalog-search-input"
+        placeholder="Pesquisar volumes, capítulos, arcos, habilidades ou termos japoneses..."
+      >
+      <button type="button" class="btn-clear-search" id="btn-clear-search" hidden aria-label="Limpar busca">✕</button>
+    </search>
+
+    <!-- ABA 1: LIGHT NOVEL (SEPARADA DA WEB NOVEL) -->
+    <section id="view-light-novel" class="view-section active" aria-labelledby="heading-ln">
+      <div class="section-hero hero-ln">
+        <div class="hero-badges">
+          <span class="hero-tag">Versão Oficial Impressa &amp; Revisada</span>
+          <span class="hero-stat" id="ln-hero-stats">21 Volumes Offline • Ilustrações de Mitz Vah</span>
+        </div>
+        <h2 id="heading-ln">Light Novel — Tensei Shitara Slime Datta Ken</h2>
         <p>
-          A versão comercial oficial escrita por <strong>Fuse</strong> e ilustrada por <strong>Mitz Vah</strong>. Na Light Novel, o autor expandiu amplamente o enredo original, refinou a diplomacia de Tempest, adicionou arcos completos (como Charybdis, a família Rosso e as 3 Demônios Primordiais) e criou combates muito mais estratégicos e profundos. Traduzida com dedicação pela equipe de fãs <em>TSSDK Scan PT-BR</em>.
+          A edição definitiva escrita por <strong>Fuse</strong> e ilustrada por <strong>Mitz Vah</strong>. Inclui os <strong>Volumes 1 a 20 + Volume 8.5</strong> completos em Português Brasileiro, com todas as ilustrações coloridas e em preto e branco posicionadas nos pontos exatos dos capítulos, notas culturais interativas, revisão completa dos arquivos do seu Google Drive e opção de alternar entre a <em>Edição Ilustrada Revisada</em> e a <em>Tradução de Fã (TSSDK Scan)</em> nos Volumes 6 a 13.
         </p>
+        <div class="hero-track-resume" id="ln-specific-resume" hidden></div>
       </div>
 
-      <div class="volume-grid" id="ln-volumes-grid">
-        <!-- Renderizado dinamicamente via JS -->
+      <div class="volume-grid" id="ln-volumes-grid"></div>
+
+      <div class="future-volumes-block" id="ln-future-section">
+        <h3 class="subsection-heading">Próximos Volumes Publicados no Japão (Referência &amp; Status)</h3>
+        <div class="future-grid" id="ln-future-grid"></div>
       </div>
     </section>
 
-    <!-- SEÇÃO 2: WEB NOVEL (WN) -->
-    <section id="view-web-novel" class="view-section">
-      <div class="section-hero">
-        <span class="hero-tag">Obra Original da Internet</span>
-        <h2>Web Novel (Shousetsuka ni Narou)</h2>
+    <!-- ABA 2: WEB NOVEL (SEPARADA DA LIGHT NOVEL) -->
+    <section id="view-web-novel" class="view-section" aria-labelledby="heading-wn">
+      <div class="section-hero hero-wn">
+        <div class="hero-badges">
+          <span class="hero-tag tag-wn">Obra Original Serializada na Web</span>
+          <span class="hero-stat" id="wn-hero-stats">303 Capítulos • 10 Arcos Principais + 3 Arcos Extras</span>
+        </div>
+        <h2 id="heading-wn">Web Novel — Shousetsuka ni Narou (Completa)</h2>
         <p>
-          O rascunho original serializado por Fuse no site japonês <em>Syosetu</em> entre 2013 e 2015. A Web Novel é uma história completa com <strong>249 Capítulos + Epílogo e Histórias Extras</strong>, dividida em 10 grandes arcos. O ritmo dos acontecimentos é ágil, com resoluções mais diretas e um final cósmico alternativo. Tradução em português disponibilizada via <em>Central Novel</em>.
+          A história original completa publicada por <strong>Fuse</strong> entre 2013 e 2016, totalmente separada da Light Novel para você comparar o rascunho original, o desfecho alternativo contra Yuuki Kagurazaka e os <strong>48 Capítulos Extras pós-final</strong> (<em>O Jogo de Fuga Elegante de Rimuru</em> e <em>Visita ao Desconhecido</em>) traduzidos em Português via <em>Central Novel</em>.
         </p>
+        <div class="hero-track-resume" id="wn-specific-resume" hidden></div>
       </div>
 
-      <div id="wn-arcs-container">
-        <!-- Renderizado dinamicamente via JS -->
+      <div class="wn-controls-row">
+        <button type="button" class="btn-secondary-pill" id="btn-expand-all-arcs">Expandir Todos os Arcos</button>
+        <button type="button" class="btn-secondary-pill" id="btn-collapse-all-arcs">Recolher Todos os Arcos</button>
       </div>
+
+      <div id="wn-arcs-container" class="arcs-wrapper"></div>
     </section>
 
-    <!-- SEÇÃO 3: COMPARADOR WN VS LN -->
-    <section id="view-comparison" class="view-section">
+    <!-- ABA 3: COMPARADOR (WN x LN + AUDITORIA DRIVE x SCAN) -->
+    <section id="view-comparison" class="view-section" aria-labelledby="heading-comp">
       <div class="section-hero">
-        <span class="hero-tag">Análise Literária & Diferenças Canônicas</span>
-        <h2>Guia de Comparação: Web Novel vs Light Novel</h2>
-        <p id="comparison-overview-text">
-          Descubra por que Fuse reescreveu mais de 50% da história na transição para a Light Novel profissional e quais arcos, personagens e batalhas foram profundamente modificados.
-        </p>
+        <div class="hero-badges">
+          <span class="hero-tag">Dossiê Comparativo &amp; Revisão Textual</span>
+        </div>
+        <h2 id="heading-comp">Comparador: Web Novel vs. Light Novel &amp; Revisão do Drive</h2>
+        <p id="comparison-overview-text"></p>
       </div>
 
-      <div id="comparison-diffs-list">
-        <!-- Renderizado dinamicamente via JS -->
-      </div>
+      <!-- Bloco 1: Auditoria de Tradução (Drive EPUB vs TSSDK Scan vs Nossa Edição Revisada) -->
+      <section class="audit-showcase" aria-labelledby="heading-audit">
+        <div class="audit-header">
+          <h3 id="heading-audit">🛠️ Revisão e Comparação das Traduções (Arquivos do Drive vs. Scan de Fã)</h3>
+          <p id="audit-overview-text"></p>
+        </div>
+        <div class="audit-table-wrap" tabindex="0">
+          <table class="audit-table" id="audit-comparison-table">
+            <thead>
+              <tr>
+                <th scope="col">Critério Analisado</th>
+                <th scope="col">TSSDK Scan PT-BR (Fã)</th>
+                <th scope="col">Drive Original (Tradução Rápida)</th>
+                <th scope="col">Nossa Edição Compilada &amp; Revisada</th>
+              </tr>
+            </thead>
+            <tbody id="audit-table-body"></tbody>
+          </table>
+        </div>
+
+        <h4 class="audit-sub">Principais Correções Aplicadas nos Volumes 6 a 20 do Drive</h4>
+        <div class="repairs-grid" id="audit-highlights-grid"></div>
+
+        <details class="arc-details" id="audit-samples-details" style="margin-top: 1.25rem;" hidden>
+          <summary class="arc-summary">
+            <span>
+              <span class="arc-title-text">🔍 Ver Amostras Reais Extraídas Diretamente dos Arquivos do Drive (Antes vs. Revisado)</span>
+              <span class="arc-desc-text">Trechos autênticos comparados durante a compilação automática dos EPUBs em Português.</span>
+            </span>
+          </summary>
+          <div class="repairs-grid" id="audit-real-samples-grid" style="padding: 1rem;"></div>
+        </details>
+      </section>
+
+      <!-- Bloco 2: Diferenças Canônicas Web Novel vs Light Novel -->
+      <h3 class="subsection-heading">⚖️ As 10 Grandes Diferenças de Enredo: Web Novel vs. Light Novel</h3>
+      <div id="comparison-diffs-list"></div>
     </section>
 
-    <!-- SEÇÃO 4: GUIA CULTURAL & NOMES ORIGINAIS -->
-    <section id="view-cultural" class="view-section">
+    <!-- ABA 4: GUIA CULTURAL & NOMES ORIGINAIS -->
+    <section id="view-cultural" class="view-section" aria-labelledby="heading-cult">
       <div class="section-hero">
-        <span class="hero-tag">Contexto Japonês & Glossário Canônico</span>
-        <h2>Guia Cultural e Conceitos do Universo de Tensura</h2>
+        <div class="hero-badges">
+          <span class="hero-tag">Cultura Japonesa, Honoríficos &amp; Cânone</span>
+        </div>
+        <h2 id="heading-cult">Guia Cultural Japonês e Glossário Canônico de Tensura</h2>
         <p>
-          Entenda a importância dos honoríficos japoneses, a filosofia de governo de Rimuru através do conceito de <em>Wa (Harmonia)</em>, o impacto da gastronomia na diplomacia dos monstros e o funcionamento do sistema de nomenclatura (Naming) e evolução mágica.
+          Preservamos os nomes originais essenciais para o entendimento da obra (<em>Rimuru Tempest, Guy Crimson, Feldway, Diablo, Testarossa, Carrera, Ultima, Ciel, Kijin, Majin, Onsen</em>) enquanto traduzimos todas as habilidades e descrições para Português natural. Consulte abaixo os significados culturais ou clique nos termos destacados durante a leitura!
         </p>
       </div>
 
-      <div class="cultural-section">
-        <h3>🎎 Honoríficos e Formas de Tratamento</h3>
+      <section class="cultural-section" aria-labelledby="cult-h-hon">
+        <h3 id="cult-h-hon">🎎 Honoríficos e Formas Tradicionais de Tratamento</h3>
         <div class="terms-grid" id="cultural-honorifics-list"></div>
-      </div>
+      </section>
 
-      <div class="cultural-section">
-        <h3>🔮 Conceitos Fundamentais e Sistemas de Poder</h3>
+      <section class="cultural-section" aria-labelledby="cult-h-sys">
+        <h3 id="cult-h-sys">🔮 Nomes Originais, Espécies e Sistemas de Poder</h3>
         <div class="terms-grid" id="cultural-concepts-list"></div>
-      </div>
+      </section>
 
-      <div class="cultural-section">
-        <h3>🍱 Elementos Culturais e Costumes Japoneses</h3>
+      <section class="cultural-section" aria-labelledby="cult-h-jp">
+        <h3 id="cult-h-jp">🍱 Costumes Japoneses, Gastronomia e Referências Mitológicas</h3>
         <div class="terms-grid" id="cultural-aspects-list"></div>
-      </div>
+      </section>
     </section>
 
-    <!-- SEÇÃO 5: CATÁLOGO OFICIAL AMAZON BRASIL -->
-    <section id="view-amazon" class="view-section">
+    <!-- ABA 5: AMAZON BRASIL -->
+    <section id="view-amazon" class="view-section" aria-labelledby="heading-amz">
       <div class="amazon-banner">
         <div class="amazon-banner-text">
-          <h3>Apoie a Obra Oficial na Amazon Brasil</h3>
-          <p>
-            Adquira os volumes oficiais de <em>That Time I Got Reincarnated as a Slime</em> em formato digital para Kindle ou livros físicos importados e ajude os criadores originais!
+          <h2 id="heading-amz">Apoie os Criadores Oficiais na Amazon Brasil</h2>
+          <p id="amazon-store-desc">
+            Encontre rapidamente todos os volumes oficiais da Light Novel (Kindle e edições físicas importadas) e do Mangá oficial em português na Amazon.com.br.
           </p>
         </div>
-        <a href="https://www.amazon.com.br/s?k=tensei+shitara+slime+datta+ken+light+novel" target="_blank" rel="noopener" class="btn-amazon-main">
-          <span>🔍 Ver Todas as Novels na Amazon Brasil</span> →
-        </a>
+        <div class="amazon-banner-cta">
+          <a href="https://www.amazon.com.br/s?k=tensei+shitara+slime+datta+ken+light+novel" target="_blank" rel="noopener" class="btn-amazon-main">
+            🔍 Ver Light Novels na Amazon.com.br →
+          </a>
+          <a href="https://www.amazon.com.br/s?k=tensei+shitara+slime+datta+ken+jbc+manga" target="_blank" rel="noopener" class="btn-amazon-secondary">
+            📚 Ver Mangás JBC PT-BR →
+          </a>
+        </div>
       </div>
 
-      <div class="amazon-grid" id="amazon-volumes-grid">
-        <!-- Renderizado dinamicamente via JS -->
-      </div>
+      <div class="amazon-grid" id="amazon-volumes-grid"></div>
     </section>
 
   </main>
 
-  <!-- VISUALIZAÇÃO DO LEITOR (READER VIEW) -->
-  <div id="reader-view" style="display: none;">
-    <!-- Barra Superior Fixa do Leitor -->
+  <!-- MODO DE LEITURA IMERSIVA (READER VIEW) -->
+  <section id="reader-view" class="reader-view" aria-label="Leitor de Capítulos" hidden>
     <div class="reader-toolbar">
       <div class="reader-nav-left">
-        <button class="btn-back" onclick="closeReader()">
-          ← Voltar ao Índice
+        <button type="button" class="btn-back" id="btn-reader-back">
+          ← Biblioteca
         </button>
-        <span class="reader-current-title" id="reader-toolbar-title">Título do Capítulo</span>
+        <div class="reader-title-stack">
+          <span class="reader-track-pill" id="reader-track-pill">Light Novel</span>
+          <span class="reader-current-title" id="reader-toolbar-title">Carregando...</span>
+        </div>
       </div>
+
       <div class="reader-tools-right">
-        <button class="btn-icon" onclick="toggleSettingsModal()" title="Personalizar Leitor (Fontes, Temas, Tamanho)">
-          ⚙️
+        <label for="reader-chapter-select" class="sr-only">Selecionar capítulo ou seção</label>
+        <select id="reader-chapter-select" class="reader-chapter-select"></select>
+
+        <button type="button" class="btn-icon" id="btn-reader-gallery" aria-label="Abrir galeria de ilustrações deste volume" hidden>
+          <span aria-hidden="true">🖼️</span>
+        </button>
+        <button type="button" class="btn-icon" id="btn-reader-bookmarks" aria-label="Ver marcadores e notas salvos">
+          <span aria-hidden="true">🔖</span>
+        </button>
+        <button type="button" class="btn-icon" id="btn-reader-settings" aria-label="Configurações de fonte, tema e notas culturais">
+          <span aria-hidden="true">⚙️</span>
         </button>
       </div>
     </div>
 
-    <!-- Conteúdo do Livro -->
-    <article class="reader-container">
-      <div class="reader-header-info" id="reader-header-area">
-        <!-- Título e cabeçalho dinâmico -->
-      </div>
-
-      <div id="reader-text-container">
-        <!-- Parágrafos renderizados dinamicamente -->
-      </div>
-
-      <!-- Navegação Inferior -->
-      <div class="reader-footer-nav" id="reader-footer-nav">
-        <!-- Botões anterior / próximo -->
-      </div>
+    <article class="reader-container" id="reader-article">
+      <header class="reader-header-info" id="reader-header-area"></header>
+      <div id="reader-text-container" class="reader-prose"></div>
+      <nav class="reader-footer-nav" id="reader-footer-nav" aria-label="Navegação entre capítulos"></nav>
     </article>
-  </div>
+  </section>
 
-  <!-- MODAL DE CONFIGURAÇÕES DO LEITOR -->
-  <div class="settings-modal" id="settings-modal">
-    <div class="settings-group">
-      <span class="settings-label">Tema Visual</span>
-      <div class="theme-options">
-        <button class="btn-theme-opt" data-theme="dark" onclick="changeTheme('dark')">Noite</button>
-        <button class="btn-theme-opt" data-theme="light" onclick="changeTheme('light')">Dia</button>
-        <button class="btn-theme-opt" data-theme="sepia" onclick="changeTheme('sepia')">Sépia</button>
-        <button class="btn-theme-opt" data-theme="oled" onclick="changeTheme('oled')">OLED</button>
-      </div>
+  <!-- DIALOG 1: CONFIGURAÇÕES DE LEITURA & BACKUP DE PROGRESSO -->
+  <dialog id="settings-dialog" class="app-dialog settings-dialog" closedby="any" aria-labelledby="settings-dialog-title">
+    <div class="dialog-header">
+      <h2 id="settings-dialog-title">⚙️ Aparência &amp; Preferências de Leitura</h2>
+      <form method="dialog">
+        <button type="submit" value="close" class="btn-dialog-close" aria-label="Fechar configurações">✕</button>
+      </form>
     </div>
 
-    <div class="settings-group">
-      <span class="settings-label">Tipografia</span>
-      <div class="theme-options">
-        <button class="btn-theme-opt btn-font-opt" data-font="sans" onclick="changeFont('sans')">Moderna</button>
-        <button class="btn-theme-opt btn-font-opt" data-font="serif" onclick="changeFont('serif')">Livro</button>
-        <button class="btn-theme-opt btn-font-opt" data-font="dyslexic" onclick="changeFont('dyslexic')">Dislexia</button>
-        <button class="btn-theme-opt btn-font-opt" data-font="mono" onclick="changeFont('mono')">Mono</button>
+    <div class="dialog-body">
+      <div class="settings-group">
+        <span class="settings-label">Esquema de Cores &amp; Paleta</span>
+        <div class="theme-options" role="group" aria-label="Escolha de tema">
+          <button type="button" class="btn-theme-opt" data-palette="system">Sistema</button>
+          <button type="button" class="btn-theme-opt" data-palette="dark">Noite</button>
+          <button type="button" class="btn-theme-opt" data-palette="light">Dia</button>
+          <button type="button" class="btn-theme-opt" data-palette="sepia">Sépia</button>
+          <button type="button" class="btn-theme-opt" data-palette="oled">OLED</button>
+        </div>
       </div>
-    </div>
 
-    <div class="settings-group">
-      <span class="settings-label">Tamanho do Texto</span>
-      <div class="font-size-controls">
-        <button class="btn-size" onclick="adjustFontSize(-1)">A-</button>
-        <span class="font-size-display" id="font-size-val">18px</span>
-        <button class="btn-size" onclick="adjustFontSize(1)">A+</button>
+      <div class="settings-group">
+        <span class="settings-label">Fonte Literária</span>
+        <div class="font-options" role="group" aria-label="Escolha de fonte">
+          <button type="button" class="btn-font-opt" data-font="serif">Livro (Literata)</button>
+          <button type="button" class="btn-font-opt" data-font="sans">Moderna (Inter)</button>
+          <button type="button" class="btn-font-opt" data-font="dyslexic">Acessível</button>
+          <button type="button" class="btn-font-opt" data-font="mono">Mono</button>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- MODAL DE GALERIA DE ILUSTRAÇÕES OFICIAIS (MITZ VAH) -->
-  <div id="illustrations-modal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); z-index: 2000; align-items: center; justify-content: center; padding: 1.5rem;">
-    <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; width: 100%; max-width: 950px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5);">
-      <div style="padding: 1.25rem; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between;">
-        <h3 id="illus-modal-title" style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">Ilustrações Oficiais</h3>
-        <button onclick="closeIllustrationsModal()" style="background: none; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer;">✕</button>
+      <div class="settings-group">
+        <span class="settings-label">Tamanho da Fonte &amp; Largura do Texto</span>
+        <div class="font-size-controls">
+          <button type="button" class="btn-size" id="btn-font-dec" aria-label="Diminuir fonte">A−</button>
+          <span class="font-size-display" id="font-size-val">19px</span>
+          <button type="button" class="btn-size" id="btn-font-inc" aria-label="Aumentar fonte">A+</button>
+        </div>
+        <div class="width-controls">
+          <button type="button" class="btn-width-opt" data-width="680">Estreita</button>
+          <button type="button" class="btn-width-opt" data-width="820">Confortável</button>
+          <button type="button" class="btn-width-opt" data-width="980">Ampla</button>
+        </div>
       </div>
-      <div id="illus-modal-grid" style="padding: 1.25rem; overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem;">
-        <!-- Imagens dinâmicas -->
+
+      <div class="settings-group">
+        <label class="toggle-row" for="chk-cultural-hints">
+          <span>
+            <strong>Destacar Termos Culturais no Texto</strong>
+            <small>Sublinha honoríficos e termos japoneses na 1ª ocorrência do capítulo para consulta rápida.</small>
+          </span>
+          <input type="checkbox" id="chk-cultural-hints" checked>
+        </label>
+      </div>
+
+      <div class="settings-group backup-group">
+        <span class="settings-label">Portabilidade de Progresso (GitHub Pages / Outro PC)</span>
+        <div class="backup-actions">
+          <button type="button" class="btn-secondary-pill" id="btn-export-progress">⬇️ Exportar Progresso (.json)</button>
+          <label class="btn-secondary-pill btn-file-label" for="input-import-progress">
+            ⬆️ Importar Progresso
+            <input type="file" id="input-import-progress" accept="application/json" hidden>
+          </label>
+        </div>
       </div>
     </div>
-  </div>
+  </dialog>
+
+  <!-- DIALOG 2: GALERIA DE ILUSTRAÇÕES OFICIAIS DO VOLUME -->
+  <dialog id="gallery-dialog" class="app-dialog gallery-dialog" closedby="any" aria-labelledby="gallery-dialog-title">
+    <div class="dialog-header">
+      <h2 id="gallery-dialog-title">🖼️ Galeria Oficial de Ilustrações</h2>
+      <form method="dialog">
+        <button type="submit" value="close" class="btn-dialog-close" autofocus aria-label="Fechar galeria">✕</button>
+      </form>
+    </div>
+    <div class="dialog-body">
+      <div id="gallery-dialog-grid" class="gallery-grid"></div>
+    </div>
+  </dialog>
+
+  <!-- DIALOG 3: LIGHTBOX DE ZOOM EM ALTA DEFINIÇÃO -->
+  <dialog id="lightbox-dialog" class="app-dialog lightbox-dialog" closedby="any" aria-labelledby="lightbox-caption">
+    <div class="lightbox-top">
+      <span id="lightbox-counter" class="lightbox-counter">1 / 1</span>
+      <form method="dialog">
+        <button type="submit" value="close" class="btn-dialog-close" autofocus aria-label="Fechar imagem ampliada">✕</button>
+      </form>
+    </div>
+    <figure class="lightbox-figure">
+      <img id="lightbox-img" src="" alt="" width="800" height="1100">
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+    <div class="lightbox-controls">
+      <button type="button" class="btn-nav-ch" id="btn-lightbox-prev">← Anterior</button>
+      <button type="button" class="btn-nav-ch" id="btn-lightbox-next">Próxima →</button>
+    </div>
+  </dialog>
+
+  <!-- DIALOG 4: MARCADORES, ANOTAÇÕES & HISTÓRICO DE LEITURA -->
+  <dialog id="bookmarks-dialog" class="app-dialog bookmarks-dialog" closedby="any" aria-labelledby="bookmarks-dialog-title">
+    <div class="dialog-header">
+      <h2 id="bookmarks-dialog-title">🔖 Seus Marcadores &amp; Progresso Salvo</h2>
+      <form method="dialog">
+        <button type="submit" value="close" class="btn-dialog-close" autofocus aria-label="Fechar marcadores">✕</button>
+      </form>
+    </div>
+    <div class="dialog-body">
+      <!-- Formulário contextual quando o leitor clica em um parágrafo -->
+      <form id="bookmark-add-form" class="bookmark-add-form" hidden>
+        <h3 class="form-sub">Salvar Marcador neste Parágrafo</h3>
+        <blockquote id="bookmark-quote-preview" class="bookmark-preview"></blockquote>
+        <label for="bookmark-note-input">Sua anotação (opcional):</label>
+        <input type="text" id="bookmark-note-input" placeholder="Ex.: Momento em que Ciel desperta / Luta épica...">
+        <div class="form-actions">
+          <button type="button" class="btn-secondary-pill" id="btn-cancel-bm-form">Cancelar</button>
+          <button type="submit" class="btn-continue">Salvar Marcador</button>
+        </div>
+      </form>
+
+      <div id="saved-tracks-summary" class="saved-tracks-summary"></div>
+      <h3 class="form-sub">Parágrafos Marcados</h3>
+      <div id="bookmarks-list-container" class="bookmarks-list"></div>
+    </div>
+  </dialog>
+
+  <!-- DIALOG 5: NOTAS CULTURAIS E DE TRADUÇÃO INTERATIVAS -->
+  <dialog id="note-dialog" class="app-dialog note-dialog" closedby="any" aria-labelledby="note-dialog-title">
+    <div class="dialog-header">
+      <h2 id="note-dialog-title">🌸 Nota Cultural &amp; Explicação</h2>
+      <form method="dialog">
+        <button type="submit" value="close" class="btn-dialog-close" autofocus aria-label="Fechar nota">✕</button>
+      </form>
+    </div>
+    <div class="dialog-body">
+      <p id="note-dialog-content" class="note-dialog-text"></p>
+    </div>
+  </dialog>
 
   <!-- Rodapé -->
   <footer class="main-footer">
     <div class="footer-container">
       <div>
-        <p><strong>Tensei Shitara Slime Datta Ken (That Time I Got Reincarnated as a Slime)</strong></p>
-        <p>Obra original por Fuse • Ilustrações por Mitz Vah • Editoras: Micro Magazine / Yen Press</p>
-        <p style="margin-top: 0.35rem; font-size: 0.78rem;">Compilado para leitura pessoal a partir das traduções da TSSDK Scan PT-BR e Central Novel.</p>
+        <p><strong>Tensei Shitara Slime Datta Ken (転生したらスライムだった件)</strong></p>
+        <p>História original por <strong>Fuse</strong> • Ilustrações por <strong>Mitz Vah</strong> • Editoras oficiais: Micro Magazine / Yen Press / JBC</p>
+        <p class="footer-sub">Compilado, comparado e revisado em Português Brasileiro com progresso salvo no navegador (LocalStorage).</p>
       </div>
       <div class="footer-links">
-        <a href="https://drive.google.com/drive/u/0/folders/1GM_wQEc6KIp5F3GmqUOLY8XGN8dkUv45" target="_blank" rel="noopener">📁 Pasta no Google Drive</a>
-        <a href="https://sites.google.com/view/tssdklscanptbr/p%C3%A1gina-inicial" target="_blank" rel="noopener">🌐 Scan PT-BR</a>
+        <a href="https://drive.google.com/drive/u/0/folders/1GM_wQEc6KIp5F3GmqUOLY8XGN8dkUv45" target="_blank" rel="noopener">📁 Google Drive</a>
+        <a href="https://sites.google.com/view/tssdklscanptbr/p%C3%A1gina-inicial" target="_blank" rel="noopener">🌐 TSSDK Scan PT-BR</a>
         <a href="https://centralnovel.com/series/tensei-shitara-slime-datta-ken/" target="_blank" rel="noopener">📖 Central Novel</a>
         <a href="https://www.amazon.com.br/s?k=tensei+shitara+slime+datta+ken+light+novel" target="_blank" rel="noopener">🛒 Amazon Brasil</a>
       </div>
     </div>
   </footer>
 
-  <!-- Script Principal da Aplicação -->
-  <script src="assets/js/app.js"></script>
+  <script src="assets/js/app.js" defer></script>
 </body>
 </html>
