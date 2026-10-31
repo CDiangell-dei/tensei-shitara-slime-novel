@@ -1297,6 +1297,35 @@ button, select, input {
   display: flex;
   align-items: center;
   gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.reader-autosave-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--success-color);
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.28);
+  padding: 0.22rem 0.55rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.btn-switch-track {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.38rem 0.68rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color var(--transition), background-color var(--transition);
+}
+.btn-switch-track:hover {
+  border-color: var(--accent-color);
+  background: var(--bg-card-hover);
 }
 
 .reader-chapter-select {
@@ -1843,22 +1872,78 @@ dialog::backdrop {
   gap: 0.5rem;
 }
 
+.autosave-explainer-box {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: var(--radius-md);
+  padding: 0.8rem 0.95rem;
+  font-size: 0.83rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+.autosave-explainer-box strong {
+  color: var(--text-primary);
+}
+
+.manual-pin-bar {
+  margin-bottom: 1.15rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
 .saved-tracks-summary {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 0.75rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 .track-save-card {
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 0.85rem;
+  padding: 0.95rem;
   font-size: 0.83rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.55rem;
+}
+.track-save-card.is-active-track {
+  border-color: var(--accent-color);
+  box-shadow: inset 0 0 0 1px var(--accent-color);
 }
 .track-save-card strong {
   display: block;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
+}
+.track-active-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--success-color);
+  margin-top: 0.15rem;
+}
+
+.track-card-meta {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.track-card-btn {
+  margin-top: 0.5rem;
+  align-self: flex-start;
+}
+
+.empty-bookmarks-hint {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.vol-title.is-wn-kicker {
+  color: var(--wn-accent);
 }
 
 .bookmarks-list {

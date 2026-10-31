@@ -7412,15 +7412,15 @@
       }
     ],
     "translation_audit": {
-      "overview": "Nos Volumes 6 a 13, você possui DUAS traduções completas lado a lado: a versão da equipe de fãs TSSDK Scan PT-BR (tradução humana direta, usada também como base dos Volumes 1 a 5 e 8.5) e os EPUBs ilustrados/coloridos da sua pasta do Google Drive (Volumes 6 a 20), que trazem todas as ilustrações coloridas, mangás bônus e notas culturais, mas continham erros de tradução rápida/automática. Nosso pipeline comparou ambas as bases e reparou automaticamente milhares de parágrafos!",
+      "overview": "Nos Volumes 6 a 13, esta biblioteca disponibiliza DUAS traduções completas lado a lado: a versão da equipe de fãs TSSDK Scan PT-BR (tradução humana direta, usada também como base dos Volumes 1 a 5 e 8.5) e a edição extraída do acervo público de EPUBs ilustrados e coloridos (Volumes 6 a 20), que preserva todas as ilustrações coloridas, mangás bônus e notas culturais, mas continha falhas de tradução rápida/automática. O pipeline de revisão do projeto comparou ambas as bases e corrigiu automaticamente milhares de parágrafos!",
       "total_paragraphs_repaired": 2386,
       "epubs_repaired_count": 15,
       "edition_comparison": [
         {
           "aspect": "Cobertura de Volumes",
-          "tssdk_scan": "Volumes 1 a 13 + Volume 8.5 (parou no Vol. 13)",
+          "tssdk_scan": "Volumes 1 a 13 + Volume 8.5 (interrompida no Vol. 13)",
           "drive_original": "Volumes 6 a 20 (incluindo Edições Coloridas 11–17 e 20)",
-          "repaired_repo": "Completa: Vols. 1–5 + 8.5 (Scan polida) + Vols. 6–20 (Drive Revisado) + Alternância para Scan nos Vols. 6–13!"
+          "repaired_repo": "Completa: Vols. 1–5 + 8.5 (Scan polida) + Vols. 6–20 (Edição Ilustrada Revisada) + Alternância para Scan nos Vols. 6–13!"
         },
         {
           "aspect": "Qualidade do Texto & Nomes",

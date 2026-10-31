@@ -787,7 +787,7 @@ def compile_epub_volume(meta: dict, comparison_samples: list):
         'is_colored_edition': meta['colored'],
         'has_scan_alternative': has_scan_alt,
         'scan_alternative_id': f"{vol_id}-scan" if has_scan_alt else None,
-        'source': 'Drive EPUB Oficial (Revisado & Padronizado em PT-BR)',
+        'source': 'Acervo EPUB Ilustrado (Revisado & Padronizado em PT-BR)',
         'cover_image': all_illustrations[0]['src'] if all_illustrations else None,
         'illustrations_count': len(all_illustrations),
         'illustrations': all_illustrations,

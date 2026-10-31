@@ -61,9 +61,9 @@
       </nav>
 
       <div class="header-actions">
-        <button type="button" class="btn-header-pill" id="btn-open-bookmarks" aria-label="Abrir marcadores, anotações e histórico de leitura">
+        <button type="button" class="btn-header-pill" id="btn-open-bookmarks" aria-label="Abrir marcações de troca entre Light Novel e Web Novel">
           <span aria-hidden="true">🔖</span>
-          <span class="pill-text">Marcadores</span>
+          <span class="pill-text">Trocar LN ↔ WN</span>
           <span class="bookmark-count-badge" id="bookmark-count-badge" hidden>0</span>
         </button>
         <button type="button" class="btn-icon" id="btn-open-settings" aria-label="Abrir configurações de leitura e aparência">
@@ -124,7 +124,7 @@
         </div>
         <h2 id="heading-ln">Light Novel — Tensei Shitara Slime Datta Ken</h2>
         <p>
-          A edição definitiva escrita por <strong>Fuse</strong> e ilustrada por <strong>Mitz Vah</strong>. Inclui os <strong>Volumes 1 a 20 + Volume 8.5</strong> completos em Português Brasileiro, com todas as ilustrações coloridas e em preto e branco posicionadas nos pontos exatos dos capítulos, notas culturais interativas, revisão completa dos arquivos do seu Google Drive e opção de alternar entre a <em>Edição Ilustrada Revisada</em> e a <em>Tradução de Fã (TSSDK Scan)</em> nos Volumes 6 a 13.
+          A edição definitiva escrita por <strong>Fuse</strong> e ilustrada por <strong>Mitz Vah</strong>. Inclui os <strong>Volumes 1 a 20 + Volume 8.5</strong> completos em Português Brasileiro, com todas as ilustrações coloridas e em preto e branco posicionadas nos pontos exatos dos capítulos, notas culturais interativas, padronização terminológica completa e opção de alternar entre a <em>Edição Ilustrada Revisada</em> e a <em>Tradução de Fã (TSSDK Scan)</em> nos Volumes 6 a 13.
         </p>
         <div class="hero-track-resume" id="ln-specific-resume" hidden></div>
       </div>
@@ -159,20 +159,20 @@
       <div id="wn-arcs-container" class="arcs-wrapper"></div>
     </section>
 
-    <!-- ABA 3: COMPARADOR (WN x LN + AUDITORIA DRIVE x SCAN) -->
+    <!-- ABA 3: COMPARADOR (WN x LN + COMPARATIVO DE EDIÇÕES) -->
     <section id="view-comparison" class="view-section" aria-labelledby="heading-comp">
       <div class="section-hero">
         <div class="hero-badges">
           <span class="hero-tag">Dossiê Comparativo &amp; Revisão Textual</span>
         </div>
-        <h2 id="heading-comp">Comparador: Web Novel vs. Light Novel &amp; Revisão do Drive</h2>
+        <h2 id="heading-comp">Comparador: Web Novel vs. Light Novel &amp; Edições em Português</h2>
         <p id="comparison-overview-text"></p>
       </div>
 
-      <!-- Bloco 1: Auditoria de Tradução (Drive EPUB vs TSSDK Scan vs Nossa Edição Revisada) -->
+      <!-- Bloco 1: Auditoria de Tradução (Acervo Público EPUB vs TSSDK Scan vs Edição Revisada) -->
       <section class="audit-showcase" aria-labelledby="heading-audit">
         <div class="audit-header">
-          <h3 id="heading-audit">🛠️ Revisão e Comparação das Traduções (Arquivos do Drive vs. Scan de Fã)</h3>
+          <h3 id="heading-audit">🛠️ Comparativo das Traduções em Português (EPUBs Públicos vs. Scan de Fã)</h3>
           <p id="audit-overview-text"></p>
         </div>
         <div class="audit-table-wrap" tabindex="0">
@@ -181,22 +181,22 @@
               <tr>
                 <th scope="col">Critério Analisado</th>
                 <th scope="col">TSSDK Scan PT-BR (Fã)</th>
-                <th scope="col">Drive Original (Tradução Rápida)</th>
-                <th scope="col">Nossa Edição Compilada &amp; Revisada</th>
+                <th scope="col">EPUB Público Original (Tradução Rápida)</th>
+                <th scope="col">Edição Compilada &amp; Revisada</th>
               </tr>
             </thead>
             <tbody id="audit-table-body"></tbody>
           </table>
         </div>
 
-        <h4 class="audit-sub">Principais Correções Aplicadas nos Volumes 6 a 20 do Drive</h4>
+        <h4 class="audit-sub">Principais Correções Aplicadas nos Volumes 6 a 20</h4>
         <div class="repairs-grid" id="audit-highlights-grid"></div>
 
         <details class="arc-details" id="audit-samples-details" style="margin-top: 1.25rem;" hidden>
           <summary class="arc-summary">
             <span>
-              <span class="arc-title-text">🔍 Ver Amostras Reais Extraídas Diretamente dos Arquivos do Drive (Antes vs. Revisado)</span>
-              <span class="arc-desc-text">Trechos autênticos comparados durante a compilação automática dos EPUBs em Português.</span>
+              <span class="arc-title-text">🔍 Ver Amostras Reais da Revisão Textual (Antes vs. Revisado)</span>
+              <span class="arc-desc-text">Trechos comparados durante a revisão e padronização automática dos EPUBs em Português.</span>
             </span>
           </summary>
           <div class="repairs-grid" id="audit-real-samples-grid" style="padding: 1rem;"></div>
@@ -274,13 +274,19 @@
       </div>
 
       <div class="reader-tools-right">
+        <span class="reader-autosave-pill" id="reader-autosave-pill" aria-live="polite">✓ Salvo auto</span>
+
         <label for="reader-chapter-select" class="sr-only">Selecionar capítulo ou seção</label>
         <select id="reader-chapter-select" class="reader-chapter-select"></select>
+
+        <button type="button" class="btn-switch-track" id="btn-reader-switch-track">
+          ⇄ Web Novel
+        </button>
 
         <button type="button" class="btn-icon" id="btn-reader-gallery" aria-label="Abrir galeria de ilustrações deste volume" hidden>
           <span aria-hidden="true">🖼️</span>
         </button>
-        <button type="button" class="btn-icon" id="btn-reader-bookmarks" aria-label="Ver marcadores e notas salvos">
+        <button type="button" class="btn-icon" id="btn-reader-bookmarks" aria-label="Marcações de troca entre Light Novel e Web Novel">
           <span aria-hidden="true">🔖</span>
         </button>
         <button type="button" class="btn-icon" id="btn-reader-settings" aria-label="Configurações de fonte, tema e notas culturais">
@@ -342,6 +348,16 @@
       </div>
 
       <div class="settings-group">
+        <label class="toggle-row" for="chk-auto-resume">
+          <span>
+            <strong>Continuar Automaticamente ao Reabrir o Site</strong>
+            <small>Abre direto na página e posição exata em que você estava lendo antes de fechar o navegador.</small>
+          </span>
+          <input type="checkbox" id="chk-auto-resume" checked>
+        </label>
+      </div>
+
+      <div class="settings-group">
         <label class="toggle-row" for="chk-cultural-hints">
           <span>
             <strong>Destacar Termos Culturais no Texto</strong>
@@ -352,7 +368,7 @@
       </div>
 
       <div class="settings-group backup-group">
-        <span class="settings-label">Portabilidade de Progresso (GitHub Pages / Outro PC)</span>
+        <span class="settings-label">Sincronizar Progresso entre Dispositivos (PC / Celular)</span>
         <div class="backup-actions">
           <button type="button" class="btn-secondary-pill" id="btn-export-progress">⬇️ Exportar Progresso (.json)</button>
           <label class="btn-secondary-pill btn-file-label" for="input-import-progress">
@@ -395,29 +411,40 @@
     </div>
   </dialog>
 
-  <!-- DIALOG 4: MARCADORES, ANOTAÇÕES & HISTÓRICO DE LEITURA -->
+  <!-- DIALOG 4: MARCAÇÕES DE TROCA (LIGHT NOVEL <-> WEB NOVEL) & PONTOS FIXOS -->
   <dialog id="bookmarks-dialog" class="app-dialog bookmarks-dialog" closedby="any" aria-labelledby="bookmarks-dialog-title">
     <div class="dialog-header">
-      <h2 id="bookmarks-dialog-title">🔖 Seus Marcadores &amp; Progresso Salvo</h2>
+      <h2 id="bookmarks-dialog-title">🔖 Alternar Light Novel ↔ Web Novel &amp; Marcações</h2>
       <form method="dialog">
-        <button type="submit" value="close" class="btn-dialog-close" autofocus aria-label="Fechar marcadores">✕</button>
+        <button type="submit" value="close" class="btn-dialog-close" autofocus aria-label="Fechar marcações">✕</button>
       </form>
     </div>
     <div class="dialog-body">
-      <!-- Formulário contextual quando o leitor clica em um parágrafo -->
+      <div class="autosave-explainer-box">
+        <strong>✓ Salvamento Automático Ativo:</strong> sua posição exata na página é salva sozinha enquanto você lê (inclusive ao fechar o navegador). Use os cartões abaixo quando quiser alternar entre a <strong>Light Novel</strong> e a <strong>Web Novel</strong> e depois voltar exatamente para onde parou!
+      </div>
+
+      <div id="saved-tracks-summary" class="saved-tracks-summary"></div>
+
+      <div class="manual-pin-bar" id="manual-pin-bar" hidden>
+        <button type="button" class="btn-secondary-pill" id="btn-pin-current-spot">
+          📌 Guardar Marcação Extra neste Ponto da Página
+        </button>
+      </div>
+
+      <!-- Formulário opcional para guardar marcação extra nomeada -->
       <form id="bookmark-add-form" class="bookmark-add-form" hidden>
-        <h3 class="form-sub">Salvar Marcador neste Parágrafo</h3>
+        <h3 class="form-sub">Guardar Marcação Extra</h3>
         <blockquote id="bookmark-quote-preview" class="bookmark-preview"></blockquote>
-        <label for="bookmark-note-input">Sua anotação (opcional):</label>
-        <input type="text" id="bookmark-note-input" placeholder="Ex.: Momento em que Ciel desperta / Luta épica...">
+        <label for="bookmark-note-input">Lembrete opcional (ex.: comparar luta na outra versão):</label>
+        <input type="text" id="bookmark-note-input" placeholder="Ex.: Voltar aqui depois de olhar a Web Novel...">
         <div class="form-actions">
           <button type="button" class="btn-secondary-pill" id="btn-cancel-bm-form">Cancelar</button>
-          <button type="submit" class="btn-continue">Salvar Marcador</button>
+          <button type="submit" class="btn-continue">Salvar Marcação</button>
         </div>
       </form>
 
-      <div id="saved-tracks-summary" class="saved-tracks-summary"></div>
-      <h3 class="form-sub">Parágrafos Marcados</h3>
+      <h3 class="form-sub">Marcações Extras Salvas</h3>
       <div id="bookmarks-list-container" class="bookmarks-list"></div>
     </div>
   </dialog>
@@ -444,9 +471,9 @@
         <p class="footer-sub">Compilado, comparado e revisado em Português Brasileiro com progresso salvo no navegador (LocalStorage).</p>
       </div>
       <div class="footer-links">
-        <a href="https://drive.google.com/drive/u/0/folders/1GM_wQEc6KIp5F3GmqUOLY8XGN8dkUv45" target="_blank" rel="noopener">📁 Google Drive</a>
         <a href="https://sites.google.com/view/tssdklscanptbr/p%C3%A1gina-inicial" target="_blank" rel="noopener">🌐 TSSDK Scan PT-BR</a>
         <a href="https://centralnovel.com/series/tensei-shitara-slime-datta-ken/" target="_blank" rel="noopener">📖 Central Novel</a>
+        <a href="https://drive.google.com/drive/u/0/folders/1GM_wQEc6KIp5F3GmqUOLY8XGN8dkUv45" target="_blank" rel="noopener">📁 Acervo Público (EPUBs)</a>
         <a href="https://www.amazon.com.br/s?k=tensei+shitara+slime+datta+ken+light+novel" target="_blank" rel="noopener">🛒 Amazon Brasil</a>
       </div>
     </div>
