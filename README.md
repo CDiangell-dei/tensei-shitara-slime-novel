@@ -2,7 +2,7 @@
 
 Uma aplicação web estática, moderna, rápida e 100% em **Português Brasileiro (PT-BR)** criada para reunir, revisar, comparar e ler todo o universo de **Tensei Shitara Slime Datta Ken** (*That Time I Got Reincarnated as a Slime*), escrita por **Fuse** e ilustrada por **Mitz Vah**.
 
-Pronta tanto para leitura local offline no seu PC (`Iniciar_Leitor.bat`) quanto para publicação direta no **GitHub Pages**, com **salvamento automático de progresso** (`localStorage` + backup `.json`), separação estrita entre **Light Novel** e **Web Novel**, centenas de ilustrações oficiais locais em WebP, notas culturais interativas e links diretos para a **Amazon Brasil**.
+Pronta tanto para leitura local offline no seu PC (`Iniciar_Leitor.bat`) quanto publicada online no **GitHub Pages** (**https://cdiangell-dei.github.io/tensei-shitara-slime-novel/**), com **salvamento automático de progresso** (`localStorage` + backup `.json`), separação estrita entre **Light Novel** e **Web Novel**, centenas de ilustrações oficiais locais em WebP, notas culturais interativas e links diretos para a **Amazon Brasil**.
 
 ---
 
@@ -90,15 +90,12 @@ Depois acesse **`http://localhost:8080`** no navegador.
 
 O `.gitignore` já está configurado para ignorar os arquivos `.epub` pesados (`drive_files/` e `drive_files_corrigidos/`), mantendo apenas os JSONs otimizados e as ilustrações WebP para o site carregar rápido no GitHub Pages:
 
-1. Crie um repositório no **GitHub** (ex.: `tensei-shitara-slime-novel`).
-2. Na pasta do projeto, execute:
-   ```bash
-   git branch -M main
-   git remote add origin https://github.com/SEU_USUARIO/tensei-shitara-slime-novel.git
-   git push -u origin main
-   ```
-3. No GitHub, vá em **Settings → Pages**, selecione a branch **`main`** (`/(root)`) e clique em **Save**.
-4. Pronto! Seu leitor online estará no ar para ler de qualquer lugar.
+- **Repositório GitHub**: https://github.com/CDiangell-dei/tensei-shitara-slime-novel
+- **Leitor Online (GitHub Pages)**: https://cdiangell-dei.github.io/tensei-shitara-slime-novel/
+
+Caso precise ativar/verificar nas configurações do repositório:
+1. Acesse https://github.com/CDiangell-dei/tensei-shitara-slime-novel/settings/pages
+2. Em **Build and deployment → Branch**, selecione **`main`** e a pasta **`/ (root)`**, e clique em **Save**.
 
 ---
 
