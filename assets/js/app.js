@@ -7,6 +7,7 @@
 
 const STORAGE_KEYS = {
   SETTINGS: 'tensura_reader_settings_v2',
+  SPOILER_ONBOARDED: 'tensura_spoiler_onboarded_v1',
   PROGRESS_LAST: 'tensura_progress_last',
   PROGRESS_LN: 'tensura_progress_ln',
   PROGRESS_WN: 'tensura_progress_wn',
@@ -16,12 +17,18 @@ const STORAGE_KEYS = {
   PALETTE: 'tensura_palette'
 };
 
+// Referência oficial: o Anime adapta até o Volume 11 da Light Novel
+const ANIME_ADAPTED_MAX_LN_VOL = 11;
+const POST_ANIME_WN_ARCS = new Set(['arc-8', 'arc-9', 'arc-10', 'arc-extra-1', 'arc-extra-2', 'arc-extra-3']);
+const POST_ANIME_CULTURAL_CONCEPT_IDXS = new Set([3, 4, 6]);
+
 const AppState = {
   catalog: null,
   currentTab: 'light-novel',
   searchQuery: '',
   isRestoringScroll: false,
   restoreTimer: null,
+  revealedSpoilers: new Set(),
   currentReading: {
     type: null,          // 'light_novel' | 'web_novel'
     id: null,            // ex: 'vol-6', 'vol-6-scan', 'cap-018-5', 'extra-001'
@@ -34,12 +41,13 @@ const AppState = {
     useRatioOnly: false
   },
   settings: {
-    palette: 'system',   // 'system' | 'dark' | 'light' | 'sepia' | 'oled'
-    font: 'serif',       // 'serif' | 'sans' | 'dyslexic' | 'mono'
+    palette: 'system',        // 'system' | 'dark' | 'light' | 'sepia' | 'oled'
+    font: 'serif',            // 'serif' | 'sans' | 'dyslexic' | 'mono'
     fontSize: 19,
     maxWidth: 820,
     culturalHints: true,
-    autoResumeOnOpen: true
+    autoResumeOnOpen: true,
+    spoilerMode: 'post_anime' // 'post_anime' (Vol. 12+) | 'all' (Vol. 1+) | 'none'
   },
   history: {},
   bookmarks: [],
@@ -71,7 +79,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderAllCatalogViews();
     refreshContinueBanners();
     updateBookmarkBadge();
-    handleInitialStartupRoute();
+    await handleInitialStartupRoute();
+    maybePromptSpoilerOnboarding();
   } catch (err) {
     console.error('Erro ao carregar data/catalog.json:', err);
     const main = document.getElementById('content-area');
@@ -246,6 +255,106 @@ function applySettingsToDOM() {
 
   const chkAutoResume = document.getElementById('chk-auto-resume');
   if (chkAutoResume) chkAutoResume.checked = AppState.settings.autoResumeOnOpen !== false;
+
+  const spoilerMode = AppState.settings.spoilerMode || 'post_anime';
+  document.querySelectorAll('.btn-spoiler-opt').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.spoiler === spoilerMode);
+  });
+  document.querySelectorAll('.onboarding-choice-card').forEach(card => {
+    card.classList.toggle('is-selected', card.dataset.chooseSpoiler === spoilerMode);
+  });
+
+  const spoilerBtn = document.getElementById('btn-open-spoiler-modal');
+  const spoilerIcon = document.getElementById('spoiler-pill-icon');
+  const spoilerText = document.getElementById('spoiler-pill-text');
+  if (spoilerBtn && spoilerIcon && spoilerText) {
+    if (spoilerMode === 'post_anime') {
+      spoilerIcon.textContent = '🛡️';
+      spoilerText.textContent = 'Sem Spoilers: Vol. 12+';
+      spoilerBtn.classList.remove('is-unfiltered');
+    } else if (spoilerMode === 'all') {
+      spoilerIcon.textContent = '🙈';
+      spoilerText.textContent = 'Sem Sinopses';
+      spoilerBtn.classList.remove('is-unfiltered');
+    } else {
+      spoilerIcon.textContent = '👁️';
+      spoilerText.textContent = 'Spoilers Visíveis';
+      spoilerBtn.classList.add('is-unfiltered');
+    }
+  }
+}
+
+function setSpoilerMode(mode) {
+  if (!['post_anime', 'all', 'none'].includes(mode)) return;
+  AppState.settings.spoilerMode = mode;
+  AppState.revealedSpoilers.clear();
+  try {
+    localStorage.setItem(STORAGE_KEYS.SPOILER_ONBOARDED, '1');
+  } catch (_) {}
+  saveSettingsToStorage();
+  applySettingsToDOM();
+  renderAllCatalogViews();
+}
+
+function maybePromptSpoilerOnboarding() {
+  if (AppState.currentReading.type) return;
+  try {
+    if (localStorage.getItem(STORAGE_KEYS.SPOILER_ONBOARDED)) return;
+  } catch (_) {
+    return;
+  }
+  const dialog = document.getElementById('spoiler-dialog');
+  if (dialog && !dialog.open) {
+    dialog.showModal();
+  }
+}
+
+function isLnVolumeNormallyProtected(volNum) {
+  const mode = AppState.settings.spoilerMode || 'post_anime';
+  if (mode === 'none') return false;
+  if (mode === 'all') return true;
+  return Number(volNum) > ANIME_ADAPTED_MAX_LN_VOL;
+}
+
+function isLnVolumeSpoilerHidden(volNum, spoilerKey) {
+  if (!isLnVolumeNormallyProtected(volNum)) return false;
+  return !AppState.revealedSpoilers.has(spoilerKey);
+}
+
+function isWnArcNormallyProtected(arcId) {
+  const mode = AppState.settings.spoilerMode || 'post_anime';
+  if (mode === 'none') return false;
+  if (mode === 'all') return true;
+  return POST_ANIME_WN_ARCS.has(arcId);
+}
+
+function isWnArcSpoilerHidden(arcId, spoilerKey) {
+  if (!isWnArcNormallyProtected(arcId)) return false;
+  return !AppState.revealedSpoilers.has(spoilerKey);
+}
+
+function isComparisonDiffNormallyProtected(diffIdx) {
+  const mode = AppState.settings.spoilerMode || 'post_anime';
+  if (mode === 'none') return false;
+  if (mode === 'all') return true;
+  return diffIdx >= 6;
+}
+
+function isComparisonDiffSpoilerHidden(diffIdx, spoilerKey) {
+  if (!isComparisonDiffNormallyProtected(diffIdx)) return false;
+  return !AppState.revealedSpoilers.has(spoilerKey);
+}
+
+function isCulturalConceptNormallyProtected(conceptIdx) {
+  const mode = AppState.settings.spoilerMode || 'post_anime';
+  if (mode === 'none') return false;
+  if (mode === 'all') return true;
+  return POST_ANIME_CULTURAL_CONCEPT_IDXS.has(conceptIdx);
+}
+
+function isCulturalConceptSpoilerHidden(conceptIdx, spoilerKey) {
+  if (!isCulturalConceptNormallyProtected(conceptIdx)) return false;
+  return !AppState.revealedSpoilers.has(spoilerKey);
 }
 
 function getScrollRatio() {
@@ -435,17 +544,19 @@ function refreshContinueBanners() {
 }
 
 function resumeSavedRecord(record) {
-  if (!record) return;
+  if (!record) return Promise.resolve();
   const anchor = {
     scrollRatio: record.scrollRatio || 0,
     pIndex: typeof record.pIndex === 'number' ? record.pIndex : null,
     pOffsetPx: typeof record.pOffsetPx === 'number' ? record.pOffsetPx : null
   };
   if (record.type === 'light_novel') {
-    openLightNovel(record.id, record.chapterIndex || 0, anchor);
-  } else if (record.type === 'web_novel') {
-    openWebNovelChapter(record.id, anchor);
+    return openLightNovel(record.id, record.chapterIndex || 0, anchor);
   }
+  if (record.type === 'web_novel') {
+    return openWebNovelChapter(record.id, anchor);
+  }
+  return Promise.resolve();
 }
 
 // ==========================================================================
@@ -465,7 +576,7 @@ function matchesSearch(text) {
   return String(text || '').toLowerCase().includes(AppState.searchQuery);
 }
 
-// 1. Catálogo da Light Novel (21 Volumes Offline + Capas WebP + Barra de Progresso)
+// 1. Catálogo da Light Novel (21 Volumes Offline + Capas WebP + Barra de Progresso + Filtro Anti-Spoilers)
 function renderLightNovelCatalog() {
   const grid = document.getElementById('ln-volumes-grid');
   const futureGrid = document.getElementById('ln-future-grid');
@@ -477,9 +588,14 @@ function renderLightNovelCatalog() {
     statsEl.textContent = `${info.available_volumes_count} Volumes Offline • ${(info.total_illustrations || 0).toLocaleString('pt-BR')} Ilustrações WebP • ${(info.total_footnotes || 0)} Notas Culturais`;
   }
 
-  const volumes = (AppState.catalog.light_novel.volumes || []).filter(v =>
-    matchesSearch(`${v.title} ${v.desc} ${v.edition} volume ${v.volume_number}`)
-  );
+  const volumes = (AppState.catalog.light_novel.volumes || []).filter(v => {
+    const spKey = `ln:${v.id}`;
+    const hidden = isLnVolumeSpoilerHidden(v.volume_number, spKey);
+    const searchable = hidden
+      ? `Volume ${v.volume_number} ${v.edition} vol ${v.volume_number}`
+      : `${v.title} ${v.desc} ${v.edition} volume ${v.volume_number}`;
+    return matchesSearch(searchable);
+  });
 
   grid.innerHTML = volumes.map((vol, idx) => {
     const deferredCls = idx >= 6 ? 'deferred-card' : '';
@@ -487,9 +603,14 @@ function renderLightNovelCatalog() {
     const pct = hist ? hist.pct : 0;
     const readBtnLabel = hist ? `Continuar (${pct}%) →` : 'Ler Volume →';
 
+    const spKey = `ln:${vol.id}`;
+    const isHidden = isLnVolumeSpoilerHidden(vol.volume_number, spKey);
+    const isManuallyRevealed = isLnVolumeNormallyProtected(vol.volume_number) && AppState.revealedSpoilers.has(spKey);
+    const displayTitle = isHidden ? `Volume ${vol.volume_number}` : vol.title;
+
     const coverHtml = vol.cover_image
       ? `<div class="vol-cover-wrap" data-action="open-ln" data-vol="${vol.id}">
-           <img src="${escapeAttr(vol.cover_image)}" alt="Capa oficial — ${escapeAttr(vol.title)}" width="192" height="288" ${idx >= 4 ? 'loading="lazy"' : ''}>
+           <img src="${escapeAttr(vol.cover_image)}" alt="Capa oficial — ${escapeAttr(displayTitle)}" width="192" height="288" ${idx >= 4 ? 'loading="lazy"' : ''}>
          </div>`
       : '';
 
@@ -504,6 +625,23 @@ function renderLightNovelCatalog() {
       : '';
 
     const amzVol = Math.floor(Number(vol.volume_number)) || 1;
+    const shieldReason = Number(vol.volume_number) > ANIME_ADAPTED_MAX_LN_VOL
+      ? 'Sinopse e subtítulo ocultados (Pós-Anime • Vol. 12+)'
+      : 'Sinopse e subtítulo ocultados (Modo Sem Spoilers)';
+
+    const descBlockHtml = isHidden
+      ? `
+        <div class="spoiler-shield-box">
+          <span class="spoiler-shield-label">🔒 ${shieldReason}</span>
+          <button type="button" class="btn-reveal-item" data-action="reveal-spoiler" data-spoiler-id="${escapeAttr(spKey)}">
+            👁️ Mostrar sinopse deste volume
+          </button>
+        </div>
+      `
+      : `
+        <p class="volume-desc">${escapeHtml(vol.desc)}</p>
+        ${isManuallyRevealed ? `<div class="spoiler-revealed-note"><button type="button" class="btn-reveal-item" data-action="hide-spoiler" data-spoiler-id="${escapeAttr(spKey)}">🙈 Ocultar novamente</button></div>` : ''}
+      `;
 
     return `
       <article class="volume-card ${deferredCls}">
@@ -516,11 +654,11 @@ function renderLightNovelCatalog() {
                 ${coloredBadge}
                 ${dualBadge}
               </div>
-              <h3>${escapeHtml(vol.title)}</h3>
+              <h3>${escapeHtml(displayTitle)}</h3>
               <div class="volume-kanji">${escapeHtml(vol.kanji || '')} • ${escapeHtml(vol.edition || '')}</div>
             </div>
           </div>
-          <p class="volume-desc" style="margin-top: 0.75rem;">${escapeHtml(vol.desc)}</p>
+          ${descBlockHtml}
         </div>
 
         <div>
@@ -543,20 +681,44 @@ function renderLightNovelCatalog() {
   }).join('');
 
   if (futureGrid) {
-    const fut = (AppState.catalog.light_novel.future_volumes || []).filter(f =>
-      matchesSearch(`${f.title} ${f.desc}`)
-    );
-    futureGrid.innerHTML = fut.map(f => `
-      <article class="future-card deferred-card">
-        <span class="badge-num">Volume ${f.num} • ${escapeHtml(f.status)}</span>
-        <h4>${escapeHtml(f.title)}</h4>
-        <p>${escapeHtml(f.desc)}</p>
-      </article>
-    `).join('');
+    const fut = (AppState.catalog.light_novel.future_volumes || []).filter(f => {
+      const spKey = `fut:${f.id}`;
+      const hidden = isLnVolumeSpoilerHidden(f.num, spKey);
+      return matchesSearch(hidden ? `Volume ${f.num} ${f.status}` : `${f.title} ${f.desc} ${f.status}`);
+    });
+    futureGrid.innerHTML = fut.map(f => {
+      const spKey = `fut:${f.id}`;
+      const isHidden = isLnVolumeSpoilerHidden(f.num, spKey);
+      const isManuallyRevealed = isLnVolumeNormallyProtected(f.num) && AppState.revealedSpoilers.has(spKey);
+
+      if (isHidden) {
+        return `
+          <article class="future-card deferred-card">
+            <span class="badge-num">Volume ${f.num} • ${escapeHtml(f.status)}</span>
+            <h4>Volume ${f.num}</h4>
+            <div class="spoiler-shield-box">
+              <span class="spoiler-shield-label">🔒 Sinopse ocultada (Pós-Anime • Vol. 12+)</span>
+              <button type="button" class="btn-reveal-item" data-action="reveal-spoiler" data-spoiler-id="${escapeAttr(spKey)}">
+                👁️ Mostrar sinopse
+              </button>
+            </div>
+          </article>
+        `;
+      }
+
+      return `
+        <article class="future-card deferred-card">
+          <span class="badge-num">Volume ${f.num} • ${escapeHtml(f.status)}</span>
+          <h4>${escapeHtml(f.title)}</h4>
+          <p>${escapeHtml(f.desc)}</p>
+          ${isManuallyRevealed ? `<div class="spoiler-revealed-note"><button type="button" class="btn-reveal-item" data-action="hide-spoiler" data-spoiler-id="${escapeAttr(spKey)}">🙈 Ocultar novamente</button></div>` : ''}
+        </article>
+      `;
+    }).join('');
   }
 }
 
-// 2. Catálogo da Web Novel (303 Capítulos em <details>/<summary> nativos)
+// 2. Catálogo da Web Novel (303 Capítulos em <details>/<summary> nativos + Filtro Anti-Spoilers)
 function renderWebNovelCatalog() {
   const container = document.getElementById('wn-arcs-container');
   const statsEl = document.getElementById('wn-hero-stats');
@@ -571,11 +733,54 @@ function renderWebNovelCatalog() {
   const allChapters = AppState.catalog.web_novel.chapters || [];
 
   container.innerHTML = arcs.map((arc, idx) => {
-    const arcChs = allChapters.filter(c => c.arc_id === arc.id && matchesSearch(`${c.display_num} ${c.title} ${arc.title}`));
+    const spKey = `wn:${arc.id}`;
+    const isHidden = isWnArcSpoilerHidden(arc.id, spKey);
+    const isManuallyRevealed = isWnArcNormallyProtected(arc.id) && AppState.revealedSpoilers.has(spKey);
+
+    let safeArcTitle = arc.title;
+    if (isHidden) {
+      safeArcTitle = arc.is_extra
+        ? `Arco Extra ${idx - 9} • Pós-Final da Web Novel`
+        : `Arco ${idx + 1}${POST_ANIME_WN_ARCS.has(arc.id) ? ' • Pós-Anime' : ''}`;
+    } else if (arc.id === 'arc-7' && AppState.settings.spoilerMode === 'post_anime') {
+      safeArcTitle = 'Arco 7: O Despertar da Heroína';
+    }
+
+    const safeArcDesc = isHidden
+      ? (POST_ANIME_WN_ARCS.has(arc.id)
+          ? '🔒 Sinopse e títulos dos capítulos ocultados (Pós-Anime • equivalente aos Vols. 12+)'
+          : '🔒 Sinopse e títulos dos capítulos ocultados (Modo Sem Spoilers)')
+      : arc.desc;
+
+    const arcChs = allChapters.filter(c => {
+      if (c.arc_id !== arc.id) return false;
+      const searchable = isHidden ? `${c.display_num} ${safeArcTitle}` : `${c.display_num} ${c.title} ${arc.title}`;
+      return matchesSearch(searchable);
+    });
     if (AppState.searchQuery && arcChs.length === 0) return '';
 
     const shouldOpen = AppState.searchQuery ? 'open' : (idx === 0 ? 'open' : '');
     const extraCls = arc.is_extra ? 'is-extra-arc' : '';
+
+    const spoilerTopBar = isHidden
+      ? `
+        <div class="wn-arc-spoiler-bar">
+          <span>🛡️ Os títulos deste arco estão ocultos para evitar spoilers.</span>
+          <button type="button" class="btn-reveal-item" data-action="reveal-spoiler" data-spoiler-id="${escapeAttr(spKey)}">
+            👁️ Mostrar sinopse e títulos deste arco
+          </button>
+        </div>
+      `
+      : (isManuallyRevealed
+          ? `
+            <div class="wn-arc-spoiler-bar">
+              <span>👁️ Sinopse e títulos revelados temporariamente.</span>
+              <button type="button" class="btn-reveal-item" data-action="hide-spoiler" data-spoiler-id="${escapeAttr(spKey)}">
+                🙈 Ocultar novamente
+              </button>
+            </div>
+          `
+          : '');
 
     const chButtons = arcChs.map(ch => {
       const chId = ch.id || `cap-${String(ch.num).padStart(3, '0')}`;
@@ -584,12 +789,13 @@ function renderWebNovelCatalog() {
       const statusLabel = hist
         ? (hist.pct >= 85 ? '✓ Lido' : `${hist.pct}%`)
         : (ch.is_downloaded ? 'Offline' : 'Online');
+      const showChTitle = !isHidden || (hist && hist.pct > 0);
 
       return `
         <button type="button" class="chapter-item-btn ${readCls}" data-action="open-wn" data-chid="${escapeAttr(chId)}">
           <span class="ch-info">
             <span class="ch-num">${escapeHtml(ch.display_num || `Capítulo ${ch.num}`)}</span>
-            <span class="ch-title">${escapeHtml(ch.title)}</span>
+            <span class="ch-title ${showChTitle ? '' : 'is-masked-spoiler'}">${showChTitle ? escapeHtml(ch.title) : 'Título ocultado contra spoilers'}</span>
           </span>
           <span class="ch-status-pill">${statusLabel}</span>
         </button>
@@ -600,10 +806,11 @@ function renderWebNovelCatalog() {
       <details class="arc-details ${extraCls}" ${shouldOpen}>
         <summary class="arc-summary">
           <span>
-            <span class="arc-title-text">${escapeHtml(arc.title)} (${arcChs.length} capítulos)</span>
-            <span class="arc-desc-text">${escapeHtml(arc.desc)}</span>
+            <span class="arc-title-text">${escapeHtml(safeArcTitle)} (${arcChs.length} capítulos)</span>
+            <span class="arc-desc-text">${escapeHtml(safeArcDesc)}</span>
           </span>
         </summary>
+        ${spoilerTopBar}
         <div class="chapter-list">
           ${chButtons}
         </div>
@@ -612,7 +819,7 @@ function renderWebNovelCatalog() {
   }).join('');
 }
 
-// 3. Comparador (Edições em Português + Diferenças WN vs LN)
+// 3. Comparador (Edições em Português + Diferenças WN vs LN + Filtro Anti-Spoilers)
 function renderComparisonCatalog() {
   if (!AppState.catalog) return;
   const comp = AppState.catalog.comparison;
@@ -685,22 +892,49 @@ function renderComparisonCatalog() {
   const diffsEl = document.getElementById('comparison-diffs-list');
   if (diffsEl && comp.key_differences) {
     diffsEl.innerHTML = comp.key_differences
-      .filter(d => matchesSearch(`${d.topic} ${d.wn} ${d.ln}`))
-      .map((diff, i) => `
-        <article class="comparison-card ${i >= 3 ? 'deferred-card' : ''}">
-          <h4>⚖️ ${escapeHtml(diff.topic)}</h4>
-          <div class="comparison-grid">
-            <div class="comparison-column col-wn">
-              <div class="col-header">📜 Web Novel (Original)</div>
-              <div class="col-body">${escapeHtml(diff.wn)}</div>
+      .map((diff, origIdx) => ({ diff, origIdx }))
+      .filter(({ diff, origIdx }) => {
+        const spKey = `comp:${origIdx}`;
+        const hidden = isComparisonDiffSpoilerHidden(origIdx, spKey);
+        return matchesSearch(hidden ? `Diferença ${origIdx + 1}` : `${diff.topic} ${diff.wn} ${diff.ln}`);
+      })
+      .map(({ diff, origIdx }, i) => {
+        const spKey = `comp:${origIdx}`;
+        const isHidden = isComparisonDiffSpoilerHidden(origIdx, spKey);
+        const isManuallyRevealed = isComparisonDiffNormallyProtected(origIdx) && AppState.revealedSpoilers.has(spKey);
+
+        if (isHidden) {
+          const scopeLabel = origIdx >= 6 ? 'Pós-Anime (Volumes 12+)' : 'Ocultado contra Spoilers';
+          return `
+            <article class="comparison-card ${i >= 3 ? 'deferred-card' : ''}">
+              <h4>⚖️ Diferença #${origIdx + 1} — ${scopeLabel}</h4>
+              <div class="spoiler-shield-box">
+                <span class="spoiler-shield-label">🔒 Comparativo de enredo ocultado para evitar spoilers.</span>
+                <button type="button" class="btn-reveal-item" data-action="reveal-spoiler" data-spoiler-id="${escapeAttr(spKey)}">
+                  👁️ Mostrar este comparativo
+                </button>
+              </div>
+            </article>
+          `;
+        }
+
+        return `
+          <article class="comparison-card ${i >= 3 ? 'deferred-card' : ''}">
+            <h4>⚖️ ${escapeHtml(diff.topic)}</h4>
+            <div class="comparison-grid">
+              <div class="comparison-column col-wn">
+                <div class="col-header">📜 Web Novel (Original)</div>
+                <div class="col-body">${escapeHtml(diff.wn)}</div>
+              </div>
+              <div class="comparison-column col-ln">
+                <div class="col-header">📘 Light Novel (Oficial)</div>
+                <div class="col-body">${escapeHtml(diff.ln)}</div>
+              </div>
             </div>
-            <div class="comparison-column col-ln">
-              <div class="col-header">📘 Light Novel (Oficial)</div>
-              <div class="col-body">${escapeHtml(diff.ln)}</div>
-            </div>
-          </div>
-        </article>
-      `).join('');
+            ${isManuallyRevealed ? `<div class="spoiler-revealed-note"><button type="button" class="btn-reveal-item" data-action="hide-spoiler" data-spoiler-id="${escapeAttr(spKey)}">🙈 Ocultar novamente</button></div>` : ''}
+          </article>
+        `;
+      }).join('');
   }
 }
 
@@ -726,13 +960,41 @@ function renderCulturalCatalog() {
 
   if (conEl) {
     conEl.innerHTML = (g.tensura_concepts || [])
-      .filter(c => matchesSearch(`${c.term} ${c.desc}`))
-      .map(c => `
-        <article class="term-card">
-          <div class="term-name">${escapeHtml(c.term)}</div>
-          <div class="term-desc">${escapeHtml(c.desc)}</div>
-        </article>
-      `).join('');
+      .map((c, origIdx) => ({ c, origIdx }))
+      .filter(({ c, origIdx }) => {
+        const spKey = `cult:${origIdx}`;
+        const hidden = isCulturalConceptSpoilerHidden(origIdx, spKey);
+        const safeName = origIdx === 6 ? 'Grande Sábio & Evoluções' : c.term;
+        return matchesSearch(hidden ? safeName : `${c.term} ${c.desc}`);
+      })
+      .map(({ c, origIdx }) => {
+        const spKey = `cult:${origIdx}`;
+        const isHidden = isCulturalConceptSpoilerHidden(origIdx, spKey);
+        const isManuallyRevealed = isCulturalConceptNormallyProtected(origIdx) && AppState.revealedSpoilers.has(spKey);
+
+        if (isHidden) {
+          const safeTerm = origIdx === 6 ? 'Grande Sábio → Evoluções Posteriores' : c.term;
+          return `
+            <article class="term-card">
+              <div class="term-name">${escapeHtml(safeTerm)}</div>
+              <div class="spoiler-shield-box">
+                <span class="spoiler-shield-label">🔒 Explicação ocultada por conter detalhes pós-Volume 11.</span>
+                <button type="button" class="btn-reveal-item" data-action="reveal-spoiler" data-spoiler-id="${escapeAttr(spKey)}">
+                  👁️ Mostrar explicação
+                </button>
+              </div>
+            </article>
+          `;
+        }
+
+        return `
+          <article class="term-card">
+            <div class="term-name">${escapeHtml(c.term)}</div>
+            <div class="term-desc">${escapeHtml(c.desc)}</div>
+            ${isManuallyRevealed ? `<div class="spoiler-revealed-note"><button type="button" class="btn-reveal-item" data-action="hide-spoiler" data-spoiler-id="${escapeAttr(spKey)}">🙈 Ocultar novamente</button></div>` : ''}
+          </article>
+        `;
+      }).join('');
   }
 
   if (aspEl) {
@@ -757,22 +1019,27 @@ function renderAmazonCatalog() {
     desc.textContent = AppState.catalog.amazon_br.store_info;
   }
 
-  const vols = (AppState.catalog.amazon_br.volumes || []).filter(v =>
-    matchesSearch(`${v.title} volume ${v.volume}`)
-  );
+  const vols = (AppState.catalog.amazon_br.volumes || []).filter(v => {
+    const hidden = isLnVolumeSpoilerHidden(v.volume, `ln:vol-${v.volume}`);
+    return matchesSearch(hidden ? `Volume ${v.volume}` : `${v.title} volume ${v.volume}`);
+  });
 
-  grid.innerHTML = vols.map((item, idx) => `
-    <article class="amazon-card ${idx >= 8 ? 'deferred-card' : ''}">
-      <div>
-        <span class="badge-num">Volume ${item.volume}</span>
-        <h3>${escapeHtml(item.title)}</h3>
-        <div class="amazon-formats">${escapeHtml((item.formats || []).join(' • '))}</div>
-      </div>
-      <a href="${escapeAttr(item.search_url)}" target="_blank" rel="noopener" class="btn-amazon-buy">
-        🛒 Ver na Amazon.com.br
-      </a>
-    </article>
-  `).join('');
+  grid.innerHTML = vols.map((item, idx) => {
+    const hidden = isLnVolumeSpoilerHidden(item.volume, `ln:vol-${item.volume}`);
+    const safeTitle = hidden ? `Volume ${item.volume}: Light Novel Oficial` : item.title;
+    return `
+      <article class="amazon-card ${idx >= 8 ? 'deferred-card' : ''}">
+        <div>
+          <span class="badge-num">Volume ${item.volume}</span>
+          <h3>${escapeHtml(safeTitle)}</h3>
+          <div class="amazon-formats">${escapeHtml((item.formats || []).join(' • '))}</div>
+        </div>
+        <a href="${escapeAttr(item.search_url)}" target="_blank" rel="noopener" class="btn-amazon-buy">
+          🛒 Ver na Amazon.com.br
+        </a>
+      </article>
+    `;
+  }).join('');
 }
 
 // ==========================================================================
@@ -1225,6 +1492,7 @@ function closeReader() {
   renderAllCatalogViews();
   refreshContinueBanners();
   history.replaceState(null, '', `#${AppState.currentTab}`);
+  maybePromptSpoilerOnboarding();
 }
 
 // ==========================================================================
@@ -1432,12 +1700,13 @@ function switchTab(tabName) {
   refreshContinueBanners();
   history.replaceState(null, '', `#${tabName}`);
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  maybePromptSpoilerOnboarding();
 }
 
-function handleInitialStartupRoute() {
+async function handleInitialStartupRoute() {
   const hash = window.location.hash.replace(/^#/, '');
   if (hash) {
-    handleInitialHash(hash);
+    await handleInitialHash(hash);
     return;
   }
 
@@ -1445,12 +1714,12 @@ function handleInitialStartupRoute() {
   if (AppState.settings.autoResumeOnOpen !== false) {
     const last = getSavedTrackProgress(STORAGE_KEYS.PROGRESS_LAST);
     if (last && last.type && last.inReader !== false) {
-      resumeSavedRecord(last);
+      await resumeSavedRecord(last);
     }
   }
 }
 
-function handleInitialHash(rawHash = null) {
+async function handleInitialHash(rawHash = null) {
   const hash = rawHash !== null ? rawHash : window.location.hash.replace(/^#/, '');
   if (!hash) return;
 
@@ -1469,7 +1738,7 @@ function handleInitialHash(rawHash = null) {
     } else if (hist && Number(hist.chapterIndex) === targetCh) {
       anchor = normalizeScrollAnchor(hist);
     }
-    openLightNovel(volId, targetCh, anchor);
+    await openLightNovel(volId, targetCh, anchor);
   } else if (hash.startsWith('wn/')) {
     const [, chId] = hash.split('/');
     const wnSave = getSavedTrackProgress(STORAGE_KEYS.PROGRESS_WN);
@@ -1481,7 +1750,7 @@ function handleInitialHash(rawHash = null) {
     } else if (hist) {
       anchor = normalizeScrollAnchor(hist);
     }
-    openWebNovelChapter(chId, anchor);
+    await openWebNovelChapter(chId, anchor);
   }
 }
 
@@ -1563,6 +1832,23 @@ function bindGlobalEvents() {
   const settingsDialog = document.getElementById('settings-dialog');
   document.getElementById('btn-open-settings')?.addEventListener('click', () => settingsDialog?.showModal());
   document.getElementById('btn-reader-settings')?.addEventListener('click', () => settingsDialog?.showModal());
+
+  const spoilerDialog = document.getElementById('spoiler-dialog');
+  document.getElementById('btn-open-spoiler-modal')?.addEventListener('click', () => spoilerDialog?.showModal());
+  spoilerDialog?.addEventListener('close', () => {
+    try {
+      if (!localStorage.getItem(STORAGE_KEYS.SPOILER_ONBOARDED)) {
+        localStorage.setItem(STORAGE_KEYS.SPOILER_ONBOARDED, '1');
+        saveSettingsToStorage();
+      }
+    } catch (_) {}
+  });
+  document.querySelectorAll('[data-choose-spoiler]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setSpoilerMode(btn.dataset.chooseSpoiler);
+      spoilerDialog?.close();
+    });
+  });
 
   document.getElementById('btn-open-bookmarks')?.addEventListener('click', () => openBookmarksModal(null));
   document.getElementById('btn-reader-bookmarks')?.addEventListener('click', () => openBookmarksModal(null));
@@ -1665,6 +1951,11 @@ function bindGlobalEvents() {
       AppState.settings.maxWidth = Number(btn.dataset.width);
       saveSettingsToStorage();
       applySettingsToDOM();
+    });
+  });
+  document.querySelectorAll('.btn-spoiler-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setSpoilerMode(btn.dataset.spoiler);
     });
   });
   document.getElementById('btn-font-dec')?.addEventListener('click', () => {
@@ -1835,6 +2126,18 @@ function bindGlobalEvents() {
     } else if (action === 'goto-tab-wn') {
       document.getElementById('bookmarks-dialog')?.close();
       switchTab('web-novel');
+    } else if (action === 'reveal-spoiler') {
+      const spId = target.dataset.spoilerId;
+      if (spId) {
+        AppState.revealedSpoilers.add(spId);
+        renderAllCatalogViews();
+      }
+    } else if (action === 'hide-spoiler') {
+      const spId = target.dataset.spoilerId;
+      if (spId) {
+        AppState.revealedSpoilers.delete(spId);
+        renderAllCatalogViews();
+      }
     } else if (action === 'close-reader') {
       closeReader();
     } else if (action === 'ln-prev') {
@@ -1884,6 +2187,7 @@ function bindGlobalEvents() {
     if (e.key === STORAGE_KEYS.SETTINGS || e.key === STORAGE_KEYS.COLOR_SCHEME || e.key === STORAGE_KEYS.PALETTE) {
       loadStateFromStorage();
       applySettingsToDOM();
+      renderAllCatalogViews();
     } else if (e.key === STORAGE_KEYS.PROGRESS_LAST || e.key === STORAGE_KEYS.HISTORY) {
       loadStateFromStorage();
       refreshContinueBanners();

@@ -710,6 +710,7 @@ button, select, input {
 }
 
 .volume-desc {
+  margin-top: 0.75rem;
   font-size: 0.85rem;
   color: var(--text-secondary);
   line-height: 1.52;
@@ -1946,6 +1947,196 @@ dialog::backdrop {
   color: var(--wn-accent);
 }
 
+.audit-samples-details {
+  margin-top: 1.25rem;
+}
+
+.audit-samples-inner {
+  padding: 1rem;
+}
+
+/* ==========================================================================
+   SISTEMA ANTI-SPOILERS & BOAS-VINDAS (REFERÊNCIA ANIME = ATÉ VOL. 11)
+   ========================================================================== */
+
+.btn-spoiler-pill {
+  border-color: rgba(16, 185, 129, 0.4);
+  background: rgba(16, 185, 129, 0.1);
+}
+.btn-spoiler-pill.is-unfiltered {
+  border-color: var(--border-color);
+  background: var(--bg-secondary);
+}
+
+.spoiler-mode-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.45rem;
+}
+
+.btn-spoiler-opt {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: var(--radius-md);
+  padding: 0.52rem 0.55rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.btn-spoiler-opt:hover {
+  border-color: var(--accent-color);
+  color: var(--text-primary);
+}
+.btn-spoiler-opt.active {
+  background: var(--accent-light);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.onboarding-dialog {
+  max-width: 620px;
+}
+
+.onboarding-intro {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 1.1rem;
+}
+.onboarding-intro strong {
+  color: var(--text-primary);
+}
+
+.onboarding-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.onboarding-choice-card {
+  width: 100%;
+  text-align: left;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.95rem 1.05rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.32rem;
+  transition: border-color var(--transition), background-color var(--transition), transform var(--transition);
+}
+.onboarding-choice-card:hover {
+  border-color: var(--accent-color);
+  background: var(--bg-card-hover);
+  transform: translateY(-1px);
+}
+.onboarding-choice-card.is-recommended {
+  border-color: rgba(16, 185, 129, 0.55);
+  background: rgba(16, 185, 129, 0.08);
+}
+.onboarding-choice-card.is-selected {
+  box-shadow: inset 0 0 0 2px var(--accent-color);
+  border-color: var(--accent-color);
+}
+.onboarding-choice-card strong {
+  font-size: 0.94rem;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+.onboarding-choice-card small {
+  font-size: 0.81rem;
+  color: var(--text-secondary);
+  line-height: 1.48;
+}
+
+.choice-badge {
+  align-self: flex-start;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  background: rgba(16, 185, 129, 0.18);
+  color: var(--success-color);
+}
+.choice-badge.choice-badge-neutral {
+  background: var(--accent-light);
+  color: var(--accent-color);
+}
+.choice-badge.choice-badge-open {
+  background: var(--wn-light);
+  color: var(--wn-accent);
+}
+
+.onboarding-footnote {
+  margin-top: 1rem;
+  font-size: 0.79rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.spoiler-shield-box {
+  margin-top: 0.75rem;
+  padding: 0.75rem 0.85rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  border: 1px dashed var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.spoiler-shield-label {
+  font-size: 0.81rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.btn-reveal-item {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: var(--radius-full);
+  padding: 0.26rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.btn-reveal-item:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.spoiler-revealed-note {
+  margin-top: 0.45rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wn-arc-spoiler-bar {
+  padding: 0.75rem 1.15rem;
+  background: rgba(16, 185, 129, 0.07);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  font-size: 0.81rem;
+  color: var(--text-secondary);
+}
+
+.ch-title.is-masked-spoiler {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
 .bookmarks-list {
   display: flex;
   flex-direction: column;
@@ -2050,5 +2241,8 @@ dialog::backdrop {
   }
   .theme-options {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .spoiler-mode-options {
+    grid-template-columns: 1fr;
   }
 }

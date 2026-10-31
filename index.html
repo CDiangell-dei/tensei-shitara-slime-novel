@@ -61,6 +61,10 @@
       </nav>
 
       <div class="header-actions">
+        <button type="button" class="btn-header-pill btn-spoiler-pill" id="btn-open-spoiler-modal" aria-label="Configurar filtro contra spoilers nas sinopses">
+          <span aria-hidden="true" id="spoiler-pill-icon">🛡️</span>
+          <span class="pill-text" id="spoiler-pill-text">Sem Spoilers: Vol. 12+</span>
+        </button>
         <button type="button" class="btn-header-pill" id="btn-open-bookmarks" aria-label="Abrir marcações de troca entre Light Novel e Web Novel">
           <span aria-hidden="true">🔖</span>
           <span class="pill-text">Trocar LN ↔ WN</span>
@@ -146,7 +150,7 @@
         </div>
         <h2 id="heading-wn">Web Novel — Shousetsuka ni Narou (Completa)</h2>
         <p>
-          A história original completa publicada por <strong>Fuse</strong> entre 2013 e 2016, totalmente separada da Light Novel para você comparar o rascunho original, o desfecho alternativo contra Yuuki Kagurazaka e os <strong>48 Capítulos Extras pós-final</strong> (<em>O Jogo de Fuga Elegante de Rimuru</em> e <em>Visita ao Desconhecido</em>) traduzidos em Português via <em>Central Novel</em>.
+          A história original completa publicada por <strong>Fuse</strong> entre 2013 e 2016, totalmente separada da Light Novel para você comparar o rascunho original, os rumos alternativos da reta final e os <strong>48 Capítulos Extras pós-final</strong> traduzidos em Português via <em>Central Novel</em>.
         </p>
         <div class="hero-track-resume" id="wn-specific-resume" hidden></div>
       </div>
@@ -192,14 +196,14 @@
         <h4 class="audit-sub">Principais Correções Aplicadas nos Volumes 6 a 20</h4>
         <div class="repairs-grid" id="audit-highlights-grid"></div>
 
-        <details class="arc-details" id="audit-samples-details" style="margin-top: 1.25rem;" hidden>
+        <details class="arc-details audit-samples-details" id="audit-samples-details" hidden>
           <summary class="arc-summary">
             <span>
               <span class="arc-title-text">🔍 Ver Amostras Reais da Revisão Textual (Antes vs. Revisado)</span>
               <span class="arc-desc-text">Trechos comparados durante a revisão e padronização automática dos EPUBs em Português.</span>
             </span>
           </summary>
-          <div class="repairs-grid" id="audit-real-samples-grid" style="padding: 1rem;"></div>
+          <div class="repairs-grid audit-samples-inner" id="audit-real-samples-grid"></div>
         </details>
       </section>
 
@@ -216,7 +220,7 @@
         </div>
         <h2 id="heading-cult">Guia Cultural Japonês e Glossário Canônico de Tensura</h2>
         <p>
-          Preservamos os nomes originais essenciais para o entendimento da obra (<em>Rimuru Tempest, Guy Crimson, Feldway, Diablo, Testarossa, Carrera, Ultima, Ciel, Kijin, Majin, Onsen</em>) enquanto traduzimos todas as habilidades e descrições para Português natural. Consulte abaixo os significados culturais ou clique nos termos destacados durante a leitura!
+          Preservamos os nomes originais essenciais para o entendimento da obra (<em>Rimuru Tempest, Veldora, Benimaru, Shion, Diablo, Milim Nava, Guy Crimson, Kijin, Majin, Onsen</em>) enquanto traduzimos todas as habilidades e descrições para Português natural. Consulte abaixo os significados culturais ou clique nos termos destacados durante a leitura!
         </p>
       </div>
 
@@ -348,6 +352,15 @@
       </div>
 
       <div class="settings-group">
+        <span class="settings-label">Proteção Contra Spoilers nas Sinopses (Anime = até Vol. 11)</span>
+        <div class="spoiler-mode-options" role="group" aria-label="Filtro contra spoilers">
+          <button type="button" class="btn-spoiler-opt" data-spoiler="post_anime">🛡️ Pós-Anime (Vol. 12+)</button>
+          <button type="button" class="btn-spoiler-opt" data-spoiler="all">🙈 Ocultar Todas</button>
+          <button type="button" class="btn-spoiler-opt" data-spoiler="none">👁️ Mostrar Tudo</button>
+        </div>
+      </div>
+
+      <div class="settings-group">
         <label class="toggle-row" for="chk-auto-resume">
           <span>
             <strong>Continuar Automaticamente ao Reabrir o Site</strong>
@@ -459,6 +472,45 @@
     </div>
     <div class="dialog-body">
       <p id="note-dialog-content" class="note-dialog-text"></p>
+    </div>
+  </dialog>
+
+  <!-- DIALOG 6: BOAS-VINDAS & CONTROLE CONTRA SPOILERS -->
+  <dialog id="spoiler-dialog" class="app-dialog onboarding-dialog" aria-labelledby="spoiler-dialog-title">
+    <div class="dialog-header">
+      <h2 id="spoiler-dialog-title">🛡️ Controle de Spoilers — Até onde você conhece a história?</h2>
+      <form method="dialog">
+        <button type="submit" value="close" class="btn-dialog-close" aria-label="Fechar janela de spoilers">✕</button>
+      </form>
+    </div>
+    <div class="dialog-body">
+      <p class="onboarding-intro">
+        As sinopses e subtítulos dos volumes avançados revelam reviravoltas importantes da obra. Para sua referência, o <strong>Anime adapta até o Volume 11</strong> da Light Novel. Você já viu o que acontece após o anime ou prefere ocultar spoilers nas sinopses?
+      </p>
+
+      <div class="onboarding-choices">
+        <button type="button" class="onboarding-choice-card is-recommended" data-choose-spoiler="post_anime" autofocus>
+          <span class="choice-badge">Recomendado • Referência do Anime</span>
+          <strong>🛡️ Ainda não vi após o Anime — Ocultar spoilers do Vol. 12+</strong>
+          <small>Exibe normalmente até o Volume 11 e oculta sinopses, subtítulos reveladores e arcos pós-Volume 11 (Light Novel, Web Novel, Comparador e Glossário).</small>
+        </button>
+
+        <button type="button" class="onboarding-choice-card" data-choose-spoiler="all">
+          <span class="choice-badge choice-badge-neutral">Começando do zero</span>
+          <strong>🙈 Quero evitar qualquer spoiler — Ocultar TODAS as sinopses (Vol. 1+)</strong>
+          <small>Oculta as sinopses e os subtítulos reveladores de todos os volumes e arcos desde o início da história.</small>
+        </button>
+
+        <button type="button" class="onboarding-choice-card" data-choose-spoiler="none">
+          <span class="choice-badge choice-badge-open">Leitor veterano</span>
+          <strong>👁️ Já conheço o pós-Anime — Mostrar todas as sinopses</strong>
+          <small>Mostra livremente todas as sinopses completas, subtítulos e comparativos de todos os volumes.</small>
+        </button>
+      </div>
+
+      <p class="onboarding-footnote">
+        💡 Você pode mudar essa opção quando quiser clicando em <strong>🛡️ Sem Spoilers</strong> no topo do site, ou revelar a sinopse de apenas um volume específico com 1 clique.
+      </p>
     </div>
   </dialog>
 
