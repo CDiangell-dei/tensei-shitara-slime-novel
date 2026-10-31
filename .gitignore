@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.venv/
+venv/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Cache temporário
+*.tmp
+*.log

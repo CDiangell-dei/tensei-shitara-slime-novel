@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark" data-font="sans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tensei Shitara Slime Datta Ken | Biblioteca & Leitor Oficial</title>
+  <meta name="description" content="Biblioteca completa de Tensei Shitara Slime Datta Ken em Português. Leia a Light Novel, Web Novel, compare versões, visualize ilustrações oficiais e salve seu progresso.">
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Estilos Customizados -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/slime.svg">
+</head>
+<body>
+
+  <!-- Barra de Progresso Superior de Leitura -->
+  <div id="reading-progress-bar" role="progressbar" aria-label="Progresso da leitura atual"></div>
+
+  <!-- Cabeçalho Principal -->
+  <header class="main-header">
+    <div class="header-container">
+      <a href="#light-novel" class="logo-link" onclick="switchTab('light-novel')">
+        <img src="assets/images/slime.svg" alt="Rimuru Slime" class="logo-icon">
+        <div class="logo-text">
+          <h1>TENSEI SHITARA SLIME</h1>
+          <span>Biblioteca & Leitor em Português</span>
+        </div>
+      </a>
+
+      <!-- Navegação Principal por Abas -->
+      <nav class="main-nav" aria-label="Navegação da Biblioteca">
+        <button class="nav-tab active" data-tab="light-novel">
+          <span>📘</span> Light Novel (LN)
+        </button>
+        <button class="nav-tab" data-tab="web-novel">
+          <span>📜</span> Web Novel (WN)
+        </button>
+        <button class="nav-tab" data-tab="comparison">
+          <span>⚖️</span> Comparador WN x LN
+        </button>
+        <button class="nav-tab" data-tab="cultural">
+          <span>🌸</span> Guia Cultural & Termos
+        </button>
+        <button class="nav-tab" data-tab="amazon">
+          <span>🛒</span> Amazon Brasil
+        </button>
+      </nav>
+
+      <!-- Ações do Cabeçalho -->
+      <div class="header-actions">
+        <button class="btn-icon" id="btn-open-settings" onclick="toggleSettingsModal()" title="Configurações de Leitura (Temas, Fontes, Tamanho)" aria-label="Configurações">
+          ⚙️
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner de Salvar / Continuar Leitura -->
+  <div id="continue-banner">
+    <div class="continue-container">
+      <div class="continue-info">
+        <span class="continue-icon">🔖</span>
+        <div class="continue-text">
+          Você parou em: <strong id="continue-title">Carregando...</strong> (<span id="continue-percent">0%</span>)
+        </div>
+      </div>
+      <div class="continue-actions">
+        <button class="btn-continue" onclick="resumeReading()">
+          <span>Continuar Lendo Agora</span> →
+        </button>
+        <button class="btn-dismiss" onclick="document.getElementById('continue-banner').style.display='none'" title="Fechar aviso">
+          ✕
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Área de Conteúdo Principal (Abas) -->
+  <main class="content-area" id="content-area">
+
+    <!-- SEÇÃO 1: LIGHT NOVEL (LN) -->
+    <section id="view-light-novel" class="view-section active">
+      <div class="section-hero">
+        <span class="hero-tag">Edição Definitiva Oficial</span>
+        <h2>Light Novel (転生したらスライムだった件)</h2>
+        <p>
+          A versão comercial oficial escrita por <strong>Fuse</strong> e ilustrada por <strong>Mitz Vah</strong>. Na Light Novel, o autor expandiu amplamente o enredo original, refinou a diplomacia de Tempest, adicionou arcos completos (como Charybdis, a família Rosso e as 3 Demônios Primordiais) e criou combates muito mais estratégicos e profundos. Traduzida com dedicação pela equipe de fãs <em>TSSDK Scan PT-BR</em>.
+        </p>
+      </div>
+
+      <div class="volume-grid" id="ln-volumes-grid">
+        <!-- Renderizado dinamicamente via JS -->
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: WEB NOVEL (WN) -->
+    <section id="view-web-novel" class="view-section">
+      <div class="section-hero">
+        <span class="hero-tag">Obra Original da Internet</span>
+        <h2>Web Novel (Shousetsuka ni Narou)</h2>
+        <p>
+          O rascunho original serializado por Fuse no site japonês <em>Syosetu</em> entre 2013 e 2015. A Web Novel é uma história completa com <strong>249 Capítulos + Epílogo e Histórias Extras</strong>, dividida em 10 grandes arcos. O ritmo dos acontecimentos é ágil, com resoluções mais diretas e um final cósmico alternativo. Tradução em português disponibilizada via <em>Central Novel</em>.
+        </p>
+      </div>
+
+      <div id="wn-arcs-container">
+        <!-- Renderizado dinamicamente via JS -->
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: COMPARADOR WN VS LN -->
+    <section id="view-comparison" class="view-section">
+      <div class="section-hero">
+        <span class="hero-tag">Análise Literária & Diferenças Canônicas</span>
+        <h2>Guia de Comparação: Web Novel vs Light Novel</h2>
+        <p id="comparison-overview-text">
+          Descubra por que Fuse reescreveu mais de 50% da história na transição para a Light Novel profissional e quais arcos, personagens e batalhas foram profundamente modificados.
+        </p>
+      </div>
+
+      <div id="comparison-diffs-list">
+        <!-- Renderizado dinamicamente via JS -->
+      </div>
+    </section>
+
+    <!-- SEÇÃO 4: GUIA CULTURAL & NOMES ORIGINAIS -->
+    <section id="view-cultural" class="view-section">
+      <div class="section-hero">
+        <span class="hero-tag">Contexto Japonês & Glossário Canônico</span>
+        <h2>Guia Cultural e Conceitos do Universo de Tensura</h2>
+        <p>
+          Entenda a importância dos honoríficos japoneses, a filosofia de governo de Rimuru através do conceito de <em>Wa (Harmonia)</em>, o impacto da gastronomia na diplomacia dos monstros e o funcionamento do sistema de nomenclatura (Naming) e evolução mágica.
+        </p>
+      </div>
+
+      <div class="cultural-section">
+        <h3>🎎 Honoríficos e Formas de Tratamento</h3>
+        <div class="terms-grid" id="cultural-honorifics-list"></div>
+      </div>
+
+      <div class="cultural-section">
+        <h3>🔮 Conceitos Fundamentais e Sistemas de Poder</h3>
+        <div class="terms-grid" id="cultural-concepts-list"></div>
+      </div>
+
+      <div class="cultural-section">
+        <h3>🍱 Elementos Culturais e Costumes Japoneses</h3>
+        <div class="terms-grid" id="cultural-aspects-list"></div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 5: CATÁLOGO OFICIAL AMAZON BRASIL -->
+    <section id="view-amazon" class="view-section">
+      <div class="amazon-banner">
+        <div class="amazon-banner-text">
+          <h3>Apoie a Obra Oficial na Amazon Brasil</h3>
+          <p>
+            Adquira os volumes oficiais de <em>That Time I Got Reincarnated as a Slime</em> em formato digital para Kindle ou livros físicos importados e ajude os criadores originais!
+          </p>
+        </div>
+        <a href="https://www.amazon.com.br/s?k=tensei+shitara+slime+datta+ken+light+novel" target="_blank" rel="noopener" class="btn-amazon-main">
+          <span>🔍 Ver Todas as Novels na Amazon Brasil</span> →
+        </a>
+      </div>
+
+      <div class="amazon-grid" id="amazon-volumes-grid">
+        <!-- Renderizado dinamicamente via JS -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- VISUALIZAÇÃO DO LEITOR (READER VIEW) -->
+  <div id="reader-view" style="display: none;">
+    <!-- Barra Superior Fixa do Leitor -->
+    <div class="reader-toolbar">
+      <div class="reader-nav-left">
+        <button class="btn-back" onclick="closeReader()">
+          ← Voltar ao Índice
+        </button>
+        <span class="reader-current-title" id="reader-toolbar-title">Título do Capítulo</span>
+      </div>
+      <div class="reader-tools-right">
+        <button class="btn-icon" onclick="toggleSettingsModal()" title="Personalizar Leitor (Fontes, Temas, Tamanho)">
+          ⚙️
+        </button>
+      </div>
+    </div>
+
+    <!-- Conteúdo do Livro -->
+    <article class="reader-container">
+      <div class="reader-header-info" id="reader-header-area">
+        <!-- Título e cabeçalho dinâmico -->
+      </div>
+
+      <div id="reader-text-container">
+        <!-- Parágrafos renderizados dinamicamente -->
+      </div>
+
+      <!-- Navegação Inferior -->
+      <div class="reader-footer-nav" id="reader-footer-nav">
+        <!-- Botões anterior / próximo -->
+      </div>
+    </article>
+  </div>
+
+  <!-- MODAL DE CONFIGURAÇÕES DO LEITOR -->
+  <div class="settings-modal" id="settings-modal">
+    <div class="settings-group">
+      <span class="settings-label">Tema Visual</span>
+      <div class="theme-options">
+        <button class="btn-theme-opt" data-theme="dark" onclick="changeTheme('dark')">Noite</button>
+        <button class="btn-theme-opt" data-theme="light" onclick="changeTheme('light')">Dia</button>
+        <button class="btn-theme-opt" data-theme="sepia" onclick="changeTheme('sepia')">Sépia</button>
+        <button class="btn-theme-opt" data-theme="oled" onclick="changeTheme('oled')">OLED</button>
+      </div>
+    </div>
+
+    <div class="settings-group">
+      <span class="settings-label">Tipografia</span>
+      <div class="theme-options">
+        <button class="btn-theme-opt btn-font-opt" data-font="sans" onclick="changeFont('sans')">Moderna</button>
+        <button class="btn-theme-opt btn-font-opt" data-font="serif" onclick="changeFont('serif')">Livro</button>
+        <button class="btn-theme-opt btn-font-opt" data-font="dyslexic" onclick="changeFont('dyslexic')">Dislexia</button>
+        <button class="btn-theme-opt btn-font-opt" data-font="mono" onclick="changeFont('mono')">Mono</button>
+      </div>
+    </div>
+
+    <div class="settings-group">
+      <span class="settings-label">Tamanho do Texto</span>
+      <div class="font-size-controls">
+        <button class="btn-size" onclick="adjustFontSize(-1)">A-</button>
+        <span class="font-size-display" id="font-size-val">18px</span>
+        <button class="btn-size" onclick="adjustFontSize(1)">A+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE GALERIA DE ILUSTRAÇÕES OFICIAIS (MITZ VAH) -->
+  <div id="illustrations-modal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); z-index: 2000; align-items: center; justify-content: center; padding: 1.5rem;">
+    <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; width: 100%; max-width: 950px; max-height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5);">
+      <div style="padding: 1.25rem; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between;">
+        <h3 id="illus-modal-title" style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">Ilustrações Oficiais</h3>
+        <button onclick="closeIllustrationsModal()" style="background: none; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer;">✕</button>
+      </div>
+      <div id="illus-modal-grid" style="padding: 1.25rem; overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem;">
+        <!-- Imagens dinâmicas -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div>
+        <p><strong>Tensei Shitara Slime Datta Ken (That Time I Got Reincarnated as a Slime)</strong></p>
+        <p>Obra original por Fuse • Ilustrações por Mitz Vah • Editoras: Micro Magazine / Yen Press</p>
+        <p style="margin-top: 0.35rem; font-size: 0.78rem;">Compilado para leitura pessoal a partir das traduções da TSSDK Scan PT-BR e Central Novel.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://drive.google.com/drive/u/0/folders/1GM_wQEc6KIp5F3GmqUOLY8XGN8dkUv45" target="_blank" rel="noopener">📁 Pasta no Google Drive</a>
+        <a href="https://sites.google.com/view/tssdklscanptbr/p%C3%A1gina-inicial" target="_blank" rel="noopener">🌐 Scan PT-BR</a>
+        <a href="https://centralnovel.com/series/tensei-shitara-slime-datta-ken/" target="_blank" rel="noopener">📖 Central Novel</a>
+        <a href="https://www.amazon.com.br/s?k=tensei+shitara+slime+datta+ken+light+novel" target="_blank" rel="noopener">🛒 Amazon Brasil</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Principal da Aplicação -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
