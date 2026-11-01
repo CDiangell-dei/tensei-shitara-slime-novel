@@ -306,10 +306,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Estupor descreve mais ou menos uma pessoa em choque)"
-        },
-        {
-          "type": "p",
           "text": "O que há com isso? Está muito quente... Dá um tempo."
         },
         {
@@ -383,10 +379,6 @@
         {
           "type": "p",
           "text": "Merda. Eu acho que realmente pode ser isso... Tipo, a dor e o calor já haviam passado bastante. Estava apenas frio. Frio como o inferno. Eu senti como se fosse congelar no lugar."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Frio como o inferno... *tela azul*)"
         },
         {
           "type": "p",
@@ -531,7 +523,6 @@
         "“Tamuraaaa!”",
         "No momento em que empurrei Tamura para o lado, senti uma dor ardente nas minhas costas. Meu corpo enrijeceu quando caiu no chão, tentando suportar o choque. Eu não sabia dizer o que tinha acontecido. Eu queria me levantar, mas não conseguia.",
         "\"Saia da minha frente!\", O homem gritou enquanto corria. Eu o observei partir e depois verifiquei como estavam meus companheiros. A repentina situação deixou Tamura em estupor, mas ele não se machucou. Isso foi bom. Mas, cara, minhas costas estavam queimando. Tão quente. Além de qualquer coisa que eu descreveria como dor.",
-        "(NT: Estupor descreve mais ou menos uma pessoa em choque)",
         "O que há com isso? Está muito quente... Dá um tempo.",
         "<< Confirmado. Resistência a Calor… adquirida com sucesso. >>",
         "Eu... Acabei de ser esfaqueado?",
@@ -551,7 +542,6 @@
         "Ei, do que você está falando? Eu não consigo te ouvir muito bem...",
         "Eu tentei falar. Mas não consegui.",
         "Merda. Eu acho que realmente pode ser isso... Tipo, a dor e o calor já haviam passado bastante. Estava apenas frio. Frio como o inferno. Eu senti como se fosse congelar no lugar.",
-        "(NT: Frio como o inferno... *tela azul*)",
         "Quem saberia que morrer poderia mantê-lo tão ocupado?",
         "<< Confirmado. Resistência a Frio... adquirida com sucesso. Combinada com a Resistência a Calor adquirida anteriormente, a habilidade progrediu para Resistência a Variação Térmica. >>",
         "Nesse momento, o que restou das minhas células cerebrais cada vez mais privadas de oxigênio se deparou com um flash brilhante.",
@@ -938,10 +928,6 @@
         {
           "type": "p",
           "text": "Embora, de volta ao meu mundo natal, ter uma conversa com minhas próprias habilidades possa ter sido considerado estranho..."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Esquizofrênico fodase)"
         },
         {
           "type": "p",
@@ -1566,10 +1552,6 @@
         {
           "type": "p",
           "text": "Se eu tivesse meus druthers, eu diria que este dragão foi uma tarefa total. Ele poderia estar me alimentando de uma linhagem o tempo todo, dizendo que ele era um dragão. Talvez os dragões deste mundo não fossem tão poderosos em primeiro lugar."
-        },
-        {
-          "type": "p",
-          "text": "(NT: eu não entendi o que quer dizer “druthers” então deixei assim mesmo)"
         },
         {
           "type": "p",
@@ -2718,7 +2700,6 @@
         "Enquanto isso, a evolução era algo que a maioria das pessoas nunca experimentava em suas vidas. Era tudo grego para mim, mas se era assim, eu estava disposto a aceitá-lo.",
         "Então o Grande Sábio estava respondendo às minhas perguntas no momento, mas por outro lado era uma coisa totalmente passiva. Nenhuma consciência real ou qualquer coisa. A menos que eu falasse, isso nunca falaria comigo por sua própria vontade. Essa era a única desvantagem real, mas trocar palavras com alguém de novo era uma sensação maravilhosa, mesmo que fosse uma rua de mão única.",
         "Embora, de volta ao meu mundo natal, ter uma conversa com minhas próprias habilidades possa ter sido considerado estranho...",
-        "(NT: Esquizofrênico fodase)",
         "Então lá estava eu, ainda trancado na escuridão, fazendo uma série de perguntas.",
         "Uma coisa que as respostas confirmaram foi que sim, eu era um slime agora. Também descobri por que nunca fiquei com fome ou com sono. Os Slimes deste mundo, ao que parece, nunca precisavam comer se pudessem continuar absorvendo as partículas Magículas, ou “magículas”, no ar. Em regiões menos magicamente abundantes, eu seria obrigado a encher absorvendo monstros ou pequenas criaturas.",
         "A maioria das gosmas evitava áreas com baixas presenças Magículas, mas as que não eram aparentemente muito fortes e loucamente cruéis. Geralmente era o contrário, onde uma riqueza de magia local significava monstros eEspecialmente fortes.",
@@ -2874,7 +2855,6 @@
         "(Simples. Quando concedo a você a capacidade de visão, peço que não me tema. Isso, e eu lhe ofereço que venha me visitar novamente. Isso é tudo. Confio que meus termos são agradáveis ​​para você?)",
         "Isso é tudo? Ele tinha certeza? Que dragão solitário. Acho que não havia mais ninguém no topo. Não é à toa que ele não conseguiu parar de falar comigo - devo ter sido seu primeiro parceiro de conversação em eras.",
         "Se eu tivesse meus druthers, eu diria que este dragão foi uma tarefa total. Ele poderia estar me alimentando de uma linhagem o tempo todo, dizendo que ele era um dragão. Talvez os dragões deste mundo não fossem tão poderosos em primeiro lugar.",
-        "(NT: eu não entendi o que quer dizer “druthers” então deixei assim mesmo)",
         "Heh. Este foi um bom negócio.",
         "(Isso é realmente tudo o que você precisa?)",
         "(Sim. Para ser sincero, fui selado aqui trezentos anos atrás. Desde então, tenho tanto tempo livre em minhas mãos que estava praticamente louco de tédio. O que você acha?)",
@@ -4754,10 +4734,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: No final só tá com preguiça...)"
-        },
-        {
-          "type": "p",
           "text": "Estava estranhamente quieto, comparado à batalha campal de um momento atrás. Eu podia sentir o olhar dos lobos sobre mim. Em meio a seus olhares, gradualmente comecei a olhar para a frente. Eu não sabia dizer como eles interpretariam isso, mas queria enfatizar que o chefe deles estava morto."
         },
         {
@@ -4787,10 +4763,6 @@
         {
           "type": "p",
           "text": "…Oh, certo! Eu disse a eles “submetam-se ou morra”, não é? Ah, merda. Isso pode ter jogado gasolina no fogo. Melhor dar-lhes uma rota de fuga, pensei enquanto me transformava em uma delas."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Eu mudei a parte da “gasolina no fogo” porque estava uma coisa muito estranha no lugar, tipo “jogar bebê fora com a água do banho”)"
         },
         {
           "type": "p",
@@ -4858,10 +4830,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Não me perguntem o que é “transmogrificado” mas deve ser algo muito fodido pra usar essa palavra)"
-        },
-        {
-          "type": "p",
           "text": "Em frente a esta linha de Goblins, convoquei os lobos. “Hum, tudo bem”, comecei, “a partir de agora, todos vocês formem pares e morem um com o outro, certo?”"
         },
         {
@@ -4903,10 +4871,6 @@
         {
           "type": "p",
           "text": "Era como se eu tivesse explodido simultaneamente as mentes de todos os goblins no local. Cada um explodiu em aplausos entusiasmados. Que diabos? É como se todos eles fossem à loteria ou algo assim. Se obter um nome faz você feliz assim, por que não faz isso sozinho? Tudo me parecia tão simples naquela época."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Veio do futuro só pra lamentar kkkk)"
         },
         {
           "type": "p",
@@ -4990,19 +4954,11 @@
         },
         {
           "type": "p",
-          "text": "(NT: Não que Rimuru sentisse o fogo já que ele tem anulação de calor...)"
-        },
-        {
-          "type": "p",
           "text": "Aproveitei a oportunidade para refletir sobre o que aconteceu. Por que fiquei sem Magícula depois que comecei a nomear pessoas? Fazer isso consumiu Magículas de alguma forma? Venha para pensar sobre isso, realmente começou a fluir quando eu nomeei o líder dos lobos, não foi?"
         },
         {
           "type": "p",
           "text": "Ainda era apenas uma teoria, mas parecia claro para mim que nomear monstros realmente exigia magia. Essa conclusão levou cerca de dois dias para chegar."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Einstein)"
         },
         {
           "type": "p",
@@ -5058,10 +5014,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Um pé é quase exatamente o tamanho de uma régua, 30cm)"
-        },
-        {
-          "type": "p",
           "text": "Estes... são goblins, certo? E deixando os Goblins, lembrei-me dos lobos serem muito mais marrons. Agora o pelo era preto, com um brilho lustroso. Eles haviam crescido também, com os maiores agora beirando três metros de comprimento. Não me lembrava de nenhum deles ter muito mais que um metro e meio antes."
         },
         {
@@ -5075,10 +5027,6 @@
         {
           "type": "p",
           "text": "“Meu mestre!” Este animal dos meus piores pesadelos berrou em uma língua humana fluente. “Como me excita vê-lo bem mais uma vez!”"
-        },
-        {
-          "type": "p",
-          "text": "(NT: Que errado jkk)"
         },
         {
           "type": "p",
@@ -5134,10 +5082,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: ( ͡° ͜ʖ ͡°) )"
-        },
-        {
-          "type": "p",
           "text": "Mesmo usando nada além de tanga..."
         },
         {
@@ -5175,10 +5119,6 @@
         {
           "type": "p",
           "text": "“Bom trabalho!”, eu disse, já que ele parecia estar desesperadamente procurando elogios. Ele balançou o rabo para frente e para trás, uma exibição adorável em um animal tão enorme. Por outro lado, um lobo feliz de cinco jardas poderia produzir vento quase o suficiente para me lançar para fora da vila."
-        },
-        {
-          "type": "p",
-          "text": "(NT: 1 jarda é quase um metro, são 91cm. Esse povo inútil que fica usando medida não oficial da vontade de tacar uma pedra)"
         },
         {
           "type": "p",
@@ -5422,10 +5362,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Bricolagem é tipo fazer algo por conta própria evitando ser contratado por outros, um trabalho não profissional)"
-        },
-        {
-          "type": "p",
           "text": "“Entendo”, respondi. “Não faria mal falar com eles. Com o que você pagou a eles? Dinheiro?”"
         },
         {
@@ -5463,10 +5399,6 @@
         {
           "type": "p",
           "text": "Moeda, hein? Seria engraçado se fosse papel."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Que tipo de idiota usaria PAPEL como dinheiro mano???????????)"
         },
         {
           "type": "p",
@@ -5818,7 +5750,6 @@
         "“Escutem, lobos! Seu líder está morto! Vou conceder-lhe uma escolha final. Submetam-se a mim ou morra!”",
         "Então, como eles vão lidar com isso? A morte de seu chefe os levará a um frenesi tão grande que eles vão me almejar? Eu gostaria de evitar isso, se pudesse.",
         "Os Goblins restantes não mostraram sinal de movimento. Oh-oh, este não será um daqueles “eu morreria antes de me submeter a você!” não é? Porque se for, será uma guerra total. Ainda estávamos perdendo em termos de números, e definitivamente teríamos algumas baixas. Chegamos até aqui sem sangue de goblin, duvidei que perderíamos a essa altura, mas preferiria que terminasse sem esforço.",
-        "(NT: No final só tá com preguiça...)",
         "Estava estranhamente quieto, comparado à batalha campal de um momento atrás. Eu podia sentir o olhar dos lobos sobre mim. Em meio a seus olhares, gradualmente comecei a olhar para a frente. Eu não sabia dizer como eles interpretariam isso, mas queria enfatizar que o chefe deles estava morto.",
         "Em um momento, eu estava no corpo flácido do alfa. Ninguém fez nenhuma objeção. Um deles, que havia se posicionado nas proximidades, recuou um passo.",
         "Então eu engoli o cadáver. Esse foi meu direito como vencedor, certo?",
@@ -5827,7 +5758,6 @@
         "Parece uma vitória para mim. Apesar de ver o próprio chefe sendo comido na frente deles, o resto dos lobos ainda não mostrava sinais de movimento.",
         "Hmmm... Nesse ponto, eles ou iriam surtar e fugir, ou surtar e virem atrás de mim.",
         "…Oh, certo! Eu disse a eles “submetam-se ou morra”, não é? Ah, merda. Isso pode ter jogado gasolina no fogo. Melhor dar-lhes uma rota de fuga, pensei enquanto me transformava em uma delas.",
-        "(NT: Eu mudei a parte da “gasolina no fogo” porque estava uma coisa muito estranha no lugar, tipo “jogar bebê fora com a água do banho”)",
         "Ativando a Intimidação, falei com eles em um grito alto. “Arh-arh-arh! Escute-me!” Eu declarei a eles. “Uma vez, e apenas uma vez, deixarei isso sem punição. Se você se recusar a me obedecer, peço que saia daqui imediatamente!”",
         "Imaginei que seria o suficiente para fazer com que esses cães fugissem. Eu estava errado... “Prometemos nossa lealdade a você!”",
         "Agora eles estavam se curvando para mim, embora parecesse mais como se estivessem deitados para tirar uma soneca. Mas, independentemente, eles aparentemente escolheram “Submeter” de qualquer maneira.",
@@ -5843,7 +5773,6 @@
         "A manhã começou comigo alinhando os goblins que estavam acordados. As crianças e os idosos assistiram de lado. Eles não podiam deixar de se destacar, dada a falta de casas para se hospedar.",
         "Ao meu lado estava o ancião da vila. Ele queria me ajudar de alguma forma, eu acho, mas não havia muito que um velhote goblin pudesse fazer por mim. Meus gostos estéticos pessoais permaneceram inalterados em relação aos meus anos humanos.",
         "Isso nunca mudaria, mesmo que eu fosse transmogrificado em um slime. Não haveria uma princesa encantadora da vila com quem eu pudesse andar no pôr do sol. Eu provavelmente teria que esperar um pouco para isso.",
-        "(NT: Não me perguntem o que é “transmogrificado” mas deve ser algo muito fodido pra usar essa palavra)",
         "Em frente a esta linha de Goblins, convoquei os lobos. “Hum, tudo bem”, comecei, “a partir de agora, todos vocês formem pares e morem um com o outro, certo?”",
         "Então eu avaliei a resposta. Não recebi muito além de “hm”. Eles estavam esperando que eu continuasse, imaginei, sem emitir um único som enquanto me encaravam. Ninguém parecia fazer uma careta abertamente com a ideia de emparelhar, pelo menos, então eu assumi que estava em terreno decente o suficiente.",
         "“Uh, vocês entendem o que eu quero dizer? São grupos de dois, ok?”",
@@ -5855,7 +5784,6 @@
         "Qual é o problema, hein?",
         "“S-sim, hum... Se não for um problema, eu gostaria de dar alguns nomes.”",
         "Era como se eu tivesse explodido simultaneamente as mentes de todos os goblins no local. Cada um explodiu em aplausos entusiasmados. Que diabos? É como se todos eles fossem à loteria ou algo assim. Se obter um nome faz você feliz assim, por que não faz isso sozinho? Tudo me parecia tão simples naquela época.",
-        "(NT: Veio do futuro só pra lamentar kkkk)",
         "Comecei com o ancião, perguntando qual era o nome do filho. Ele era o único goblin nomeado na vila, agora tristemente passado. Era “Rigur”, aparentemente.",
         "Então, adicionei um “do” no final e chamei o ancião de “Rigurdoo”. Não havia uma razão específica para isso, apenas parecia bom. “Se seu filho estivesse aqui”, brinquei, “você poderia fazer com que ele dissesse o nome dele e meio que adicionasse “do” ao final, entende?”",
         "Ninguém riu. Eles pensaram que eu estava falando sério. “Eu... eu não posso expressar minha gratidão o suficiente”, ele chorou, “por ter recebido permissão para assumir o nome do meu filho!” Sim, ótimo. Estou apenas atirando do quadril aqui, você sabe. Estava começando a me fazer sentir um pouco culpada... mas ah, que diabos!",
@@ -5876,10 +5804,8 @@
         "Eu ainda estava consciente. Eu não precisava dormir... exatamente, e eu podia ouvir a voz do Sábio.",
         "Lenta, mas seguramente, começou a surgir em mim. Eu usei muito da minha... Magícula? Como atingir zero MP, mais ou menos? O que eu fiz para gastar isso? Eu estava me desgastando o tempo todo sem perceber? Com certeza não parecia assim.",
         "Eu tentei me mover. Sem resposta. O “modo de suspensão” deve ser algo como hibernação. Eu não estava dormindo, mas não conseguia me mexer. Tudo o que eu podia fazer era ficar sentado - o que era bom, porque os goblins haviam preparado um lugar de honra para mim perto do fogo, para que eu pudesse me deleitar. Nada mais a fazer, ou que eu pudesse fazer.",
-        "(NT: Não que Rimuru sentisse o fogo já que ele tem anulação de calor...)",
         "Aproveitei a oportunidade para refletir sobre o que aconteceu. Por que fiquei sem Magícula depois que comecei a nomear pessoas? Fazer isso consumiu Magículas de alguma forma? Venha para pensar sobre isso, realmente começou a fluir quando eu nomeei o líder dos lobos, não foi?",
         "Ainda era apenas uma teoria, mas parecia claro para mim que nomear monstros realmente exigia magia. Essa conclusão levou cerca de dois dias para chegar.",
-        "(NT: Einstein)",
         "Isso certamente explicava por que Rigurdo estava tão horrorizado com o que eu estava fazendo, entre outras coisas.",
         "Isso... Oh, merda, isso não é um conhecimento comum entre monstros, é?",
         "Eu queria gritar, “vocês precisam me dizer essas coisas!!” Mas não havia sentido em atacar os outros. Não que isso me parasse uma vez que eu pudesse me mover novamente, imaginei.",
@@ -5893,12 +5819,10 @@
         "Os goblins operários, percebendo que eu estava acordado, começaram a se reunir ao meu redor. A eles juntaram-se os lobos, que estavam chegando de sua base externa. O que foi bom, mas...",
         "“Hum... Ei, pessoal? Vocês todos ficaram maiores?”",
         "Eles tinham. Os goblins tinham em média um pouco menos de um metro e meio de altura. Agora eles eram quase um pé mais alto.",
-        "(NT: Um pé é quase exatamente o tamanho de uma régua, 30cm)",
         "Estes... são goblins, certo? E deixando os Goblins, lembrei-me dos lobos serem muito mais marrons. Agora o pelo era preto, com um brilho lustroso. Eles haviam crescido também, com os maiores agora beirando três metros de comprimento. Não me lembrava de nenhum deles ter muito mais que um metro e meio antes.",
         "O que realmente chamou minha atenção foi o lobo na frente deles, caminhando silenciosamente para frente. Eu juro que ele tinha que ter pelo menos cinco metros. Eu podia sentir a Aura saindo de todos os poros. Isso não era nada como o chefe que eu derrotei alguns dias atrás - entre sua aparência e sua pura força de presença, ele tinha que ser um monstro de nível superior. A marca de nascença em forma de estrela na testa e o chifre de aparência magnífica também erguiam algumas bandeiras vermelhas.",
         "Assustador.",
         "“Meu mestre!” Este animal dos meus piores pesadelos berrou em uma língua humana fluente. “Como me excita vê-lo bem mais uma vez!”",
-        "(NT: Que errado jkk)",
         "Santo... é Ranga? O que aconteceu nos últimos três dias? Fiquei me perguntando isso por mim mesmo, enquanto os monstros aplaudindo e uivantes me cercavam.",
         "Tudo certo…",
         "Então, nos três dias em que dormi, todos os monstros ao meu redor cresceram. Isso foi esquisito. A única coisa que poderia produzir algo assim era... evolução, suponho. Então, nomear um monstro os desenvolve?",
@@ -5911,7 +5835,6 @@
         "“Hã?…Hã?!”",
         "Isso me fez literalmente dar uma olhada dupla. Esses caras eram como diabinhos um momento atrás, talvez mais próximos de babuínos do que humanos, e agora - bem, para usar sua terminologia oficial - os machos eram “hobgoblins” e as fêmeas “goblinas”, embora o último parecesse estúpido para mim. Ambos haviam evoluído e, de acordo com Rigurdo, haviam ouvido a chamada voz do mundo quando o fizeram - algo que todas as criaturas evoluídas experimentaram. Uma ocorrência muito rara e que excitou Rigurdo sem parar, a julgar por como ele não podia calar a boca.",
         "Isso não foi algo totalmente feliz para mim. Os goblins fêmeas haviam coberto seus corpos inteiros em trapos antes. Agora, graças à sua evolução, as roupas minúsculas permitiam ver certas... coisas. Não dava para esconde-los agora. Os homens certamente pareciam felizes com isso.",
-        "(NT: ( ͡° ͜ʖ ͡°) )",
         "Mesmo usando nada além de tanga...",
         "A vila precisava desesperadamente de comida, roupas e abrigo. Melhor começar com as roupas primeiro, pensei.",
         "Outra questão com a qual tive que lidar foi com o Ranga. Ele ficou tão satisfeito que eu voltei à consciência plena que ele não parava de me seguir e me incomodar.",
@@ -5922,7 +5845,6 @@
         "Hã. Então toda a matilha evolui juntos.",
         "A coisa “tudo e um” era algo em que o chefe anterior nunca acreditava totalmente, como explicou Ranga. Se ele tivesse, essa batalha poderia ter ido em uma direção diferente. Enquanto isso, Ranga já havia conquistado total controle sobre sua matilha, ao que parece, permitir que todos evoluíssem de Lobo de presa para “lobo tempestuoso”. “Mais poder para todos” é a maneira como ele colocou as coisas.",
         "“Bom trabalho!”, eu disse, já que ele parecia estar desesperadamente procurando elogios. Ele balançou o rabo para frente e para trás, uma exibição adorável em um animal tão enorme. Por outro lado, um lobo feliz de cinco jardas poderia produzir vento quase o suficiente para me lançar para fora da vila.",
-        "(NT: 1 jarda é quase um metro, são 91cm. Esse povo inútil que fica usando medida não oficial da vontade de tacar uma pedra)",
         "“Ei, observe o que você está fazendo com essa coisa!” Eu o avisei. O olhar oprimido que ele deu em resposta me fez rir - e a maneira como ele encolheu seu corpo para cerca de três metros de comprimento me fez parar. Sua raça poderia ajustar seus tamanhos, aparentemente. Quão útil, pensei ao instruí-lo a ficar no tamanho pequeno a partir de agora.",
         "A maior questão de todas, no entanto, foi onde diabos nós manteríamos todos esses caras. Os pares lobo-goblin pareciam estar compartilhando casas uns com os outros agora - não que eles tivessem casas, então eram realmente mais os lobos e os Goblins se usando como cobertores. A falta de roupas estava me matando, mas a habitação também precisava de alguma atenção.",
         "Então. E agora?",
@@ -5981,7 +5903,6 @@
         "“Ah! Sim! Conheço algumas pessoas com quem já lidamos várias vezes. Talvez eles possam fornecer roupas que atendam às nossas necessidades. De fato, com suas habilidades, eles também podem saber como construir casas!”",
         "Hmm.",
         "Tendo trabalhado para um empreiteiro, eu estava de olho em uma qualidade de construção decente. Em termos do que eu poderia realmente construir, no entanto, minha habilidade estava limitada aos seus projetos básicos de bricolagem à tarde de domingo. Não é o suficiente para servir como capataz de construção. Se esses empresários puderem ajudar com isso, talvez valha a pena visitá-los.",
-        "(NT: Bricolagem é tipo fazer algo por conta própria evitando ser contratado por outros, um trabalho não profissional)",
         "“Entendo”, respondi. “Não faria mal falar com eles. Com o que você pagou a eles? Dinheiro?”",
         "Não, sir Rimuru. Temos alguma moeda que confiscamos dos aventureiros, mas que permanece armazenada. Em vez disso, obtivemos os materiais necessários por meio de troca ou trabalho de curto prazo.”",
         "“Oh. Então, quem são esses caras?”",
@@ -5992,7 +5913,6 @@
         "“Ah! Ah, é claro, Sir Rimuru! Terei tudo para a sua jornada amanhã à tarde!”",
         "Ele parecia entusiasmado o suficiente para que eu me sentisse seguro em suas mãos. Ele provavelmente me daria o dinheiro que sobrou também, não que eu devesse esperar muito.",
         "Moeda, hein? Seria engraçado se fosse papel.",
-        "(NT: Que tipo de idiota usaria PAPEL como dinheiro mano???????????)",
         "Pensando nisso, também não tinha muito dinheiro para o meu nome. O fato de a moeda existir neste mundo foi uma surpresa agradável, pelo menos. Eu imaginei que sim, mas eu não tinha ideia de como foi divulgado.",
         "Depois de chegar a uma cidade humana, terei que dar uma volta e conferir os preços. Mas isso pode esperar até depois dos anões. Depois de todo o trabalho duro para moldar esta cidade, uma visita agradável faria maravilhas para mim. Eu estarei com minha própria humanidade, em breve verificar se uma das outras raças pode me ajudar a aprender um pouco mais sobre esse mundo maluco.",
         "Embora tecnicamente uma sub-raça de pessoas, os anões aparentemente viviam em grandes cidades. Eles também tinham um rei, embora nenhum goblin tenha sido permitido sequer um olhar. Apenas ser permitido entrar em suas cidades foi considerado uma conquista de todos os tempos para os goblins.",
@@ -6121,10 +6041,6 @@
         {
           "type": "p",
           "text": "No final, isso me impediu de enlouquecer por dentro. Isso me ajudou a me proteger da culpa que eu deveria ter sentido ao matar. Não que eu fosse incapaz dessa emoção - Ifrit apenas exerceu seu controle completo sobre mim para garantir que eu nunca a sentisse. Para garantir que eu, seu anfitrião, nunca enlouquecesse e morresse com ele."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Crueldade com minha Shizu;-;)"
         },
         {
           "type": "p",
@@ -6351,10 +6267,6 @@
           "text": "E Leon, meu senhor demônio, simplesmente olhou friamente. Silenciosamente. Nunca me castigando."
         },
         {
-          "type": "p",
-          "text": "(NT: Tadinha da Shizu, vontade de chorar aqui;-;)"
-        },
-        {
           "type": "img",
           "src": "assets/illustrations/ln/vol-1/img_13.webp",
           "width": 808,
@@ -6402,7 +6314,6 @@
         "Meu coração se encheu de medo. Eu sabia que aqui, por minha própria mão, eu tinha matado uma pessoa nascida na magia. No entanto, eu podia sentir meu corpo inteiro se iluminando com uma sensação estranhamente profunda de satisfação. Era difícil de explicar - como se eu tivesse acabado de concluir algo que eu deveria fazer. Parecia que minha mente pertencia a outra pessoa. O terror era insuportável.",
         "Mas... Em outro momento, tudo se consertou. A consciência de Ifrit encheu minha alma novamente, engarrafando minhas ansiedades e meu medo.",
         "No final, isso me impediu de enlouquecer por dentro. Isso me ajudou a me proteger da culpa que eu deveria ter sentido ao matar. Não que eu fosse incapaz dessa emoção - Ifrit apenas exerceu seu controle completo sobre mim para garantir que eu nunca a sentisse. Para garantir que eu, seu anfitrião, nunca enlouquecesse e morresse com ele.",
-        "(NT: Crueldade com minha Shizu;-;)",
         "Assim começou minha estranha relação simbiótica com Ifrit, algo que eu não queria nem esperava.",
         "A mesma coisa aconteceu de novo, várias vezes e de novo, matei os intrusos por Leon, nunca sentindo nada.",
         "Não tive arrependimentos. Eu era jovem; Ainda não sabia o que estava certo e deixei tudo para a Ifrit. Simplesmente agi sem sentir nada, arrastado pela vontade da criatura para despachar aqueles em seu caminho.",
@@ -6457,17 +6368,12 @@
         "Isso me deixou doente. Por horas a fio, até que nada mais saiu. Ele deveria ter me matado também, enquanto estava nisso. Meu corpo inteiro subiu com arrependimento enlouquecedor e tristeza e então, como nada havia acontecido, eu estava serena. Nenhuma lágrima caiu dos meus olhos, mesmo que eu quisesse chorar. Nenhuma loucura me dominou, mesmo que eu quisesse me perder nela. Nenhuma voz escapou da minha garganta, mesmo que eu quisesse gritar.",
         "O titã nascido na magia também tomou conta da minha mente? Meu coração foi enterrado em uma onda de terror e, instantaneamente, a calma voltou. Eu não era mais uma pessoa. Por mais que eu quisesse, nunca alcançaria o tipo de felicidade a que outros têm direito.",
         "A partir desse dia, parei de chorar. Eu já tinha chorado todas as minhas lágrimas de qualquer maneira. Não havia mais nada a perder. Eu havia perdido algo importante demais para mim naquele dia.",
-        "E Leon, meu senhor demônio, simplesmente olhou friamente. Silenciosamente. Nunca me castigando.",
-        "(NT: Tadinha da Shizu, vontade de chorar aqui;-;)"
+        "E Leon, meu senhor demônio, simplesmente olhou friamente. Silenciosamente. Nunca me castigando."
       ]
     },
     {
       "title": "Capítulo 3: Através do Reino Dwargo",
       "blocks": [
-        {
-          "type": "p",
-          "text": "(NT: Dwargo = anão, vou deixar “Dwargo” pro Reino por que é mais legal, mas referindo a raça, vai ser anão mesmo)"
-        },
         {
           "type": "p",
           "text": "Como ele proclamou com tanta ousadia um dia antes, Rigurdo tinha tudo o que eu precisava naquela tarde. Ele já havia escolhido os membros da equipe para a minha expedição ao Reino dos Anões."
@@ -6502,10 +6408,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Frescura)"
-        },
-        {
-          "type": "p",
           "text": "No lado monetário, tínhamos sete peças de prata e vinte e quatro peças de bronze. Até eu percebi que não era muito. Minhas expectativas não eram altas, então isso foi bom. Nós descobriríamos o que fazer quando aparecêssemos."
         },
         {
@@ -6515,10 +6417,6 @@
         {
           "type": "p",
           "text": "Para um goblin a pé, aparentemente levaria cerca de dois meses para caminhar até o Reino dos Anões. Seguiríamos em grande parte o rio Grande Ameld, que fluía através da floresta, até sua nascente em uma cordilheira que abrigava o povoado que buscávamos."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Great Ameld não tem uma tradução exata então vou deixar “Grande Ameld”)"
         },
         {
           "type": "p",
@@ -6714,10 +6612,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Por algum motivo estava “lugar infernal”, eu assumi que ele quis dizer “interessante” ou “legal” então mudei)"
-        },
-        {
-          "type": "p",
           "text": "“Nesse caso”, perguntei, “quanto tempo vai demorar, Gobta?”"
         },
         {
@@ -6830,10 +6724,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Blowback seria como um contragolpe, tipo, fazer algo e aí tem uma reação *tipo aquela lei de newton*, não sei como colocar em português então deixei em inglês mesmo)"
-        },
-        {
-          "type": "p",
           "text": "Talvez os anões deste mundo não fossem os seres gentis e quase amáveis ​​que eu estava imaginando. Eles poderiam ser muito mais violentos do que isso, pelo que eu sabia. Ainda assim, como uma cidade livre e um centro de comércio entre raças e espécies, manteve pelo menos uma face pública de neutralidade. O fato de o Rei Herói nunca permitir o combate dentro da cidade era um conhecimento bastante comum entre os aventureiros. Supus que, mesmo neste mundo, você pudesse se dar ao luxo de ser neutro apenas se tivesse o músculo necessário para apoiá-lo."
         },
         {
@@ -6843,10 +6733,6 @@
         {
           "type": "p",
           "text": "“Ei! Ei, olha só, tem monstros aqui! Nós podemos matar eles, certo? Ainda não estamos lá dentro.”"
-        },
-        {
-          "type": "p",
-          "text": "(NT: Podem tentar kkkkk)"
         },
         {
           "type": "p",
@@ -6926,10 +6812,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Rimuru parece bem mais sombrio na novel do que no manga/anime em, gostei:b)"
-        },
-        {
-          "type": "p",
           "text": "Nesse momento, o aventureiro hostil à direita desviou o olhar e eu o segui. Isso levou a outro grupo, um trio, sorrindo enquanto assistiam o espetáculo se desenrolar."
         },
         {
@@ -6955,10 +6837,6 @@
         {
           "type": "p",
           "text": "“Do que diabos você está falando, seu pequeno pisante?” Um deles berrou em sua melhor voz subalterna. “Você quer começar algo com a gente?!”"
-        },
-        {
-          "type": "p",
-          "text": "(NT: ~Referencias)"
         },
         {
           "type": "p",
@@ -7170,10 +7048,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Informações que não tem no anime nem no mangá em)"
-        },
-        {
-          "type": "p",
           "text": "... Prata é um metal relativamente fraco, não é? Irmão."
         },
         {
@@ -7363,10 +7237,6 @@
         {
           "type": "p",
           "text": "“Então, hum... Bem, eu conheço alguns feitiços ilusórios, mas eu ainda era apenas um estudante na época, então esse mago do mal me transformou em um slime... Estou em uma jornada para encontrar uma maneira de desfazer a maldição, e isso é praticamente isto!”"
-        },
-        {
-          "type": "p",
-          "text": "(NT: Puta história merda em kkkkk)"
         },
         {
           "type": "p",
@@ -7662,10 +7532,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: safadinho, era pra ser muito mais caro...)"
-        },
-        {
-          "type": "p",
           "text": "Vinte e cinco de ouro, então? Por mim tudo bem. Não sei se estou me prejudicando ou não, mas não estou em posição de pechinchar. Melhor descobrir o quanto isso é exatamente."
         },
         {
@@ -7799,10 +7665,6 @@
         {
           "type": "p",
           "text": "Eles seguiram em frente com a história, uma história de um slime misterioso que lhes forneceu remédios que salvam vidas. Parecia um monte de delírios ridículos, mas essas pessoas não eram as que inventavam histórias. Eles não tinham talento para isso."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Nossa kkk, que tristeza)"
         },
         {
           "type": "p",
@@ -8166,10 +8028,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Pobre é uma coisa triste)"
-        },
-        {
-          "type": "p",
           "text": "Agora, para a questão real."
         },
         {
@@ -8282,15 +8140,7 @@
         },
         {
           "type": "p",
-          "text": "(NT: é poh, super comum ter uma espada de um minério mais valioso que ouro, COMER e replicar a espada)"
-        },
-        {
-          "type": "p",
           "text": "E com esse comentário mental ridículo, comecei a trabalhar."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Com certeza)"
         },
         {
           "type": "p",
@@ -8303,10 +8153,6 @@
         {
           "type": "p",
           "text": "Quero dizer, achei que poderia fazê-lo, mas era tão fácil! E as pessoas passaram a vida inteira criando coisas assim. Comecei a sentir como se tivesse feito algo descaradamente rude com eles. Este Predador é um grande cheat."
-        },
-        {
-          "type": "p",
-          "text": "(NT: pra você que viver no Acre, cheat é trapaça, normalmente usados em referência a hacks em jogos)"
         },
         {
           "type": "p",
@@ -8418,10 +8264,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Pra quem não sabe, Rimuru tem fetiche em elfas:v)"
-        },
-        {
-          "type": "p",
           "text": "Ohhhh meu Deus, e suas roupas são tão finas!! É como se eu quase conseguisse ver através... mas não posso... Droga, e eu tenho o Percepção Mágica indo na força máxima também! Eles têm os limites de suas roupas, não é? Isso é para ser algum tipo de... desafio? Nnnngh!!"
         },
         {
@@ -8463,10 +8305,6 @@
         {
           "type": "p",
           "text": "Ahh, eu me sinto tão mal pelo meu querido amigo que partiu lá em baixo! Se ele ainda estivesse por perto! Eu estaria batendo nas paredes!"
-        },
-        {
-          "type": "p",
-          "text": "(NT: Que horrível kkkkk)"
         },
         {
           "type": "p",
@@ -8766,10 +8604,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Pra quem é lerdo e não entendeu de primeira que nem eu, eles estão se referindo a forca, por isso “pendurar” tendeu?)"
-        },
-        {
-          "type": "p",
           "text": "Ele acentuou esse fato mórbido com uma risada calorosa."
         },
         {
@@ -8834,10 +8668,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Salafrário safado)"
-        },
-        {
-          "type": "p",
           "text": "“Isso é verdade? “"
         },
         {
@@ -8871,10 +8701,6 @@
         {
           "type": "p",
           "text": "Desgraçado. Talvez eu devesse bater nele, afinal."
-        },
-        {
-          "type": "p",
-          "text": "(NT: já devia ter feito)"
         },
         {
           "type": "p",
@@ -8951,10 +8777,6 @@
         {
           "type": "p",
           "text": "Olhando de novo, percebi que a almofada que Gobta estava usando no sofá era na verdade um lobo tempestuoso. Espere, sério? Ele realmente convocou o cara?"
-        },
-        {
-          "type": "p",
-          "text": "(NT: Gobuta é um gênio, só percebeu agora?)"
         },
         {
           "type": "p",
@@ -9110,15 +8932,7 @@
         },
         {
           "type": "p",
-          "text": "(NT: Em português iria ficar estranho “cheio” então deixei “full” mesmo)"
-        },
-        {
-          "type": "p",
           "text": "Mesmo com a melhor tecnologia que os anões tinham na ponta dos dedos, o extrato mais puro que eles podiam produzir atingiu 98%. Isso a tornava tão potente quanto uma poção “alta”. Enquanto isso, esse líquido estava em 99%!"
-        },
-        {
-          "type": "p",
-          "text": "(NT: Tem muito mais diferença do que vocês imaginam, nem faz sentido ser apenas 1% de diferença)"
         },
         {
           "type": "p",
@@ -9147,10 +8961,6 @@
         {
           "type": "p",
           "text": "“Eu vejo. Nesse caso... Vesta! Proíbo você de entrar no palácio. Não me deixe vê-lo diante de mim novamente. Vou deixar você com isso: estou cansado de você!”"
-        },
-        {
-          "type": "p",
-          "text": "(NT: Porra, no anime ele foi mó legal tipo “obrigado por tudo”, mas agora ele jogou na cara mesmo)"
         },
         {
           "type": "p",
@@ -9254,10 +9064,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: hmm, no mangá o Ranga vê isso em um flashback antes “daquilo” acontecer, ficou mais legal no mangá)"
-        },
-        {
-          "type": "p",
           "text": "“Faremos o nosso melhor para atender às suas expectativas elevadas, meu mestre!”"
         },
         {
@@ -9342,10 +9148,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Aceleração, ou impulso, como se começasse a correr)"
-        },
-        {
-          "type": "p",
           "text": "Acrescente alguns reflexos rápidos e parecia que eu tinha o que era necessário para fazer bom uso desse formulário."
         },
         {
@@ -9387,10 +9189,6 @@
         {
           "type": "p",
           "text": "Dado o alcance desse raio, no entanto, poderia ser um bom ás na manga algum dia. Todo o raio de vinte jardas ao redor da pedra desintegrada estava agora ardendo em calor e vítreo. Algo para pensar sobre."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Vítreo é um tipo de vidro, 20 jardas são por volta de 18 metros)"
         },
         {
           "type": "p",
@@ -9910,7 +9708,6 @@
         }
       ],
       "paragraphs": [
-        "(NT: Dwargo = anão, vou deixar “Dwargo” pro Reino por que é mais legal, mas referindo a raça, vai ser anão mesmo)",
         "Como ele proclamou com tanta ousadia um dia antes, Rigurdo tinha tudo o que eu precisava naquela tarde. Ele já havia escolhido os membros da equipe para a minha expedição ao Reino dos Anões.",
         "A propósito, Rigur também tinha que ser nosso líder de expedição também? Eu estava um pouco preocupado com isso, mas ele parecia ser a favor.",
         "Bem, seu pai recuperou sua aparência jovem e o entusiasmo de seguir em frente. Talvez eu estivesse me preocupando demais.",
@@ -9919,10 +9716,8 @@
         "Na verdade, eu estava praticando um pouco com a minha seda durante as horas extras. Que herói de sangue vermelho não quis dar um tapa em seus inimigos com um golpe rápido como um raio? Ainda não sabia se poderia, mas tinha tempo. A prática leva à perfeição.",
         "Minha bagagem consistia principalmente em dinheiro e comida, no valor de três dias. Se demorarmos mais do que isso, teremos que procurar um pouco. Poderíamos trazer algumas rações que durariam por períodos mais longos, mas eu queria viajar leve, se pudesse.",
         "Não que eu não pudesse engolir tudo e trazê-lo junto... mas eu não queria ficar cheio. Eu não precisava de comida de qualquer maneira.",
-        "(NT: Frescura)",
         "No lado monetário, tínhamos sete peças de prata e vinte e quatro peças de bronze. Até eu percebi que não era muito. Minhas expectativas não eram altas, então isso foi bom. Nós descobriríamos o que fazer quando aparecêssemos.",
         "Para um goblin a pé, aparentemente levaria cerca de dois meses para caminhar até o Reino dos Anões. Seguiríamos em grande parte o rio Grande Ameld, que fluía através da floresta, até sua nascente em uma cordilheira que abrigava o povoado que buscávamos.",
-        "(NT: Great Ameld não tem uma tradução exata então vou deixar “Grande Ameld”)",
         "Estas eram as montanhas de Canaat, que separavam ordenadamente o Império do leste e a pequena ninhada de nações aqui e ali ao redor da floresta de Jura. Havia, em geral, três rotas comerciais que corriam entre os dois bolsos da civilização. Um através da floresta; outra era uma rota mais traiçoeira pelas montanhas; o terceiro foi por via marítima. A rota de Jura normalmente seria a mais curta e segura, mas, por alguma razão, raramente era aproveitada, a maioria dos viajantes desafiava as montanhas, com os custos de viagem e a interferência potencial de monstros marinhos que uma rota de navio apresentava.",
         "Além dessas três rotas, havia várias outras maneiras de chegar ao Reino dos Anões, mas todas cobravam pedágios. Isso era obrigatório, supostamente para impedir as pessoas de transportar mercadorias perigosas pelos caminhos. Era uma opção decente o suficiente para bandas pequenas, mas as caravanas maiores as evitavam pelos custos e tempo envolvidos. Eles estavam seguros, sem dúvida, e teríamos que considerar um deles mais tarde, dependendo de como nossas finanças se mantiveram.",
         "Como não tínhamos negócios com o Império, não havia sentido em viajar para o leste para deixar a floresta. Foi direto para o norte dos Canaats. Pelo menos não teríamos que subir a nenhum pico, o Reino estava situado na base das montanhas, na parte superior do Grande Ameld. Um belo centro de civilização, ao que parece, construído em uma gigantesca caverna natural.",
@@ -9971,7 +9766,6 @@
         "De acordo com o relato de Gobta, o Rei atual era Gazel Dwargo, terceiro na sua linha do original. Um grande herói, alguém cuja força e presença fez os anões mais velhos recordarem seu avô em sua juventude, mas também um inteligente que governava seu Reino com uma mão firme e equilibrada. Um herói vivo, de certa forma.",
         "Fazia mil anos desde que Guran Dwargo, o primeiro Rei Herói dos anões, estabeleceu esse Reino. Desde então, seus descendentes mantiveram sua vontade, preservando e desenvolvendo a história, a cultura e as habilidades técnicas de seu povo.",
         "Em poucas palavras, isso era Dwargon. Dado quanto tempo seus Reis aparentemente viveram, deve ter sido um lugar bem legal. Ouvir sobre isso me deixou animado.",
-        "(NT: Por algum motivo estava “lugar infernal”, eu assumi que ele quis dizer “interessante” ou “legal” então mudei)",
         "“Nesse caso”, perguntei, “quanto tempo vai demorar, Gobta?”",
         "“Se eu tivesse que adivinhar, deveríamos chegar amanhã, senhor! As montanhas estão começando a aparecer!”",
         "Ele estava certo. Os picos não estavam visíveis até ontem. Estávamos avançando em uma velocidade espantosa.",
@@ -9999,11 +9793,9 @@
         "“Provavelmente não poderíamos comprar equipamentos assim nem depois de dez anos com meu salário”.",
         "“Sim, eu aposto! Até o Império Oriental tenta manter as coisas pacíficas com esses caras, em público pelo menos. Com esse tipo de equipamento, vejo o porquê.”",
         "“Você disse isso. Eles com certeza não lhe darão uma segunda chance se você tentar alguma coisa. O blowback seria um inferno de dor de cabeça para qualquer nação que o experimentasse!”",
-        "(NT: Blowback seria como um contragolpe, tipo, fazer algo e aí tem uma reação *tipo aquela lei de newton*, não sei como colocar em português então deixei em inglês mesmo)",
         "Talvez os anões deste mundo não fossem os seres gentis e quase amáveis ​​que eu estava imaginando. Eles poderiam ser muito mais violentos do que isso, pelo que eu sabia. Ainda assim, como uma cidade livre e um centro de comércio entre raças e espécies, manteve pelo menos uma face pública de neutralidade. O fato de o Rei Herói nunca permitir o combate dentro da cidade era um conhecimento bastante comum entre os aventureiros. Supus que, mesmo neste mundo, você pudesse se dar ao luxo de ser neutro apenas se tivesse o músculo necessário para apoiá-lo.",
         "Enquanto refletia sobre isso, comecei a ouvir algumas vozes mais sinistras.",
         "“Ei! Ei, olha só, tem monstros aqui! Nós podemos matar eles, certo? Ainda não estamos lá dentro.”",
-        "(NT: Podem tentar kkkkk)",
         "“Sim, por que diabos vocês estão na fila? Você acha que nós vamos deixar isso, suas coisinhas? Me dê seu lugar antes de te matar! E deixe seus pertences também, certo? Então vamos deixar você ir!”",
         "Eu imaginei que eles iriam incomodar, mas, novamente, éramos apenas eu e Gobta.",
         "Um monte de goblins de tanga montados em Lobos gigantes teria atraído pelo menos um pouco de atenção, e não do tipo bom, então eu decidi ir sozinho com meu guia. Rigur queria se juntar a mim, mas eu o rejeitei.",
@@ -10023,7 +9815,6 @@
         "“Boa. Nesse caso, você poderia fechar os olhos e cobrir os ouvidos para mim? Não espreite!”",
         "“Hum...? Tudo bem, mas...!”",
         "Certo. Estabelecer algumas regras simples para meu pessoal e violar prontamente cada um deles três dias depois não me faria exatamente um modelo. Mas com Gobta fora do meu alcance, eu estava livre mais uma vez para tirar o lixo.",
-        "(NT: Rimuru parece bem mais sombrio na novel do que no manga/anime em, gostei:b)",
         "Nesse momento, o aventureiro hostil à direita desviou o olhar e eu o segui. Isso levou a outro grupo, um trio, sorrindo enquanto assistiam o espetáculo se desenrolar.",
         "Um dos meus adversários carregava uma espada; o outro estava vestido com armadura leve. Bandidos, imaginei. Os outros três consistiam em duas figuras vestidas, magos ou monges ou algo assim, e um grande e musculoso lutador. Se eu tivesse que adivinhar, eles estavam todos no mesmo grupo, e esses dois foram enviados para nos perseguir e ocupar nossa posição na fila, enquanto os outros três nos atacariam e se juntaram aos outros como se nada tivesse acontecido. Aquele tipo de coisa.",
         "Uma maneira pura e fácil de capturar os monstros mais fracos e tirar suas posses. Bem planejado. Pena que eles escolheram o alvo errado!",
@@ -10031,7 +9822,6 @@
         "A dupla pareceu estupefata por um momento. Então seus rostos ficaram vermelhos.",
         "Não demorou muito para marcar.",
         "“Do que diabos você está falando, seu pequeno pisante?” Um deles berrou em sua melhor voz subalterna. “Você quer começar algo com a gente?!”",
-        "(NT: ~Referencias)",
         "“Você está morto! Prometi que você viveria se você deixasse todas as suas coisas aí, mas você sabe o que? Agora que você me irritou.”",
         "Heh. De volta ao meu empreiteiro, eu empurrei pessoas que pareciam muito mais assustadoras do que esses caras. Eu precisava, se quisesse fazer algum trabalho. Alguns dos velhos patifes até tinham tatuagens por toda parte. Comparado a isso, isso mal me fez suar a camisa.",
         "“Pequeno pisante, hein? Você quer dizer eu?”",
@@ -10084,7 +9874,6 @@
         "“O que foi isso?” eu zombei deles, tentando o meu melhor para interpretar a figura do vilão. Realmente, porém, o que foi isso? Eu estava completamente intacto. Esse nome de habilidade era apenas para mostrar?",
         "“N-não! Essa sua pele... é muito dura!”",
         "“Não pode ser... eu... eu... não pode ser! Minha espada é trabalhada em prata! Deveria machucar mais os monstros!”",
-        "(NT: Informações que não tem no anime nem no mangá em)",
         "... Prata é um metal relativamente fraco, não é? Irmão.",
         "“E-ei! Me ajudem, pessoal!”",
         "Aparentemente, o espadachim não se preocupava mais em salvar as aparências. Eu imaginei que outro trio estivesse com ele, afinal. “Hah! Acabou para você agora!”",
@@ -10132,7 +9921,6 @@
         "“Bem... eu fui realmente amaldiçoado. Meus talentos devem ter despertado um pouco de ciúmes, eu acho... sou capaz de manejar magia ilusória.”",
         "“Sério? Uma maldição, é? Então o que?”",
         "“Então, hum... Bem, eu conheço alguns feitiços ilusórios, mas eu ainda era apenas um estudante na época, então esse mago do mal me transformou em um slime... Estou em uma jornada para encontrar uma maneira de desfazer a maldição, e isso é praticamente isto!”",
-        "(NT: Puta história merda em kkkkk)",
         "“Por que você encontrou um bruxo malvado, então? Por que ele te amaldiçoou em vez de apenas matá-lo?”",
         "Nnngh... Isso seria muito mais fácil se você apenas acreditasse em mim, cara.",
         "Você não precisa ser tão obstinado com isso. Embora eu acho que também estaria. Se ele realmente comprou minha história, isso o tornaria mais crédulo que um goblin.",
@@ -10206,7 +9994,6 @@
         "“Cinco! Ah, isso seria maravilhoso!”",
         "“Certo. Ah, também, tenho certeza de que eles ainda funcionarão, mesmo que você os dilua um pouco, certo? Se for apenas uma ferida normal, dez partes de água para uma parte de poção devem fazer o truque.”",
         "O capitão assentiu ansiosamente, totalmente convencido. Cuspi minhas cinco poções, e ele respondeu me dando uma pequena bolsa. Lá dentro eu podia ver uma seleção de moedas de ouro. “Eu sei que não é muito”, explicou, “mas espero que você aceite isso. Vou dar cinco moedas de ouro para cada uma delas!”",
-        "(NT: safadinho, era pra ser muito mais caro...)",
         "Vinte e cinco de ouro, então? Por mim tudo bem. Não sei se estou me prejudicando ou não, mas não estou em posição de pechinchar. Melhor descobrir o quanto isso é exatamente.",
         "“Uhmm, se eu pudesse...”",
         "“Insuficiente? Estou fazendo o meu melhor aqui, senhor...”",
@@ -10240,7 +10027,6 @@
         "“Não. De fato, ainda mal podemos acreditar no que aconteceu conosco ontem!”",
         "“......”",
         "Eles seguiram em frente com a história, uma história de um slime misterioso que lhes forneceu remédios que salvam vidas. Parecia um monte de delírios ridículos, mas essas pessoas não eram as que inventavam histórias. Eles não tinham talento para isso.",
-        "(NT: Nossa kkk, que tristeza)",
         "Então, todo o caso realmente aconteceu? Talvez isso não tenha importância. Ele sabia que era verdade que as pessoas haviam sido atacadas nas minas. E isso significava não mineração por um tempo. Os trabalhadores que ele havia contratado desistiram ontem e foram para as colinas no momento em que as notícias dos monstros foram divulgadas. E por que não? Seus irmãos ficaram feridos, sem dúvida.",
         "Agora seria o momento perfeito para recorrer aos serviços da Associação da Liberdade, mas isso provavelmente era igualmente impossível. Ele havia apresentado um pedido de mineração há muito tempo, para um silêncio ensurdecedor. Ele sabia que não era o único também. Uma escassez começava a elevar sua cabeça feia.",
         "Contratar membros da guilda como guardas de minas também não seria muito bom. Eles não eram baratos e, mesmo assim, não levaram um dedo além do que a guilda lhes pagou. Os guardas da guilda fizeram exatamente isso, guarda, e nada mais. E se esse era o tipo de monstro que poderia matar um aventureiro com grau B-...",
@@ -10328,7 +10114,6 @@
         "Independentemente disso, o ponto era que o minério mágico não surgiu do nada. Além disso, o aço mágico extraído dele ocupava 3, talvez 5% de sua massa total. Mesmo um pedaço daquele aço do tamanho de um punho valia pelo menos vinte vezes seu peso em ouro.",
         "Parecia também que os preços, em geral, eram em média próximos dos mesmos que no meu velho mundo. O ouro era usado como moeda porque valia muito, assim como em casa. Como resultado, todos os países adotaram o ouro como padrão monetário.",
         "Eu mantive o fato de que eu tinha um estoque enorme desses pedaços de aço mágico no meu estômago em segredo. Honestamente, estava ficando um pouco assustador. De jeito nenhum eles poderiam saber, mas... e se eles tivessem? Ou seria apenas a minha educação paranóica e de classe média baixa saindo?",
-        "(NT: Pobre é uma coisa triste)",
         "Agora, para a questão real.",
         "Aço mágico era raro, certamente, mas não foi isso que o tornou tão valioso. Isso estava no quão facilmente adaptável era para servir de canal para a força Mágica.",
         "Alguém poderia controlar as Magículas através do poder da imaginação, até certo ponto. Minha habilidade de Percepção Mágica funcionou dessa maneira, mas mesmo a manipulação de água funcionou manipulando a magia do ambiente ao meu redor. A maioria das habilidades monstruosas também a utilizavam. Na verdade, eu não sabia muito sobre feitiços, mas achei que eles trabalhavam na mesma premissa.",
@@ -10357,13 +10142,10 @@
         "Repita dezenove vezes. Bom apetite!",
         "Fácil, não foi?",
         "Crianças, não tente fazer isso em casa!",
-        "(NT: é poh, super comum ter uma espada de um minério mais valioso que ouro, COMER e replicar a espada)",
         "E com esse comentário mental ridículo, comecei a trabalhar.",
-        "(NT: Com certeza)",
         "Caramba... Cada cópia estava levando, tipo, dez segundos.",
         "190 segundos, três minutos e troco, e eu tinha dezenove espadas espalhadas pela sala. Fazia talvez cinco minutos desde que eu expulsei Kaijin e o resto da sala.",
         "Quero dizer, achei que poderia fazê-lo, mas era tão fácil! E as pessoas passaram a vida inteira criando coisas assim. Comecei a sentir como se tivesse feito algo descaradamente rude com eles. Este Predador é um grande cheat.",
-        "(NT: pra você que viver no Acre, cheat é trapaça, normalmente usados em referência a hacks em jogos)",
         "Então agora o que? Eu disse a eles para não abrir a porta por três dias. Eu deveria ficar aqui até lá? Não... eu não posso simplesmente sentar aqui como a bolha que eu sou. Talvez eu deva ficar limpo...",
         "Então eu fiz. Abri a porta e saí. Os quatro anões imediatamente se levantaram, me dando olhares preocupados. Gobta estava... dormindo.",
         "Deus, cinco minutos? Sim. Foi quando eu decidi que tinha que fazer algo sobre ele.",
@@ -10390,7 +10172,6 @@
         "“Ooh, bem-vindos!”",
         "“Bem-vindos, senhores!”",
         "Phwoaarrrr!! O lugar estava alinhado com bebês!! Whoaaa! Seus ouvidos eram tão longos também! Está quente aqui, ou são apenas aqueles elfos? Dang!",
-        "(NT: Pra quem não sabe, Rimuru tem fetiche em elfas:v)",
         "Ohhhh meu Deus, e suas roupas são tão finas!! É como se eu quase conseguisse ver através... mas não posso... Droga, e eu tenho o Percepção Mágica indo na força máxima também! Eles têm os limites de suas roupas, não é? Isso é para ser algum tipo de... desafio? Nnnngh!!",
         "“Oooh, olhe para você, que fofooo!”",
         "“Aww, eu o vi primeiro!!”",
@@ -10402,7 +10183,6 @@
         "“Hã…? N... não, não muito.”",
         "Acho que não deveria ter esperado o mundo, então. Afinal, ninguém acredita em mim. Mas assim seja. Com o que eu me importo? Estou empoleirado no colo de um elfo da vida real! Não acredito que isso esteja acontecendo!!",
         "Ahh, eu me sinto tão mal pelo meu querido amigo que partiu lá em baixo! Se ele ainda estivesse por perto! Eu estaria batendo nas paredes!",
-        "(NT: Que horrível kkkkk)",
         "No entanto, enquanto estávamos nos divertindo...",
         "“Bem! Se não é Kaijin! Meu Deus, o que você está fazendo, trazendo esse monstro vulgar para um estabelecimento de classe alta como esse?”",
         "Quem é aquele cara? Vindo aqui para começar uma briga, era o que parecia. As coisas rapidamente se calaram ao nosso redor. Até as meninas zombavam desse visitante, não deviam ter gostado muito dele, embora fossem educadas o suficiente para manter os escárnios muito discretos.",
@@ -10476,7 +10256,6 @@
         "Ele parecia um pouco desanimado com isso, mas pelo menos ele tinha apoio. Os três irmãos conosco também estavam cientes da verdade, e também não havia amor perdido por Vesta entre eles. Inferno, até eu o odiava agora.",
         "Ainda assim, Kaijin é meio nobre, então eu meio que me perguntei se eles simplesmente iriam nos libertar e nos despedir.",
         "“Eu não me preocuparia com isso”, Kaijin me tranquilizou. “Estou fora do exército agora, mas consegui compensar o líder do corpo. No que diz respeito à minha posição social, estou logo abaixo do barão. Se fosse estritamente plebeu ou nobre nos tribunais, bem, pendurar poderia ter entrado em cena.”",
-        "(NT: Pra quem é lerdo e não entendeu de primeira que nem eu, eles estão se referindo a forca, por isso “pendurar” tendeu?)",
         "Ele acentuou esse fato mórbido com uma risada calorosa.",
         "Enquanto isso, eu apenas fiquei sentado lá. Se as coisas ficassem difíceis, eu sairia daqui, mas, caso contrário, eu ficaria feliz sendo um bom slime até as cabeças mais frias prevalecerem.",
         "Nosso dia no tribunal chegou logo depois e todos nós fomos trazidos à frente do monarca.",
@@ -10492,7 +10271,6 @@
         "Se você era inocente ou não, era assim que esse lugar funcionava. Ficamos presos ao nosso representante falar por nós. Ele nos fez algumas visitas durante nossos dois dias em custódia, discutindo a natureza do nosso caso. Nosso tipo de advogado, basicamente.",
         "Podemos confiar nele, no entanto? Ansiedades como essa tinham uma tendência a surgir por uma razão…",
         "“Então lá estava Sir Vesta”, continuou ele, “sentando-se neste clube e saboreando uma bebida alcoólica, quando essa gangue abriu caminho e o expôs a uma terrível violência! Este é o tipo de comportamento que jamais deveria ser perdoado!”",
-        "(NT: Salafrário safado)",
         "“Isso é verdade? “",
         "“Sim, meu senhor! Ouvi isso do próprio Kaijin e também escrevi testemunhos dos proprietários do clube. Não pode haver dúvida sobre o curso dos eventos naquela noite!”",
         "...Hum, o que? O que ele acabou de dizer? Eu pensei que ele estava do nosso lado, e demorou cinco minutos para ele usar o casaco. Isso não pode ser bom, pode?",
@@ -10502,7 +10280,6 @@
         "“Meu senhor!”, exclamou Vesta, incitando-o. “Você já ouviu isso por si mesmo! Eu imploro a você que lide com esses malfeitores!”",
         "Ele nos lançou um sorriso de suprema confiança.",
         "Desgraçado. Talvez eu devesse bater nele, afinal.",
-        "(NT: já devia ter feito)",
         "O Rei permaneceu imóvel, de olhos fechados. Em seu lugar, um dos guardas ao seu lado falou.",
         "“Ordem! Agora vou dar o veredito! Kaijin, o mentor por trás desse crime, é condenado a vinte anos de trabalho nas minas. Seus cúmplices são condenados a dez anos de trabalho nas minas. Com isso, este tribunal é por meio deste...”",
         "“Espere”, uma voz profunda e silenciosa interrompeu.",
@@ -10522,7 +10299,6 @@
         "“Ooh! Bem-vindo de volta, senhor! Você se divertiu? Puxa, com certeza espero que você me leve com você da próxima vez!”",
         "Lá estava ele, pulando do sofá para me cumprimentar! Que diabos? Como isso aconteceu…? Ele não poderia ter saído da minha teia de aço tão fácil!",
         "Olhando de novo, percebi que a almofada que Gobta estava usando no sofá era na verdade um lobo tempestuoso. Espere, sério? Ele realmente convocou o cara?",
-        "(NT: Gobuta é um gênio, só percebeu agora?)",
         "“Uh, Gobta, como você conseguiu esse lobo aqui? “",
         "“Oh! Certo! Eu apenas pensei comigo: 'Ei, você pode vir, por favor?' E ele fez, senhor!”",
         "Ele fez parecer tão fácil, o bastardo. Nenhum dos outros goblins havia conseguido o feito de tão longo alcance antes. Talvez suas células cerebrais fossem todas dedicadas a seus talentos naturais, em vez de, você sabe, à inteligência real. Pareceu uma loucura para mim. Concluí que deve ter sido uma coincidência.",
@@ -10560,9 +10336,7 @@
         "O líquido permaneceu um mistério para Vesta, mas a espada longa que ele se lembrava. Kaijin o trouxe.",
         "“Você pode explicar a ele”, ordenou o Rei a seu assistente. O discurso a seguir levou muito tempo para Vesta entender completamente.",
         "O líquido era um elixir regenerador da vida, um extrato quase perfeito dos sucos das ervas hipocute. Uma poção chamada “Full”, nomeada por suas propriedades de recuperação milagrosas.",
-        "(NT: Em português iria ficar estranho “cheio” então deixei “full” mesmo)",
         "Mesmo com a melhor tecnologia que os anões tinham na ponta dos dedos, o extrato mais puro que eles podiam produzir atingiu 98%. Isso a tornava tão potente quanto uma poção “alta”. Enquanto isso, esse líquido estava em 99%!",
-        "(NT: Tem muito mais diferença do que vocês imaginam, nem faz sentido ser apenas 1% de diferença)",
         "O rosto de Vesta se torceu em choque. Ele tinha que saber! O que eles fizeram para produzir esse nível de...? Mas antes que ele pudesse perguntar, o atendente tinha notícias ainda mais chocantes para ele. A espada longa tinha um núcleo de aço mágico que já estava trabalhando no restante da lâmina.",
         "Impossível. Esse processo começou apenas após um processo de adaptação de dez anos! O choque deixou a mente de Vesta instável. Se isso fosse verdade...!",
         "“Essas duas maravilhas foram provocadas por esse slime”, disse o Rei. “E graças ao seu comportamento, perdemos nossa conexão com essa criatura. Você tem algo que gostaria de dizer?”",
@@ -10570,7 +10344,6 @@
         "“Eu... eu não, meu senhor.”",
         "Lágrimas começaram a brotar em seus olhos. Ele sabia tudo muito bem agora, seu senhor o abandonara. Tudo o que ele queria era servir ao Rei. Para ganhar sua aprovação. Foi isso. Quando eu errei? Quando fiquei com ciúmes de Kaijin, ou antes...? Ele não sabia. Tudo o que sabia era que havia traído a confiança do Rei.",
         "“Eu vejo. Nesse caso... Vesta! Proíbo você de entrar no palácio. Não me deixe vê-lo diante de mim novamente. Vou deixar você com isso: estou cansado de você!”",
-        "(NT: Porra, no anime ele foi mó legal tipo “obrigado por tudo”, mas agora ele jogou na cara mesmo)",
         "Ouvindo suas palavras, Vesta se levantou e curvou-se profundamente ao seu senhor. Então ele partiu, partindo para pagar sua penitência por sua tolice.",
         "Enquanto isso, um guarda avançou e prendeu o representante servindo como cúmplice de Vesta.",
         "O Rei observou-os pelo canto do olho. “Meu agente das trevas!”, Ele gritou com alguma urgência. “Acompanhe os movimentos daquele slime! Não deixe escapar de sua visão. Nunca! “",
@@ -10595,7 +10368,6 @@
         "Mimetizar: Lobo tempestuoso das estrelas.",
         "“Surpreendente! Sua força deslumbrante não tem limites, meu mestre!”",
         "“Ah-ah-ah! Sim, aposto! E você ficará assim em breve, se continuar!”",
-        "(NT: hmm, no mangá o Ranga vê isso em um flashback antes “daquilo” acontecer, ficou mais legal no mangá)",
         "“Faremos o nosso melhor para atender às suas expectativas elevadas, meu mestre!”",
         "Os olhos de Ranga brilharam nesta nova missão na vida. O resto dos Lobos tempestuosos ficou igualmente empolgado. É sempre uma boa ideia motivar um pouco as tropas.",
         "Então eu me virei para Kaijin e Gharm para fazê-los subir, e...",
@@ -10617,7 +10389,6 @@
         "Coloquei Gobta alguns degraus mais alto no meu totem interno. Ele provavelmente voltará a cair em breve.",
         "Decidimos acampar uma vez que a noite caiu. Eu não estava cansado, mas todo mundo precisava descansar, eu poderia testar minhas habilidades enquanto isso.",
         "Um lobo das tempestades, para dizer o mínimo, era fisicamente talentoso. Eu podia praticamente sentir o poder pulsando dentro de mim. Apenas um leve salto, e eu estava no céu; em terra, rasguei qualquer caminho que encontrei com meu sprint rápido.",
-        "(NT: Aceleração, ou impulso, como se começasse a correr)",
         "Acrescente alguns reflexos rápidos e parecia que eu tinha o que era necessário para fazer bom uso desse formulário.",
         "A maioria das minhas batalhas até agora me envolveu rebentando algumas lâminas de água e terminando assim. Eu não tinha pensado muito sobre isso, mas a força, e os reflexos, seriam muito mais importantes para mim se as coisas se complicassem. Nessa frente, o lobo das tempestades parecia ter quase tudo o que eu poderia querer.",
         "Com o apoio do Sábio, esse lobo provavelmente poderia matar a cobra negra naquela caverna, não são necessárias habilidades. Aprendi na cidade que o lagarto tinha um B- na classificação e, a partir daí, usei as habilidades de simulação do Sábio para descobrir como o resto se comportava contra ele.",
@@ -10629,7 +10400,6 @@
         "Certo! Eu não estava fazendo nada! Apenas uma pequena tempestade de raios.",
         "Vamos deixar isso assim. Sele-o para mais tarde, como o sopro venenoso da cobra. Seria melhor se eu o salvasse até saber como moderar um pouco a força dos meus ataques. Além disso, com toda a magia interna que me custa, é melhor aprender a ajustar as coisas em breve. Não há como jogar isso à vontade. Eu poderia acabar ficando sem magia no meio da batalha.",
         "Dado o alcance desse raio, no entanto, poderia ser um bom ás na manga algum dia. Todo o raio de vinte jardas ao redor da pedra desintegrada estava agora ardendo em calor e vítreo. Algo para pensar sobre.",
-        "(NT: Vítreo é um tipo de vidro, 20 jardas são por volta de 18 metros)",
         "Rigur, é claro, apareceu com alguns goblins em pouco tempo para descobrir o que estava acontecendo. Eu disse a eles que era apenas um raio desonesto. Desculpe por interromper o sono, pessoal. Preciso salvar a experimentação mais perigosa em algum lugar onde possa trabalhar em paz. Alguns isolamentos acústicos também seriam bons. Caso contrário, seria difícil realmente flexionar meus músculos.",
         "Ainda assim, havia mais alguns dados para trabalhar. Eu repeti a simulação em minha mente. De acordo com os resultados, um lobo das estrelas tempestuoso fora de meu controle poderia usar Relâmpago negro e provavelmente matar dez cobras negras ao mesmo tempo. O que significava que o ataque provavelmente tinha passado do nível A.",
         "O guia para uma classificação A estava sendo capaz de destruir uma cidade pequena, no nível de “desastre “, em outras palavras. Melhor evitar essa transformação em torno das áreas urbanas.",
@@ -10848,10 +10618,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Que isso, sdds Rimuru sombrio no anime/manga)"
-        },
-        {
-          "type": "p",
           "text": "A propósito, se esses eram apenas os enviados, com quantos goblins estávamos falando no geral? Suspirei. Eu posso ter muitos nomes para pensar em breve."
         },
         {
@@ -10877,10 +10643,6 @@
         {
           "type": "p",
           "text": "Isso, naturalmente, alarmou a maioria dos outros goblins. No momento em que eles se envolveram nessa guerra entre florestas, tudo acabou para eles. Por isso, eles realizaram uma conferência, discutiram a questão por vários dias e foram muito burros para ter ideias decentes."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Carai kk, um pouquinho de sensibilidade aí para os goblins poh)"
         },
         {
           "type": "p",
@@ -10988,10 +10750,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Sistema séptico se refere a um tipo de sistema pra tratamento de esgoto e água, não entendo muito bem mas é nessa linha)"
-        },
-        {
-          "type": "p",
           "text": "Os goblins ficam doentes? Eu pensei. A resposta foi sim, eles eram suscetíveis a doenças como qualquer outra pessoa. Monstros muito fracos, se você me perguntasse. Embora, dado o tipo de sujeira em que viviam antes de eu aparecer, não admira..."
         },
         {
@@ -11025,10 +10783,6 @@
         {
           "type": "p",
           "text": "Isso resolveu um problema, mas eu tinha algo maior no meu prato, nomear. Só de pensar nisso me deprimiu. Tive a sensação de que, quando cheguei na metade dos quinhentos goblins, eu estaria apenas percorrendo o alfabeto. “Abcdef” seria um pouco difícil de pronunciar, no entanto."
-        },
-        {
-          "type": "p",
-          "text": "(NT: kkkkk melhor estratégia, nome em ordem alfabética, podia pedir pro grande sábio, “fala uns nome aleatório ai” mas não pensa, e ainda fica chamando os goblins de burro)"
         },
         {
           "type": "p",
@@ -11280,10 +11034,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Óxido de cálcio, cal rápida, cal queimada. É tipo cimento mesmo)"
-        },
-        {
-          "type": "p",
           "text": "Enquanto isso, outro prédio fora da cidade seria nossa instalação de processamento de resíduos, onde planejamos fabricar o fertilizante que desejávamos."
         },
         {
@@ -11301,10 +11051,6 @@
         {
           "type": "p",
           "text": "A única desvantagem real dessa configuração era que poderia ser fácil para os inimigos se moverem em caso de invasão, mas se eles realmente chegassem ao centro da cidade, isso significaria uma dúzia de outras coisas que teriam falhado até então."
-        },
-        {
-          "type": "p",
-          "text": "(NT: KKKK faz sentido, lucido)"
         },
         {
           "type": "p",
@@ -11369,10 +11115,6 @@
         {
           "type": "p",
           "text": "Ranga estar em patrulha fez com que o transporte pela nossa nova cidade fosse um pouco doloroso. Eu conseguia andar com facilidade, mas quando estava sozinha, minha falta de altura era um problema. Sempre me ressentia da sensação de ser menosprezada sempre que conhecia alguém. Ter pessoas ajoelhadas para me cumprimentar acabou atrapalhando o trabalho real. Além disso, eu tinha uma reputação de defender e não queria estar sob as pessoas o tempo todo. Talvez eu tenha me preocupado demais com isso, mas sempre achei que era melhor evitar problemas antes de começar."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Imagina, alguém se ajoelha pra você com respeito... e ai você ainda precisa olhar pra cima pra ver a pessoa ajoelhada akakaka, tristeza)"
         },
         {
           "type": "p",
@@ -11484,15 +11226,7 @@
         },
         {
           "type": "p",
-          "text": "(NT: Referência a dragon quest)"
-        },
-        {
-          "type": "p",
           "text": "Ouvi um som crepitante debaixo da máscara. Com toda a comida que esse cara estava mastigando, os resultados provavelmente não foram bonitos."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Pra quem não entendeu a garota soltou um “pfffft” porque ela pegou a referência e acabou rindo)"
         },
         {
           "type": "p",
@@ -11592,10 +11326,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Shizu, best waifu­ fds)"
-        },
-        {
-          "type": "p",
           "text": "Era difícil distinguir estritamente o sexo ou a idade de sua voz. Mas depois de aperfeiçoar meus talentos tentando diferenciar goblins, eu pude perceber imediatamente, ela era uma mulher. E, se meu palpite estava correto, talvez até japonês? Essa foi a impressão que tive."
         },
         {
@@ -11653,10 +11383,6 @@
         {
           "type": "p",
           "text": "Ao longo do caminho, esse grupo colidiu com uma grande pedra de aparência suspeita, com um buraco nela. É isso! eles devem ter pensado, porque eles sacaram suas espadas e a esfaquearam um pouco... apenas para acordar um ninho inteiro de formigas gigantes. Irmão, Eu não sabia o que dizer"
-        },
-        {
-          "type": "p",
-          "text": "(NT: Rimuru usando gíria kkkkkkkk muito bom, eu to com muito sono agora deve ser por isso)"
         },
         {
           "type": "p",
@@ -11728,10 +11454,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Completamente!)"
-        },
-        {
-          "type": "p",
           "text": "Ah bem. O que eles não sabiam não os machucaria."
         },
         {
@@ -11769,10 +11491,6 @@
         {
           "type": "p",
           "text": "As coisas progrediram rapidamente depois disso."
-        },
-        {
-          "type": "p",
-          "text": "(NT: ahhh, aí não, tava esperando o desenvolvimento detalhadinho da Shizu mas nem teve em, mangá está muito melhor nessa parte)"
         },
         {
           "type": "hr",
@@ -12360,10 +12078,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: 91 metros)"
-        },
-        {
-          "type": "p",
           "text": "“Círculo das chamas!”"
         },
         {
@@ -12425,10 +12139,6 @@
         {
           "type": "p",
           "text": "Quem pediu para você falar agora, seu monte de lixo?!"
-        },
-        {
-          "type": "p",
-          "text": "(NT: Puto)"
         },
         {
           "type": "p",
@@ -13012,10 +12722,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Mas eu não vou deixar “coma” nem ferrando, acabou com o clima pra mim, seus mente poluída)"
-        },
-        {
-          "type": "p",
           "text": "Hum? O que essa velha senhora acabou de dizer?"
         },
         {
@@ -13146,7 +12852,6 @@
         "Se eles nos apunhalarem pelas costas depois disso, podemos simplesmente matar todos eles.",
         "Eu não aceitaria gentilmente os traidores. Óculos cor de rosa atrapalhariam quando você liderava um bando de monstros. Você tinha que manter a cabeça fria ao redor deles. Essa foi parte do motivo pelo qual eu estava disposto a aceitar esses goblins, porque queria provar para mim mesmo que estava falando sério.",
         "Mais uma vez, lembrei a mim mesmo: Se esses caras se tornarem traidores, eu pessoalmente matarei todos eles. Era incrível como eu pensava em matar pessoas como se estivesse me perguntando para onde ir almoçar. Foi uma surpresa, mas, diabos, ele bateu na bainha e em todas as decisões da vida que eu tomei. Manteve isso simples.",
-        "(NT: Que isso, sdds Rimuru sombrio no anime/manga)",
         "A propósito, se esses eram apenas os enviados, com quantos goblins estávamos falando no geral? Suspirei. Eu posso ter muitos nomes para pensar em breve.",
         "Os guardas que acompanhavam os anciãos goblins voltaram para suas respectivas aldeias para relatar as notícias. Então, o que eles tinham a dizer?",
         "Para resumir, a história deles foi um pouco assim...",
@@ -13154,7 +12859,6 @@
         "Todas as raças inteligentes nesta floresta, os orcs, os homens lagartos e os ogros também, estavam começando a avançar e apostar suas Reivindicações dessa maneira. Havia discussões menores nesse sentido antes, mas havia também uma espécie de acordo silencioso de que ninguém deixaria entrar em conflito armado. Com o único e verdadeiro superintendente da floresta fora de cena, no entanto, havia mais do que algumas raças por aí prontas para desabafar um pouco.",
         "Monstros, em geral, tinham uma tendência a inchar e se envolver em demonstrações regulares de poder. Agora, todas as aldeias da floresta estavam se preparando rapidamente para dar um chute no traseiro. Foi apenas uma questão de tempo até que algo fizesse a bola rolar. E os goblins, as crianças mais fracas do quarteirão, estavam condenados a deixar que a maioria dessas outras raças lhes derrotassem totalmente.",
         "Isso, naturalmente, alarmou a maioria dos outros goblins. No momento em que eles se envolveram nessa guerra entre florestas, tudo acabou para eles. Por isso, eles realizaram uma conferência, discutiram a questão por vários dias e foram muito burros para ter ideias decentes.",
-        "(NT: Carai kk, um pouquinho de sensibilidade aí para os goblins poh)",
         "Não que eu esperasse que eles tivessem...",
         "As notícias do iminente ataque de lobos chegaram no meio disso, mas sua atenção estava concentrada em outro lugar. A vila de Rigurdo foi deixada para morrer e quase esquecida. Suas conversas continuaram, sem milagres à vista.",
         "No momento em que os estoques de alimentos das aldeias estavam começando a escassear, eles ouviram falar de mais uma nova ameaça na floresta, rumores de animais maciços e escuros, pilotados por pessoas montando em suas costas. Eles aceleraram por entre as árvores, como se estivessem atravessando planícies, e derrotaram completamente os monstros mais poderosos da floresta. Quem eram eles? O conceito fez os goblins tremerem de medo e surpresa.",
@@ -13180,7 +12884,6 @@
         "Coisa engraçada para ele dizer. O que há de tão surpreendente em nascer em uma caverna? Se ele estava bem com isso, tudo bem.",
         "Liguei para Mildo, o mais novo dos três irmãos, e contei o máximo que pude sobre como a arquitetura funcionava no mundo de onde eu vim. A pesquisa e a medição neste mundo foram realmente bastante precisas, graças à magia. Isso, além do conhecimento sobre a hora do amador que trouxe para a mesa, nos ajudou a decidir criar um projeto de pesquisa para a área local.",
         "Os lobos não precisavam muito, mas para os goblins e anões uma instalação de gerenciamento de resíduos seria uma necessidade. Eu pensei que seria bom se pudéssemos montar um sistema pseudo-séptico que pudesse armazenar lixo e transformá-lo em fertilizante. Além disso, precisamos de algo para manter as doenças infecciosas afastadas. Essa foi outra coisa que adicionei à lista de Mildo.",
-        "(NT: Sistema séptico se refere a um tipo de sistema pra tratamento de esgoto e água, não entendo muito bem mas é nessa linha)",
         "Os goblins ficam doentes? Eu pensei. A resposta foi sim, eles eram suscetíveis a doenças como qualquer outra pessoa. Monstros muito fracos, se você me perguntasse. Embora, dado o tipo de sujeira em que viviam antes de eu aparecer, não admira...",
         "Eles perderam muitas pessoas, mas compensaram isso com uma abundância de bebês. Matemática simples. Embora esse não fosse o caso dos goblins, eles deram à luz menos filhos de cada vez, o que foi outro motivo pelo qual presumi que a expectativa de vida deles era mais longa.",
         "De qualquer forma, se perdêssemos muitos em doenças, não conseguiríamos manter nossos números altos. Eu tinha zero conhecimento de medicina; qualquer coisa que uma poção não aguentava estava além de minha capacidade e não tínhamos curandeiros mágicos.",
@@ -13190,7 +12893,6 @@
         "Outro clássico lançamento de responsabilidade, se é que digo.",
         "Depois de Rigurdo designar algumas pessoas para os detalhes de Mildo, enviei todas elas para inspecionar nosso potencial novo lar. Ranga se juntou a eles, apenas por precaução. Não achei que monstros saíssem da caverna neles, mas você nunca sabe. Ranga deveria ter sido capaz de lidar com o que apareceu, então é melhor prevenir do que remediar.",
         "Isso resolveu um problema, mas eu tinha algo maior no meu prato, nomear. Só de pensar nisso me deprimiu. Tive a sensação de que, quando cheguei na metade dos quinhentos goblins, eu estaria apenas percorrendo o alfabeto. “Abcdef” seria um pouco difícil de pronunciar, no entanto.",
-        "(NT: kkkkk melhor estratégia, nome em ordem alfabética, podia pedir pro grande sábio, “fala uns nome aleatório ai” mas não pensa, e ainda fica chamando os goblins de burro)",
         "Ainda assim, eu tive que começar. Demorou cerca de quatro dias para passar por todos eles, com um modo rápido de dormir no meio, e eu realmente tive que nomeá-los até o fim. Não é tão cansativo quanto da última vez, mas não é um processo que eu não gostaria de repetir tão cedo.",
         "Liguei para os anciãos tribais. Eles se ajoelharam à sua maneira imponente. Rigurdo estava lá, e seguindo seus passos havia três outros que acabei de citar: Rugurdo, Regurdo e Rogurdo.",
         "Coloque todos os líderes juntos, e sim! Você tem todas as cinco vogais!",
@@ -13250,13 +12952,11 @@
         "O som de cortar árvores e martelar ecoou por toda a floresta. Lentamente, a nova cidade e suas casas começaram a tomar forma. Em nossas mentes, pelo menos. Ainda estávamos ocupados arrumando a água e o sistema séptico, então, por enquanto, ainda era apenas uma clareira.",
         "Este sistema tomou a direção do seu fluxo do rio ao qual estávamos adjacentes. Planejamos ter um edifício de processamento de água eventualmente, embora ainda estivesse em construção. É aí que a água do rio é purificada e distribuída nas casas das pessoas.",
         "No fim séptico das coisas, construímos uma grande câmara de madeira que planejávamos enterrar no chão. As superfícies internas da madeira seriam tratadas para melhorar sua resistência ao apodrecimento e depois reforçadas com cimento. Era nisso que estávamos trabalhando agora. Tivemos a sorte de encontrar um material do tipo quicklime em uma colina próxima.",
-        "(NT: Óxido de cálcio, cal rápida, cal queimada. É tipo cimento mesmo)",
         "Enquanto isso, outro prédio fora da cidade seria nossa instalação de processamento de resíduos, onde planejamos fabricar o fertilizante que desejávamos.",
         "Além disso, eu estava mandando a equipe construir um grande edifício temporário, uma espécie de ginásio em que eles pudessem dormir durante a construção. Era um pouco descuidado, pois não tínhamos intenção de torná-lo permanente, mas faria o trabalho.",
         "Descrever as diversas divisões do bairro estava indo bem. As casas da classe alta, incluindo a que eu ficaria, seriam construídas perto da boca da caverna. Teríamos uma linha de casas destinadas aos idosos tribais, com as outras residências espalhadas ao redor deles.",
         "Estávamos fazendo isso antes de qualquer outra coisa, por isso era fácil definir o plano da cidade sem deixar as coisas desorganizadas e confusas. Era basicamente construído em forma de cruz, com uma ampla rua principal, facilitando o trabalho das pessoas da cidade como um grupo, se necessário. Teríamos que ter cuidado para não criar longas filas de estradas idênticas, para facilitar a perda, mas isso não era uma preocupação.",
         "A única desvantagem real dessa configuração era que poderia ser fácil para os inimigos se moverem em caso de invasão, mas se eles realmente chegassem ao centro da cidade, isso significaria uma dúzia de outras coisas que teriam falhado até então.",
-        "(NT: KKKK faz sentido, lucido)",
         "Não adianta insistir nesse cenário. Se formos destruídos, sempre poderíamos reconstruir.",
         "Foi absolutamente uma boa ideia nomear todos os goblins e atualizá-los para hobgoblins. Fez maravilhas por seus níveis de inteligência, e todos aprenderam surpreendentemente rápidos. Suas forças também foram aprimoradas. Os anões descreviam goblins regulares como monstros do tipo F, enquanto hobgoblins pairavam entre C e D na maior parte do tempo. Eles se sentiam mais como pessoas do que antes, com certeza. Dependendo de suas armas e armaduras, para não mencionar suas classes e artes magicas, havia muito espaço para crescimento.",
         "Na mesma nota, eu estava vendo uma variação substancial nos tamanhos e pontos fortes dos hobgoblins. Os quatro senhores goblins que eu acabei de nomear, pareciam todos mais talentosos na vida do que o ranking. Enquanto isso, Rigurdo o Goblin Rei…",
@@ -13273,7 +12973,6 @@
         "Hmm. Algum país está verificando este lugar? Eu já sabia pelos anões que a Floresta de Jura era considerada território neutro, não reclamado por nenhuma nação. Parecia plausível que se tratasse de uma força expedicionária, tentando encontrar um novo território para tomar por si próprio. Isso poderia ser um problema, mas não havia motivo para se preocupar com isso sem ouvi-los. Eu poderia pensar no que fazer depois disso.",
         "“Tudo certo. Leve-me até eles!” Eu disse enquanto pulava no ombro de Rigurdo.",
         "Ranga estar em patrulha fez com que o transporte pela nossa nova cidade fosse um pouco doloroso. Eu conseguia andar com facilidade, mas quando estava sozinha, minha falta de altura era um problema. Sempre me ressentia da sensação de ser menosprezada sempre que conhecia alguém. Ter pessoas ajoelhadas para me cumprimentar acabou atrapalhando o trabalho real. Além disso, eu tinha uma reputação de defender e não queria estar sob as pessoas o tempo todo. Talvez eu tenha me preocupado demais com isso, mas sempre achei que era melhor evitar problemas antes de começar.",
-        "(NT: Imagina, alguém se ajoelha pra você com respeito... e ai você ainda precisa olhar pra cima pra ver a pessoa ajoelhada akakaka, tristeza)",
         "Era por isso que eu costumava viajar por muitos ombros hoje em dia.",
         "Então a bordo dos ombros de Rigurdo, fiz o meu caminho para ver esses aventureiros. Quem são eles? Eu me perguntei antes de uma conversa entrar nos meus ouvidos (figurativos).",
         "“Uau! Ei! Eu queria isso!”",
@@ -13301,9 +13000,7 @@
         "Todos eles reagiram com choque.",
         "Bem, na verdade não tenho certeza sobre o último. Tanto faz.",
         "“É um prazer conhecê-lo. Eu sou Rimuru, um slime. Não sou um slime malvado!”",
-        "(NT: Referência a dragon quest)",
         "Ouvi um som crepitante debaixo da máscara. Com toda a comida que esse cara estava mastigando, os resultados provavelmente não foram bonitos.",
-        "(NT: Pra quem não entendeu a garota soltou um “pfffft” porque ela pegou a referência e acabou rindo)",
         "Idiota rude.",
         "Deve ter sido uma surpresa ouvir um slime falar. Os outros três pareciam igualmente surpresos, mas pelo menos não tinham a boca cheia no momento.",
         "Então. Quem eram esses visitantes? Boas pessoas, espero.",
@@ -13327,7 +13024,6 @@
         "Então eles eram um grupo. Ser classificado B os colocava nos escalões superiores, com certeza, mas eles enfrentariam momentos difíceis na caverna, não? Talvez eles fossem mestres em se esconder de monstros ou algo assim.",
         "“Enquanto isso, Shizu é uma adição temporária à nossa equipe para esta missão.”",
         "“Shizu. Prazer.”",
-        "(NT: Shizu, best waifu­ fds)",
         "Era difícil distinguir estritamente o sexo ou a idade de sua voz. Mas depois de aperfeiçoar meus talentos tentando diferenciar goblins, eu pude perceber imediatamente, ela era uma mulher. E, se meu palpite estava correto, talvez até japonês? Essa foi a impressão que tive.",
         "O jeito que ela carregava sua xícara de chá e o jeito que ela se ajoelhava, com os pés apoiados no chão. Essa posição, pensei, tinha que ser rara neste mundo, e seus três companheiros certamente não se incomodavam, os homens estavam sentados de pernas cruzadas no tapete de pele de lobo no chão, e Elen optou por manter as pernas unidas. lado em vez disso.",
         "Ah bem. Não seria estranho ter uma cultura em algum lugar deste planeta que se assemelhasse à do Japão. Eu seguiria essa linha de pensamento mais tarde.",
@@ -13343,7 +13039,6 @@
         "“Podemos ser bons olheiros e tudo mais, mas não podemos fazer tudo, sabia?”, Acrescentou Gido.",
         "E então eles falaram mal com o mestre da guilda sem se importar com o mundo. Eu quase senti pena do cara.",
         "Ao longo do caminho, esse grupo colidiu com uma grande pedra de aparência suspeita, com um buraco nela. É isso! eles devem ter pensado, porque eles sacaram suas espadas e a esfaquearam um pouco... apenas para acordar um ninho inteiro de formigas gigantes. Irmão, Eu não sabia o que dizer",
-        "(NT: Rimuru usando gíria kkkkkkkk muito bom, eu to com muito sono agora deve ser por isso)",
         "Foi um milagre que eles estivessem vivos, eles passaram os três dias seguintes constantemente fugindo, perdendo todos os seus pertences no caminho, antes de chegarem aqui. Eu tive que dizer a eles para gerenciar isso, realmente.",
         "“Bem”, refleti, “eu não diria que há muita suspeita por aqui, não. A caverna, principalmente, eu acho?”",
         "Elen balançou a cabeça. “Mas não encontramos nada lá, não. Você conhecia a história por trás daquela caverna? Deveria haver um dragão grande e maligno selado lá dentro, mas passamos duas semanas subindo e descendo a caverna, e nada! Duas semanas sem banho, e praticamente não conseguimos nada...”",
@@ -13361,7 +13056,6 @@
         "“No entanto, ainda está cheio de monstros fortes, então eu realmente não quero voltar se tiver a opção”, disse Elen. Também não há tesouro para falar, nem minério mágico. Todo esse monstro que você precisa fazer, e não há recompensa por isso!”",
         "“Sim”, acrescentou Gido, “você pode encontrar algum equipamento de bandido se parecer um pouco, mas não vale a pena sair do seu caminho.”",
         "Opa sem minério, hein? Bem, e se eu lhe dissesse que costumava haver um monte... e eu engoli tudo? E se eu lhe dissesse que a magia havia diminuído lá dentro porque engoli o Veldora, o cara que gera tudo isso? Isso é tudo basicamente minha culpa, não é?",
-        "(NT: Completamente!)",
         "Ah bem. O que eles não sabiam não os machucaria.",
         "Continuamos conversando por um tempo. De qualquer maneira, eles haviam falado demais, como Kabal disse, para que pudessem ir até o fim. Esses caras eram muito mais gentis do que eu acreditava inicialmente.",
         "E se a caverna não fosse mais um local de interesse, talvez não sejamos o centro das atenções, afinal. Eu estava pensando em mudar a cidade como o pior cenário, mas agora eu duvidava que fosse necessário. Nenhum país tinha direito legal a essa terra, então não era como se alguém pudesse nos forçar a sair.",
@@ -13372,7 +13066,6 @@
         "Obviamente, a guilda não saberia o que seus países anfitriões estavam pensando. Além disso, se algum deles agir, terá que provar sua Reivindicação para os outros países vizinhos. Não valeria a pena.",
         "Então, enquanto pensava sobre isso, notei que algo estava acontecendo com Shizu, que ficava ali ouvindo o tempo todo. De repente, ela caiu no chão, inconsciente. Todos nós imediatamente fomos até ela, tentando segurá-la, quando... “Nhh... Nraaaaahhhhhh!! “",
         "As coisas progrediram rapidamente depois disso.",
-        "(NT: ahhh, aí não, tava esperando o desenvolvimento detalhadinho da Shizu mas nem teve em, mangá está muito melhor nessa parte)",
         "Quando o gemido prolongado de Shizu terminou, a tenda foi visitada por um silêncio absoluto.",
         "Agora rachaduras apareciam sobre sua máscara, Aura flutuando por baixo. Todos nós podíamos dizer que algo ruim estava acontecendo.",
         "“Magia de invocação?!” Elen gritou de surpresa.",
@@ -13516,7 +13209,6 @@
         "Mas-",
         "No momento em que pensei “oh, merda!” já era tarde demais. No momento em que senti, eu já estava cercado. Uma barreira de grande alcance para me prender? Uma das habilidades de Ifrit?",
         "Em um instante, houve um círculo mágico pintado no chão, sem necessidade de cantar para lançá-lo. Eu esqueci que não era o único que poderia fazer isso. Ele transformara seu próprio corpo em gás e transformara um raio de cem jardas em um oceano escaldante de chamas. Provavelmente, um dos ataques à distância de alto nível de Ifrit e, pior ainda, a área estava cheia de energia dos clones de Ifrit que eu havia derrotado.",
-        "(NT: 91 metros)",
         "“Círculo das chamas!”",
         "Ouvi uma voz que não conseguia decifrar. Homem, mulher, jovem, velha? Difícil de dizer.",
         "Não havia... nenhuma fuga. Eu estava à mercê do feitiço do meu inimigo. Ifrit me fez atacar esses clones de propósito. Ambos eram uma distração e uma maneira de carregar sua energia.",
@@ -13533,7 +13225,6 @@
         "<< Os efeitos de “Anulação de variação térmica” cancelaram com sucesso ataques baseados em chamas automaticamente. >>",
         "Eu detectei pelo menos um pouco do sarcasmo “Você esqueceu tudo sobre suas resistências, não é?”",
         "Quem pediu para você falar agora, seu monte de lixo?!",
-        "(NT: Puto)",
         "Sim. Eu pensei que tinha um”...” em resposta a essa pequena explosão.",
         "Espero que seja apenas minha imaginação. O Sábio tinha sido completamente fiel a mim antes agora. Não era nem autoconsciente. Seria estúpido pensar de outra maneira.",
         "Ha-ha-ha. Eu só estou sendo bobo. Estou certo disso!",
@@ -13676,7 +13367,6 @@
         "“Que tipo de pedido?”",
         "Nada particularmente factível, eu tinha certeza. Mas prometi cuidar dela até o fim. Ela merecia ser ouvida.",
         "“Eu quero que você me devore...”",
-        "(NT: Mas eu não vou deixar “coma” nem ferrando, acabou com o clima pra mim, seus mente poluída)",
         "Hum? O que essa velha senhora acabou de dizer?",
         "“Você consumiu a maldição... que foi colocada em mim, não foi…? Estou tão feliz por me livrar disso...” Sua voz ficou quieta. “Eu gostaria de ter a chance, duvido que eu pudesse ter feito isso, mas gostaria de ter tido a chance de confrontar a pessoa que a colocou em mim, mais uma vez... Então, eu tenho apenas um pedido para você, você me deixaria dormir dentro de você?”",
         "Algo em seus olhos, a resolução que ela simplesmente não podia abandonar, agarrou-me. Parecia tão absurdo, tão cruel...",
@@ -14179,10 +13869,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Gobuta provavelmente era o goblin mais inteligente na vila, ele pensava em sua condição futura e tinha criatividade diferente do resto, ele também tem um grande talento natural pra aprendizado de magia e habilidades de luta)"
-        },
-        {
-          "type": "p",
           "text": "Isso deve ser o suficiente!"
         },
         {
@@ -14236,10 +13922,6 @@
         {
           "type": "p",
           "text": "Mais uma vez, porém, a pura sorte de Gobuta salvou o dia. O tipo específico de cogumelo que ele escolheu era perigosamente venenoso, mas apenas se o calor fosse aplicado, grelhando, fervendo, o que fosse. Os sucos de sua carne se transformavam em um composto letal, algo que Gobuta não fazia ideia, pois, inadvertidamente, escolheu a maneira mais segura de apreciá-lo."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Gobuta também é sortudo, um pacote completo)"
         },
         {
           "type": "p",
@@ -14603,10 +14285,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Ousado pra krl kkkk, pra quem não sabe, goblina se refere a um hobgoblin feminino, goblins se refere para feminino e masculino)"
-        },
-        {
-          "type": "p",
           "text": "Quando se tratava de romance, os goblins nunca levavam as coisas devagar. O resto dos ocupantes do vagão tomou isso como uma piada."
         },
         {
@@ -14851,10 +14529,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: É só um cheater, não o elogiem)"
-        },
-        {
-          "type": "p",
           "text": "“Bem verdade. Eu não tinha ideia de que você tinha esse tipo de talento!”"
         },
         {
@@ -14916,10 +14590,6 @@
         {
           "type": "p",
           "text": "Ela sabia que enfurecer um tigre-lâmina não faria nada além de tornar a situação ainda mais traiçoeira. Ela pelo menos queria que seus clientes sobrevivessem ao encontro. Enquanto o tigre estava se banqueteando com seus cavalos, eles poderiam pelo menos tentar uma fuga, se tivessem sorte, poderiam até conseguir."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Tadinho dos cavalos;-;)"
         },
         {
           "type": "p",
@@ -15016,10 +14686,6 @@
         {
           "type": "p",
           "text": "Era inteligente o suficiente para não repetir o mesmo erro duas vezes, mas o que normalmente seria uma característica vantajosa significava condenação por isso. Em vez do Canhão de Voz, o tigre das lâminas imaginou que ele morderia o objeto recebido para detê-lo. Com seus reflexos, seria uma coisa fácil de fazer."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Acho que não existe “Desviar” no dicionário do tigre né?)"
         },
         {
           "type": "p",
@@ -15131,10 +14797,6 @@
         },
         {
           "type": "p",
-          "text": "(NT: Gobuta conquistando corações)"
-        },
-        {
-          "type": "p",
           "text": "“Eu vou ficar mais forte, senhorita! Vou vencer outra besta mágica assim, sozinho! Para que eu possa salvar sua vida algum dia!”"
         },
         {
@@ -15225,7 +14887,6 @@
         "Infelizmente, isso não funcionou. A caixa se recusou a se mover. Gobuta coçou a cabeça um pouco mais. Então ele se lembrou da caixa realmente grande que viu uma vez, perto de um assentamento humano, com um cavalo puxando-a.",
         "Ah, sim, esse tinha algumas coisas redondas, não tinha...?",
         "O que ele estava lembrando era de um carrinho, e as “coisas redondas” eram rodas, embora ele não tivesse as palavras para elas em seu vocabulário. Então Gobuta procurou algo que funcionasse em seu lugar. O que ele encontrou foi um par de escudos circulares abandonados.",
-        "(NT: Gobuta provavelmente era o goblin mais inteligente na vila, ele pensava em sua condição futura e tinha criatividade diferente do resto, ele também tem um grande talento natural pra aprendizado de magia e habilidades de luta)",
         "Isso deve ser o suficiente!",
         "As coisas procederam louvável rapidamente a partir daí. Ele pegou um taco reto e depois usou sua nova e brilhante faca mágica para diminuir o tamanho. Então ele colocou alguns buracos na caixa com seus pertences e passou o bastão pelos dois. Ele prendeu os escudos gêmeos nas duas extremidades deste eixo improvisado e amarrou-os no lugar com algumas videiras úteis que encontrou. Um par de pedaços extras de madeira para alças e voa là, um puxão instantâneo.",
         "Com alguns trapos empilhados em cima para impedir que as coisas caíssem, e mais alguns da vila para se aquecer à noite, ele estava pronto. O ancião teve a gentileza de fornecer um pouco de comida e água também.",
@@ -15239,7 +14900,6 @@
         "“Ooh, um cogumelo! Eu poderia lutar por três anos com isso!”",
         "Ele se lançou sobre o cogumelo, devorando-o cru sem pensar muito.",
         "Mais uma vez, porém, a pura sorte de Gobuta salvou o dia. O tipo específico de cogumelo que ele escolheu era perigosamente venenoso, mas apenas se o calor fosse aplicado, grelhando, fervendo, o que fosse. Os sucos de sua carne se transformavam em um composto letal, algo que Gobuta não fazia ideia, pois, inadvertidamente, escolheu a maneira mais segura de apreciá-lo.",
-        "(NT: Gobuta também é sortudo, um pacote completo)",
         "Estar com o estômago cheio fazia maravilhas para o espírito de Gobuta. Encheu a pele de couro de uma poça de água dentro de uma cavidade na árvore e decidiu descansar, não muito interessado em viajar mais longe naquele dia.",
         "Sua carroça estava pronta para se partir a qualquer momento, mas, felizmente, havia algumas vinhas úteis nas proximidades, que ele costumava amarrá-la novamente, além de uma seiva útil da árvore para preencher os diversos buracos e fendas que apareceram. A casca da árvore também fez maravilhas para consertar as maiores quebras da caixa.",
         "Com esse trabalho vital completo, Gobuta dormiu o resto da noite, aliviando seu cansaço. Ele acordou na manhã seguinte, surpreendentemente alegre, considerando como foi o dia anterior, e começou a procurar, apanhando nozes e morangos silvestres com aparência de comestível, e avistando mais cogumelos do dia anterior.",
@@ -15328,7 +14988,6 @@
         "“Oh, você está acordado?”",
         "Ele olhou para cima e encontrou a goblina ruiva ao seu lado, quase de aparência humana, ao contrário dos goblins. Um único olhar fez de Gobuta seu prisioneiro. Ele se esqueceu instantaneamente dos ferimentos e imediatamente se apaixonou pela mulher.",
         "“Um anjo. Uma mulher angelical do céu! Por favor! Quero que você dê à luz meus filhos!”",
-        "(NT: Ousado pra krl kkkk, pra quem não sabe, goblina se refere a um hobgoblin feminino, goblins se refere para feminino e masculino)",
         "Quando se tratava de romance, os goblins nunca levavam as coisas devagar. O resto dos ocupantes do vagão tomou isso como uma piada.",
         "“Bah-ah-ah-ah! Legal, garoto!”",
         "“Oh Ho! Você o ouviu!”",
@@ -15389,7 +15048,6 @@
         "O grupo prosseguiu ao longo do caminho do rio, abençoado com uma jornada sem intercorrências, enquanto atravessavam as pastagens e mergulhavam na Floresta de Jura. Gobuta tinha amplos pássaros selvagens para caçar onde quer que descansassem, um suprimento decente de nozes e frutas para colher, e ele fez sua parte, reunindo seus recursos com os da caravana.",
         "“Você tem um talento real para isso, não é?”, disse o líder, um pouco surpreso. “Veja toda a comida que você localizou para nós...”",
         "“De fato”, outro kobold interrompeu, “você deve conhecer a Floresta de Jura como as costas da sua mão. Na floresta, você é muito mais ajuda do que eu jamais esperava.”",
-        "(NT: É só um cheater, não o elogiem)",
         "“Bem verdade. Eu não tinha ideia de que você tinha esse tipo de talento!”",
         "Gobuta, sua última captura em uma mão e uma pedra extra na outra, não conseguiu esconder sua alegria por isso. Ninguém nunca o elogiou tanto na vila. Ele gostou.",
         "Um dia, eles encontraram os cogumelos venenosos e de cores vivas novamente, exatamente como o que Gobuta comera inadvertidamente para acalmar sua fome.",
@@ -15406,7 +15064,6 @@
         "Outro goblin soltou um grito de surpresa, mas estava petrificado demais para se mexer. Tudo o que ele podia fazer era segurar um machado instável nas mãos e manter um olho atento no tigre das lâminas. Ninguém poderia culpá-lo. Hobgoblins foram classificados em C. Eles não foram feitos para enfrentar um tigre como este.",
         "“Não o cutuque”, advertiu a guarda em voz baixa. “Esse cara é perigoso. Levaria dez de nós para ter pelo menos uma chance de enfrentar um tigre-lâmina. Comerciantes! Precisamos desistir de nossos produtos e lentamente nos afastar da área.”",
         "Ela sabia que enfurecer um tigre-lâmina não faria nada além de tornar a situação ainda mais traiçoeira. Ela pelo menos queria que seus clientes sobrevivessem ao encontro. Enquanto o tigre estava se banqueteando com seus cavalos, eles poderiam pelo menos tentar uma fuga, se tivessem sorte, poderiam até conseguir.",
-        "(NT: Tadinho dos cavalos;-;)",
         "Mas essa esperança foi rapidamente frustrada. O tigre-lâmina não queria uma refeição. Queria vingança. Olhou para o resto dos guardas lentamente, procurando o goblin que realmente queria. Então rosnou para os kobolds lentamente se afastando do acampamento. Os comerciantes caíram no chão, entendendo que não teriam piedade.",
         "“Bem, é isso”, um dos guardas murmurou. “Não vai nos deixar ir.”",
         "“O que devemos fazer, senhorita? Não podemos ganhar disso?”",
@@ -15431,7 +15088,6 @@
         "Talvez se eu usar isso—",
         "Gobuta parou, mantendo-se firme e tirou algo do bolso. Com um sorriso desafiador, ele lançou-o diretamente para o tigre da lâmina. A criatura parou, mais surpresa com o súbito fim dessa perseguição do que com o objeto arremessado na direção de sua cabeça. Normalmente, era quando o tigre-lâmina usava o Canhão de Voz, sua arma mais poderosa, para pulverizar o que havia à sua frente. Mas a lembrança de seus erros passados ​​fez o tigre hesitar.",
         "Era inteligente o suficiente para não repetir o mesmo erro duas vezes, mas o que normalmente seria uma característica vantajosa significava condenação por isso. Em vez do Canhão de Voz, o tigre das lâminas imaginou que ele morderia o objeto recebido para detê-lo. Com seus reflexos, seria uma coisa fácil de fazer.",
-        "(NT: Acho que não existe “Desviar” no dicionário do tigre né?)",
         "Mas no momento em que o objeto estava entre os dentes, Gobuta gritou:",
         "“Unseal!!”",
         "Antes que o tigre-lâmina pudesse entendê-lo, o encantamento entrou em vigor. Assim como Gobuta esperava, o tubo mágico fornecido a ele pelo escritório de transferência fez exatamente o que foi feito, desenrolando todos os potes, panelas, armas e até sua carroça na boca do tigre.",
@@ -15459,7 +15115,6 @@
         "“Bem, graças a isso, você salvou a todos nós”, disse o comerciante chefe. “Nós realmente precisamos agradecer novamente.”",
         "Gobuta sorriu timidamente para eles.",
         "“Você sabe”, gaguejou o guarda goblina, “eu, acho que poderia”",
-        "(NT: Gobuta conquistando corações)",
         "“Eu vou ficar mais forte, senhorita! Vou vencer outra besta mágica assim, sozinho! Para que eu possa salvar sua vida algum dia!”",
         "“Hã? Um sim. Sim exatamente!”",
         "Gobuta a deteve antes que ela pudesse terminar a frase. O que provavelmente foi uma coisa boa. Isso provavelmente deu a Gobuta todo o incentivo que ele precisava para continuar lutando por alturas mais altas, além disso.",
@@ -15486,10 +15141,6 @@
         {
           "type": "p",
           "text": "Se essa é uma história totalmente nova para você, gostaria de sugerir que você também verifique a versão da web. O enredo principal é o mesmo entre as duas versões, mas você também encontrará um número razoável de diferenças aqui e ali, então imagino que poderia ser divertido comparar as duas por si mesmo."
-        },
-        {
-          "type": "p",
-          "text": "(NT: Muito, vários acontecimentos foram alterados e estão completamente diferentes. Podem ate levar a wn como uma história paralela que é muito interessante)"
         },
         {
           "type": "p",
@@ -15520,7 +15171,6 @@
         "Olá! Fuse aqui. Antes de mais, gostaria de agradecer por ter adquirido este livro.",
         "Este volume é uma versão fortemente revisada, reescrita e expandida de uma história originalmente lançada na web. Este trabalho, como tenho certeza de que alguns de vocês sabem, ainda está sendo lançado no syosetu.com, um site em língua japonesa para romancistas e contadores de histórias on-line. A história paralela e outro material extra deste livro em particular são todos originais deste volume, criados para os seguidores da versão da Web.",
         "Se essa é uma história totalmente nova para você, gostaria de sugerir que você também verifique a versão da web. O enredo principal é o mesmo entre as duas versões, mas você também encontrará um número razoável de diferenças aqui e ali, então imagino que poderia ser divertido comparar as duas por si mesmo.",
-        "(NT: Muito, vários acontecimentos foram alterados e estão completamente diferentes. Podem ate levar a wn como uma história paralela que é muito interessante)",
         "É a primeira vez que escrevo um posfácio e descobrir o que devo escrever me deixa um pouco nervoso. Como resultado, suponho que devo escrever uma ou duas palavras de agradecimento às forças originais que deram vida a este livro. Primeiro, obrigado como sempre às pessoas que leram e apoiaram esta história na web. Suas críticas e opiniões me deram muita força.",
         "Obrigado, Mitz Vah, que forneceu as ilustrações maravilhosas deste livro e deu muita vida e movimento a todos os personagens da história. Tenho certeza de que vou fazer muito mais pedidos egoístas para você continuar, mas espero que esteja disposto a atendê-lo.",
         "Obrigado, Sr. I, o editor que primeiro me abordou sobre a edição impressa. Se não fosse por sua paixão, esse volume nunca seria lançado.",
