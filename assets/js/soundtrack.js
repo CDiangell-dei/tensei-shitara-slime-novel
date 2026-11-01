@@ -11,7 +11,8 @@
     AUTOPLAY_CHAPTER: 'tensura_soundtrack_auto_suggest',
     MUTED: 'tensura_soundtrack_muted',
     LAST_TRACK: 'tensura_soundtrack_last_track',
-    DOCK_COLLAPSED: 'tensura_soundtrack_collapsed'
+    DOCK_COLLAPSED: 'tensura_soundtrack_collapsed',
+    LOOP: 'tensura_soundtrack_loop'
   };
 
   const TRACK_CATALOG = [
@@ -21,7 +22,8 @@
       subtitle: 'Going Forward & Backward (35:02)',
       season: '2ª Temporada',
       videoId: 's2p-7sfYkM8',
-      start: 2102,
+      start: 2098, // 34:58
+      end: 2525,   // 42:05 (bloco com todas as variações da reunião!)
       desc: 'Trilha clássica dos debates e planejamento na sala de reuniões de Tempest.'
     },
     {
@@ -30,7 +32,8 @@
       subtitle: 'Hyōgikai / 評議会 (12:36)',
       season: '4ª Temporada',
       videoId: 'JFKlCKKI3hU',
-      start: 756,
+      start: 756,  // 12:36
+      end: 888,    // 14:48
       desc: 'Trilha solene e séria para conferências diplomáticas e políticas de alto escalão.'
     },
     {
@@ -39,7 +42,8 @@
       subtitle: 'Sarion no Monogatari (41:42)',
       season: '4ª Temporada',
       videoId: 'JFKlCKKI3hU',
-      start: 2502,
+      start: 2502, // 41:42
+      end: 2602,   // 43:22
       desc: 'Tema oficial da nobreza e das histórias antigas da Dinastia Feiticeira de Sarion.'
     },
     {
@@ -48,7 +52,8 @@
       subtitle: 'Village / Tensura Nikki (10:07)',
       season: 'Tensura Nikki',
       videoId: 'wD694z2iB1w',
-      start: 607,
+      start: 607,  // 10:07
+      end: 715,    // 11:55
       desc: 'Trilha suave de descanso, colheita, agricultura e vida pacífica na federação.'
     },
     {
@@ -57,7 +62,8 @@
       subtitle: 'Counterattack (30:55)',
       season: '2ª Temporada',
       videoId: 's2p-7sfYkM8',
-      start: 1855,
+      start: 1855, // 30:55
+      end: 1976,   // 32:56
       desc: 'Trilha épica de superação, virada militar e batalha de Rimuru e seus generais.'
     },
     {
@@ -66,7 +72,8 @@
       subtitle: 'Takurami / Dokeshi (02:00)',
       season: '4ª Temporada',
       videoId: 'JFKlCKKI3hU',
-      start: 120,
+      start: 120,  // 02:00
+      end: 220,    // 03:40
       desc: 'Tema de conspirações secretas, palhaços moderados e acordos sombrios.'
     }
   ];
@@ -104,6 +111,8 @@
   let isMuted = localStorage.getItem(STORAGE_KEYS.MUTED) === 'true';
   let isCollapsed = localStorage.getItem(STORAGE_KEYS.DOCK_COLLAPSED) === 'true';
   let isAutoSuggest = localStorage.getItem(STORAGE_KEYS.AUTOPLAY_CHAPTER) !== 'false';
+  let isLooping = localStorage.getItem(STORAGE_KEYS.LOOP) !== 'false'; // Padrão: TRUE (repete a cena para manter atmosfera)
+  let loopWatcherInterval = null;
 
   function initSoundtrack() {
     createSoundtrackElements();
@@ -176,7 +185,12 @@
       <div class="soundtrack-dock-body" id="soundtrack-dock-body">
         <div class="soundtrack-track-card">
           <div class="soundtrack-now-playing">
-            <span class="soundtrack-season-tag" id="soundtrack-season-tag">${escapeHtml(currentTrack.season)}</span>
+            <div class="soundtrack-meta-line">
+              <span class="soundtrack-season-tag" id="soundtrack-season-tag">${escapeHtml(currentTrack.season)}</span>
+              <span class="soundtrack-loop-indicator" id="soundtrack-loop-indicator" title="Status de repetição">
+                ${isLooping ? '🔂 Loop da cena ativo' : '⏭ Modo contínuo'}
+              </span>
+            </div>
             <h4 class="soundtrack-track-title" id="soundtrack-track-title">${escapeHtml(currentTrack.title)}</h4>
             <p class="soundtrack-track-desc" id="soundtrack-track-desc">${escapeHtml(currentTrack.desc)}</p>
           </div>
@@ -195,6 +209,12 @@
           <label for="soundtrack-vol-slider" class="sr-only">Volume da Trilha Sonora</label>
           <input type="range" id="soundtrack-vol-slider" class="soundtrack-vol-slider" min="0" max="100" value="${isMuted ? 0 : currentVolume}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${currentVolume}" title="Volume de leitura">
           <span class="soundtrack-vol-text" id="soundtrack-vol-text">${isMuted ? 'Mudo' : `${currentVolume}%`}</span>
+          
+          <!-- Botão de Alternância de Loop -->
+          <button type="button" class="btn-soundtrack-loop ${isLooping ? 'is-active' : ''}" id="btn-soundtrack-loop" title="${isLooping ? 'Loop ativo: a música repete para manter a atmosfera da cena' : 'Modo contínuo: o vídeo segue tocando as próximas faixas'}">
+            <span id="soundtrack-loop-icon" aria-hidden="true">${isLooping ? '🔂' : '⏭'}</span>
+            <span class="soundtrack-loop-text" id="soundtrack-loop-text">${isLooping ? 'Loop' : 'Seguir'}</span>
+          </button>
         </div>
 
         <!-- Seletor Rápido de Atmosferas / Trilhas -->
@@ -228,6 +248,7 @@
     const btnMinimize = document.getElementById('btn-soundtrack-minimize');
     const sliderVol = document.getElementById('soundtrack-vol-slider');
     const btnMute = document.getElementById('btn-soundtrack-mute');
+    const btnLoop = document.getElementById('btn-soundtrack-loop');
     const chkAuto = document.getElementById('chk-soundtrack-auto');
     const presetsGrid = document.getElementById('soundtrack-presets-grid');
 
@@ -255,6 +276,10 @@
 
     if (btnMute) {
       btnMute.addEventListener('click', () => toggleMute());
+    }
+
+    if (btnLoop) {
+      btnLoop.addEventListener('click', () => toggleLoop());
     }
 
     if (chkAuto) {
@@ -299,6 +324,39 @@
     localStorage.setItem(STORAGE_KEYS.DOCK_COLLAPSED, isCollapsed);
   }
 
+  function toggleLoop() {
+    isLooping = !isLooping;
+    localStorage.setItem(STORAGE_KEYS.LOOP, isLooping);
+    if (isLooping && isPlaying) {
+      startLoopWatcher();
+    } else if (!isLooping) {
+      stopLoopWatcher();
+    }
+    syncUiState();
+  }
+
+  function startLoopWatcher() {
+    stopLoopWatcher();
+    loopWatcherInterval = setInterval(() => {
+      if (!isPlaying || !isLooping || !ytPlayer || typeof ytPlayer.getCurrentTime !== 'function') return;
+      try {
+        const curTime = ytPlayer.getCurrentTime();
+        if (currentTrack.end && curTime >= currentTrack.end) {
+          ytPlayer.seekTo(currentTrack.start, true);
+        }
+      } catch (e) {
+        // Ignora pequenos atrasos transitórios da API
+      }
+    }, 800);
+  }
+
+  function stopLoopWatcher() {
+    if (loopWatcherInterval) {
+      clearInterval(loopWatcherInterval);
+      loopWatcherInterval = null;
+    }
+  }
+
   async function ensurePlayerCreated() {
     await loadYouTubeIframeApi();
 
@@ -332,8 +390,18 @@
           onStateChange: (event) => {
             if (event.data === window.YT.PlayerState.PLAYING) {
               isPlaying = true;
-            } else if (event.data === window.YT.PlayerState.PAUSED || event.data === window.YT.PlayerState.ENDED) {
+              if (isLooping) startLoopWatcher();
+            } else if (event.data === window.YT.PlayerState.ENDED) {
+              if (isLooping) {
+                ytPlayer.seekTo(currentTrack.start, true);
+                ytPlayer.playVideo();
+              } else {
+                isPlaying = false;
+                stopLoopWatcher();
+              }
+            } else {
               isPlaying = false;
+              stopLoopWatcher();
             }
             syncUiState();
           },
@@ -361,6 +429,7 @@
         if (shouldPlay) {
           player.playVideo();
           isPlaying = true;
+          if (isLooping) startLoopWatcher();
         }
       }
     } catch (e) {
@@ -377,10 +446,12 @@
       if (isPlaying) {
         player.pauseVideo();
         isPlaying = false;
+        stopLoopWatcher();
       } else {
         player.setVolume(isMuted ? 0 : currentVolume);
         player.playVideo();
         isPlaying = true;
+        if (isLooping) startLoopWatcher();
       }
     } catch (e) {
       console.error('[Soundtrack] Erro ao alternar play/pause:', e);
@@ -421,6 +492,10 @@
     const trackTitle = document.getElementById('soundtrack-track-title');
     const trackDesc = document.getElementById('soundtrack-track-desc');
     const seasonTag = document.getElementById('soundtrack-season-tag');
+    const loopIndicator = document.getElementById('soundtrack-loop-indicator');
+    const btnLoop = document.getElementById('btn-soundtrack-loop');
+    const loopIcon = document.getElementById('soundtrack-loop-icon');
+    const loopText = document.getElementById('soundtrack-loop-text');
     const volSlider = document.getElementById('soundtrack-vol-slider');
     const volText = document.getElementById('soundtrack-vol-text');
     const muteIcon = document.getElementById('soundtrack-mute-icon');
@@ -431,6 +506,19 @@
     if (trackTitle) trackTitle.textContent = currentTrack.title;
     if (trackDesc) trackDesc.textContent = currentTrack.desc;
     if (seasonTag) seasonTag.textContent = currentTrack.season;
+
+    if (loopIndicator) {
+      loopIndicator.textContent = isLooping ? '🔂 Loop ativo' : '⏭ Modo contínuo';
+    }
+
+    if (btnLoop) {
+      btnLoop.classList.toggle('is-active', isLooping);
+      btnLoop.title = isLooping
+        ? 'Loop ativo: a música repete para manter a atmosfera da cena'
+        : 'Modo contínuo: o vídeo segue tocando as próximas faixas';
+    }
+    if (loopIcon) loopIcon.textContent = isLooping ? '🔂' : '⏭';
+    if (loopText) loopText.textContent = isLooping ? 'Loop' : 'Seguir';
 
     if (volSlider) {
       volSlider.value = isMuted ? 0 : currentVolume;
