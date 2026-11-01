@@ -21,7 +21,7 @@ const STORAGE_KEYS = {
 const ANIME_ADAPTED_MAX_LN_VOL = 11;
 const POST_ANIME_WN_ARCS = new Set(['arc-8', 'arc-9', 'arc-10', 'arc-extra-1', 'arc-extra-2', 'arc-extra-3']);
 const POST_ANIME_CULTURAL_CONCEPT_IDXS = new Set([3, 4, 6]);
-const APP_BUILD_VERSION = '20261101_v6';
+const APP_BUILD_VERSION = '20261101_v8';
 
 const AppState = {
   catalog: null,
@@ -1377,9 +1377,7 @@ async function openLightNovel(volumeId, chapterIndex = 0, anchorOrRatio = 0, pre
   try {
     const initialBaseGuess = String(volumeId).replace(/-scan$/, '');
     const savedHist = AppState.history[`ln:${initialBaseGuess}`];
-    const effectiveVolumeId = (chapterIndex === null && savedHist && savedHist.editionId)
-      ? savedHist.editionId
-      : volumeId;
+    const effectiveVolumeId = initialBaseGuess;
 
     const res = await fetch(`data/light_novel/${effectiveVolumeId}.json?v=${APP_BUILD_VERSION}`);
     if (!res.ok) throw new Error(`Volume ${effectiveVolumeId} não encontrado.`);
@@ -1599,23 +1597,6 @@ function renderReaderScreen() {
     btnGallery.hidden = illusList.length === 0;
     btnGallery.dataset.vol = cur.baseVolumeId;
 
-    // Alternador de Edição nos Volumes 6 a 13 (Edição Ilustrada Revisada vs TSSDK Scan)
-    let editionHtml = '';
-    if (baseVolMeta && baseVolMeta.has_scan_alternative) {
-      const isScanNow = cur.id.endsWith('-scan');
-      editionHtml = `
-        <div class="edition-switcher" role="group" aria-label="Alternar tradução deste volume">
-          <span class="edition-switcher-label">Tradução ativa:</span>
-          <button type="button" class="btn-edition-opt ${!isScanNow ? 'active' : ''}" data-action="switch-edition" data-vol="${baseVolMeta.id}">
-            ✨ Edição Ilustrada Revisada
-          </button>
-          <button type="button" class="btn-edition-opt ${isScanNow ? 'active' : ''}" data-action="switch-edition" data-vol="${baseVolMeta.scan_alternative_id}">
-            👥 Tradução de Fã (TSSDK Scan)
-          </button>
-        </div>
-      `;
-    }
-
     const pCount = (ch.paragraphs || []).length;
     const estMin = Math.max(1, Math.ceil(pCount / 10));
 
@@ -1628,7 +1609,6 @@ function renderReaderScreen() {
         <span>Leitura estimada: ~${estMin} min</span>
         ${illusList.length > 0 ? `<button type="button" class="meta-pill-illus" data-action="open-gallery-current">🖼️ Galeria do Volume (${illusList.length})</button>` : ''}
       </div>
-      ${editionHtml}
     `;
 
     // Renderizar blocos estruturados (parágrafos, ilustrações inline e quebras de cena)

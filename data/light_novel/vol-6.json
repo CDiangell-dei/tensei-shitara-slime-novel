@@ -177,7 +177,7 @@
     "15": "Um khakkhara é um bastão budista usado principalmente em orações ou como uma arma originária da Índia.",
     "16": "O nome aqui é “Núcleo Sagrado Demoníaco”, então basicamente misturando propriedades de ambos os elementos sagrado e demoníaco.",
     "17": "Esta é uma expressão idiomática japonesa, 恩威並行 ou 恩威並び行われる",
-    "18": "Diferencie Herói Escolhido (勇者) e Herói (英雄). Em inglês, essas duas palavras são intercambiáveis e seria justificado usar “herói” para ambas na maioria dos casos. No entanto, na série Slime, “Herói Escolhido” é um título como “Senhor Demônio”, implicando que o dono do título seja o protetor da humanidade. Um herói, por outro lado, pode ser qualquer pessoa com conquistas notáveis, como “Hero Youm”. Existem apenas alguns heróis escolhidos no slime, então usarei isso para diferenciá-los de outros “heróis”.",
+    "18": "Diferencie Herói Escolhido (勇者) e Herói (英雄). Em inglês, essas duas palavras são intercambiáveis e seria justificado usar “herói” para ambas na maioria dos casos. No entanto, na série Slime, “Herói Escolhido” é um título como “Lorde Demônio”, implicando que o dono do título seja o protetor da humanidade. Um herói, por outro lado, pode ser qualquer pessoa com conquistas notáveis, como “Hero Youm”. Existem apenas alguns heróis escolhidos no slime, então usarei isso para diferenciá-los de outros “heróis”.",
     "19": "Não tenho certeza do que é isso exatamente, aparentemente se refere aos restos de alguns raios de luz enquanto Leon sai.",
     "20": "Ainda não tenho ideia do que isso significa depois de consultar a fonte do JP. Mas acho que está se referindo a Karion.",
     "21": "妖鬼 ou Fair Oni",
@@ -466,7 +466,7 @@
         },
         {
           "type": "p",
-          "text": "“Oh, agora, por favor, cale a boca. Não é como se eu quisesse acabar assim. Este corpo é um homúnculo especialmente modificado do Sarion da Dinastia do Feiticeiro que o chefe preparou só para mim."
+          "text": "“Oh, agora, por favor, cale a boca. Não é como se eu quisesse acabar assim. Este corpo é um homúnculo especialmente modificado da Dinastia Feiticeira de Sarion que o chefe preparou só para mim."
         },
         {
           "type": "p",
@@ -1616,7 +1616,7 @@
         "“Tanto faz... Não, eu entendo agora. Se devo continuar com esse ato, preciso falar mais como uma mulher.”",
         "“Não, não, não, esse não é o problema aqui, é? De qualquer forma, combina melhor com você… Mas, como devo dizer isso… O QUE HAHAHAHA!”",
         "Laplace cai na gargalhada, incapaz de continuar.",
-        "“Oh, agora, por favor, cale a boca. Não é como se eu quisesse acabar assim. Este corpo é um homúnculo especialmente modificado do Sarion da Dinastia do Feiticeiro que o chefe preparou só para mim.",
+        "“Oh, agora, por favor, cale a boca. Não é como se eu quisesse acabar assim. Este corpo é um homúnculo especialmente modificado da Dinastia Feiticeira de Sarion que o chefe preparou só para mim.",
         "\"Sim. É muito caro. Se não preparamos o recipiente sem alma, ele pode ter contaminado a alma transferida, resultando em falha na transferência. Falando nisso, se Kazalim não tivesse escapado para dentro do meu corpo, ele já poderia estar misturado com impurezas e teria tornado impossível a separação. Em outras palavras, não posso realmente ajudar com a aparência.”",
         "“Eu realmente aprecio isso, chefe.”",
         "Mas não havia alegria na voz deste jovem e Kazalim expressa gratidão para com ele. Mesmo assim, ele ainda parece bastante irritado e só conseguiu recuperar o bom humor depois que Laplace agradeceu.",
@@ -3850,7 +3850,7 @@
         },
         {
           "type": "p",
-          "text": "O próximo é Sarion da Dinastia do Feiticeiro."
+          "text": "O próximo é da Dinastia Feiticeira de Sarion."
         },
         {
           "type": "p",
@@ -3874,7 +3874,7 @@
         },
         {
           "type": "p",
-          "text": "A Dinastia do Feiticeiro Sarion tem o poder nacional para enfrentar os estados do conselho por si só, e é uma superpotência que rivaliza com a Nação Armada de Dwargon."
+          "text": "a Dinastia Feiticeira de Sarion tem o poder nacional para enfrentar os estados do conselho por si só, e é uma superpotência que rivaliza com a Nação Armada de Dwargon."
         },
         {
           "type": "p",
@@ -4330,7 +4330,7 @@
         },
         {
           "type": "p",
-          "text": "“Deveria ser bom fazê-lo nas nações ocidentais. Quanto ao Sarion da Dinastia do Feiticeiro, direi apenas ao Imperador o que ouvi. O problema é-\""
+          "text": "“Deveria ser bom fazê-lo nas nações ocidentais. Quanto ao da Dinastia Feiticeira de Sarion, direi apenas ao Imperador o que ouvi. O problema é-\""
         },
         {
           "type": "p",
@@ -4934,7 +4934,7 @@
         },
         {
           "type": "p",
-          "text": "Elalude surpreendentemente respondeu à minha confusão. Hinata parece ser bastante famosa mesmo na Dinastia do Feiticeiro Sarion. Dá para perceber então que a reputação dela está amplamente difundida, o que me surpreende."
+          "text": "Elalude surpreendentemente respondeu à minha confusão. Hinata parece ser bastante famosa mesmo na Dinastia Feiticeira de Sarion. Dá para perceber então que a reputação dela está amplamente difundida, o que me surpreende."
         },
         {
           "type": "p",
@@ -5591,7 +5591,7 @@
         },
         {
           "type": "p",
-          "text": "Elalude também não dirá nada. Ele provavelmente está calculando calmamente o que é melhor para Sarion da Dinastia do Feiticeiro."
+          "text": "Elalude também não dirá nada. Ele provavelmente está calculando calmamente o que é melhor para da Dinastia Feiticeira de Sarion."
         },
         {
           "type": "p",
@@ -6515,7 +6515,7 @@
         },
         {
           "type": "p",
-          "text": "O terceiro país humano – Sarion da Dinastia do Feiticeiro, formou um laço diplomático oficial conosco."
+          "text": "O terceiro país humano – da Dinastia Feiticeira de Sarion, formou um laço diplomático oficial conosco."
         },
         {
           "type": "p",
@@ -7016,13 +7016,13 @@
         "Infelizmente, esta nação não enviou um representante oficial.",
         "Como Fuze é o chefe da Seção da Associação de Liberdade em Blumund, além de ser parente próximo do Barão Bayette, que é ministro do Reino de Blumund, ele deveria ter o mesmo nível de autoridade que ele.",
         "Ele é sem dúvida o melhor representante que podem escolher. Eu realmente deveria ouvir suas preciosas opiniões.",
-        "O próximo é Sarion da Dinastia do Feiticeiro.",
+        "O próximo é da Dinastia Feiticeira de Sarion.",
         "De repente eles vieram participar, mas o chefe do grupo é o famoso nobre duque Elalude.",
         "Elalude é o pai burro que mima a filha, mas que mesmo assim possui a perspectiva cruel de um nobre.",
         "O objetivo da viagem deles é avaliar meu país. Ele provavelmente não cometeria nenhum erro de julgamento e faria algo estúpido devido ao amor que sente por sua filha.",
         "Esse cara é outra coisa, e eu definitivamente não posso ignorá-lo.",
         "Além disso…",
-        "A Dinastia do Feiticeiro Sarion tem o poder nacional para enfrentar os estados do conselho por si só, e é uma superpotência que rivaliza com a Nação Armada de Dwargon.",
+        "a Dinastia Feiticeira de Sarion tem o poder nacional para enfrentar os estados do conselho por si só, e é uma superpotência que rivaliza com a Nação Armada de Dwargon.",
         "Se tudo correr bem, poderemos até formar uma aliança com eles.",
         "Não se deve ser muito ganancioso, é o que diz o ditado. É por isso que preciso tratá-lo com cuidado.",
         "Olhando para os convidados ao redor, todos são personagens proeminentes.",
@@ -7135,7 +7135,7 @@
         "Gazel e Elalude se entreolham.",
         "Os dois parecem não se dar bem, mas provavelmente são amigos muito próximos.",
         "“A verdadeira questão seria tornar isso público ou ocultá-lo.”",
-        "“Deveria ser bom fazê-lo nas nações ocidentais. Quanto ao Sarion da Dinastia do Feiticeiro, direi apenas ao Imperador o que ouvi. O problema é-\"",
+        "“Deveria ser bom fazê-lo nas nações ocidentais. Quanto ao da Dinastia Feiticeira de Sarion, direi apenas ao Imperador o que ouvi. O problema é-\"",
         "“É a Santa Igreja Ocidental, certo? Você nunca pode enganá-los. Entre todos os 'Dragões Verdadeiros', a Igreja é a que mais odeia o 'Dragão da Tempestade'. Eles definitivamente iriam atrás dele assim que ele fosse revivido.”",
         "“Se quisermos esconder a verdade, temos que agir juntos como se não tivéssemos ideia. Mas isso provavelmente não funcionará e nos tornará todos ‘Nêmesis de Deus’”.",
         "Só assim, os dois trocaram opiniões e tentaram encontrar uma solução para a minha situação.",
@@ -7285,7 +7285,7 @@
         "“Mas aquela mulher nem me dá chance de explicar.”",
         "Na verdade, ela me tratou como uma monstruosidade desde o início. Mas parecia que ela havia sido alimentada com informações erradas, mas a parte de não ouvir a razão é apenas…",
         "“Bem, isso pode ser por causa da doutrina da seita Luminas “Nenhuma negociação com monstros.””",
-        "Elalude surpreendentemente respondeu à minha confusão. Hinata parece ser bastante famosa mesmo na Dinastia do Feiticeiro Sarion. Dá para perceber então que a reputação dela está amplamente difundida, o que me surpreende.",
+        "Elalude surpreendentemente respondeu à minha confusão. Hinata parece ser bastante famosa mesmo na Dinastia Feiticeira de Sarion. Dá para perceber então que a reputação dela está amplamente difundida, o que me surpreende.",
         "— Não, talvez seja natural, do ponto de vista de uma nação, reunir informações sobre o cavaleiro mais forte da Santa Igreja Ocidental.",
         "Talvez ela tenha se tornado uma celebridade por causa de sua beleza. Esse pensamento passou por mim algumas vezes, mas provavelmente não deveria dizer isso em voz alta.",
         "Depois de ouvir a explicação de Fuze e dos demais, agora começo a entender quem realmente é Hinata.",
@@ -7445,7 +7445,7 @@
         "Fuze começa a ponderar depois de ouvir meu plano.",
         "Ele permanece em silêncio. Ele está compilando seus pensamentos em seu coração.",
         "Gazel também não faz barulho e está com os olhos fechados. Seus companheiros, porém, estão em meio a uma intensa discussão sobre o tema. Mas estão num impasse, sem que ninguém tenha chegado a uma conclusão.",
-        "Elalude também não dirá nada. Ele provavelmente está calculando calmamente o que é melhor para Sarion da Dinastia do Feiticeiro.",
+        "Elalude também não dirá nada. Ele provavelmente está calculando calmamente o que é melhor para da Dinastia Feiticeira de Sarion.",
         "Olho ao redor para ver a reação de todos enquanto continuo explicando.",
         "Primeiro, libertaremos o atual rei para que ele compense a invasão de nossa nação.",
         "Mas isso é apenas no nome, o nosso verdadeiro objectivo é levar Farmus à guerra civil através da questão da compensação.",
@@ -7675,7 +7675,7 @@
         "UAU! Há muita comemoração no local.",
         "Todos se levantam para comemorar esse relacionamento recém-descoberto.",
         "Agora, existe uma nova nação que está disposta a nos aceitar.",
-        "O terceiro país humano – Sarion da Dinastia do Feiticeiro, formou um laço diplomático oficial conosco.",
+        "O terceiro país humano – da Dinastia Feiticeira de Sarion, formou um laço diplomático oficial conosco.",
         "A queda do reino Farmus é iminente e um novo país surgirá sob a liderança de Youm.",
         "O mapa deste continente será reimpresso.",
         "Mas as coisas piorariam mais cedo do que eu esperava."
@@ -8307,7 +8307,7 @@
         },
         {
           "type": "p",
-          "text": "A Nação Armada de Dwargon e a Dinastia do Feiticeiro Sarion não são influenciadas pela Santa Igreja Ocidental e têm o poder de rivalizar potencialmente com as Nações Ocidentais por si mesmas. Em comparação, o Reino de Blumund é um pequeno reino que pode ser grandemente influenciado pelas pressões exercidas pelos países vizinhos."
+          "text": "A Nação Armada de Dwargon e a Dinastia Feiticeira de Sarion não são influenciadas pela Santa Igreja Ocidental e têm o poder de rivalizar potencialmente com as Nações Ocidentais por si mesmas. Em comparação, o Reino de Blumund é um pequeno reino que pode ser grandemente influenciado pelas pressões exercidas pelos países vizinhos."
         },
         {
           "type": "p",
@@ -8323,7 +8323,7 @@
         },
         {
           "type": "p",
-          "text": "A Nação Armada de Dwargon e a Dinastia do Feiticeiro Sarion têm origens culturais e tecnologias muito diferentes. A adição de comércio com Tempest estimularia esta cidade a um desenvolvimento mais rápido."
+          "text": "A Nação Armada de Dwargon e a Dinastia Feiticeira de Sarion têm origens culturais e tecnologias muito diferentes. A adição de comércio com Tempest estimularia esta cidade a um desenvolvimento mais rápido."
         },
         {
           "type": "p",
@@ -8899,7 +8899,7 @@
         },
         {
           "type": "p",
-          "text": "O Sarion da Dinastia do Feiticeiro pode ser forte, mas isso não significa que possa facilmente fornecer um orçamento dessa escala."
+          "text": "O da Dinastia Feiticeira de Sarion pode ser forte, mas isso não significa que possa facilmente fornecer um orçamento dessa escala."
         },
         {
           "type": "p",
@@ -10363,7 +10363,7 @@
         },
         {
           "type": "p",
-          "text": "Do nosso lado, há mais de vinte mil pessoas que se refugiaram aqui do Reino das Bestas Eurazânia. Metade deles é capaz de combater, perfazendo cerca de dez mil pessoas. Eles já são Rank B em circunstâncias normais, e até evoluiriam para A-menos após sua bestialização, o que os torna uma força incrível a ser reconhecida."
+          "text": "Do nosso lado, há mais de vinte mil pessoas que se refugiaram aqui do Reino das Feras Eurazânia. Metade deles é capaz de combater, perfazendo cerca de dez mil pessoas. Eles já são Rank B em circunstâncias normais, e até evoluiriam para A-menos após sua bestialização, o que os torna uma força incrível a ser reconhecida."
         },
         {
           "type": "p",
@@ -12128,11 +12128,11 @@
         "Usaremos isso para continuar nossa busca pelo sucesso.",
         "“É bastante desrespeitoso da minha parte dizer isso, mas formar laços com a Federação Tempest é uma faca de dois gumes. Como tal, aqueles que o fazem devem agir com cautela se não quiserem ser mordidos de volta.”",
         "Não há dúvida de que isso foi dito por Fuze. Ele está certo, o reino de Blumund tem a postura mais difícil entre eles.",
-        "A Nação Armada de Dwargon e a Dinastia do Feiticeiro Sarion não são influenciadas pela Santa Igreja Ocidental e têm o poder de rivalizar potencialmente com as Nações Ocidentais por si mesmas. Em comparação, o Reino de Blumund é um pequeno reino que pode ser grandemente influenciado pelas pressões exercidas pelos países vizinhos.",
+        "A Nação Armada de Dwargon e a Dinastia Feiticeira de Sarion não são influenciadas pela Santa Igreja Ocidental e têm o poder de rivalizar potencialmente com as Nações Ocidentais por si mesmas. Em comparação, o Reino de Blumund é um pequeno reino que pode ser grandemente influenciado pelas pressões exercidas pelos países vizinhos.",
         "— Mas esses são assuntos para outro dia.",
         "“Hehe, você é Fuze, certo? Não se preocupe, através da Tempest Federation, seu país pode se comunicar conosco, Dwargon. Enquanto apoiarmos a posição da sua nação, os Estados do Conselho não irão subestimá-lo.”",
         "Gazel está certo.",
-        "A Nação Armada de Dwargon e a Dinastia do Feiticeiro Sarion têm origens culturais e tecnologias muito diferentes. A adição de comércio com Tempest estimularia esta cidade a um desenvolvimento mais rápido.",
+        "A Nação Armada de Dwargon e a Dinastia Feiticeira de Sarion têm origens culturais e tecnologias muito diferentes. A adição de comércio com Tempest estimularia esta cidade a um desenvolvimento mais rápido.",
         "Uma nova era de cultura logo estaria sobre nós.",
         "Além disso, a Ciência movida a Magia da qual Sarion tanto se orgulha e a Industrialização Espiritual desenvolvida por Dwargon são dois ramos diferentes da tecnologia. A combinação dos dois criará, sem dúvida, uma fantasia como a revolução industrial.",
         "E Blumund prova a cereja do bolo.",
@@ -12275,7 +12275,7 @@
         "Já que estabelecemos laços com a Dinastia Feiticeira Sarion, seria muito mais conveniente ter uma estrada direta construída entre eles. É claro que o nosso país empreenderia tal construção.",
         "A vantagem é poder transportar mercadorias diretamente em vez de fazer o desvio anteriormente mais longo, por isso considerei isso como parte do meu plano desde o início.",
         "Mas a construção exigiria uma reforma em massa do terreno, por exemplo, desflorestação, escavação de túneis, bem como operações de pavimentação nas estradas. Irá gastar um enorme orçamento nacional para executar todas as operações acima mencionadas.",
-        "O Sarion da Dinastia do Feiticeiro pode ser forte, mas isso não significa que possa facilmente fornecer um orçamento dessa escala.",
+        "O da Dinastia Feiticeira de Sarion pode ser forte, mas isso não significa que possa facilmente fornecer um orçamento dessa escala.",
         "Elalude, por sua consideração cuidadosa do ponto de vista de um duque, provavelmente nos confiaria todo o trabalho.",
         "“Elalude, você está sendo muito nojento aqui. Como poderia Rimuru concordar tão facilmente com um pedido tão substancial?",
         "Gazel decide me defender.",
@@ -12639,7 +12639,7 @@
         "Embora sejam muito mais poderosos em comparação com o Exército Farmus que eliminei, ainda há pouco a temer.",
         "O problema está no comandante Yamza, ou melhor, me decepciona.",
         "“Eles não são um pouco fracos?”",
-        "Do nosso lado, há mais de vinte mil pessoas que se refugiaram aqui do Reino das Bestas Eurazânia. Metade deles é capaz de combater, perfazendo cerca de dez mil pessoas. Eles já são Rank B em circunstâncias normais, e até evoluiriam para A-menos após sua bestialização, o que os torna uma força incrível a ser reconhecida.",
+        "Do nosso lado, há mais de vinte mil pessoas que se refugiaram aqui do Reino das Feras Eurazânia. Metade deles é capaz de combater, perfazendo cerca de dez mil pessoas. Eles já são Rank B em circunstâncias normais, e até evoluiriam para A-menos após sua bestialização, o que os torna uma força incrível a ser reconhecida.",
         "Até mesmo a Ordem dos Cavaleiros do Reino de Farmus alcançou a média do Rank B com sua fortificação mágica. Isso apenas mostra o quão fortes são os guerreiros do Reino das Feras.",
         "Sem mencionar a enorme lacuna entre as habilidades básicas dos Humanos e dos Homens-Besta.",
         "Somente essas pessoas podem formar uma enorme força de combate. Além disso, existem outros combatentes disponíveis espalhados por aí. Depois de se retirarem da capital, eles se reuniram com membros dos Homens-Besta das tribos próximas espalhadas pela terra. Os veteranos do Exército do Rei Besta assumiram o comando desses indivíduos e os reorganizaram em uma força capaz escondida perto da área. Com estas forças combinadas, haverá mais dez mil soldados.",
@@ -18038,7 +18038,7 @@
         },
         {
           "type": "p",
-          "text": "Os fracos não merecem o título de “Senhor Demônio”."
+          "text": "Os fracos não merecem o título de “Lorde Demônio”."
         },
         {
           "type": "p",
@@ -18862,7 +18862,7 @@
         "Mas isso não é aprovado por Guy.",
         "Para os humanos, seria do seu interesse que os perigosos Lordes Demônios continuassem a lutar contra o governo uns dos outros e reduzissem em número ao longo do processo. Mas de alguma forma, os Dez Grandes Lordes Demônios se tornaram uma regra tácita.",
         "Mas esta regra está prestes a ser anulada.",
-        "Os fracos não merecem o título de “Senhor Demônio”.",
+        "Os fracos não merecem o título de “Lorde Demônio”.",
         "Já é hora de o negócio real dominar o mundo novamente.",
         "— Essa é a opinião do Guy.",
         "Guy foi o primeiro lorde demônio.",
@@ -29340,7 +29340,7 @@
         },
         {
           "type": "p",
-          "text": "“Senhor Demônio – Não, eu sou 'O Palhaço Risonho (Crazy Pierrot)' {{FN:40}} Clayman. Eu vou matar você, Majin Shion!”"
+          "text": "“Lorde Demônio – Não, eu sou 'O Palhaço Risonho (Crazy Pierrot)' {{FN:40}} Clayman. Eu vou matar você, Majin Shion!”"
         },
         {
           "type": "p",
@@ -32580,7 +32580,7 @@
         "\"Oh? Agora você parece um pouco mais intrigado. Você está começando a me impressionar. Eu sou o secretário pessoal do Lorde Demônio Rimuru-sama, Shion. Permita-me ser seu oponente!”",
         "Shion parece encantada e anuncia seu nome para Clayman.",
         "Clayman também—",
-        "“Senhor Demônio – Não, eu sou 'O Palhaço Risonho (Crazy Pierrot)' {{FN:40}} Clayman. Eu vou matar você, Majin Shion!”",
+        "“Lorde Demônio – Não, eu sou 'O Palhaço Risonho (Crazy Pierrot)' {{FN:40}} Clayman. Eu vou matar você, Majin Shion!”",
         "Ele responde anunciando seu título.",
         "É assim que eles começam a luta ao mesmo tempo.",
         "Clayman com seu verdadeiro eu revelado é muito forte.",
@@ -35925,7 +35925,7 @@
         },
         {
           "type": "p",
-          "text": "[Nota 18] Diferencie Herói Escolhido (勇者) e Herói (英雄). Em inglês, essas duas palavras são intercambiáveis e seria justificado usar “herói” para ambas na maioria dos casos. No entanto, na série Slime, “Herói Escolhido” é um título como “Senhor Demônio”, implicando que o dono do título seja o protetor da humanidade. Um herói, por outro lado, pode ser qualquer pessoa com conquistas notáveis, como “Hero Youm”. Existem apenas alguns heróis escolhidos no slime, então usarei isso para diferenciá-los de outros “heróis”."
+          "text": "[Nota 18] Diferencie Herói Escolhido (勇者) e Herói (英雄). Em inglês, essas duas palavras são intercambiáveis e seria justificado usar “herói” para ambas na maioria dos casos. No entanto, na série Slime, “Herói Escolhido” é um título como “Lorde Demônio”, implicando que o dono do título seja o protetor da humanidade. Um herói, por outro lado, pode ser qualquer pessoa com conquistas notáveis, como “Hero Youm”. Existem apenas alguns heróis escolhidos no slime, então usarei isso para diferenciá-los de outros “heróis”."
         },
         {
           "type": "p",
@@ -36074,7 +36074,7 @@
         "[Nota 15] Um khakkhara é um bastão budista usado principalmente em orações ou como uma arma originária da Índia.",
         "[Nota 16] O nome aqui é “Núcleo Sagrado Demoníaco”, então basicamente misturando propriedades de ambos os elementos sagrado e demoníaco.",
         "[Nota 17] Esta é uma expressão idiomática japonesa, 恩威並行 ou 恩威並び行われる",
-        "[Nota 18] Diferencie Herói Escolhido (勇者) e Herói (英雄). Em inglês, essas duas palavras são intercambiáveis e seria justificado usar “herói” para ambas na maioria dos casos. No entanto, na série Slime, “Herói Escolhido” é um título como “Senhor Demônio”, implicando que o dono do título seja o protetor da humanidade. Um herói, por outro lado, pode ser qualquer pessoa com conquistas notáveis, como “Hero Youm”. Existem apenas alguns heróis escolhidos no slime, então usarei isso para diferenciá-los de outros “heróis”.",
+        "[Nota 18] Diferencie Herói Escolhido (勇者) e Herói (英雄). Em inglês, essas duas palavras são intercambiáveis e seria justificado usar “herói” para ambas na maioria dos casos. No entanto, na série Slime, “Herói Escolhido” é um título como “Lorde Demônio”, implicando que o dono do título seja o protetor da humanidade. Um herói, por outro lado, pode ser qualquer pessoa com conquistas notáveis, como “Hero Youm”. Existem apenas alguns heróis escolhidos no slime, então usarei isso para diferenciá-los de outros “heróis”.",
         "[Nota 19] Não tenho certeza do que é isso exatamente, aparentemente se refere aos restos de alguns raios de luz enquanto Leon sai.",
         "[Nota 20] Ainda não tenho ideia do que isso significa depois de consultar a fonte do JP. Mas acho que está se referindo a Karion.",
         "[Nota 21] 妖鬼 ou Fair Oni",

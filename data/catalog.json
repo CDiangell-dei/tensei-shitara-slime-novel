@@ -984,8 +984,8 @@
         "is_downloaded": true,
         "edition": "Edição Ilustrada Completa — Revisada PT-BR",
         "is_colored_edition": false,
-        "has_scan_alternative": true,
-        "scan_alternative_id": "vol-6-scan",
+        "has_scan_alternative": false,
+        "scan_alternative_id": null,
         "cover_image": "assets/illustrations/ln/vol-6/img_01.webp",
         "illustrations_count": 21,
         "illustrations": [
@@ -1151,8 +1151,8 @@
         "is_downloaded": true,
         "edition": "Edição Ilustrada Completa — Revisada PT-BR",
         "is_colored_edition": false,
-        "has_scan_alternative": true,
-        "scan_alternative_id": "vol-7-scan",
+        "has_scan_alternative": false,
+        "scan_alternative_id": null,
         "cover_image": "assets/illustrations/ln/vol-7/img_01.webp",
         "illustrations_count": 21,
         "illustrations": [
@@ -1318,8 +1318,8 @@
         "is_downloaded": true,
         "edition": "Edição Ilustrada Completa — Revisada PT-BR",
         "is_colored_edition": false,
-        "has_scan_alternative": true,
-        "scan_alternative_id": "vol-8-scan",
+        "has_scan_alternative": false,
+        "scan_alternative_id": null,
         "cover_image": "assets/illustrations/ln/vol-8/img_01.webp",
         "illustrations_count": 14,
         "illustrations": [
@@ -1484,8 +1484,8 @@
         "is_downloaded": true,
         "edition": "Edição Ilustrada Completa — Revisada PT-BR",
         "is_colored_edition": false,
-        "has_scan_alternative": true,
-        "scan_alternative_id": "vol-9-scan",
+        "has_scan_alternative": false,
+        "scan_alternative_id": null,
         "cover_image": "assets/illustrations/ln/vol-9/img_01.webp",
         "illustrations_count": 16,
         "illustrations": [
@@ -1616,8 +1616,8 @@
         "is_downloaded": true,
         "edition": "Edição Ilustrada Completa — Revisada PT-BR",
         "is_colored_edition": false,
-        "has_scan_alternative": true,
-        "scan_alternative_id": "vol-10-scan",
+        "has_scan_alternative": false,
+        "scan_alternative_id": null,
         "cover_image": "assets/illustrations/ln/vol-10/img_01.webp",
         "illustrations_count": 19,
         "illustrations": [
@@ -1769,8 +1769,8 @@
         "is_downloaded": true,
         "edition": "Edição Colorida Ilustrada — Revisada PT-BR",
         "is_colored_edition": true,
-        "has_scan_alternative": true,
-        "scan_alternative_id": "vol-11-scan",
+        "has_scan_alternative": false,
+        "scan_alternative_id": null,
         "cover_image": "assets/illustrations/ln/vol-11/img_01.webp",
         "illustrations_count": 19,
         "illustrations": [
@@ -1922,8 +1922,8 @@
         "is_downloaded": true,
         "edition": "Edição Colorida Ilustrada — Revisada PT-BR",
         "is_colored_edition": true,
-        "has_scan_alternative": true,
-        "scan_alternative_id": "vol-12-scan",
+        "has_scan_alternative": false,
+        "scan_alternative_id": null,
         "cover_image": "assets/illustrations/ln/vol-12/img_01.webp",
         "illustrations_count": 20,
         "illustrations": [
@@ -2082,8 +2082,8 @@
         "is_downloaded": true,
         "edition": "Edição Colorida Ilustrada — Revisada PT-BR",
         "is_colored_edition": true,
-        "has_scan_alternative": true,
-        "scan_alternative_id": "vol-13-scan",
+        "has_scan_alternative": false,
+        "scan_alternative_id": null,
         "cover_image": "assets/illustrations/ln/vol-13/img_01.webp",
         "illustrations_count": 20,
         "illustrations": [
@@ -7751,15 +7751,15 @@
       }
     ],
     "translation_audit": {
-      "overview": "Esta biblioteca reúne os 24 volumes da Light Novel (Volumes 1 a 23 + Volume 8.5) harmonizando e integrando as melhores fontes da comunidade: a fluidez dos diálogos humanos da TSSDK Scan PT-BR (base dos Volumes 1 a 5 + 8.5 e harmonizada diretamente na Edição Ilustrada dos Volumes 6 a 13 com opção de alternância de edição), a base terminológica e as ilustrações canônicas em alta definição do Slime Reader (TensuraFan — Vols. 6 a 20) e a compilação integralmente traduzida e padronizada em PT-BR dos Volumes finais 21, 22 e 23.",
-      "total_paragraphs_repaired": 2414,
+      "overview": "Esta biblioteca reúne os 24 volumes da Light Novel (Volumes 1 a 23 + Volume 8.5) hospedando exclusivamente a nossa Edição Ilustrada Revisada e Compilada a partir dos EPUBs originais, com ilustrações oficiais em alta definição posicionadas nos capítulos, notas culturais e padronização terminológica em PT-BR. Os projetos e scans da comunidade (TSSDK Scan, Slime Reader / TensuraFan e Central Novel) são referenciados e disponibilizados através de links diretos no rodapé para que os leitores possam consultar os sites originais dos tradutores.",
+      "total_paragraphs_repaired": 2554,
       "epubs_repaired_count": 18,
       "edition_comparison": [
         {
           "aspect": "Cobertura de Volumes",
-          "tssdk_scan": "Volumes 1 a 13 + Volume 8.5 (interrompida no Vol. 13)",
+          "tssdk_scan": "Disponível no site original da scan (link no rodapé)",
           "drive_original": "Slime Reader (TensuraFan) até o Vol. 20 + Edições Ilustradas dos Vols. 6 a 23",
-          "repaired_repo": "100% Completa: todos os 24 Volumes (Vols. 1–23 + 8.5) em PT-BR + Dupla Tradução nos Vols. 6–13!"
+          "repaired_repo": "100% Completa: todos os 24 Volumes (Vols. 1–23 + 8.5) na nossa Edição Ilustrada Revisada baseada nos EPUBs!"
         },
         {
           "aspect": "Qualidade do Texto & Nomes",
