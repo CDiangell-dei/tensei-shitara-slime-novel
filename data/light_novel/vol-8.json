@@ -645,7 +645,7 @@
         },
         {
           "type": "p",
-          "text": "“Vender um favor a 'Ele'... Ah, você está falando daquele cara. A ideia do Boss é interessante como sempre. Eu vejo como é isso. Por favor, deixe isso comigo então."
+          "text": "“Vender um favor a 'Ele'... Ah, você está falando daquele cara. A ideia do Chefe é interessante como sempre. Eu vejo como é isso. Por favor, deixe isso comigo então."
         },
         {
           "type": "p",
@@ -784,7 +784,7 @@
         "“Não é óbvio? Toda a Grande Floresta do Jura está agora sob o domínio daquele Slime. Ele definitivamente arruinará nossos negócios se continuarmos a caçar monstros lá. Se for esse o caso, não seria mais benéfico fecharmos as lojas mais cedo?”",
         "\"Eu vejo. Esse parece ser o caso. É o mesmo que lagartos cortando a própria cauda; só precisamos nos concentrar em proteger as mercadorias importantes.”",
         "“Não é mesmo? Posso confiar esta tarefa a você?”",
-        "“Vender um favor a 'Ele'... Ah, você está falando daquele cara. A ideia do Boss é interessante como sempre. Eu vejo como é isso. Por favor, deixe isso comigo então.",
+        "“Vender um favor a 'Ele'... Ah, você está falando daquele cara. A ideia do Chefe é interessante como sempre. Eu vejo como é isso. Por favor, deixe isso comigo então.",
         "“Hmm, contarei com você, Kazalim.”",
         "\"Sem problemas. E, a propósito, espero que você possa me chamar de ‘Kagali’ de agora em diante.”",
         "Os olhos do jovem se arregalaram para Kazalim depois de ouvir suas palavras.",
@@ -1898,7 +1898,7 @@
         },
         {
           "type": "p",
-          "text": "Mas pode haver uma solução. Quando perguntei a Raphael-sensei se havia uma maneira melhor, obtive uma resposta imediata. O método era usar o 'Cook' de Shion para sobrescrever os resultados. Como ela poderia sobrescrever os resultados, melhorar a qualidade do produto seria moleza."
+          "text": "Mas pode haver uma solução. Quando perguntei a Raphael-sensei se havia uma maneira melhor, obtive uma resposta imediata. O método era usar o ‘Cozinheiro’ de Shion para sobrescrever os resultados. Como ela poderia sobrescrever os resultados, melhorar a qualidade do produto seria moleza."
         },
         {
           "type": "p",
@@ -3399,7 +3399,7 @@
         },
         {
           "type": "p",
-          "text": "O florete de Hinata foi destruído depois que eu o devorei e reciclei, então criei uma nova espada depois de analisar e melhorar sua arma anterior. {{FN:23}} Sua qualidade atingiu nível único, então não deveria ter sido muito diferente na prática. Afinal, até mesmo sua habilidade especial ‘Dead End Rainbow’ foi recriada."
+          "text": "O florete de Hinata foi destruído depois que eu o devorei e reciclei, então criei uma nova espada depois de analisar e melhorar sua arma anterior. {{FN:23}} Sua qualidade atingiu nível único, então não deveria ter sido muito diferente na prática. Afinal, até mesmo sua habilidade especial ‘Arco-Íris da Morte Final’ foi recriada."
         },
         {
           "type": "p",
@@ -3439,7 +3439,7 @@
         },
         {
           "type": "p",
-          "text": "'Gear of Holy Spirit' parecia ser algum equipamento confidencial em nível nacional, e agora nós o tornamos nosso usando 'Analyze and Assess'. Parecia ser bastante complicado de usar, então tive que descobrir a quem entregá-lo. Só assim, adicionamos outro item poderoso ao arsenal da nossa nação."
+          "text": "'Gear of Holy Spirit' parecia ser algum equipamento confidencial em nível nacional, e agora nós o tornamos nosso usando ‘Analisar e Avaliar’. Parecia ser bastante complicado de usar, então tive que descobrir a quem entregá-lo. Só assim, adicionamos outro item poderoso ao arsenal da nossa nação."
         },
         {
           "type": "hr",
@@ -3647,11 +3647,11 @@
         },
         {
           "type": "p",
-          "text": "Eu processaria aço mágico em cabos com um diâmetro de cerca de um centímetro e os conectaria a todas as principais cidades usando o 'Shadow Step'. Isso por si só não resolveria o problema, mas em conjunto com o dispositivo que Vesta e o resto desenvolveram, iria converter os pensamentos em voz e imagem. O dispositivo poderia funcionar mesmo sem mana, por isso os dispositivos puderam ser instalados assim que foram desenvolvidos. Portanto, tudo o que podíamos fazer era começar a preparar o aço mágico necessário."
+          "text": "Eu processaria aço mágico em cabos com um diâmetro de cerca de um centímetro e os conectaria a todas as principais cidades usando o ‘Passo nas Sombras’. Isso por si só não resolveria o problema, mas em conjunto com o dispositivo que Vesta e o resto desenvolveram, iria converter os pensamentos em voz e imagem. O dispositivo poderia funcionar mesmo sem mana, por isso os dispositivos puderam ser instalados assim que foram desenvolvidos. Portanto, tudo o que podíamos fazer era começar a preparar o aço mágico necessário."
         },
         {
           "type": "p",
-          "text": "Devido à nossa nação ter uma enorme população de monstros, os minérios de ferro armazenados em nossos armazéns se tornariam minérios mágicos com o tempo. Estaríamos processando-os em “Magic Steel String” e teríamos indivíduos capazes de 'Shadow Step' conectando os fios. Como não havia obstáculos, configurá-los provavelmente seria fácil. Dependendo de quanto pudéssemos ganhar, não estaríamos conectando fios exclusivamente às grandes cidades, mas também às aldeias ao longo das linhas principais da rede. Tínhamos essa parte planejada também. Só tivemos que esperar pelo desenvolvimento de um transmissor."
+          "text": "Devido à nossa nação ter uma enorme população de monstros, os minérios de ferro armazenados em nossos armazéns se tornariam minérios mágicos com o tempo. Estaríamos processando-os em “Magic Steel String” e teríamos indivíduos capazes de ‘Passo nas Sombras’ conectando os fios. Como não havia obstáculos, configurá-los provavelmente seria fácil. Dependendo de quanto pudéssemos ganhar, não estaríamos conectando fios exclusivamente às grandes cidades, mas também às aldeias ao longo das linhas principais da rede. Tínhamos essa parte planejada também. Só tivemos que esperar pelo desenvolvimento de um transmissor."
         },
         {
           "type": "p",
@@ -4077,7 +4077,7 @@
         "Com base em todas estas razões, trabalhamos para desenvolver todos os tipos de cozinhas. Foi muito mais fácil conseguir cereais como trigo, cevada e aveia do que eu imaginava. Lembrei-me de ter visto na capital da Ingrácia pão branco, considerado alimento diário dos ricos. Ao estudar seu método de produção, mais tarde consegui produzi-los em meu reino com meios relativamente mais fáceis.",
         "Nossos atuais esforços de pesquisa centraram-se no arroz branco. Não melhoramos a ponto de ter um sabor satisfatório. Comparado ao arroz japonês que foi pesquisado e melhorado desde tempos imemoriais, a qualidade do nosso era definitivamente inferior.",
         "Mas isso era natural. Eu não esperava que as coisas corressem tão bem de qualquer maneira. Conseguimos colher rapidamente usando magia para cultivá-los. Mas, dito isso, cultivá-los no inverno não foi tarefa fácil. Atualmente tínhamos apenas uma pequena quantidade crescendo em ambientes internos controlados. Levaria muito tempo até que pudéssemos mostrar quaisquer resultados.",
-        "Mas pode haver uma solução. Quando perguntei a Raphael-sensei se havia uma maneira melhor, obtive uma resposta imediata. O método era usar o 'Cook' de Shion para sobrescrever os resultados. Como ela poderia sobrescrever os resultados, melhorar a qualidade do produto seria moleza.",
+        "Mas pode haver uma solução. Quando perguntei a Raphael-sensei se havia uma maneira melhor, obtive uma resposta imediata. O método era usar o ‘Cozinheiro’ de Shion para sobrescrever os resultados. Como ela poderia sobrescrever os resultados, melhorar a qualidade do produto seria moleza.",
         "Mas isso realmente funcionará?",
         "Eu não achei que alguém aceitaria tal método, já que era uma maneira bastante tortuosa de fazer as coisas... Mas isso sou só eu pensando. Embora neste momento provavelmente já fosse tarde demais para dizer coisas assim. Usamos esse método de forma bastante imprudente durante a produção de vinhos, então qualquer intenção de autocontrole já havia desaparecido.",
         "Nosso apetite teve precedência sobre a ética. Mas não podíamos confiar no poder de Shion durante cada colheita, então precisávamos continuar nossa pesquisa. No entanto, isso excluía uma pequena porção de - principalmente para mim - arroz branco. Shion ficou feliz em ajudar, então entreguei o arroz para Shuna e disse a ela para servi-lo apenas em ocasiões especiais. {{FN:13}}. Hoje foi uma ocasião tão especial. O Lorde Demônio Luminas estava presente, entre outras coisas, por isso tivemos que gastar muito. Para garantirmos boas relações a partir de agora, tivemos que demonstrar o valor do nosso país. Tínhamos uma cenoura e um pedaço de pau para oferecer. Sua impressão de alguém aumentará rapidamente se você for bem tratado, apesar de ter tido uma impressão negativa no passado. Se um jovem delinquente subitamente cometesse um ato virtuoso, sua reputação melhoraria muito – pelo menos foi esse o meu processo de pensamento. Se tivéssemos sorte, isso poderia até fazer com que a impressão anterior que tinham de nós mudasse de tamanho.",
@@ -4445,7 +4445,7 @@
         "De acordo com Kaijin e Kurobee, a qualidade do aço mágico evoluiu ao longo do tempo. É por isso que, após um período de tempo, os equipamentos de primeira classe aparentemente também evoluiriam, e sua qualidade aumentaria exponencialmente. A evidência são os itens recuperados de ruínas antigas. Foi dito que eles descobriram equipamentos de altíssima qualidade que as tecnologias modernas não foram capazes de replicar. Essas coisas eram coroadas com títulos lendários e muitas vezes eram seladas, então normalmente não haveria sequer uma chance de colocar os olhos nelas.",
         "Tanto Kurobee quanto Garm pareciam ter como objetivo fabricar tal arma. Os dois ficaram hipnotizados depois de colocar os olhos no Moonlight Rapier de Hinata. Eu esperava que eles alcançassem esse objetivo algum dia.",
         "Além disso, devido à natureza incrível da espada, ela só era usada em momentos cruciais. Se ela tentasse desembainhar a espada na cidade, causaria enormes perigos aos arredores, considerando o seu nível. Seria como carregar um lançador de foguetes em vez de uma pistola para autodefesa. Não há como você simplesmente balançar algo assim diariamente. Eu presenteei ela com uma espada com base nesses pensamentos, e ela pareceu gostar muito mais do que eu esperava.",
-        "O florete de Hinata foi destruído depois que eu o devorei e reciclei, então criei uma nova espada depois de analisar e melhorar sua arma anterior. {{FN:23}} Sua qualidade atingiu nível único, então não deveria ter sido muito diferente na prática. Afinal, até mesmo sua habilidade especial ‘Dead End Rainbow’ foi recriada.",
+        "O florete de Hinata foi destruído depois que eu o devorei e reciclei, então criei uma nova espada depois de analisar e melhorar sua arma anterior. {{FN:23}} Sua qualidade atingiu nível único, então não deveria ter sido muito diferente na prática. Afinal, até mesmo sua habilidade especial ‘Arco-Íris da Morte Final’ foi recriada.",
         "Eu também peguei a espada larga quebrada chamada Caçador de Dragões (Dragon Buster) ou algo assim. Sua qualidade era surpreendentemente lixo. Sério, como diabos essa coisa poderia derrotar Veldora?",
         "Também existiam coisas como a 'Equipamento do Espírito Santo' - mas eles não nos permitiam ver isso. Era exclusivo de Hinata e do equipamento original do Armamento Espiritual. Ah, eu realmente queria analisar isso—",
         "\"Perceber. A referida informação foi coletada durante o combate e completada com 'Analisar e Avaliar'.»",
@@ -4455,7 +4455,7 @@
         "Ah, você não parece estar com disposição para isso, eu acho. Eu deveria apenas agradecer antecipadamente.",
         "Ok, isso é épico. E falando nisso, Raphael com certeza era um personagem cruel. Com os resultados da ‘Analisar e Avaliar’ da versão inferior do Armamento Espiritual combinados com informações da minha luta com Hinata, aparentemente fomos capazes de recriar o ‘Equipamento do Espírito Santo’. Deve ter sido originalmente um equipamento com elemento Sagrado, mas com base em seu princípio de função, pode ter sido modificado para possuir elemento monstro.",
         "Desculpe Hinata.",
-        "'Gear of Holy Spirit' parecia ser algum equipamento confidencial em nível nacional, e agora nós o tornamos nosso usando 'Analyze and Assess'. Parecia ser bastante complicado de usar, então tive que descobrir a quem entregá-lo. Só assim, adicionamos outro item poderoso ao arsenal da nossa nação.",
+        "'Gear of Holy Spirit' parecia ser algum equipamento confidencial em nível nacional, e agora nós o tornamos nosso usando ‘Analisar e Avaliar’. Parecia ser bastante complicado de usar, então tive que descobrir a quem entregá-lo. Só assim, adicionamos outro item poderoso ao arsenal da nossa nação.",
         "Já era noite quando terminamos, chegando a um entendimento sobre as trocas. Como havíamos finalizado tudo, suspeitei que os Cavaleiros Sagrados iriam querer voltar mais cedo, mas ainda assim os convidei para jantar conosco por cortesia.",
         "“Certo, Hinata e Luminas. Já é bem tarde, então por que você não parte amanhã? Eu joguei fora casualmente, na verdade.",
         "Afinal, Luminas poderia usar o ‘Movimento Espacial’ para retornar de qualquer maneira. Hinata, sem dúvida, já havia registrado uma localização em Lubelius usando a magia elementar ‘Waypoint Transportation’ também. E claro, seria o mesmo para os outros Cavaleiros Sagrados. Eles eram todos indivíduos poderosos acima do Rank A, então não precisavam se preocupar em como retornar. Presumi que eles provavelmente responderiam com “Sentimos muito, mas deveríamos ir embora, já que nossos negócios aqui estão encerrados” ou algo parecido para sair rapidamente. No entanto-",
@@ -4506,8 +4506,8 @@
         "Isso provou ser um problema para estudos futuros. Queria depositar a minha esperança nas crianças e construir escolas para a sua educação. No momento, estávamos apenas na escola particular (Terakoya) Nível {{FN:28}}, onde ensinamos às crianças escrita e aritmética básica. Mas eu aspirava usar minha rede formada durante meu período como professor para contratar alguns tutores humanos.",
         "Mas voltando ao tema original, vamos falar de comunicação. Neste momento, a rede de comunicação disponível era formada principalmente por bolas de cristal comunicativas que somente magos poderiam operar. Além disso, corriam o risco de serem roubados, já que afinal eram itens mágicos. Na verdade, houve vários casos de roubo envolvendo eles. Mais importante ainda, tivemos que assumir que talvez não houvesse nenhum mago disponível quando uma chamada de emergência precisasse ser feita. Tivemos que encontrar um meio que não corresse o risco de ser roubado e que também fosse acessível a qualquer pessoa. Eram termos bastante exigentes, mas acabou por haver uma solução.",
         "Eu estava de olho em 'Sticky Steel Web' e magisteel. Já tentei com Souei. A condutividade dos pensamentos telepáticos através da minha ‘Sticky Steel Web’ era extremamente alta. Também havia magias dentro dele, conferindo à clareza da comunicação uma qualidade muito alta. Havia também o aço mágico, que também possui grandes quantidades de magia. É por isso que suspeitei que tivesse propriedades semelhantes ao 'Sticky Steel Web'. Aconteceu exatamente o que aconteceu depois que fiz um experimento. É por isso que decidi usá-los de forma eficaz.",
-        "Eu processaria aço mágico em cabos com um diâmetro de cerca de um centímetro e os conectaria a todas as principais cidades usando o 'Shadow Step'. Isso por si só não resolveria o problema, mas em conjunto com o dispositivo que Vesta e o resto desenvolveram, iria converter os pensamentos em voz e imagem. O dispositivo poderia funcionar mesmo sem mana, por isso os dispositivos puderam ser instalados assim que foram desenvolvidos. Portanto, tudo o que podíamos fazer era começar a preparar o aço mágico necessário.",
-        "Devido à nossa nação ter uma enorme população de monstros, os minérios de ferro armazenados em nossos armazéns se tornariam minérios mágicos com o tempo. Estaríamos processando-os em “Magic Steel String” e teríamos indivíduos capazes de 'Shadow Step' conectando os fios. Como não havia obstáculos, configurá-los provavelmente seria fácil. Dependendo de quanto pudéssemos ganhar, não estaríamos conectando fios exclusivamente às grandes cidades, mas também às aldeias ao longo das linhas principais da rede. Tínhamos essa parte planejada também. Só tivemos que esperar pelo desenvolvimento de um transmissor.",
+        "Eu processaria aço mágico em cabos com um diâmetro de cerca de um centímetro e os conectaria a todas as principais cidades usando o ‘Passo nas Sombras’. Isso por si só não resolveria o problema, mas em conjunto com o dispositivo que Vesta e o resto desenvolveram, iria converter os pensamentos em voz e imagem. O dispositivo poderia funcionar mesmo sem mana, por isso os dispositivos puderam ser instalados assim que foram desenvolvidos. Portanto, tudo o que podíamos fazer era começar a preparar o aço mágico necessário.",
+        "Devido à nossa nação ter uma enorme população de monstros, os minérios de ferro armazenados em nossos armazéns se tornariam minérios mágicos com o tempo. Estaríamos processando-os em “Magic Steel String” e teríamos indivíduos capazes de ‘Passo nas Sombras’ conectando os fios. Como não havia obstáculos, configurá-los provavelmente seria fácil. Dependendo de quanto pudéssemos ganhar, não estaríamos conectando fios exclusivamente às grandes cidades, mas também às aldeias ao longo das linhas principais da rede. Tínhamos essa parte planejada também. Só tivemos que esperar pelo desenvolvimento de um transmissor.",
         "Vindo de um mundo profundamente definido pela Era da Informação, não poderia ignorar a importância da velocidade de transmissão.",
         "“O que você acha, não será conveniente depois de concluído?” Eu me gabei para Hinata.",
         "Assim que a rede de comunicação estivesse completa, nos concentraríamos na criação de oportunidades de recreação e no desenvolvimento de nossa cultura. Meus sonhos estavam ficando maiores a cada dia, deixando muito mais coisas para fazer. Eu esperava que, com a realização desses sonhos, pudéssemos finalmente viver uma vida segura e confortável.",
@@ -7323,7 +7323,7 @@
         },
         {
           "type": "p",
-          "text": "Sabendo que eu ainda não voltaria, Ranga parecia bastante ansioso. Eu vi que a cauda dele estava baixa, mas você não precisa se preocupar tanto. Apesar de minha aparência, ainda sou um Lorde Demônio, afinal. No momento eu não estava ficando descuidado e tinha 'Absolute Defense' rodando. Se eu realmente me deparasse com um ataque forte o suficiente para quebrá-lo, não seria inseguro para mim onde quer que eu fosse? O que Ranga estava fazendo é chamado de paranóia."
+          "text": "Sabendo que eu ainda não voltaria, Ranga parecia bastante ansioso. Eu vi que a cauda dele estava baixa, mas você não precisa se preocupar tanto. Apesar de minha aparência, ainda sou um Lorde Demônio, afinal. No momento eu não estava ficando descuidado e tinha ‘Defesa Absoluta’ rodando. Se eu realmente me deparasse com um ataque forte o suficiente para quebrá-lo, não seria inseguro para mim onde quer que eu fosse? O que Ranga estava fazendo é chamado de paranóia."
         },
         {
           "type": "p",
@@ -8561,7 +8561,7 @@
         "\"Entendido. Falando nisso, Rimuru-sama não está voltando também?”",
         "\"Não. Já que vim até aqui, quero visitar Fuze primeiro, antes de retornar.”",
         "“Se for esse o caso, você não deveria precisar de um guarda-costas para acompanhá-lo?”",
-        "Sabendo que eu ainda não voltaria, Ranga parecia bastante ansioso. Eu vi que a cauda dele estava baixa, mas você não precisa se preocupar tanto. Apesar de minha aparência, ainda sou um Lorde Demônio, afinal. No momento eu não estava ficando descuidado e tinha 'Absolute Defense' rodando. Se eu realmente me deparasse com um ataque forte o suficiente para quebrá-lo, não seria inseguro para mim onde quer que eu fosse? O que Ranga estava fazendo é chamado de paranóia.",
+        "Sabendo que eu ainda não voltaria, Ranga parecia bastante ansioso. Eu vi que a cauda dele estava baixa, mas você não precisa se preocupar tanto. Apesar de minha aparência, ainda sou um Lorde Demônio, afinal. No momento eu não estava ficando descuidado e tinha ‘Defesa Absoluta’ rodando. Se eu realmente me deparasse com um ataque forte o suficiente para quebrá-lo, não seria inseguro para mim onde quer que eu fosse? O que Ranga estava fazendo é chamado de paranóia.",
         "“Não haverá nenhum problema. Só vou bater um papo com ele. Se alguém justificasse alguma preocupação, seria Myourmiles. Ele parece ter se tornado alvo de algum nobre estranho. Não há como saber o que esse tipo de pessoa faria.”",
         "“Oh, você está se referindo àquele homem vulgar de antes? Devo ir mordê-lo até a morte?",
         "PAREUUU. Não faça esse tipo de coisa em cidades de outros reinos. Isso causará enormes problemas.",
@@ -10852,7 +10852,7 @@
         },
         {
           "type": "p",
-          "text": "Ao terminar minhas palavras, desativei a Ordem do Criador (Master Lock) na Beretta e transferi o “Master Access” para Ramiris. Após a transferência, eu só teria acesso como criador. Se alguma coisa acontecesse com Ramiris, o direito de comando retornaria para mim. Mas, enquanto as coisas não acabassem assim, Ramiris sempre seria o mestre de Beretta."
+          "text": "Ao terminar minhas palavras, desativei a Ordem do Criador (Master Lock) na Beretta e transferi o “Acesso Mestre” para Ramiris. Após a transferência, eu só teria acesso como criador. Se alguma coisa acontecesse com Ramiris, o direito de comando retornaria para mim. Mas, enquanto as coisas não acabassem assim, Ramiris sempre seria o mestre de Beretta."
         },
         {
           "type": "p",
@@ -11381,7 +11381,7 @@
         },
         {
           "type": "p",
-          "text": "Além disso, também havia dragões mais poderosos entre os Arch Dragons, eles eram os senhores dragões que representavam os quatro elementos. Depois de viver centenas de anos depois de evoluir para um Arco Dragão, e depois ter sua sabedoria aumentada ainda mais, esses eram os Senhores Dragões. Depois de evoluir, eles pareciam capazes de utilizar parte do poder do Spirit Dragon e não envelheciam mais à medida que envelheciam. Eles eram quase uma forma de vida semi-espiritual. Mas, ao contrário dos Dragões Verdadeiros, uma vez eliminados, eles morreram para sempre."
+          "text": "Além disso, também havia dragões mais poderosos entre os Arch Dragons, eles eram os senhores dragões que representavam os quatro elementos. Depois de viver centenas de anos depois de evoluir para um Arco Dragão, e depois ter sua sabedoria aumentada ainda mais, esses eram os Senhores Dragões. Depois de evoluir, eles pareciam capazes de utilizar parte do poder do Dragão Espiritual e não envelheciam mais à medida que envelheciam. Eles eram quase uma forma de vida semi-espiritual. Mas, ao contrário dos Dragões Verdadeiros, uma vez eliminados, eles morreram para sempre."
         },
         {
           "type": "p",
@@ -11721,7 +11721,7 @@
         },
         {
           "type": "p",
-          "text": "“Hmm, nós realmente precisamos disso? Porque, se tivermos esse tipo de instalação, ‘Return Whistle’ não venderá bem.”"
+          "text": "“Hmm, nós realmente precisamos disso? Porque, se tivermos esse tipo de instalação, ‘Apito de Retorno’ não venderá bem.”"
         },
         {
           "type": "p",
@@ -12328,7 +12328,7 @@
         "\"Isso é bom. Então, Beretta, prometa sua lealdade a Ramiris no futuro!”",
         "“Mesmo que eu me torne servo de Ramiris-sama, não esquecerei os atos graciosos feitos por Rimuru-sama. Se algum dia eu puder ser útil para você, basta dizer uma palavra.",
         "“Tudo bem, contarei com você então.”",
-        "Ao terminar minhas palavras, desativei a Ordem do Criador (Master Lock) na Beretta e transferi o “Master Access” para Ramiris. Após a transferência, eu só teria acesso como criador. Se alguma coisa acontecesse com Ramiris, o direito de comando retornaria para mim. Mas, enquanto as coisas não acabassem assim, Ramiris sempre seria o mestre de Beretta.",
+        "Ao terminar minhas palavras, desativei a Ordem do Criador (Master Lock) na Beretta e transferi o “Acesso Mestre” para Ramiris. Após a transferência, eu só teria acesso como criador. Se alguma coisa acontecesse com Ramiris, o direito de comando retornaria para mim. Mas, enquanto as coisas não acabassem assim, Ramiris sempre seria o mestre de Beretta.",
         "Agora eu poderia ficar tranquilo. Eu não seria criticado por Guy, e Beretta, como guarda de Ramiris, também era digna de confiança.",
         "Eu senti que havia surpreendentemente muitas maneiras de usar o labirinto. Superficialmente, parecia ser um meio promocional para atrair aventureiros. Mais nos bastidores, era um canal para Veldora se aliviar. Por último, como subproduto, transformou minérios de ferro em minérios de aço mágico usando altas concentrações de magia. Isso servirá. Parecia que ao pesquisar a misteriosa substância conhecida como “Magícula” neste mundo, conseguimos percorrer este labirinto de forma eficaz. Isso foi além da minha expectativa, o que aumentou a importância deste labirinto.",
         "Eu não tinha certeza sobre entregar a missão de proteger o lugar apenas para Treyni-san, mas agora com Beretta, eu estava muito mais seguro.",
@@ -12456,7 +12456,7 @@
         "Os Dragões Verdadeiros eram seres imortais, no entanto, as pessoas acreditavam que havia mais nesse atributo... mas de qualquer forma, vamos deixar isso de lado por enquanto.",
         "A origem dos dragões pode ser atribuída a este Dragão Rei Estrela, mais precisamente, pode ser atribuída ao animal de estimação dado a Milim pelo Dragão Rei Estrela, Dragão Espiritual (Dragão Elemental) {{FN:68}}.",
         "Comparando isso com a história que Elen me contou, aquele Dragão Espiritual era sem dúvida o falecido Dragão do Caos. Hoje em dia, em regiões com magias concentradas, parecia haver desova de Dragões Menores e dragões que herdaram mais elementos do Dragão Espiritual tornaram-se Dragões Maiores (Arch Dragons).",
-        "Além disso, também havia dragões mais poderosos entre os Arch Dragons, eles eram os senhores dragões que representavam os quatro elementos. Depois de viver centenas de anos depois de evoluir para um Arco Dragão, e depois ter sua sabedoria aumentada ainda mais, esses eram os Senhores Dragões. Depois de evoluir, eles pareciam capazes de utilizar parte do poder do Spirit Dragon e não envelheciam mais à medida que envelheciam. Eles eram quase uma forma de vida semi-espiritual. Mas, ao contrário dos Dragões Verdadeiros, uma vez eliminados, eles morreram para sempre.",
+        "Além disso, também havia dragões mais poderosos entre os Arch Dragons, eles eram os senhores dragões que representavam os quatro elementos. Depois de viver centenas de anos depois de evoluir para um Arco Dragão, e depois ter sua sabedoria aumentada ainda mais, esses eram os Senhores Dragões. Depois de evoluir, eles pareciam capazes de utilizar parte do poder do Dragão Espiritual e não envelheciam mais à medida que envelheciam. Eles eram quase uma forma de vida semi-espiritual. Mas, ao contrário dos Dragões Verdadeiros, uma vez eliminados, eles morreram para sempre.",
         "Lembrei-me que o dragão do céu que derrotei era um Arch Dragon, seu nível de ameaça estava no Rank Calamity. Os Lordes Dragões são mais fortes do que isso, eles provavelmente poderiam rivalizar com um Lorde Demônio. Em outras palavras, talvez eles pudessem competir com Clayman e Greater Spirits, ou talvez fossem ainda mais fortes que eles.",
         "Se eles tivessem uma piscina de magia tão grande, eles deveriam ser capazes de obter facilmente controle sobre os efeitos do terreno de cada andar.",
         "“Espere, não importa o quão forte eu seja, não serei capaz de capturar os poderosos senhores dragões!” Milim exclamou apressadamente, com medo de que eu tenha entendido mal.",
@@ -12540,7 +12540,7 @@
         "Não foi uma coisa totalmente ruim. O interior do labirinto estava cheio de magias, então o equipamento poderia até se tornar espadas mágicas ou lanças mágicas depois de algum tempo. Como eles estavam recebendo recompensas tão preciosas, era de se esperar que encontrassem perigo. Eles não morreriam enquanto tivessem uma “Pulseira da Ressurreição”, então seria mais emocionante ser cruel e, razoavelmente falando, mais interessante. Eu estava realmente ansioso para saber que tipo de reação os aventureiros dariam.",
         "E assim, o trabalho de inspeção do nível dez foi concluído.",
         "\"O que devemos fazer em seguida? Deveríamos criar uma instalação para comprar de volta os itens obtidos pelas pessoas dos monstros ou para eles depositarem os itens?”",
-        "“Hmm, nós realmente precisamos disso? Porque, se tivermos esse tipo de instalação, ‘Return Whistle’ não venderá bem.”",
+        "“Hmm, nós realmente precisamos disso? Porque, se tivermos esse tipo de instalação, ‘Apito de Retorno’ não venderá bem.”",
         "Suponho que isso também esteja certo. O comentário de Ramiris foi uma refutação direta. Ela tinha razão. Ela aparentemente era bastante perspicaz quando se tratava de dinheiro.",
         "“Na verdade, colocar este tipo de instalação em um nível com um ponto de salvamento torna-o sem sentido. Deveríamos talvez escolher os do meio, para fazer com que os níveis que terminam em cinco sejam zonas seguras?”",
         "“Hmm, hmm, isso deve funcionar!”",
@@ -18130,7 +18130,7 @@
         },
         {
           "type": "p",
-          "text": "[Nota 68] Este é um caso de confusão de anotação katakana. Sua anotação é “Elemental Dragon” quando é chamado de “Spirit Dragon” em Kanji. Estarei me referindo a ele como 'Spirit Dragon' para diferenciá-lo de 属性 竜 (Elemental Dragon), que é um tipo de Arch Dragon."
+          "text": "[Nota 68] Este é um caso de confusão de anotação katakana. Sua anotação é “Dragão Elemental” quando é chamado de “Dragão Espiritual” em Kanji. Estarei me referindo a ele como 'Dragão Espiritual' para diferenciá-lo de 属性 竜 (Dragão Elemental), que é um tipo de Arch Dragon."
         },
         {
           "type": "p",
@@ -18202,7 +18202,7 @@
         },
         {
           "type": "p",
-          "text": "[Nota 86] Kenki é um título que essa pessoa recebeu, é traduzido diretamente como “Sword Devil”."
+          "text": "[Nota 86] Kenki é um título que essa pessoa recebeu, é traduzido diretamente como “Demônio da Espada”."
         },
         {
           "type": "p",
@@ -18289,7 +18289,7 @@
         "[Nota 65] Para ser mais específico, o termo aqui é “不滅” (não pode ser destruído)",
         "[Nota 66] A palavra aqui é “大所帯”, que significa “uma grande organização (familiar)”, então é mais parecida com “Eu tenho um grupo enorme agora”. Mas, diabos, é muito saudável, então por que não família.",
         "[Nota 67] A frase usada aqui é “因子” que significa “fator”/”Elemento”, mas acho que é algo mais parecido com “linhagem”/”Gene” neste contexto. Mas como a forma de vida espiritual não tem realmente carne, isso realmente não se aplica.",
-        "[Nota 68] Este é um caso de confusão de anotação katakana. Sua anotação é “Elemental Dragon” quando é chamado de “Spirit Dragon” em Kanji. Estarei me referindo a ele como 'Spirit Dragon' para diferenciá-lo de 属性 竜 (Elemental Dragon), que é um tipo de Arch Dragon.",
+        "[Nota 68] Este é um caso de confusão de anotação katakana. Sua anotação é “Dragão Elemental” quando é chamado de “Dragão Espiritual” em Kanji. Estarei me referindo a ele como 'Dragão Espiritual' para diferenciá-lo de 属性 竜 (Dragão Elemental), que é um tipo de Arch Dragon.",
         "[Nota 69] Os nomes em kanji soam muito mais legais; eles são Dragão de Chama (火炎竜), Dragão de Gelo (冰雪竜), Dragão do Vento impetuoso (烈風竜), Dragão da Terra Despedaçada (地碎竜)",
         "[Nota 70] Esta é a parte em que reclamo sobre meus editores serem gaijin e autointerpretarem as fontes. Mas os sentimentos deles foram feridos e minha nota de rodapé foi removida, então estou colocando-a aqui novamente. Por que estou reclamando? Rimuru é basicamente um libtard.",
         "[Nota 71] No Japão, jogar com dinheiro é ilegal, mas ganhar pequenos brinquedos e outras bugigangas sem valor é bom. Depois, você pode visitar a loja localizada ao lado, onde você pode vender esses itens de maneira conveniente por dinheiro vivo, essa é a brecha.",
@@ -18307,7 +18307,7 @@
         "[Nota 83] 紅葉 Folha de outono",
         "[Nota 84] A fonte é: Cobra que fede a fera",
         "[Nota 85] Este estilo de esgrima também foi mencionado antes, irei me referir a ele como Oboro-Ryu, pois não há uma boa alternativa. “朧” (Oboro) significa nebuloso e pouco claro (também existem habilidades com esta palavra), “流” (Ryu) significa escola/estilo.",
-        "[Nota 86] Kenki é um título que essa pessoa recebeu, é traduzido diretamente como “Sword Devil”.",
+        "[Nota 86] Kenki é um título que essa pessoa recebeu, é traduzido diretamente como “Demônio da Espada”.",
         "[Nota 87] Ela conheceu Hakurou há cerca de 300 anos... Foi uma gravidez muuuito longa.",
         "[Nota 88] A fonte aqui afirma: 寝耳に水, que significa evento imprevisível",
         "[Nota 89] Este é um provérbio japonês 外堀を埋める, que significa que para atingir um determinado objetivo, primeiro devem ser dados alguns passos para se livrar do obstáculo. Nesse caso, acho que se refere ao fato da presença de Momiji ter livrado o fator calma de Hakurou. Mas, honestamente, parece muito fora de lugar, ou talvez apenas minha habilidade com o moonrune seja uma merda. Provavelmente o último.",
