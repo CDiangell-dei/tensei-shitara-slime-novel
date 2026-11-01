@@ -211,6 +211,12 @@ def download_one(entry, force_refresh_early=True):
                         if ln and not any(ns in ln.lower() for ns in NOISE_SUBSTRINGS)
                     ]
 
+            try:
+                from clean_web_novel_paragraphs import process_chapter_paragraphs
+                paragraphs, _, _ = process_chapter_paragraphs(paragraphs)
+            except Exception:
+                pass
+
             data = {
                 'id': entry['id'],
                 'number': entry['num'],
