@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-font="serif">
+<html lang="pt-BR" data-font="serif" data-palette="sepia">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="light">
   <script>
     try {
-      const savedScheme = localStorage.getItem('color-scheme');
-      if (savedScheme === 'light' || savedScheme === 'dark') {
-        document.querySelector('meta[name="color-scheme"]').content = savedScheme;
+      const savedPalette = localStorage.getItem('tensura_palette') || 'sepia';
+      const darkPalettes = ['dark', 'oled', 'coffee', 'midnight'];
+      let scheme = 'light';
+      if (darkPalettes.includes(savedPalette)) {
+        scheme = 'dark';
+      } else if (savedPalette === 'system') {
+        scheme = 'light dark';
       }
-      const savedPalette = localStorage.getItem('tensura_palette');
-      if (savedPalette) {
+      document.querySelector('meta[name="color-scheme"]').content = scheme;
+      if (savedPalette && savedPalette !== 'light' && savedPalette !== 'dark' && savedPalette !== 'system') {
         document.documentElement.dataset.palette = savedPalette;
+      } else {
+        delete document.documentElement.dataset.palette;
+      }
+      const savedFont = localStorage.getItem('tensura_font');
+      if (savedFont) {
+        document.documentElement.dataset.font = savedFont;
       }
     } catch (_) {}
   </script>
@@ -21,9 +31,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="assets/css/style.css?v=20261101_v19">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261101_v20">
   <link rel="icon" type="image/svg+xml" href="assets/images/slime.svg">
 </head>
 <body>
@@ -1015,21 +1024,30 @@
       <div class="settings-group">
         <span class="settings-label">Esquema de Cores &amp; Paleta</span>
         <div class="theme-options" role="group" aria-label="Escolha de tema">
-          <button type="button" class="btn-theme-opt" data-palette="system">Sistema</button>
-          <button type="button" class="btn-theme-opt" data-palette="dark">Noite</button>
-          <button type="button" class="btn-theme-opt" data-palette="light">Dia</button>
-          <button type="button" class="btn-theme-opt" data-palette="sepia">Sépia</button>
-          <button type="button" class="btn-theme-opt" data-palette="oled">OLED</button>
+          <button type="button" class="btn-theme-opt" data-palette="sepia"><span class="swatch-dot" style="background:#f4ecd8;border:1px solid #d4c29d;"></span>Sépia</button>
+          <button type="button" class="btn-theme-opt" data-palette="mint"><span class="swatch-dot" style="background:#eaf1ea;border:1px solid #c4d7c6;"></span>Menta</button>
+          <button type="button" class="btn-theme-opt" data-palette="parchment"><span class="swatch-dot" style="background:#f6efe0;border:1px solid #ddceb3;"></span>Pergaminho</button>
+          <button type="button" class="btn-theme-opt" data-palette="sakura"><span class="swatch-dot" style="background:#faf0f2;border:1px solid #e5ccd2;"></span>Sakura</button>
+          <button type="button" class="btn-theme-opt" data-palette="light"><span class="swatch-dot" style="background:#ffffff;border:1px solid #cbd5e1;"></span>Claro</button>
+          <button type="button" class="btn-theme-opt" data-palette="coffee"><span class="swatch-dot" style="background:#25201c;border:1px solid #4a3d31;"></span>Café</button>
+          <button type="button" class="btn-theme-opt" data-palette="midnight"><span class="swatch-dot" style="background:#0a0f1d;border:1px solid #21304a;"></span>Noite Nórdica</button>
+          <button type="button" class="btn-theme-opt" data-palette="dark"><span class="swatch-dot" style="background:#18181b;border:1px solid #3f3f46;"></span>Escuro</button>
+          <button type="button" class="btn-theme-opt" data-palette="oled"><span class="swatch-dot" style="background:#000000;border:1px solid #27272a;"></span>OLED</button>
+          <button type="button" class="btn-theme-opt" data-palette="system"><span class="swatch-dot" style="background:linear-gradient(135deg, #f8fafc 50%, #18181b 50%);border:1px solid #94a3b8;"></span>Sistema</button>
         </div>
       </div>
 
       <div class="settings-group">
         <span class="settings-label">Fonte Literária</span>
         <div class="font-options" role="group" aria-label="Escolha de fonte">
-          <button type="button" class="btn-font-opt" data-font="serif">Livro (Literata)</button>
-          <button type="button" class="btn-font-opt" data-font="sans">Moderna (Inter)</button>
-          <button type="button" class="btn-font-opt" data-font="dyslexic">Acessível</button>
-          <button type="button" class="btn-font-opt" data-font="mono">Mono</button>
+          <button type="button" class="btn-font-opt" data-font="serif" style="font-family:'Literata', serif;">Literata (Clássica)</button>
+          <button type="button" class="btn-font-opt" data-font="lora" style="font-family:'Lora', serif;">Lora (Editorial)</button>
+          <button type="button" class="btn-font-opt" data-font="merriweather" style="font-family:'Merriweather', serif;">Merriweather (Livro)</button>
+          <button type="button" class="btn-font-opt" data-font="crimson" style="font-family:'Crimson Pro', serif;">Crimson Pro (Fina)</button>
+          <button type="button" class="btn-font-opt" data-font="sans" style="font-family:'Inter', sans-serif;">Inter (Moderna)</button>
+          <button type="button" class="btn-font-opt" data-font="accessible" style="font-family:'Atkinson Hyperlegible', sans-serif;">Atkinson (Legível)</button>
+          <button type="button" class="btn-font-opt" data-font="dyslexic" style="font-family:'OpenDyslexic', sans-serif;">Dislexia</button>
+          <button type="button" class="btn-font-opt" data-font="mono" style="font-family:'Fira Code', monospace;">Fira (Mono)</button>
         </div>
       </div>
 
@@ -1233,7 +1251,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/soundtrack.js?v=20261101_v19" defer></script>
-  <script src="assets/js/app.js?v=20261101_v19" defer></script>
+  <script src="assets/js/soundtrack.js?v=20261101_v20" defer></script>
+  <script src="assets/js/app.js?v=20261101_v20" defer></script>
 </body>
 </html>

@@ -81,6 +81,111 @@ html[data-palette="sepia"] {
   --voice-telepathy: #5b21b6;
 }
 
+html[data-palette="mint"] {
+  --bg-primary: #eaf1ea;
+  --bg-secondary: #dbe7dc;
+  --bg-card: #f3f7f3;
+  --bg-card-hover: #e3ede3;
+  --header-glass: rgba(234, 241, 234, 0.94);
+  --text-primary: #193122;
+  --text-secondary: #274732;
+  --text-muted: #4e6b57;
+  --border-color: #c4d7c6;
+  --accent-color: #1e6b42;
+  --accent-hover: #144f30;
+  --accent-contrast: #ffffff;
+  --accent-light: rgba(30, 107, 66, 0.12);
+  --reader-bg: #edf3ed;
+  --reader-text: #162b1e;
+  --voice-sage-bg: rgba(30, 107, 66, 0.09);
+  --voice-sage-text: #144f30;
+  --voice-telepathy: #4c1d95;
+}
+
+html[data-palette="parchment"] {
+  --bg-primary: #f6efe0;
+  --bg-secondary: #ede1cb;
+  --bg-card: #fbf7ee;
+  --bg-card-hover: #f3e9d4;
+  --header-glass: rgba(246, 239, 224, 0.94);
+  --text-primary: #342718;
+  --text-secondary: #563f25;
+  --text-muted: #826645;
+  --border-color: #ddceb3;
+  --accent-color: #a16207;
+  --accent-hover: #854d0e;
+  --accent-contrast: #ffffff;
+  --accent-light: rgba(161, 98, 7, 0.12);
+  --reader-bg: #f8f2e5;
+  --reader-text: #2c1f11;
+  --voice-sage-bg: rgba(161, 98, 7, 0.09);
+  --voice-sage-text: #854d0e;
+  --voice-telepathy: #6b21a8;
+}
+
+html[data-palette="sakura"] {
+  --bg-primary: #faf0f2;
+  --bg-secondary: #f3e2e5;
+  --bg-card: #fdf6f7;
+  --bg-card-hover: #f6e6e9;
+  --header-glass: rgba(250, 240, 242, 0.94);
+  --text-primary: #3d2329;
+  --text-secondary: #5c353e;
+  --text-muted: #875762;
+  --border-color: #e5ccd2;
+  --accent-color: #be185d;
+  --accent-hover: #9d174d;
+  --accent-contrast: #ffffff;
+  --accent-light: rgba(190, 24, 93, 0.12);
+  --reader-bg: #fbf3f5;
+  --reader-text: #331c22;
+  --voice-sage-bg: rgba(190, 24, 93, 0.08);
+  --voice-sage-text: #9d174d;
+  --voice-telepathy: #701a75;
+}
+
+html[data-palette="coffee"] {
+  --bg-primary: #1c1815;
+  --bg-secondary: #161210;
+  --bg-card: #25201c;
+  --bg-card-hover: #2e2823;
+  --header-glass: rgba(28, 24, 21, 0.94);
+  --text-primary: #ede3d7;
+  --text-secondary: #d1c3b2;
+  --text-muted: #9c8b77;
+  --border-color: #3d342c;
+  --accent-color: #d97706;
+  --accent-hover: #f59e0b;
+  --accent-contrast: #1c1815;
+  --accent-light: rgba(217, 119, 6, 0.16);
+  --reader-bg: #1c1815;
+  --reader-text: #e8ded1;
+  --voice-sage-bg: rgba(217, 119, 6, 0.14);
+  --voice-sage-text: #fbbf24;
+  --voice-telepathy: #c084fc;
+}
+
+html[data-palette="midnight"] {
+  --bg-primary: #0a0f1d;
+  --bg-secondary: #070a14;
+  --bg-card: #111a2e;
+  --bg-card-hover: #17233d;
+  --header-glass: rgba(10, 15, 29, 0.94);
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #8496ad;
+  --border-color: #21304a;
+  --accent-color: #38bdf8;
+  --accent-hover: #7dd3fc;
+  --accent-contrast: #031525;
+  --accent-light: rgba(56, 189, 248, 0.15);
+  --reader-bg: #0a0f1d;
+  --reader-text: #e2e8f0;
+  --voice-sage-bg: rgba(56, 189, 248, 0.12);
+  --voice-sage-text: #7dd3fc;
+  --voice-telepathy: #a78bfa;
+}
+
 html[data-palette="oled"] {
   --bg-primary: #000000;
   --bg-secondary: #09090b;
@@ -95,15 +200,27 @@ html[data-palette="oled"] {
   --reader-text: #e4e4e7;
 }
 
-/* Opções Tipográficas */
+/* Opções Tipográficas Literárias */
 html[data-font="serif"] {
   --reader-font: 'Literata', 'Georgia', Cambria, serif;
+}
+html[data-font="lora"] {
+  --reader-font: 'Lora', 'Merriweather', 'Baskerville', Georgia, serif;
+}
+html[data-font="merriweather"] {
+  --reader-font: 'Merriweather', 'Georgia', Cambria, serif;
+}
+html[data-font="crimson"] {
+  --reader-font: 'Crimson Pro', 'EB Garamond', Garamond, 'Times New Roman', serif;
 }
 html[data-font="sans"] {
   --reader-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
+html[data-font="accessible"] {
+  --reader-font: 'Atkinson Hyperlegible', 'Verdana', sans-serif;
+}
 html[data-font="dyslexic"] {
-  --reader-font: 'OpenDyslexic', 'Verdana', 'Tahoma', sans-serif;
+  --reader-font: 'OpenDyslexic', 'Atkinson Hyperlegible', 'Verdana', 'Tahoma', sans-serif;
 }
 html[data-font="mono"] {
   --reader-font: 'Fira Code', 'Consolas', monospace;
@@ -1684,12 +1801,27 @@ dialog::backdrop {
 .theme-options {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 0.4rem;
+  gap: 0.45rem;
+}
+@media (max-width: 560px) {
+  .theme-options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 360px) {
+  .theme-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .font-options {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.45rem;
+}
+@media (max-width: 480px) {
+  .font-options {
+    grid-template-columns: 1fr;
+  }
 }
 .width-controls {
   display: grid;
@@ -1698,10 +1830,23 @@ dialog::backdrop {
   margin-top: 0.55rem;
 }
 
+.swatch-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 4px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
 .btn-theme-opt,
 .btn-font-opt,
 .btn-width-opt {
-  padding: 0.5rem 0.35rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.52rem 0.35rem;
   font-size: 0.78rem;
   font-weight: 700;
   border-radius: var(--radius-md);
@@ -1709,6 +1854,12 @@ dialog::backdrop {
   background: var(--bg-secondary);
   color: var(--text-primary);
   cursor: pointer;
+  transition: border-color var(--transition), background var(--transition), transform 0.1s ease;
+}
+.btn-theme-opt:active,
+.btn-font-opt:active,
+.btn-width-opt:active {
+  transform: scale(0.98);
 }
 .btn-theme-opt.active,
 .btn-font-opt.active,

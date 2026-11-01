@@ -21,7 +21,7 @@ const STORAGE_KEYS = {
 const ANIME_ADAPTED_MAX_LN_VOL = 11;
 const POST_ANIME_WN_ARCS = new Set(['arc-8', 'arc-9', 'arc-10', 'arc-extra-1', 'arc-extra-2', 'arc-extra-3']);
 const POST_ANIME_CULTURAL_CONCEPT_IDXS = new Set([3, 4, 6]);
-const APP_BUILD_VERSION = '20261101_v19';
+const APP_BUILD_VERSION = '20261101_v20';
 
 const AppState = {
   catalog: null,
@@ -43,8 +43,8 @@ const AppState = {
     useRatioOnly: false
   },
   settings: {
-    palette: 'system',        // 'system' | 'dark' | 'light' | 'sepia' | 'oled'
-    font: 'serif',            // 'serif' | 'sans' | 'dyslexic' | 'mono'
+    palette: 'sepia',         // 'sepia' (padrão) | 'mint' | 'parchment' | 'sakura' | 'light' | 'coffee' | 'midnight' | 'dark' | 'oled' | 'system'
+    font: 'serif',            // 'serif' | 'lora' | 'merriweather' | 'crimson' | 'sans' | 'accessible' | 'dyslexic' | 'mono'
     fontSize: 19,
     maxWidth: 820,
     culturalHints: true,
@@ -167,6 +167,18 @@ function loadStateFromStorage() {
     const rawSettings = localStorage.getItem(STORAGE_KEYS.SETTINGS);
     if (rawSettings) {
       AppState.settings = { ...AppState.settings, ...JSON.parse(rawSettings) };
+    } else {
+      const savedPalette = localStorage.getItem(STORAGE_KEYS.PALETTE);
+      if (savedPalette) {
+        AppState.settings.palette = savedPalette;
+      }
+      const savedFont = localStorage.getItem('tensura_font');
+      if (savedFont) {
+        AppState.settings.font = savedFont;
+      }
+    }
+    if (!AppState.settings.palette) {
+      AppState.settings.palette = 'sepia';
     }
     const rawHist = localStorage.getItem(STORAGE_KEYS.HISTORY);
     if (rawHist) {
@@ -196,21 +208,26 @@ function saveSettingsToStorage() {
 function applySettingsToDOM() {
   const root = document.documentElement;
   const metaScheme = document.querySelector('meta[name="color-scheme"]');
-  const p = AppState.settings.palette;
+  const p = AppState.settings.palette || 'sepia';
 
   // Mapear paleta escolhida para <meta name="color-scheme"> + data-palette
-  let schemeContent = 'light dark';
-  let customPalette = '';
+  let schemeContent = 'light';
+  let customPalette = p;
   if (p === 'dark') {
     schemeContent = 'dark';
+    customPalette = '';
   } else if (p === 'light') {
     schemeContent = 'light';
-  } else if (p === 'sepia') {
-    schemeContent = 'light';
-    customPalette = 'sepia';
-  } else if (p === 'oled') {
+    customPalette = '';
+  } else if (p === 'oled' || p === 'midnight' || p === 'coffee') {
     schemeContent = 'dark';
-    customPalette = 'oled';
+    customPalette = p;
+  } else if (p === 'sepia' || p === 'mint' || p === 'parchment' || p === 'sakura') {
+    schemeContent = 'light';
+    customPalette = p;
+  } else if (p === 'system') {
+    schemeContent = 'light dark';
+    customPalette = '';
   }
 
   if (metaScheme) metaScheme.content = schemeContent;
@@ -226,17 +243,16 @@ function applySettingsToDOM() {
       localStorage.removeItem(STORAGE_KEYS.PALETTE);
     } else {
       localStorage.setItem(STORAGE_KEYS.COLOR_SCHEME, schemeContent);
-      if (customPalette) {
-        localStorage.setItem(STORAGE_KEYS.PALETTE, customPalette);
-      } else {
-        localStorage.removeItem(STORAGE_KEYS.PALETTE);
-      }
+      localStorage.setItem(STORAGE_KEYS.PALETTE, p);
+    }
+    if (AppState.settings.font) {
+      localStorage.setItem('tensura_font', AppState.settings.font);
     }
   } catch (_) {}
 
-  root.dataset.font = AppState.settings.font;
-  root.style.setProperty('--reader-size', `${AppState.settings.fontSize}px`);
-  root.style.setProperty('--reader-max-width', `${AppState.settings.maxWidth}px`);
+  root.dataset.font = AppState.settings.font || 'serif';
+  root.style.setProperty('--reader-size', `${AppState.settings.fontSize || 19}px`);
+  root.style.setProperty('--reader-max-width', `${AppState.settings.maxWidth || 820}px`);
 
   // Sincronizar botões do painel de configurações
   document.querySelectorAll('.btn-theme-opt').forEach(btn => {
@@ -1647,7 +1663,8 @@ function renderReaderScreen() {
       const isBm = AppState.bookmarks.some(
         b => b.type === 'light_novel' && b.readingId === cur.id && b.chapterIndex === cur.chapterIndex && b.pIndex === pidx
       );
-      const richHtml = formatRichParagraph(block.text, vol.footnotes || {}, inlineGlossary, seenTermsInChapter);
+      const combinedFootnotes = Object.assign({}, vol.footnotes || {}, ch.footnotes || {});
+      const richHtml = formatRichParagraph(block.text, combinedFootnotes, inlineGlossary, seenTermsInChapter);
       return `<p class="novel-paragraph ${isBm ? 'bookmarked' : ''}" id="p-${pidx}" data-pidx="${pidx}">${richHtml}</p>`;
     }).join('');
 
@@ -1696,7 +1713,8 @@ function renderReaderScreen() {
       const isBm = AppState.bookmarks.some(
         b => b.type === 'web_novel' && b.readingId === cur.id && b.pIndex === pidx
       );
-      const richHtml = formatRichParagraph(p, {}, inlineGlossary, seenTermsInChapter);
+      const combinedFootnotes = Object.assign({}, ch.footnotes || {});
+      const richHtml = formatRichParagraph(p, combinedFootnotes, inlineGlossary, seenTermsInChapter);
       return `<p class="novel-paragraph ${isBm ? 'bookmarked' : ''}" id="p-${pidx}" data-pidx="${pidx}">${richHtml}</p>`;
     }).join('');
   }
@@ -2530,8 +2548,14 @@ function bindGlobalEvents() {
       }
     } else if (action === 'show-fn') {
       const fnNum = target.dataset.fn;
-      const fnTxt = AppState.currentReading.data?.footnotes?.[fnNum];
-      if (fnTxt) showCulturalNoteDialog(`📖 Nota Cultural / Tradução [${fnNum}]`, fnTxt);
+      const curData = AppState.currentReading.data;
+      const curCh = curData?.chapters?.[AppState.currentReading.chapterIndex];
+      const fnTxt = curCh?.footnotes?.[fnNum] || curData?.footnotes?.[fnNum];
+      if (fnTxt) {
+        const isLore = fnTxt.toLowerCase().includes('lore') || fnTxt.toLowerCase().includes('continuidade') || fnTxt.toLowerCase().includes('web novel');
+        const heading = isLore ? `🧭 Nota de Lore & Continuidade [${fnNum}]` : `📖 Nota Cultural / Tradução [${fnNum}]`;
+        showCulturalNoteDialog(heading, fnTxt);
+      }
     } else if (action === 'show-term') {
       const term = target.dataset.term;
       const gl = AppState.catalog?.cultural_guide?.inline_glossary?.[term];
