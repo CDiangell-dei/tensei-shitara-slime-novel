@@ -382,15 +382,32 @@ function normalizeScrollAnchor(anchorOrRatio) {
   };
 }
 
+function getReaderToolbarClearance() {
+  const readerView = document.getElementById('reader-view');
+  const toolbar = readerView ? readerView.querySelector('.reader-toolbar') : null;
+  if (!readerView || readerView.hidden || !toolbar) return 96;
+  const rect = toolbar.getBoundingClientRect();
+  return Math.max(72, Math.ceil(rect.bottom + 14));
+}
+
+function syncReaderToolbarOffset() {
+  const readerView = document.getElementById('reader-view');
+  const toolbar = readerView ? readerView.querySelector('.reader-toolbar') : null;
+  if (!readerView || readerView.hidden || !toolbar) return;
+  const bottomPx = Math.max(60, Math.ceil(toolbar.getBoundingClientRect().bottom));
+  readerView.style.setProperty('--reader-toolbar-offset', `${bottomPx}px`);
+}
+
 function findExactReadingAnchor() {
   const ratio = getScrollRatio();
   if (window.scrollY < 20) {
     return { pIndex: 0, pOffsetPx: null, scrollRatio: 0 };
   }
+  const clearance = getReaderToolbarClearance();
   const paras = document.querySelectorAll('#reader-text-container .novel-paragraph');
   for (const p of paras) {
     const rect = p.getBoundingClientRect();
-    if (rect.bottom > 85) {
+    if (rect.bottom > clearance) {
       return {
         pIndex: Number(p.dataset.pidx || 0),
         pOffsetPx: Math.round(rect.top),
@@ -1172,7 +1189,10 @@ function applyAnchorScrollOnce(cur) {
   if (!cur.useRatioOnly && typeof cur.pIndex === 'number') {
     const pEl = document.getElementById(`p-${cur.pIndex}`);
     if (pEl) {
-      const offset = typeof cur.pOffsetPx === 'number' ? cur.pOffsetPx : 105;
+      const clearance = getReaderToolbarClearance();
+      const offset = typeof cur.pOffsetPx === 'number'
+        ? Math.max(cur.pOffsetPx, clearance - 6)
+        : clearance;
       const targetTop = Math.max(0, window.scrollY + pEl.getBoundingClientRect().top - offset);
       window.scrollTo({ top: targetTop, behavior: 'instant' });
       return;
@@ -1216,6 +1236,7 @@ function restoreReaderScrollPosition(cur) {
 }
 
 function renderReaderScreen() {
+  const siteHeader = document.getElementById('site-header');
   const readerView = document.getElementById('reader-view');
   const mainArea = document.getElementById('content-area');
   const banner = document.getElementById('continue-banner');
@@ -1230,6 +1251,7 @@ function renderReaderScreen() {
 
   if (!readerView || !proseArea) return;
 
+  if (siteHeader) siteHeader.hidden = true;
   mainArea.hidden = true;
   if (banner) banner.hidden = true;
   readerView.hidden = false;
@@ -1390,6 +1412,7 @@ function renderReaderScreen() {
 
   renderReaderFooterNav(footerNav);
   updateAutosavePill(cur.scrollRatio || 0);
+  syncReaderToolbarOffset();
   restoreReaderScrollPosition(cur);
 }
 
@@ -1483,9 +1506,11 @@ function closeReader() {
   AppState.isRestoringScroll = false;
   persistReadingProgress({ force: true, inReader: false });
 
+  const siteHeader = document.getElementById('site-header');
   const readerView = document.getElementById('reader-view');
   const mainArea = document.getElementById('content-area');
   if (readerView) readerView.hidden = true;
+  if (siteHeader) siteHeader.hidden = false;
   if (mainArea) mainArea.hidden = false;
 
   AppState.currentReading.type = null;
@@ -1678,6 +1703,7 @@ function switchTab(tabName) {
   if (!['light-novel', 'web-novel', 'comparison', 'cultural', 'amazon'].includes(tabName)) return;
   AppState.currentTab = tabName;
 
+  const siteHeader = document.getElementById('site-header');
   const readerView = document.getElementById('reader-view');
   const mainArea = document.getElementById('content-area');
   if (readerView && !readerView.hidden) {
@@ -1685,8 +1711,11 @@ function switchTab(tabName) {
     AppState.isRestoringScroll = false;
     persistReadingProgress({ force: true, inReader: false });
     readerView.hidden = true;
+    if (siteHeader) siteHeader.hidden = false;
     mainArea.hidden = false;
     AppState.currentReading.type = null;
+  } else if (siteHeader) {
+    siteHeader.hidden = false;
   }
 
   document.querySelectorAll('.nav-tab').forEach(btn => {
@@ -2162,6 +2191,16 @@ function bindGlobalEvents() {
       if (target.dataset.chid) openWebNovelChapter(target.dataset.chid, 0);
     }
   });
+
+  // Manter altura da barra suspensa do leitor sincronizada em qualquer tela/quebra de linha
+  const readerToolbar = document.querySelector('#reader-view .reader-toolbar');
+  if (readerToolbar && typeof ResizeObserver !== 'undefined') {
+    const toolbarObserver = new ResizeObserver(() => {
+      syncReaderToolbarOffset();
+    });
+    toolbarObserver.observe(readerToolbar);
+  }
+  window.addEventListener('resize', syncReaderToolbarOffset, { passive: true });
 
   // Salvar progresso automaticamente ao parar de rolar (scrollend), minimizar aba ou fechar o navegador
   window.addEventListener('scrollend', () => {
