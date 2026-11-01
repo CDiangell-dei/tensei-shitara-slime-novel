@@ -6,7 +6,7 @@ Aplicação web estática, moderna e 100% em **Português Brasileiro (PT-BR)** d
 
 > 💡 **Projeto Livre & Código Aberto:** Este projeto é 100% comunitário, livre e sem fins lucrativos. Qualquer pessoa ou grupo que queira **clonar, modificar e traduzir para outros idiomas** tem total liberdade para fazer um fork e utilizá-lo como base! Veja a [seção de tradução](#-projeto-livre-aberto--tradução-para-outros-idiomas-fork--localização).
 
-Funciona diretamente no navegador (computador, tablet ou celular) pelo **GitHub Pages** ou localmente de forma 100% offline, contando com **salvamento automático de progresso** (`localStorage` + backup `.json`), separação estrita entre **Light Novel** e **Web Novel**, trilha sonora dinâmica por mudança de cena, **123 caixinhas de explicação interativas** (perfeitas para leituras ao vivo e streamers), centenas de ilustrações oficiais em WebP HD e links diretos para as edições oficiais na **Amazon Brasil**.
+Funciona diretamente no navegador (computador, tablet ou celular) pelo **GitHub Pages** ou localmente de forma 100% offline, contando com **salvamento automático de progresso** (`localStorage` + backup `.json`), separação estrita entre **Light Novel** e **Web Novel**, trilha sonora dinâmica por mudança de cena, **203 caixinhas de explicação interativas** (perfeitas para leituras ao vivo e streamers), centenas de ilustrações oficiais em WebP HD e links diretos para as edições oficiais na **Amazon Brasil**.
 
 ---
 
@@ -39,14 +39,14 @@ Funciona diretamente no navegador (computador, tablet ou celular) pelo **GitHub 
 
 ---
 
-### 4. 💡 Guia Interativo de Tensura & Caixinhas de Explicação (123 Termos)
+### 4. 💡 Guia Interativo de Tensura & Caixinhas de Explicação (203 Termos)
 *Recurso projetado especialmente para **transmissões ao vivo (streamers lendo em live)**, espectadores de chat e leitores que esquecem quem é quem na história.*
 
 - **Mecânica Discreta e Sem Poluição Visual**:
   - Cada termo recebe um destaque sutil **apenas na primeira vez em que aparece no capítulo**. Os parágrafos seguintes continuam 100% limpos.
 - **Consulta Instantânea em Menos de 0,1s**:
   - Clicou no termo, abre um modal leve (`💡 Guia de Tensura: ...`) explicando quem é o personagem ou o que faz a habilidade de forma objetiva e **livre de spoilers**. Clicou fora, o popup fecha e a leitura segue imediatamente.
-- **123 Verbetes Canônicos Cadastrados**:
+- **203 Verbetes Canônicos Cadastrados**:
   - **Personagens & Líderes**: Rimuru, Guy Crimson, Veldora, Milim, Diablo, Luminas, Hinata, Chloe, Yuuki, Laplace, Clayman, Feldway, Velgrynd, Velzard, Veldanava, Ciel, Zegion, Hakurou, Benimaru, Shion, Souei, Geld, Gabil, Ranga, Ramiris, Gazel, Myourmiles, Masayuki, Testarossa, Carrera, Ultima, Elmesia, Erald, Eren, Gobta, Rigurd, Shuna, Kurobee, Kumara, Adalman, Apito, Beretta, Treyni, Kaijin, Leon Cromwell, Dagruel, Dino, Carrion, Frey, Kagali, Michael, Rudra, Kondou, Damrada, Calgurio e mais.
   - **Sistemas de Poder & Lore**: Habilidade Suprema, Habilidade Única, Magículas, Voz do Mundo, Lorde Demônio Desperto, Semente de Lorde Demônio, Dragão Verdadeiro, Dragonoid, Corredor da Alma, Manas, Partículas Espirituais, Colapso Espiritual, Mundo Suspenso, Anti-Habilidade, Outromundista, Fator Dragão, Valor de Existência (EP), Classe Mítica, Nomeação, Festival da Colheita, Números Negros, Labirinto, Megiddo, Barreira Sagrada, Espírito Maior, Haki Dracônico, Pecados Capitais, Série das Virtudes, Série Angélica, Série Demoníaca.
   - **Nações & Alianças**: Octagrama, Trupe dos Arlequins, Doze Guardiões, Igreja Ocidental, Cavaleiros Sagrados, Sete Luminárias, Império Oriental, Dinastia de Sarion, Reino de Farmenas.
@@ -95,7 +95,7 @@ Tensei Shitara Slime Novel/
 │   ├── images/slime.svg              # Ícone vetorial do Rimuru
 │   └── illustrations/ln/             # Mais de 630 ilustrações oficiais em WebP HD
 ├── data/
-│   ├── catalog.json                  # Catálogo mestre (LN, WN, Resumo, Guia de 123 termos e trilhas sonoras)
+│   ├── catalog.json                  # Catálogo mestre (LN, WN, Resumo, Guia de 203 termos e trilhas sonoras)
 │   ├── illustrations.json            # Índice consolidado de ilustrações por volume
 │   ├── translation_comparison.json   # Histórico de auditoria e correções
 │   ├── light_novel/                  # 32 arquivos JSON (Vols. 1–23 + 8.5 + edições alternativas)
