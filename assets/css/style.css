@@ -863,6 +863,16 @@ button, select, input {
   margin-bottom: 0.75rem;
 }
 
+.vol-time-tag {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.ch-time-inline {
+  opacity: 0.9;
+  font-weight: 600;
+}
+
 .meta-pill-illus {
   background: var(--wn-light);
   color: var(--wn-accent);

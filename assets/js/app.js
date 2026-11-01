@@ -21,7 +21,7 @@ const STORAGE_KEYS = {
 const ANIME_ADAPTED_MAX_LN_VOL = 11;
 const POST_ANIME_WN_ARCS = new Set(['arc-8', 'arc-9', 'arc-10', 'arc-extra-1', 'arc-extra-2', 'arc-extra-3']);
 const POST_ANIME_CULTURAL_CONCEPT_IDXS = new Set([3, 4, 6]);
-const APP_BUILD_VERSION = '20261101_v23';
+const APP_BUILD_VERSION = '20261101_v24';
 
 const AppState = {
   catalog: null,
@@ -685,7 +685,9 @@ function renderLightNovelCatalog() {
 
   const info = AppState.catalog.light_novel.info;
   if (statsEl && info) {
-    statsEl.textContent = `${info.available_volumes_count} Volumes Offline • ${(info.total_illustrations || 0).toLocaleString('pt-BR')} Ilustrações WebP • ${(info.total_footnotes || 0)} Notas Culturais`;
+    const timeFormatted = info.total_reading_time_formatted || (info.total_reading_time_minutes ? formatReadingTime(info.total_reading_time_minutes) : '');
+    const timeInfo = timeFormatted ? `~${timeFormatted} de Leitura • ` : '';
+    statsEl.textContent = `${timeInfo}${info.available_volumes_count} Volumes Offline • ${(info.total_illustrations || 0).toLocaleString('pt-BR')} Ilustrações WebP • ${(info.total_footnotes || 0)} Notas Culturais`;
   }
 
   const volumes = (AppState.catalog.light_novel.volumes || []).filter(v => {
@@ -761,6 +763,9 @@ function renderLightNovelCatalog() {
         ${manualNotice}
       `;
 
+    const timeFormatted = vol.reading_time_formatted || (vol.reading_time_minutes ? formatReadingTime(vol.reading_time_minutes) : '');
+    const timeBadge = timeFormatted ? `<span class="vol-time-tag" title="Tempo estimado de leitura do volume completo">⏱️ ~${escapeHtml(timeFormatted)}</span> • ` : '';
+
     return `
       <article class="volume-card ${deferredCls}">
         <div>
@@ -782,7 +787,7 @@ function renderLightNovelCatalog() {
         <div>
           ${pct > 0 ? `<div class="vol-progress-strip" aria-hidden="true"><div class="vol-progress-fill" style="width:${pct}%"></div></div>` : ''}
           <div class="volume-meta">
-            <span>📖 ${vol.chapter_count} seções • ${(vol.paragraph_count || 0).toLocaleString('pt-BR')} §</span>
+            <span>${timeBadge}📖 ${vol.chapter_count} seções • ${(vol.paragraph_count || 0).toLocaleString('pt-BR')} §</span>
             ${illusBtn}
           </div>
           <div class="volume-actions">
@@ -847,7 +852,9 @@ function renderWebNovelCatalog() {
 
   const info = AppState.catalog.web_novel.info;
   if (statsEl && info) {
-    statsEl.textContent = `${info.downloaded_count}/${info.total_chapters} Capítulos Offline • ${info.main_chapters_count} Principais + ${info.extra_chapters_count} Extras`;
+    const timeFormatted = info.total_reading_time_formatted || (info.total_reading_time_minutes ? formatReadingTime(info.total_reading_time_minutes) : '');
+    const timeInfo = timeFormatted ? `~${timeFormatted} de Leitura • ` : '';
+    statsEl.textContent = `${timeInfo}${info.downloaded_count}/${info.total_chapters} Capítulos Offline • ${info.main_chapters_count} Principais + ${info.extra_chapters_count} Extras`;
   }
 
   const arcs = AppState.catalog.web_novel.arcs || [];
@@ -928,7 +935,7 @@ function renderWebNovelCatalog() {
             <span class="ch-num">${escapeHtml(ch.display_num || `Capítulo ${ch.num}`)}</span>
             <span class="ch-title ${showChTitle ? '' : 'is-masked-spoiler'}">${showChTitle ? escapeHtml(ch.title) : 'Título ocultado contra spoilers'}</span>
           </span>
-          <span class="ch-status-pill">${statusLabel}</span>
+          <span class="ch-status-pill">${ch.reading_time_formatted ? `<span class="ch-time-inline">⏱️ ~${ch.reading_time_formatted}</span> • ` : ''}${statusLabel}</span>
         </button>
       `;
     }).join('');
@@ -937,7 +944,7 @@ function renderWebNovelCatalog() {
       <details class="arc-details ${extraCls}" ${shouldOpen}>
         <summary class="arc-summary">
           <span>
-            <span class="arc-title-text">${escapeHtml(safeArcTitle)} (${arcChs.length} capítulos)</span>
+            <span class="arc-title-text">${escapeHtml(safeArcTitle)} (${arcChs.length} capítulos${arc.reading_time_formatted ? ` • ⏱️ ~${arc.reading_time_formatted}` : ''})</span>
             <span class="arc-desc-text">${escapeHtml(safeArcDesc)}</span>
           </span>
         </summary>
@@ -1602,9 +1609,11 @@ function renderReaderScreen() {
     }
 
     // Preencher seletor de seções/capítulos do volume
-    chSelect.innerHTML = vol.chapters.map((c, idx) =>
-      `<option value="${idx}" ${idx === cur.chapterIndex ? 'selected' : ''}>${idx + 1}. ${escapeHtml(c.title)}</option>`
-    ).join('');
+    chSelect.innerHTML = vol.chapters.map((c, idx) => {
+      const timeLabel = c.reading_time_formatted || (c.reading_time_minutes ? formatReadingTime(c.reading_time_minutes) : '');
+      const timeTag = timeLabel ? ` (~${timeLabel})` : '';
+      return `<option value="${idx}" ${idx === cur.chapterIndex ? 'selected' : ''}>${idx + 1}. ${escapeHtml(c.title)}${timeTag}</option>`;
+    }).join('');
 
     // Botão de galeria
     const illusList = (vol.illustrations && vol.illustrations.length > 0)
@@ -1614,7 +1623,7 @@ function renderReaderScreen() {
     btnGallery.dataset.vol = cur.baseVolumeId;
 
     const pCount = (ch.paragraphs || []).length;
-    const estMin = Math.max(1, Math.ceil(pCount / 10));
+    const chTime = ch.reading_time_formatted || formatReadingTime(ch.reading_time_minutes || Math.ceil(pCount / 10));
 
     headerArea.innerHTML = `
       <div class="vol-title">${escapeHtml(vol.title)} • ${escapeHtml(vol.edition || '')}</div>
@@ -1622,7 +1631,7 @@ function renderReaderScreen() {
       <div class="ch-meta-row">
         <span>Seção ${cur.chapterIndex + 1} de ${vol.chapters.length}</span>
         <span>•</span>
-        <span>Leitura estimada: ~${estMin} min</span>
+        <span>⏱️ Leitura estimada: ~${chTime}</span>
         ${illusList.length > 0 ? `<button type="button" class="meta-pill-illus" data-action="open-gallery-current">🖼️ Galeria do Volume (${illusList.length})</button>` : ''}
       </div>
     `;
@@ -1700,12 +1709,14 @@ function renderReaderScreen() {
         : 'Salvar ponto atual na Web Novel e abrir a Light Novel');
     }
 
-    chSelect.innerHTML = wnChapters.map(c =>
-      `<option value="${escapeAttr(c.id)}" ${c.id === cur.id ? 'selected' : ''}>${escapeHtml(c.display_num)}: ${escapeHtml(c.title)}</option>`
-    ).join('');
+    chSelect.innerHTML = wnChapters.map(c => {
+      const timeLabel = c.reading_time_formatted || (c.reading_time_minutes ? formatReadingTime(c.reading_time_minutes) : '');
+      const timeTag = timeLabel ? ` (~${timeLabel})` : '';
+      return `<option value="${escapeAttr(c.id)}" ${c.id === cur.id ? 'selected' : ''}>${escapeHtml(c.display_num)}: ${escapeHtml(c.title)}${timeTag}</option>`;
+    }).join('');
 
     const paras = ch.paragraphs || [];
-    const estMin = Math.max(1, Math.ceil(paras.length / 10));
+    const chTime = ch.reading_time_formatted || formatReadingTime(ch.reading_time_minutes || Math.ceil(paras.length / 10));
 
     headerArea.innerHTML = `
       <div class="vol-title is-wn-kicker">Tensei Shitara Slime Datta Ken — Web Novel Original</div>
@@ -1713,7 +1724,7 @@ function renderReaderScreen() {
       <div class="ch-meta-row">
         <span>${paras.length} parágrafos</span>
         <span>•</span>
-        <span>Leitura estimada: ~${estMin} min</span>
+        <span>⏱️ Leitura estimada: ~${chTime}</span>
         <span>•</span>
         <span>Fonte: Central Novel PT-BR</span>
       </div>
@@ -2706,4 +2717,14 @@ function escapeHtml(str) {
 
 function escapeAttr(str) {
   return escapeHtml(str);
+}
+
+function formatReadingTime(minutes) {
+  const m = Math.max(1, Math.round(Number(minutes) || 1));
+  const hours = Math.floor(m / 60);
+  const remMin = m % 60;
+  if (hours > 0) {
+    return remMin > 0 ? `${hours}h ${remMin}min` : `${hours}h`;
+  }
+  return `${remMin} min`;
 }

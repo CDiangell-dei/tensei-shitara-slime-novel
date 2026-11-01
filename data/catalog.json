@@ -17,7 +17,10 @@
       "total_illustrations": 442,
       "total_footnotes": 571,
       "total_paragraphs": 100903,
-      "status": "24 Volumes Offline — Obra 100% Completa (Vols. 1–23 + 8.5) + Dupla Tradução nos Vols. 6–13"
+      "status": "24 Volumes Offline — Obra 100% Completa (Vols. 1–23 + 8.5) + Dupla Tradução nos Vols. 6–13",
+      "total_words": 2318404,
+      "total_reading_time_minutes": 11630,
+      "total_reading_time_formatted": "193h 50min"
     },
     "volumes": [
       {
@@ -185,7 +188,10 @@
         ],
         "footnotes_count": 0,
         "chapter_count": 11,
-        "paragraph_count": 2987
+        "paragraph_count": 2987,
+        "word_count": 80634,
+        "reading_time_minutes": 404,
+        "reading_time_formatted": "6h 44min"
       },
       {
         "id": "vol-2",
@@ -366,7 +372,10 @@
         ],
         "footnotes_count": 0,
         "chapter_count": 10,
-        "paragraph_count": 2772
+        "paragraph_count": 2772,
+        "word_count": 88594,
+        "reading_time_minutes": 444,
+        "reading_time_formatted": "7h 24min"
       },
       {
         "id": "vol-3",
@@ -561,7 +570,10 @@
         ],
         "footnotes_count": 0,
         "chapter_count": 9,
-        "paragraph_count": 2974
+        "paragraph_count": 2974,
+        "word_count": 91343,
+        "reading_time_minutes": 458,
+        "reading_time_formatted": "7h 38min"
       },
       {
         "id": "vol-4",
@@ -763,7 +775,10 @@
         ],
         "footnotes_count": 0,
         "chapter_count": 10,
-        "paragraph_count": 3075
+        "paragraph_count": 3075,
+        "word_count": 93152,
+        "reading_time_minutes": 467,
+        "reading_time_formatted": "7h 47min"
       },
       {
         "id": "vol-5",
@@ -972,7 +987,10 @@
         ],
         "footnotes_count": 0,
         "chapter_count": 9,
-        "paragraph_count": 3187
+        "paragraph_count": 3187,
+        "word_count": 89033,
+        "reading_time_minutes": 446,
+        "reading_time_formatted": "7h 26min"
       },
       {
         "id": "vol-6",
@@ -1139,7 +1157,10 @@
         ],
         "footnotes_count": 50,
         "chapter_count": 13,
-        "paragraph_count": 7079
+        "paragraph_count": 7079,
+        "word_count": 116707,
+        "reading_time_minutes": 587,
+        "reading_time_formatted": "9h 47min"
       },
       {
         "id": "vol-7",
@@ -1306,7 +1327,10 @@
         ],
         "footnotes_count": 90,
         "chapter_count": 13,
-        "paragraph_count": 6396
+        "paragraph_count": 6396,
+        "word_count": 115228,
+        "reading_time_minutes": 578,
+        "reading_time_formatted": "9h 38min"
       },
       {
         "id": "vol-8",
@@ -1424,7 +1448,10 @@
         ],
         "footnotes_count": 90,
         "chapter_count": 10,
-        "paragraph_count": 3553
+        "paragraph_count": 3553,
+        "word_count": 102836,
+        "reading_time_minutes": 515,
+        "reading_time_formatted": "8h 35min"
       },
       {
         "id": "vol-8-5",
@@ -1472,7 +1499,10 @@
         ],
         "footnotes_count": 0,
         "chapter_count": 15,
-        "paragraph_count": 998
+        "paragraph_count": 998,
+        "word_count": 24887,
+        "reading_time_minutes": 125,
+        "reading_time_formatted": "2h 5min"
       },
       {
         "id": "vol-9",
@@ -1604,7 +1634,10 @@
         ],
         "footnotes_count": 18,
         "chapter_count": 14,
-        "paragraph_count": 4589
+        "paragraph_count": 4589,
+        "word_count": 107786,
+        "reading_time_minutes": 540,
+        "reading_time_formatted": "9h"
       },
       {
         "id": "vol-10",
@@ -1757,7 +1790,10 @@
         ],
         "footnotes_count": 21,
         "chapter_count": 12,
-        "paragraph_count": 5397
+        "paragraph_count": 5397,
+        "word_count": 112685,
+        "reading_time_minutes": 566,
+        "reading_time_formatted": "9h 26min"
       },
       {
         "id": "vol-11",
@@ -1910,7 +1946,10 @@
         ],
         "footnotes_count": 15,
         "chapter_count": 10,
-        "paragraph_count": 5328
+        "paragraph_count": 5328,
+        "word_count": 114348,
+        "reading_time_minutes": 573,
+        "reading_time_formatted": "9h 33min"
       },
       {
         "id": "vol-12",
@@ -2070,7 +2109,10 @@
         ],
         "footnotes_count": 20,
         "chapter_count": 11,
-        "paragraph_count": 3733
+        "paragraph_count": 3733,
+        "word_count": 100318,
+        "reading_time_minutes": 503,
+        "reading_time_formatted": "8h 23min"
       },
       {
         "id": "vol-13",
@@ -2230,7 +2272,10 @@
         ],
         "footnotes_count": 8,
         "chapter_count": 11,
-        "paragraph_count": 5594
+        "paragraph_count": 5594,
+        "word_count": 113346,
+        "reading_time_minutes": 570,
+        "reading_time_formatted": "9h 30min"
       },
       {
         "id": "vol-14",
@@ -2383,7 +2428,10 @@
         ],
         "footnotes_count": 9,
         "chapter_count": 12,
-        "paragraph_count": 3261
+        "paragraph_count": 3261,
+        "word_count": 93083,
+        "reading_time_minutes": 468,
+        "reading_time_formatted": "7h 48min"
       },
       {
         "id": "vol-15",
@@ -2501,7 +2549,10 @@
         ],
         "footnotes_count": 37,
         "chapter_count": 10,
-        "paragraph_count": 5347
+        "paragraph_count": 5347,
+        "word_count": 113155,
+        "reading_time_minutes": 568,
+        "reading_time_formatted": "9h 28min"
       },
       {
         "id": "vol-16",
@@ -2752,7 +2803,10 @@
         ],
         "footnotes_count": 15,
         "chapter_count": 8,
-        "paragraph_count": 3256
+        "paragraph_count": 3256,
+        "word_count": 88901,
+        "reading_time_minutes": 446,
+        "reading_time_formatted": "7h 26min"
       },
       {
         "id": "vol-17",
@@ -2905,7 +2959,10 @@
         ],
         "footnotes_count": 17,
         "chapter_count": 8,
-        "paragraph_count": 2853
+        "paragraph_count": 2853,
+        "word_count": 85887,
+        "reading_time_minutes": 432,
+        "reading_time_formatted": "7h 12min"
       },
       {
         "id": "vol-18",
@@ -3030,7 +3087,10 @@
         ],
         "footnotes_count": 57,
         "chapter_count": 10,
-        "paragraph_count": 6061
+        "paragraph_count": 6061,
+        "word_count": 94443,
+        "reading_time_minutes": 473,
+        "reading_time_formatted": "7h 53min"
       },
       {
         "id": "vol-19",
@@ -3078,7 +3138,10 @@
         ],
         "footnotes_count": 81,
         "chapter_count": 10,
-        "paragraph_count": 2986
+        "paragraph_count": 2986,
+        "word_count": 90837,
+        "reading_time_minutes": 456,
+        "reading_time_formatted": "7h 36min"
       },
       {
         "id": "vol-20",
@@ -3231,7 +3294,10 @@
         ],
         "footnotes_count": 42,
         "chapter_count": 9,
-        "paragraph_count": 3044
+        "paragraph_count": 3044,
+        "word_count": 97653,
+        "reading_time_minutes": 490,
+        "reading_time_formatted": "8h 10min"
       },
       {
         "id": "vol-21",
@@ -3349,7 +3415,10 @@
         ],
         "footnotes_count": 0,
         "chapter_count": 9,
-        "paragraph_count": 2734
+        "paragraph_count": 2734,
+        "word_count": 78903,
+        "reading_time_minutes": 396,
+        "reading_time_formatted": "6h 36min"
       },
       {
         "id": "vol-22",
@@ -3474,7 +3543,10 @@
         ],
         "footnotes_count": 0,
         "chapter_count": 6,
-        "paragraph_count": 4102
+        "paragraph_count": 4102,
+        "word_count": 91308,
+        "reading_time_minutes": 458,
+        "reading_time_formatted": "7h 38min"
       },
       {
         "id": "vol-23",
@@ -3592,7 +3664,10 @@
         ],
         "footnotes_count": 0,
         "chapter_count": 10,
-        "paragraph_count": 9597
+        "paragraph_count": 9597,
+        "word_count": 133337,
+        "reading_time_minutes": 667,
+        "reading_time_formatted": "11h 7min"
       }
     ],
     "future_volumes": []
@@ -3607,7 +3682,10 @@
       "main_chapters_count": 255,
       "extra_chapters_count": 48,
       "downloaded_count": 303,
-      "status": "100% Completa Offline (255 Capítulos Principais + 48 Capítulos Extras)"
+      "status": "100% Completa Offline (255 Capítulos Principais + 48 Capítulos Extras)",
+      "total_words": 926556,
+      "total_reading_time_minutes": 4635,
+      "total_reading_time_formatted": "77h 15min"
     },
     "arcs": [
       {
@@ -3619,7 +3697,10 @@
           0,
           18.9
         ],
-        "desc": "Satoru Mikami reencarna como um Slime, faz pacto de amizade com o Dragão da Tempestade Veldora, assume o nome Rimuru Tempest, evolui os Goblins e Lobos da Presa e visita o Reino Armado de Dwargon."
+        "desc": "Satoru Mikami reencarna como um Slime, faz pacto de amizade com o Dragão da Tempestade Veldora, assume o nome Rimuru Tempest, evolui os Goblins e Lobos da Presa e visita o Reino Armado de Dwargon.",
+        "word_count": 48911,
+        "reading_time_minutes": 245,
+        "reading_time_formatted": "4h 5min"
       },
       {
         "id": "arc-2",
@@ -3630,7 +3711,10 @@
           19,
           44
         ],
-        "desc": "O encontro com Shizu Izawa, a chegada dos Ogros sobreviventes (que evoluem para Kijin), a invasão de 200 mil Orcs comandados pelo Orc Desastre Geld e a fundação da Aliança da Grande Floresta de Jura."
+        "desc": "O encontro com Shizu Izawa, a chegada dos Ogros sobreviventes (que evoluem para Kijin), a invasão de 200 mil Orcs comandados pelo Orc Desastre Geld e a fundação da Aliança da Grande Floresta de Jura.",
+        "word_count": 64017,
+        "reading_time_minutes": 321,
+        "reading_time_formatted": "5h 21min"
       },
       {
         "id": "arc-3",
@@ -3641,7 +3725,10 @@
           45,
           64
         ],
-        "desc": "A visita explosiva da Lorde Demônio Milim Nava, os tratados diplomáticos e a jornada de Rimuru até o Reino de Ingrassia para ensinar e salvar os alunos de Shizu."
+        "desc": "A visita explosiva da Lorde Demônio Milim Nava, os tratados diplomáticos e a jornada de Rimuru até o Reino de Ingrassia para ensinar e salvar os alunos de Shizu.",
+        "word_count": 56028,
+        "reading_time_minutes": 278,
+        "reading_time_formatted": "4h 38min"
       },
       {
         "id": "arc-4",
@@ -3652,7 +3739,10 @@
           65,
           83
         ],
-        "desc": "O ataque covarde do Reino de Farmas, o despertar de Rimuru como Verdadeiro Lorde Demônio com o feitiço Megiddo, a libertação de Veldora e o julgamento de Clayman no Walpurgis."
+        "desc": "O ataque covarde do Reino de Farmas, o despertar de Rimuru como Verdadeiro Lorde Demônio com o feitiço Megiddo, a libertação de Veldora e o julgamento de Clayman no Walpurgis.",
+        "word_count": 65133,
+        "reading_time_minutes": 325,
+        "reading_time_formatted": "5h 25min"
       },
       {
         "id": "arc-5",
@@ -3663,7 +3753,10 @@
           84,
           97
         ],
-        "desc": "A queda definitiva de Farmas, as manipulações nos bastidores da Igreja Santa Ocidental e a revanche decisiva entre Rimuru e Hinata Sakaguchi."
+        "desc": "A queda definitiva de Farmas, as manipulações nos bastidores da Igreja Santa Ocidental e a revanche decisiva entre Rimuru e Hinata Sakaguchi.",
+        "word_count": 45767,
+        "reading_time_minutes": 228,
+        "reading_time_formatted": "3h 48min"
       },
       {
         "id": "arc-6",
@@ -3674,7 +3767,10 @@
           98,
           119
         ],
-        "desc": "O Festival de Fundação de Tempest, o torneio marcial com a estreia cômica do herói Masayuki e a inauguração da Masmorra Subterrânea de 100 andares."
+        "desc": "O Festival de Fundação de Tempest, o torneio marcial com a estreia cômica do herói Masayuki e a inauguração da Masmorra Subterrânea de 100 andares.",
+        "word_count": 68091,
+        "reading_time_minutes": 340,
+        "reading_time_formatted": "5h 40min"
       },
       {
         "id": "arc-7",
@@ -3685,7 +3781,10 @@
           120,
           136
         ],
-        "desc": "O mistério temporal envolvendo Chloe e Hinata, o duelo entre Leon Cromwell e Yuuki Kagurazaka e a fuga de Yuuki rumo ao Império Oriental."
+        "desc": "O mistério temporal envolvendo Chloe e Hinata, o duelo entre Leon Cromwell e Yuuki Kagurazaka e a fuga de Yuuki rumo ao Império Oriental.",
+        "word_count": 46992,
+        "reading_time_minutes": 237,
+        "reading_time_formatted": "3h 57min"
       },
       {
         "id": "arc-8",
@@ -3696,7 +3795,10 @@
           137,
           161.9
         ],
-        "desc": "Quase um milhão de soldados blindados do Império marcham contra Tempest e enfrentam o terror absoluto dos Guardiões do Labirinto e da Legião Negra."
+        "desc": "Quase um milhão de soldados blindados do Império marcham contra Tempest e enfrentam o terror absoluto dos Guardiões do Labirinto e da Legião Negra.",
+        "word_count": 83580,
+        "reading_time_minutes": 416,
+        "reading_time_formatted": "6h 56min"
       },
       {
         "id": "arc-9",
@@ -3707,7 +3809,10 @@
           162,
           185.9
         ],
-        "desc": "A evolução dos 12 Patronos de Rimuru para Lordes Demônios Despertos, o embate contra Velgrynd, o nascimento de Ciel e a reviravolta na Capital Imperial."
+        "desc": "A evolução dos 12 Patronos de Rimuru para Lordes Demônios Despertos, o embate contra Velgrynd, o nascimento de Ciel e a reviravolta na Capital Imperial.",
+        "word_count": 73244,
+        "reading_time_minutes": 369,
+        "reading_time_formatted": "6h 9min"
       },
       {
         "id": "arc-10",
@@ -3718,7 +3823,10 @@
           186,
           249
         ],
-        "desc": "A guerra apocalíptica contra o exército celestial, o confronto final no Fim do Espaço-Tempo contra Yuuki Kagurazaka e o epílogo da reencarnação de Satoru."
+        "desc": "A guerra apocalíptica contra o exército celestial, o confronto final no Fim do Espaço-Tempo contra Yuuki Kagurazaka e o epílogo da reencarnação de Satoru.",
+        "word_count": 208598,
+        "reading_time_minutes": 1045,
+        "reading_time_formatted": "17h 25min"
       },
       {
         "id": "arc-extra-1",
@@ -3729,7 +3837,10 @@
           1,
           26
         ],
-        "desc": "Após o fim da Guerra Tenma, Rimuru decide viajar incógnito pelo mundo como um aventureiro comum, envolvendo-se em intrigas acadêmicas e conspirações reais."
+        "desc": "Após o fim da Guerra Tenma, Rimuru decide viajar incógnito pelo mundo como um aventureiro comum, envolvendo-se em intrigas acadêmicas e conspirações reais.",
+        "word_count": 78047,
+        "reading_time_minutes": 391,
+        "reading_time_formatted": "6h 31min"
       },
       {
         "id": "arc-extra-2",
@@ -3740,7 +3851,10 @@
           27,
           45
         ],
-        "desc": "Veldora, Ramiris e Beretta são transportados acidentalmente para um universo futurista cibernético ameaçado por invasores dimensionais."
+        "desc": "Veldora, Ramiris e Beretta são transportados acidentalmente para um universo futurista cibernético ameaçado por invasores dimensionais.",
+        "word_count": 81835,
+        "reading_time_minutes": 408,
+        "reading_time_formatted": "6h 48min"
       },
       {
         "id": "arc-extra-3",
@@ -3751,7 +3865,10 @@
           46,
           48
         ],
-        "desc": "Contos especiais de cotidiano em Tempest: águas termais (Onsen), bastidores e o grande sorteio do Festival da Academia."
+        "desc": "Contos especiais de cotidiano em Tempest: águas termais (Onsen), bastidores e o grande sorteio do Festival da Academia.",
+        "word_count": 6313,
+        "reading_time_minutes": 32,
+        "reading_time_formatted": "32 min"
       }
     ],
     "chapters": [
@@ -3766,7 +3883,10 @@
         "file": "capitulo_000.json",
         "arc_id": "arc-1",
         "paragraph_count": 100,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 1629,
+        "reading_time_minutes": 8,
+        "reading_time_formatted": "8 min"
       },
       {
         "seq": 1,
@@ -3779,7 +3899,10 @@
         "file": "capitulo_001.json",
         "arc_id": "arc-1",
         "paragraph_count": 199,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2334,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 2,
@@ -3792,7 +3915,10 @@
         "file": "capitulo_002.json",
         "arc_id": "arc-1",
         "paragraph_count": 202,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2491,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 3,
@@ -3805,7 +3931,10 @@
         "file": "capitulo_003.json",
         "arc_id": "arc-1",
         "paragraph_count": 193,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2856,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 4,
@@ -3818,7 +3947,10 @@
         "file": "capitulo_004.json",
         "arc_id": "arc-1",
         "paragraph_count": 227,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2855,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 5,
@@ -3831,7 +3963,10 @@
         "file": "capitulo_005.json",
         "arc_id": "arc-1",
         "paragraph_count": 168,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2335,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 6,
@@ -3844,7 +3979,10 @@
         "file": "capitulo_006.json",
         "arc_id": "arc-1",
         "paragraph_count": 186,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 1794,
+        "reading_time_minutes": 9,
+        "reading_time_formatted": "9 min"
       },
       {
         "seq": 7,
@@ -3857,7 +3995,10 @@
         "file": "capitulo_007.json",
         "arc_id": "arc-1",
         "paragraph_count": 218,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2232,
+        "reading_time_minutes": 11,
+        "reading_time_formatted": "11 min"
       },
       {
         "seq": 8,
@@ -3870,7 +4011,10 @@
         "file": "capitulo_008.json",
         "arc_id": "arc-1",
         "paragraph_count": 185,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 1934,
+        "reading_time_minutes": 10,
+        "reading_time_formatted": "10 min"
       },
       {
         "seq": 9,
@@ -3883,7 +4027,10 @@
         "file": "capitulo_009.json",
         "arc_id": "arc-1",
         "paragraph_count": 161,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 1893,
+        "reading_time_minutes": 9,
+        "reading_time_formatted": "9 min"
       },
       {
         "seq": 10,
@@ -3896,7 +4043,10 @@
         "file": "capitulo_010.json",
         "arc_id": "arc-1",
         "paragraph_count": 264,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2950,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 11,
@@ -3909,7 +4059,10 @@
         "file": "capitulo_011.json",
         "arc_id": "arc-1",
         "paragraph_count": 204,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2139,
+        "reading_time_minutes": 11,
+        "reading_time_formatted": "11 min"
       },
       {
         "seq": 12,
@@ -3922,7 +4075,10 @@
         "file": "capitulo_012.json",
         "arc_id": "arc-1",
         "paragraph_count": 192,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2155,
+        "reading_time_minutes": 11,
+        "reading_time_formatted": "11 min"
       },
       {
         "seq": 13,
@@ -3935,7 +4091,10 @@
         "file": "capitulo_013.json",
         "arc_id": "arc-1",
         "paragraph_count": 140,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 1866,
+        "reading_time_minutes": 9,
+        "reading_time_formatted": "9 min"
       },
       {
         "seq": 14,
@@ -3948,7 +4107,10 @@
         "file": "capitulo_014.json",
         "arc_id": "arc-1",
         "paragraph_count": 228,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3201,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 15,
@@ -3961,7 +4123,10 @@
         "file": "capitulo_015.json",
         "arc_id": "arc-1",
         "paragraph_count": 218,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3105,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 16,
@@ -3974,7 +4139,10 @@
         "file": "capitulo_015_5.json",
         "arc_id": "arc-1",
         "paragraph_count": 63,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 940,
+        "reading_time_minutes": 5,
+        "reading_time_formatted": "5 min"
       },
       {
         "seq": 17,
@@ -3987,7 +4155,10 @@
         "file": "capitulo_016.json",
         "arc_id": "arc-1",
         "paragraph_count": 158,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3002,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 18,
@@ -4000,7 +4171,10 @@
         "file": "capitulo_017.json",
         "arc_id": "arc-1",
         "paragraph_count": 202,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3038,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 19,
@@ -4013,7 +4187,10 @@
         "file": "capitulo_018.json",
         "arc_id": "arc-1",
         "paragraph_count": 291,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3346,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 20,
@@ -4026,7 +4203,10 @@
         "file": "capitulo_018_5.json",
         "arc_id": "arc-1",
         "paragraph_count": 58,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 816,
+        "reading_time_minutes": 4,
+        "reading_time_formatted": "4 min"
       },
       {
         "seq": 21,
@@ -4039,7 +4219,10 @@
         "file": "capitulo_019.json",
         "arc_id": "arc-2",
         "paragraph_count": 177,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2290,
+        "reading_time_minutes": 11,
+        "reading_time_formatted": "11 min"
       },
       {
         "seq": 22,
@@ -4052,7 +4235,10 @@
         "file": "capitulo_020.json",
         "arc_id": "arc-2",
         "paragraph_count": 200,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2364,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 23,
@@ -4065,7 +4251,10 @@
         "file": "capitulo_021.json",
         "arc_id": "arc-2",
         "paragraph_count": 191,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2424,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 24,
@@ -4078,7 +4267,10 @@
         "file": "capitulo_022.json",
         "arc_id": "arc-2",
         "paragraph_count": 239,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2746,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 25,
@@ -4091,7 +4283,10 @@
         "file": "capitulo_023.json",
         "arc_id": "arc-2",
         "paragraph_count": 179,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 1898,
+        "reading_time_minutes": 9,
+        "reading_time_formatted": "9 min"
       },
       {
         "seq": 26,
@@ -4104,7 +4299,10 @@
         "file": "capitulo_024.json",
         "arc_id": "arc-2",
         "paragraph_count": 246,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2853,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 27,
@@ -4117,7 +4315,10 @@
         "file": "capitulo_025.json",
         "arc_id": "arc-2",
         "paragraph_count": 122,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 1345,
+        "reading_time_minutes": 7,
+        "reading_time_formatted": "7 min"
       },
       {
         "seq": 28,
@@ -4130,7 +4331,10 @@
         "file": "capitulo_026.json",
         "arc_id": "arc-2",
         "paragraph_count": 223,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3090,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 29,
@@ -4143,7 +4347,10 @@
         "file": "capitulo_027.json",
         "arc_id": "arc-2",
         "paragraph_count": 233,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2609,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 30,
@@ -4156,7 +4363,10 @@
         "file": "capitulo_028.json",
         "arc_id": "arc-2",
         "paragraph_count": 197,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2539,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 31,
@@ -4169,7 +4379,10 @@
         "file": "capitulo_029.json",
         "arc_id": "arc-2",
         "paragraph_count": 173,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 1831,
+        "reading_time_minutes": 9,
+        "reading_time_formatted": "9 min"
       },
       {
         "seq": 32,
@@ -4182,7 +4395,10 @@
         "file": "capitulo_030.json",
         "arc_id": "arc-2",
         "paragraph_count": 195,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2404,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 33,
@@ -4195,7 +4411,10 @@
         "file": "capitulo_031.json",
         "arc_id": "arc-2",
         "paragraph_count": 245,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2921,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 34,
@@ -4208,7 +4427,10 @@
         "file": "capitulo_032.json",
         "arc_id": "arc-2",
         "paragraph_count": 183,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2167,
+        "reading_time_minutes": 11,
+        "reading_time_formatted": "11 min"
       },
       {
         "seq": 35,
@@ -4221,7 +4443,10 @@
         "file": "capitulo_033.json",
         "arc_id": "arc-2",
         "paragraph_count": 185,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2182,
+        "reading_time_minutes": 11,
+        "reading_time_formatted": "11 min"
       },
       {
         "seq": 36,
@@ -4234,7 +4459,10 @@
         "file": "capitulo_034.json",
         "arc_id": "arc-2",
         "paragraph_count": 164,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 1905,
+        "reading_time_minutes": 10,
+        "reading_time_formatted": "10 min"
       },
       {
         "seq": 37,
@@ -4247,7 +4475,10 @@
         "file": "capitulo_035.json",
         "arc_id": "arc-2",
         "paragraph_count": 217,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2731,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 38,
@@ -4260,7 +4491,10 @@
         "file": "capitulo_036.json",
         "arc_id": "arc-2",
         "paragraph_count": 223,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2638,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 39,
@@ -4273,7 +4507,10 @@
         "file": "capitulo_037.json",
         "arc_id": "arc-2",
         "paragraph_count": 203,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2317,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 40,
@@ -4286,7 +4523,10 @@
         "file": "capitulo_038.json",
         "arc_id": "arc-2",
         "paragraph_count": 205,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2779,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 41,
@@ -4299,7 +4539,10 @@
         "file": "capitulo_039.json",
         "arc_id": "arc-2",
         "paragraph_count": 204,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2681,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 42,
@@ -4312,7 +4555,10 @@
         "file": "capitulo_040.json",
         "arc_id": "arc-2",
         "paragraph_count": 209,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2929,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 43,
@@ -4325,7 +4571,10 @@
         "file": "capitulo_041.json",
         "arc_id": "arc-2",
         "paragraph_count": 212,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2069,
+        "reading_time_minutes": 10,
+        "reading_time_formatted": "10 min"
       },
       {
         "seq": 44,
@@ -4338,7 +4587,10 @@
         "file": "capitulo_042.json",
         "arc_id": "arc-2",
         "paragraph_count": 255,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3274,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 45,
@@ -4351,7 +4603,10 @@
         "file": "capitulo_043.json",
         "arc_id": "arc-2",
         "paragraph_count": 200,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2511,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 46,
@@ -4364,7 +4619,10 @@
         "file": "capitulo_044.json",
         "arc_id": "arc-2",
         "paragraph_count": 216,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2520,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 47,
@@ -4377,7 +4635,10 @@
         "file": "capitulo_045.json",
         "arc_id": "arc-3",
         "paragraph_count": 207,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2729,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 48,
@@ -4390,7 +4651,10 @@
         "file": "capitulo_046.json",
         "arc_id": "arc-3",
         "paragraph_count": 254,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3442,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 49,
@@ -4403,7 +4667,10 @@
         "file": "capitulo_047.json",
         "arc_id": "arc-3",
         "paragraph_count": 248,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3188,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 50,
@@ -4416,7 +4683,10 @@
         "file": "capitulo_048.json",
         "arc_id": "arc-3",
         "paragraph_count": 206,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2634,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 51,
@@ -4429,7 +4699,10 @@
         "file": "capitulo_049.json",
         "arc_id": "arc-3",
         "paragraph_count": 216,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2695,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 52,
@@ -4442,7 +4715,10 @@
         "file": "capitulo_050.json",
         "arc_id": "arc-3",
         "paragraph_count": 207,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2879,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 53,
@@ -4455,7 +4731,10 @@
         "file": "capitulo_051.json",
         "arc_id": "arc-3",
         "paragraph_count": 197,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2739,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 54,
@@ -4468,7 +4747,10 @@
         "file": "capitulo_052.json",
         "arc_id": "arc-3",
         "paragraph_count": 175,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2482,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 55,
@@ -4481,7 +4763,10 @@
         "file": "capitulo_053.json",
         "arc_id": "arc-3",
         "paragraph_count": 194,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3160,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 56,
@@ -4494,7 +4779,10 @@
         "file": "capitulo_054.json",
         "arc_id": "arc-3",
         "paragraph_count": 216,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3060,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 57,
@@ -4507,7 +4795,10 @@
         "file": "capitulo_055.json",
         "arc_id": "arc-3",
         "paragraph_count": 212,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2693,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 58,
@@ -4520,7 +4811,10 @@
         "file": "capitulo_056.json",
         "arc_id": "arc-3",
         "paragraph_count": 208,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2732,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 59,
@@ -4533,7 +4827,10 @@
         "file": "capitulo_057.json",
         "arc_id": "arc-3",
         "paragraph_count": 164,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2415,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 60,
@@ -4546,7 +4843,10 @@
         "file": "capitulo_058.json",
         "arc_id": "arc-3",
         "paragraph_count": 231,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2861,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 61,
@@ -4559,7 +4859,10 @@
         "file": "capitulo_059.json",
         "arc_id": "arc-3",
         "paragraph_count": 166,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2298,
+        "reading_time_minutes": 11,
+        "reading_time_formatted": "11 min"
       },
       {
         "seq": 62,
@@ -4572,7 +4875,10 @@
         "file": "capitulo_060.json",
         "arc_id": "arc-3",
         "paragraph_count": 211,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2724,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 63,
@@ -4585,7 +4891,10 @@
         "file": "capitulo_061.json",
         "arc_id": "arc-3",
         "paragraph_count": 234,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3056,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 64,
@@ -4598,7 +4907,10 @@
         "file": "capitulo_062.json",
         "arc_id": "arc-3",
         "paragraph_count": 139,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 1998,
+        "reading_time_minutes": 10,
+        "reading_time_formatted": "10 min"
       },
       {
         "seq": 65,
@@ -4611,7 +4923,10 @@
         "file": "capitulo_063.json",
         "arc_id": "arc-3",
         "paragraph_count": 254,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3067,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 66,
@@ -4624,7 +4939,10 @@
         "file": "capitulo_064.json",
         "arc_id": "arc-3",
         "paragraph_count": 229,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3176,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 67,
@@ -4637,7 +4955,10 @@
         "file": "capitulo_065.json",
         "arc_id": "arc-4",
         "paragraph_count": 166,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2960,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 68,
@@ -4650,7 +4971,10 @@
         "file": "capitulo_066.json",
         "arc_id": "arc-4",
         "paragraph_count": 380,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 5217,
+        "reading_time_minutes": 26,
+        "reading_time_formatted": "26 min"
       },
       {
         "seq": 69,
@@ -4663,7 +4987,10 @@
         "file": "capitulo_067.json",
         "arc_id": "arc-4",
         "paragraph_count": 278,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2969,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 70,
@@ -4676,7 +5003,10 @@
         "file": "capitulo_068.json",
         "arc_id": "arc-4",
         "paragraph_count": 258,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3521,
+        "reading_time_minutes": 18,
+        "reading_time_formatted": "18 min"
       },
       {
         "seq": 71,
@@ -4689,7 +5019,10 @@
         "file": "capitulo_069.json",
         "arc_id": "arc-4",
         "paragraph_count": 367,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 5395,
+        "reading_time_minutes": 27,
+        "reading_time_formatted": "27 min"
       },
       {
         "seq": 72,
@@ -4702,7 +5035,10 @@
         "file": "capitulo_070.json",
         "arc_id": "arc-4",
         "paragraph_count": 211,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2380,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 73,
@@ -4715,7 +5051,10 @@
         "file": "capitulo_071.json",
         "arc_id": "arc-4",
         "paragraph_count": 282,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3836,
+        "reading_time_minutes": 19,
+        "reading_time_formatted": "19 min"
       },
       {
         "seq": 74,
@@ -4728,7 +5067,10 @@
         "file": "capitulo_072.json",
         "arc_id": "arc-4",
         "paragraph_count": 207,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2534,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 75,
@@ -4741,7 +5083,10 @@
         "file": "capitulo_073.json",
         "arc_id": "arc-4",
         "paragraph_count": 252,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3240,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 76,
@@ -4754,7 +5099,10 @@
         "file": "capitulo_074.json",
         "arc_id": "arc-4",
         "paragraph_count": 339,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3551,
+        "reading_time_minutes": 18,
+        "reading_time_formatted": "18 min"
       },
       {
         "seq": 77,
@@ -4767,7 +5115,10 @@
         "file": "capitulo_075.json",
         "arc_id": "arc-4",
         "paragraph_count": 207,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2580,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 78,
@@ -4780,7 +5131,10 @@
         "file": "capitulo_076.json",
         "arc_id": "arc-4",
         "paragraph_count": 234,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3690,
+        "reading_time_minutes": 18,
+        "reading_time_formatted": "18 min"
       },
       {
         "seq": 79,
@@ -4793,7 +5147,10 @@
         "file": "capitulo_077.json",
         "arc_id": "arc-4",
         "paragraph_count": 276,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3469,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 80,
@@ -4806,7 +5163,10 @@
         "file": "capitulo_078.json",
         "arc_id": "arc-4",
         "paragraph_count": 306,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4027,
+        "reading_time_minutes": 20,
+        "reading_time_formatted": "20 min"
       },
       {
         "seq": 81,
@@ -4819,7 +5179,10 @@
         "file": "capitulo_079.json",
         "arc_id": "arc-4",
         "paragraph_count": 200,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2686,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 82,
@@ -4832,7 +5195,10 @@
         "file": "capitulo_080.json",
         "arc_id": "arc-4",
         "paragraph_count": 224,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3009,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 83,
@@ -4845,7 +5211,10 @@
         "file": "capitulo_081.json",
         "arc_id": "arc-4",
         "paragraph_count": 291,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3401,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 84,
@@ -4858,7 +5227,10 @@
         "file": "capitulo_082.json",
         "arc_id": "arc-4",
         "paragraph_count": 256,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3849,
+        "reading_time_minutes": 19,
+        "reading_time_formatted": "19 min"
       },
       {
         "seq": 85,
@@ -4871,7 +5243,10 @@
         "file": "capitulo_083.json",
         "arc_id": "arc-4",
         "paragraph_count": 212,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2819,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 86,
@@ -4884,7 +5259,10 @@
         "file": "capitulo_084.json",
         "arc_id": "arc-5",
         "paragraph_count": 189,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3271,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 87,
@@ -4897,7 +5275,10 @@
         "file": "capitulo_085.json",
         "arc_id": "arc-5",
         "paragraph_count": 211,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2895,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 88,
@@ -4910,7 +5291,10 @@
         "file": "capitulo_086.json",
         "arc_id": "arc-5",
         "paragraph_count": 194,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2813,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 89,
@@ -4923,7 +5307,10 @@
         "file": "capitulo_087.json",
         "arc_id": "arc-5",
         "paragraph_count": 214,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2568,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 90,
@@ -4936,7 +5323,10 @@
         "file": "capitulo_088.json",
         "arc_id": "arc-5",
         "paragraph_count": 214,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2719,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 91,
@@ -4949,7 +5339,10 @@
         "file": "capitulo_089.json",
         "arc_id": "arc-5",
         "paragraph_count": 196,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3023,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 92,
@@ -4962,7 +5355,10 @@
         "file": "capitulo_090.json",
         "arc_id": "arc-5",
         "paragraph_count": 240,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3727,
+        "reading_time_minutes": 19,
+        "reading_time_formatted": "19 min"
       },
       {
         "seq": 93,
@@ -4975,7 +5371,10 @@
         "file": "capitulo_091.json",
         "arc_id": "arc-5",
         "paragraph_count": 199,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2788,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 94,
@@ -4988,7 +5387,10 @@
         "file": "capitulo_092.json",
         "arc_id": "arc-5",
         "paragraph_count": 181,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3542,
+        "reading_time_minutes": 18,
+        "reading_time_formatted": "18 min"
       },
       {
         "seq": 95,
@@ -5001,7 +5403,10 @@
         "file": "capitulo_093.json",
         "arc_id": "arc-5",
         "paragraph_count": 230,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3215,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 96,
@@ -5014,7 +5419,10 @@
         "file": "capitulo_094.json",
         "arc_id": "arc-5",
         "paragraph_count": 283,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3259,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 97,
@@ -5027,7 +5435,10 @@
         "file": "capitulo_095.json",
         "arc_id": "arc-5",
         "paragraph_count": 269,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3786,
+        "reading_time_minutes": 19,
+        "reading_time_formatted": "19 min"
       },
       {
         "seq": 98,
@@ -5040,7 +5451,10 @@
         "file": "capitulo_096.json",
         "arc_id": "arc-5",
         "paragraph_count": 257,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3266,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 99,
@@ -5053,7 +5467,10 @@
         "file": "capitulo_097.json",
         "arc_id": "arc-5",
         "paragraph_count": 214,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4895,
+        "reading_time_minutes": 24,
+        "reading_time_formatted": "24 min"
       },
       {
         "seq": 100,
@@ -5066,7 +5483,10 @@
         "file": "capitulo_098.json",
         "arc_id": "arc-6",
         "paragraph_count": 210,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2791,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 101,
@@ -5079,7 +5499,10 @@
         "file": "capitulo_099.json",
         "arc_id": "arc-6",
         "paragraph_count": 244,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2991,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 102,
@@ -5092,7 +5515,10 @@
         "file": "capitulo_100.json",
         "arc_id": "arc-6",
         "paragraph_count": 245,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2869,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 103,
@@ -5105,7 +5531,10 @@
         "file": "capitulo_101.json",
         "arc_id": "arc-6",
         "paragraph_count": 239,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3253,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 104,
@@ -5118,7 +5547,10 @@
         "file": "capitulo_102.json",
         "arc_id": "arc-6",
         "paragraph_count": 254,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4409,
+        "reading_time_minutes": 22,
+        "reading_time_formatted": "22 min"
       },
       {
         "seq": 105,
@@ -5131,7 +5563,10 @@
         "file": "capitulo_103.json",
         "arc_id": "arc-6",
         "paragraph_count": 290,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 5571,
+        "reading_time_minutes": 28,
+        "reading_time_formatted": "28 min"
       },
       {
         "seq": 106,
@@ -5144,7 +5579,10 @@
         "file": "capitulo_104.json",
         "arc_id": "arc-6",
         "paragraph_count": 97,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3575,
+        "reading_time_minutes": 18,
+        "reading_time_formatted": "18 min"
       },
       {
         "seq": 107,
@@ -5157,7 +5595,10 @@
         "file": "capitulo_105.json",
         "arc_id": "arc-6",
         "paragraph_count": 187,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4059,
+        "reading_time_minutes": 20,
+        "reading_time_formatted": "20 min"
       },
       {
         "seq": 108,
@@ -5170,7 +5611,10 @@
         "file": "capitulo_106.json",
         "arc_id": "arc-6",
         "paragraph_count": 248,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3775,
+        "reading_time_minutes": 19,
+        "reading_time_formatted": "19 min"
       },
       {
         "seq": 109,
@@ -5183,7 +5627,10 @@
         "file": "capitulo_107.json",
         "arc_id": "arc-6",
         "paragraph_count": 225,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3453,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 110,
@@ -5196,7 +5643,10 @@
         "file": "capitulo_108.json",
         "arc_id": "arc-6",
         "paragraph_count": 151,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2342,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 111,
@@ -5209,7 +5659,10 @@
         "file": "capitulo_109.json",
         "arc_id": "arc-6",
         "paragraph_count": 81,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2427,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 112,
@@ -5222,7 +5675,10 @@
         "file": "capitulo_110.json",
         "arc_id": "arc-6",
         "paragraph_count": 70,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2611,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 113,
@@ -5235,7 +5691,10 @@
         "file": "capitulo_111.json",
         "arc_id": "arc-6",
         "paragraph_count": 129,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2821,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 114,
@@ -5248,7 +5707,10 @@
         "file": "capitulo_112.json",
         "arc_id": "arc-6",
         "paragraph_count": 223,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3415,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 115,
@@ -5261,7 +5723,10 @@
         "file": "capitulo_113.json",
         "arc_id": "arc-6",
         "paragraph_count": 206,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2711,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 116,
@@ -5274,7 +5739,10 @@
         "file": "capitulo_114.json",
         "arc_id": "arc-6",
         "paragraph_count": 192,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2874,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 117,
@@ -5287,7 +5755,10 @@
         "file": "capitulo_115.json",
         "arc_id": "arc-6",
         "paragraph_count": 207,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3042,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 118,
@@ -5300,7 +5771,10 @@
         "file": "capitulo_116.json",
         "arc_id": "arc-6",
         "paragraph_count": 149,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2252,
+        "reading_time_minutes": 11,
+        "reading_time_formatted": "11 min"
       },
       {
         "seq": 119,
@@ -5313,7 +5787,10 @@
         "file": "capitulo_117.json",
         "arc_id": "arc-6",
         "paragraph_count": 164,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2101,
+        "reading_time_minutes": 11,
+        "reading_time_formatted": "11 min"
       },
       {
         "seq": 120,
@@ -5326,7 +5803,10 @@
         "file": "capitulo_118.json",
         "arc_id": "arc-6",
         "paragraph_count": 150,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2825,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 121,
@@ -5339,7 +5819,10 @@
         "file": "capitulo_119.json",
         "arc_id": "arc-6",
         "paragraph_count": 169,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 1924,
+        "reading_time_minutes": 10,
+        "reading_time_formatted": "10 min"
       },
       {
         "seq": 122,
@@ -5352,7 +5835,10 @@
         "file": "capitulo_120.json",
         "arc_id": "arc-7",
         "paragraph_count": 129,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2052,
+        "reading_time_minutes": 10,
+        "reading_time_formatted": "10 min"
       },
       {
         "seq": 123,
@@ -5365,7 +5851,10 @@
         "file": "capitulo_121.json",
         "arc_id": "arc-7",
         "paragraph_count": 170,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2359,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 124,
@@ -5378,7 +5867,10 @@
         "file": "capitulo_122.json",
         "arc_id": "arc-7",
         "paragraph_count": 145,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2875,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 125,
@@ -5391,7 +5883,10 @@
         "file": "capitulo_123.json",
         "arc_id": "arc-7",
         "paragraph_count": 234,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3790,
+        "reading_time_minutes": 19,
+        "reading_time_formatted": "19 min"
       },
       {
         "seq": 126,
@@ -5404,7 +5899,10 @@
         "file": "capitulo_124.json",
         "arc_id": "arc-7",
         "paragraph_count": 178,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2879,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 127,
@@ -5417,7 +5915,10 @@
         "file": "capitulo_125.json",
         "arc_id": "arc-7",
         "paragraph_count": 174,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3207,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 128,
@@ -5430,7 +5931,10 @@
         "file": "capitulo_126.json",
         "arc_id": "arc-7",
         "paragraph_count": 117,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2141,
+        "reading_time_minutes": 11,
+        "reading_time_formatted": "11 min"
       },
       {
         "seq": 129,
@@ -5443,7 +5947,10 @@
         "file": "capitulo_127.json",
         "arc_id": "arc-7",
         "paragraph_count": 169,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2309,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 130,
@@ -5456,7 +5963,10 @@
         "file": "capitulo_128.json",
         "arc_id": "arc-7",
         "paragraph_count": 219,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3431,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 131,
@@ -5469,7 +5979,10 @@
         "file": "capitulo_129.json",
         "arc_id": "arc-7",
         "paragraph_count": 183,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2901,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 132,
@@ -5482,7 +5995,10 @@
         "file": "capitulo_130.json",
         "arc_id": "arc-7",
         "paragraph_count": 139,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2040,
+        "reading_time_minutes": 10,
+        "reading_time_formatted": "10 min"
       },
       {
         "seq": 133,
@@ -5495,7 +6011,10 @@
         "file": "capitulo_131.json",
         "arc_id": "arc-7",
         "paragraph_count": 193,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2974,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 134,
@@ -5508,7 +6027,10 @@
         "file": "capitulo_132.json",
         "arc_id": "arc-7",
         "paragraph_count": 177,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2720,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 135,
@@ -5521,7 +6043,10 @@
         "file": "capitulo_133.json",
         "arc_id": "arc-7",
         "paragraph_count": 215,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3126,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 136,
@@ -5534,7 +6059,10 @@
         "file": "capitulo_134.json",
         "arc_id": "arc-7",
         "paragraph_count": 209,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3775,
+        "reading_time_minutes": 19,
+        "reading_time_formatted": "19 min"
       },
       {
         "seq": 137,
@@ -5547,7 +6075,10 @@
         "file": "capitulo_135.json",
         "arc_id": "arc-7",
         "paragraph_count": 166,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2112,
+        "reading_time_minutes": 11,
+        "reading_time_formatted": "11 min"
       },
       {
         "seq": 138,
@@ -5560,7 +6091,10 @@
         "file": "capitulo_136.json",
         "arc_id": "arc-7",
         "paragraph_count": 161,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2301,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 139,
@@ -5573,7 +6107,10 @@
         "file": "capitulo_137.json",
         "arc_id": "arc-8",
         "paragraph_count": 180,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2906,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 140,
@@ -5586,7 +6123,10 @@
         "file": "capitulo_138.json",
         "arc_id": "arc-8",
         "paragraph_count": 149,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2825,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 141,
@@ -5599,7 +6139,10 @@
         "file": "capitulo_139.json",
         "arc_id": "arc-8",
         "paragraph_count": 286,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4574,
+        "reading_time_minutes": 23,
+        "reading_time_formatted": "23 min"
       },
       {
         "seq": 142,
@@ -5612,7 +6155,10 @@
         "file": "capitulo_140.json",
         "arc_id": "arc-8",
         "paragraph_count": 181,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3055,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 143,
@@ -5625,7 +6171,10 @@
         "file": "capitulo_141.json",
         "arc_id": "arc-8",
         "paragraph_count": 230,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3699,
+        "reading_time_minutes": 18,
+        "reading_time_formatted": "18 min"
       },
       {
         "seq": 144,
@@ -5638,7 +6187,10 @@
         "file": "capitulo_142.json",
         "arc_id": "arc-8",
         "paragraph_count": 135,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2100,
+        "reading_time_minutes": 10,
+        "reading_time_formatted": "10 min"
       },
       {
         "seq": 145,
@@ -5651,7 +6203,10 @@
         "file": "capitulo_143.json",
         "arc_id": "arc-8",
         "paragraph_count": 285,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3902,
+        "reading_time_minutes": 20,
+        "reading_time_formatted": "20 min"
       },
       {
         "seq": 146,
@@ -5664,7 +6219,10 @@
         "file": "capitulo_143_5.json",
         "arc_id": "arc-8",
         "paragraph_count": 176,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2034,
+        "reading_time_minutes": 10,
+        "reading_time_formatted": "10 min"
       },
       {
         "seq": 147,
@@ -5677,7 +6235,10 @@
         "file": "capitulo_144.json",
         "arc_id": "arc-8",
         "paragraph_count": 210,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3425,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 148,
@@ -5690,7 +6251,10 @@
         "file": "capitulo_145.json",
         "arc_id": "arc-8",
         "paragraph_count": 174,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3021,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 149,
@@ -5703,7 +6267,10 @@
         "file": "capitulo_146.json",
         "arc_id": "arc-8",
         "paragraph_count": 288,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4285,
+        "reading_time_minutes": 21,
+        "reading_time_formatted": "21 min"
       },
       {
         "seq": 150,
@@ -5716,7 +6283,10 @@
         "file": "capitulo_147.json",
         "arc_id": "arc-8",
         "paragraph_count": 260,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4198,
+        "reading_time_minutes": 21,
+        "reading_time_formatted": "21 min"
       },
       {
         "seq": 151,
@@ -5729,7 +6299,10 @@
         "file": "capitulo_148.json",
         "arc_id": "arc-8",
         "paragraph_count": 118,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2121,
+        "reading_time_minutes": 11,
+        "reading_time_formatted": "11 min"
       },
       {
         "seq": 152,
@@ -5742,7 +6315,10 @@
         "file": "capitulo_149.json",
         "arc_id": "arc-8",
         "paragraph_count": 272,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4361,
+        "reading_time_minutes": 22,
+        "reading_time_formatted": "22 min"
       },
       {
         "seq": 153,
@@ -5755,7 +6331,10 @@
         "file": "capitulo_150.json",
         "arc_id": "arc-8",
         "paragraph_count": 146,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2603,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 154,
@@ -5768,7 +6347,10 @@
         "file": "capitulo_151.json",
         "arc_id": "arc-8",
         "paragraph_count": 174,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2645,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 155,
@@ -5781,7 +6363,10 @@
         "file": "capitulo_152.json",
         "arc_id": "arc-8",
         "paragraph_count": 169,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2856,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 156,
@@ -5794,7 +6379,10 @@
         "file": "capitulo_153.json",
         "arc_id": "arc-8",
         "paragraph_count": 219,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3276,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 157,
@@ -5807,7 +6395,10 @@
         "file": "capitulo_154.json",
         "arc_id": "arc-8",
         "paragraph_count": 174,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2639,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 158,
@@ -5820,7 +6411,10 @@
         "file": "capitulo_155.json",
         "arc_id": "arc-8",
         "paragraph_count": 262,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4029,
+        "reading_time_minutes": 20,
+        "reading_time_formatted": "20 min"
       },
       {
         "seq": 159,
@@ -5833,7 +6427,10 @@
         "file": "capitulo_156.json",
         "arc_id": "arc-8",
         "paragraph_count": 188,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2628,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 160,
@@ -5846,7 +6443,10 @@
         "file": "capitulo_157.json",
         "arc_id": "arc-8",
         "paragraph_count": 184,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2584,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 161,
@@ -5859,7 +6459,10 @@
         "file": "capitulo_158.json",
         "arc_id": "arc-8",
         "paragraph_count": 254,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3229,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 162,
@@ -5872,7 +6475,10 @@
         "file": "capitulo_159.json",
         "arc_id": "arc-8",
         "paragraph_count": 165,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2560,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 163,
@@ -5885,7 +6491,10 @@
         "file": "capitulo_160.json",
         "arc_id": "arc-8",
         "paragraph_count": 169,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2382,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 164,
@@ -5898,7 +6507,10 @@
         "file": "capitulo_161.json",
         "arc_id": "arc-8",
         "paragraph_count": 277,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3498,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 165,
@@ -5911,7 +6523,10 @@
         "file": "capitulo_161_5.json",
         "arc_id": "arc-8",
         "paragraph_count": 158,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2145,
+        "reading_time_minutes": 11,
+        "reading_time_formatted": "11 min"
       },
       {
         "seq": 166,
@@ -5924,7 +6539,10 @@
         "file": "capitulo_162.json",
         "arc_id": "arc-9",
         "paragraph_count": 250,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3732,
+        "reading_time_minutes": 19,
+        "reading_time_formatted": "19 min"
       },
       {
         "seq": 167,
@@ -5937,7 +6555,10 @@
         "file": "capitulo_163.json",
         "arc_id": "arc-9",
         "paragraph_count": 162,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2122,
+        "reading_time_minutes": 11,
+        "reading_time_formatted": "11 min"
       },
       {
         "seq": 168,
@@ -5950,7 +6571,10 @@
         "file": "capitulo_164.json",
         "arc_id": "arc-9",
         "paragraph_count": 228,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3105,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 169,
@@ -5963,7 +6587,10 @@
         "file": "capitulo_165.json",
         "arc_id": "arc-9",
         "paragraph_count": 183,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3061,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 170,
@@ -5976,7 +6603,10 @@
         "file": "capitulo_166.json",
         "arc_id": "arc-9",
         "paragraph_count": 154,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2335,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 171,
@@ -5989,7 +6619,10 @@
         "file": "capitulo_167.json",
         "arc_id": "arc-9",
         "paragraph_count": 260,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4195,
+        "reading_time_minutes": 21,
+        "reading_time_formatted": "21 min"
       },
       {
         "seq": 172,
@@ -6002,7 +6635,10 @@
         "file": "capitulo_168.json",
         "arc_id": "arc-9",
         "paragraph_count": 185,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2947,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 173,
@@ -6015,7 +6651,10 @@
         "file": "capitulo_169.json",
         "arc_id": "arc-9",
         "paragraph_count": 208,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3153,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 174,
@@ -6028,7 +6667,10 @@
         "file": "capitulo_170.json",
         "arc_id": "arc-9",
         "paragraph_count": 185,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2586,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 175,
@@ -6041,7 +6683,10 @@
         "file": "capitulo_171.json",
         "arc_id": "arc-9",
         "paragraph_count": 179,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2877,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 176,
@@ -6054,7 +6699,10 @@
         "file": "capitulo_172.json",
         "arc_id": "arc-9",
         "paragraph_count": 146,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2138,
+        "reading_time_minutes": 11,
+        "reading_time_formatted": "11 min"
       },
       {
         "seq": 177,
@@ -6067,7 +6715,10 @@
         "file": "capitulo_173.json",
         "arc_id": "arc-9",
         "paragraph_count": 191,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2715,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 178,
@@ -6080,7 +6731,10 @@
         "file": "capitulo_174.json",
         "arc_id": "arc-9",
         "paragraph_count": 174,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2615,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 179,
@@ -6093,7 +6747,10 @@
         "file": "capitulo_175.json",
         "arc_id": "arc-9",
         "paragraph_count": 234,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3112,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 180,
@@ -6106,7 +6763,10 @@
         "file": "capitulo_176.json",
         "arc_id": "arc-9",
         "paragraph_count": 182,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2359,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 181,
@@ -6119,7 +6779,10 @@
         "file": "capitulo_177.json",
         "arc_id": "arc-9",
         "paragraph_count": 205,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2482,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 182,
@@ -6132,7 +6795,10 @@
         "file": "capitulo_178.json",
         "arc_id": "arc-9",
         "paragraph_count": 197,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2600,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 183,
@@ -6145,7 +6811,10 @@
         "file": "capitulo_179.json",
         "arc_id": "arc-9",
         "paragraph_count": 247,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2662,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 184,
@@ -6158,7 +6827,10 @@
         "file": "capitulo_180.json",
         "arc_id": "arc-9",
         "paragraph_count": 185,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2544,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 185,
@@ -6171,7 +6843,10 @@
         "file": "capitulo_181.json",
         "arc_id": "arc-9",
         "paragraph_count": 240,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3230,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 186,
@@ -6184,7 +6859,10 @@
         "file": "capitulo_182.json",
         "arc_id": "arc-9",
         "paragraph_count": 238,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2808,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 187,
@@ -6197,7 +6875,10 @@
         "file": "capitulo_183.json",
         "arc_id": "arc-9",
         "paragraph_count": 253,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3357,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 188,
@@ -6210,7 +6891,10 @@
         "file": "capitulo_184.json",
         "arc_id": "arc-9",
         "paragraph_count": 208,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2730,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 189,
@@ -6223,7 +6907,10 @@
         "file": "capitulo_185.json",
         "arc_id": "arc-9",
         "paragraph_count": 350,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4255,
+        "reading_time_minutes": 21,
+        "reading_time_formatted": "21 min"
       },
       {
         "seq": 190,
@@ -6236,7 +6923,10 @@
         "file": "capitulo_185_5.json",
         "arc_id": "arc-9",
         "paragraph_count": 277,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3524,
+        "reading_time_minutes": 18,
+        "reading_time_formatted": "18 min"
       },
       {
         "seq": 191,
@@ -6249,7 +6939,10 @@
         "file": "capitulo_186.json",
         "arc_id": "arc-10",
         "paragraph_count": 167,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2465,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 192,
@@ -6262,7 +6955,10 @@
         "file": "capitulo_187.json",
         "arc_id": "arc-10",
         "paragraph_count": 227,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3595,
+        "reading_time_minutes": 18,
+        "reading_time_formatted": "18 min"
       },
       {
         "seq": 193,
@@ -6275,7 +6971,10 @@
         "file": "capitulo_188.json",
         "arc_id": "arc-10",
         "paragraph_count": 212,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3262,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 194,
@@ -6288,7 +6987,10 @@
         "file": "capitulo_189.json",
         "arc_id": "arc-10",
         "paragraph_count": 281,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3968,
+        "reading_time_minutes": 20,
+        "reading_time_formatted": "20 min"
       },
       {
         "seq": 195,
@@ -6301,7 +7003,10 @@
         "file": "capitulo_190.json",
         "arc_id": "arc-10",
         "paragraph_count": 246,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4431,
+        "reading_time_minutes": 22,
+        "reading_time_formatted": "22 min"
       },
       {
         "seq": 196,
@@ -6314,7 +7019,10 @@
         "file": "capitulo_191.json",
         "arc_id": "arc-10",
         "paragraph_count": 411,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 5033,
+        "reading_time_minutes": 25,
+        "reading_time_formatted": "25 min"
       },
       {
         "seq": 197,
@@ -6327,7 +7035,10 @@
         "file": "capitulo_192.json",
         "arc_id": "arc-10",
         "paragraph_count": 300,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4313,
+        "reading_time_minutes": 22,
+        "reading_time_formatted": "22 min"
       },
       {
         "seq": 198,
@@ -6340,7 +7051,10 @@
         "file": "capitulo_193.json",
         "arc_id": "arc-10",
         "paragraph_count": 166,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3080,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 199,
@@ -6353,7 +7067,10 @@
         "file": "capitulo_194.json",
         "arc_id": "arc-10",
         "paragraph_count": 290,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4586,
+        "reading_time_minutes": 23,
+        "reading_time_formatted": "23 min"
       },
       {
         "seq": 200,
@@ -6366,7 +7083,10 @@
         "file": "capitulo_195.json",
         "arc_id": "arc-10",
         "paragraph_count": 251,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3716,
+        "reading_time_minutes": 19,
+        "reading_time_formatted": "19 min"
       },
       {
         "seq": 201,
@@ -6379,7 +7099,10 @@
         "file": "capitulo_196.json",
         "arc_id": "arc-10",
         "paragraph_count": 249,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3790,
+        "reading_time_minutes": 19,
+        "reading_time_formatted": "19 min"
       },
       {
         "seq": 202,
@@ -6392,7 +7115,10 @@
         "file": "capitulo_197.json",
         "arc_id": "arc-10",
         "paragraph_count": 244,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3354,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 203,
@@ -6405,7 +7131,10 @@
         "file": "capitulo_198.json",
         "arc_id": "arc-10",
         "paragraph_count": 288,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4050,
+        "reading_time_minutes": 20,
+        "reading_time_formatted": "20 min"
       },
       {
         "seq": 204,
@@ -6418,7 +7147,10 @@
         "file": "capitulo_199.json",
         "arc_id": "arc-10",
         "paragraph_count": 327,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4729,
+        "reading_time_minutes": 24,
+        "reading_time_formatted": "24 min"
       },
       {
         "seq": 205,
@@ -6431,7 +7163,10 @@
         "file": "capitulo_200.json",
         "arc_id": "arc-10",
         "paragraph_count": 210,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2632,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 206,
@@ -6444,7 +7179,10 @@
         "file": "capitulo_201.json",
         "arc_id": "arc-10",
         "paragraph_count": 201,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2563,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 207,
@@ -6457,7 +7195,10 @@
         "file": "capitulo_202.json",
         "arc_id": "arc-10",
         "paragraph_count": 188,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2410,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 208,
@@ -6470,7 +7211,10 @@
         "file": "capitulo_203.json",
         "arc_id": "arc-10",
         "paragraph_count": 305,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4044,
+        "reading_time_minutes": 20,
+        "reading_time_formatted": "20 min"
       },
       {
         "seq": 209,
@@ -6483,7 +7227,10 @@
         "file": "capitulo_204.json",
         "arc_id": "arc-10",
         "paragraph_count": 200,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3613,
+        "reading_time_minutes": 18,
+        "reading_time_formatted": "18 min"
       },
       {
         "seq": 210,
@@ -6496,7 +7243,10 @@
         "file": "capitulo_205.json",
         "arc_id": "arc-10",
         "paragraph_count": 209,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3390,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 211,
@@ -6509,7 +7259,10 @@
         "file": "capitulo_206.json",
         "arc_id": "arc-10",
         "paragraph_count": 155,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2604,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 212,
@@ -6522,7 +7275,10 @@
         "file": "capitulo_207.json",
         "arc_id": "arc-10",
         "paragraph_count": 233,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3578,
+        "reading_time_minutes": 18,
+        "reading_time_formatted": "18 min"
       },
       {
         "seq": 213,
@@ -6535,7 +7291,10 @@
         "file": "capitulo_208.json",
         "arc_id": "arc-10",
         "paragraph_count": 185,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2799,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 214,
@@ -6548,7 +7307,10 @@
         "file": "capitulo_209.json",
         "arc_id": "arc-10",
         "paragraph_count": 225,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3111,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 215,
@@ -6561,7 +7323,10 @@
         "file": "capitulo_210.json",
         "arc_id": "arc-10",
         "paragraph_count": 225,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3137,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 216,
@@ -6574,7 +7339,10 @@
         "file": "capitulo_211.json",
         "arc_id": "arc-10",
         "paragraph_count": 221,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3206,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 217,
@@ -6587,7 +7355,10 @@
         "file": "capitulo_212.json",
         "arc_id": "arc-10",
         "paragraph_count": 183,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2635,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 218,
@@ -6600,7 +7371,10 @@
         "file": "capitulo_213.json",
         "arc_id": "arc-10",
         "paragraph_count": 301,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4135,
+        "reading_time_minutes": 21,
+        "reading_time_formatted": "21 min"
       },
       {
         "seq": 219,
@@ -6613,7 +7387,10 @@
         "file": "capitulo_214.json",
         "arc_id": "arc-10",
         "paragraph_count": 315,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4619,
+        "reading_time_minutes": 23,
+        "reading_time_formatted": "23 min"
       },
       {
         "seq": 220,
@@ -6626,7 +7403,10 @@
         "file": "capitulo_215.json",
         "arc_id": "arc-10",
         "paragraph_count": 230,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2970,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 221,
@@ -6639,7 +7419,10 @@
         "file": "capitulo_216.json",
         "arc_id": "arc-10",
         "paragraph_count": 234,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2930,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 222,
@@ -6652,7 +7435,10 @@
         "file": "capitulo_217.json",
         "arc_id": "arc-10",
         "paragraph_count": 285,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4181,
+        "reading_time_minutes": 21,
+        "reading_time_formatted": "21 min"
       },
       {
         "seq": 223,
@@ -6665,7 +7451,10 @@
         "file": "capitulo_218.json",
         "arc_id": "arc-10",
         "paragraph_count": 209,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2822,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 224,
@@ -6678,7 +7467,10 @@
         "file": "capitulo_219.json",
         "arc_id": "arc-10",
         "paragraph_count": 271,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3528,
+        "reading_time_minutes": 18,
+        "reading_time_formatted": "18 min"
       },
       {
         "seq": 225,
@@ -6691,7 +7483,10 @@
         "file": "capitulo_220.json",
         "arc_id": "arc-10",
         "paragraph_count": 208,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2742,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 226,
@@ -6704,7 +7499,10 @@
         "file": "capitulo_221.json",
         "arc_id": "arc-10",
         "paragraph_count": 173,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2411,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 227,
@@ -6717,7 +7515,10 @@
         "file": "capitulo_222.json",
         "arc_id": "arc-10",
         "paragraph_count": 239,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2838,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 228,
@@ -6730,7 +7531,10 @@
         "file": "capitulo_223.json",
         "arc_id": "arc-10",
         "paragraph_count": 184,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2389,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 229,
@@ -6743,7 +7547,10 @@
         "file": "capitulo_224.json",
         "arc_id": "arc-10",
         "paragraph_count": 230,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3242,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 230,
@@ -6756,7 +7563,10 @@
         "file": "capitulo_225.json",
         "arc_id": "arc-10",
         "paragraph_count": 223,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3198,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 231,
@@ -6769,7 +7579,10 @@
         "file": "capitulo_226.json",
         "arc_id": "arc-10",
         "paragraph_count": 162,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2501,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 232,
@@ -6782,7 +7595,10 @@
         "file": "capitulo_227.json",
         "arc_id": "arc-10",
         "paragraph_count": 177,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2547,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 233,
@@ -6795,7 +7611,10 @@
         "file": "capitulo_228.json",
         "arc_id": "arc-10",
         "paragraph_count": 183,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2640,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 234,
@@ -6808,7 +7627,10 @@
         "file": "capitulo_229.json",
         "arc_id": "arc-10",
         "paragraph_count": 193,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2872,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 235,
@@ -6821,7 +7643,10 @@
         "file": "capitulo_230.json",
         "arc_id": "arc-10",
         "paragraph_count": 187,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2621,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 236,
@@ -6834,7 +7659,10 @@
         "file": "capitulo_231.json",
         "arc_id": "arc-10",
         "paragraph_count": 166,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2363,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 237,
@@ -6847,7 +7675,10 @@
         "file": "capitulo_232.json",
         "arc_id": "arc-10",
         "paragraph_count": 176,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2785,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 238,
@@ -6860,7 +7691,10 @@
         "file": "capitulo_233.json",
         "arc_id": "arc-10",
         "paragraph_count": 280,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3863,
+        "reading_time_minutes": 19,
+        "reading_time_formatted": "19 min"
       },
       {
         "seq": 239,
@@ -6873,7 +7707,10 @@
         "file": "capitulo_234.json",
         "arc_id": "arc-10",
         "paragraph_count": 193,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3157,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 240,
@@ -6886,7 +7723,10 @@
         "file": "capitulo_235.json",
         "arc_id": "arc-10",
         "paragraph_count": 198,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2683,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 241,
@@ -6899,7 +7739,10 @@
         "file": "capitulo_236.json",
         "arc_id": "arc-10",
         "paragraph_count": 208,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3005,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 242,
@@ -6912,7 +7755,10 @@
         "file": "capitulo_237.json",
         "arc_id": "arc-10",
         "paragraph_count": 181,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2868,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 243,
@@ -6925,7 +7771,10 @@
         "file": "capitulo_238.json",
         "arc_id": "arc-10",
         "paragraph_count": 196,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2902,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 244,
@@ -6938,7 +7787,10 @@
         "file": "capitulo_239.json",
         "arc_id": "arc-10",
         "paragraph_count": 201,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2736,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 245,
@@ -6951,7 +7803,10 @@
         "file": "capitulo_240.json",
         "arc_id": "arc-10",
         "paragraph_count": 164,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2995,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 246,
@@ -6964,7 +7819,10 @@
         "file": "capitulo_241.json",
         "arc_id": "arc-10",
         "paragraph_count": 151,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2509,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 247,
@@ -6977,7 +7835,10 @@
         "file": "capitulo_242.json",
         "arc_id": "arc-10",
         "paragraph_count": 209,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3402,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 248,
@@ -6990,7 +7851,10 @@
         "file": "capitulo_243.json",
         "arc_id": "arc-10",
         "paragraph_count": 283,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4086,
+        "reading_time_minutes": 20,
+        "reading_time_formatted": "20 min"
       },
       {
         "seq": 249,
@@ -7003,7 +7867,10 @@
         "file": "capitulo_244.json",
         "arc_id": "arc-10",
         "paragraph_count": 177,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2721,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 250,
@@ -7016,7 +7883,10 @@
         "file": "capitulo_245.json",
         "arc_id": "arc-10",
         "paragraph_count": 210,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3088,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 251,
@@ -7029,7 +7899,10 @@
         "file": "capitulo_246.json",
         "arc_id": "arc-10",
         "paragraph_count": 153,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2821,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 252,
@@ -7042,7 +7915,10 @@
         "file": "capitulo_247.json",
         "arc_id": "arc-10",
         "paragraph_count": 205,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3389,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 253,
@@ -7055,7 +7931,10 @@
         "file": "capitulo_248.json",
         "arc_id": "arc-10",
         "paragraph_count": 223,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3512,
+        "reading_time_minutes": 18,
+        "reading_time_formatted": "18 min"
       },
       {
         "seq": 254,
@@ -7068,7 +7947,10 @@
         "file": "capitulo_249.json",
         "arc_id": "arc-10",
         "paragraph_count": 299,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4433,
+        "reading_time_minutes": 22,
+        "reading_time_formatted": "22 min"
       },
       {
         "seq": 255,
@@ -7081,7 +7963,10 @@
         "file": "extra_001.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 187,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3143,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 256,
@@ -7094,7 +7979,10 @@
         "file": "extra_002.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 182,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3089,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 257,
@@ -7107,7 +7995,10 @@
         "file": "extra_003.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 230,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3513,
+        "reading_time_minutes": 18,
+        "reading_time_formatted": "18 min"
       },
       {
         "seq": 258,
@@ -7120,7 +8011,10 @@
         "file": "extra_004.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 204,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2872,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 259,
@@ -7133,7 +8027,10 @@
         "file": "extra_005.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 170,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3233,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 260,
@@ -7146,7 +8043,10 @@
         "file": "extra_006.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 243,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3753,
+        "reading_time_minutes": 19,
+        "reading_time_formatted": "19 min"
       },
       {
         "seq": 261,
@@ -7159,7 +8059,10 @@
         "file": "extra_007.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 292,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3844,
+        "reading_time_minutes": 19,
+        "reading_time_formatted": "19 min"
       },
       {
         "seq": 262,
@@ -7172,7 +8075,10 @@
         "file": "extra_008.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 174,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2725,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 263,
@@ -7185,7 +8091,10 @@
         "file": "extra_009.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 189,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2925,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 264,
@@ -7198,7 +8107,10 @@
         "file": "extra_010.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 223,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2912,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 265,
@@ -7211,7 +8123,10 @@
         "file": "extra_011.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 162,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2375,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 266,
@@ -7224,7 +8139,10 @@
         "file": "extra_012.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 185,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3264,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 267,
@@ -7237,7 +8155,10 @@
         "file": "extra_013.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 236,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3426,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 268,
@@ -7250,7 +8171,10 @@
         "file": "extra_014.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 221,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3189,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 269,
@@ -7263,7 +8187,10 @@
         "file": "extra_015.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 229,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3343,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 270,
@@ -7276,7 +8203,10 @@
         "file": "extra_016.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 226,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3081,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 271,
@@ -7289,7 +8219,10 @@
         "file": "extra_017.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 199,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2518,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 272,
@@ -7302,7 +8235,10 @@
         "file": "extra_018.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 144,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2319,
+        "reading_time_minutes": 12,
+        "reading_time_formatted": "12 min"
       },
       {
         "seq": 273,
@@ -7315,7 +8251,10 @@
         "file": "extra_019.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 244,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3488,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 274,
@@ -7328,7 +8267,10 @@
         "file": "extra_020.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 209,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2673,
+        "reading_time_minutes": 13,
+        "reading_time_formatted": "13 min"
       },
       {
         "seq": 275,
@@ -7341,7 +8283,10 @@
         "file": "extra_021.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 285,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3842,
+        "reading_time_minutes": 19,
+        "reading_time_formatted": "19 min"
       },
       {
         "seq": 276,
@@ -7354,7 +8299,10 @@
         "file": "extra_022.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 313,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3949,
+        "reading_time_minutes": 20,
+        "reading_time_formatted": "20 min"
       },
       {
         "seq": 277,
@@ -7367,7 +8315,10 @@
         "file": "extra_023.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 231,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2978,
+        "reading_time_minutes": 15,
+        "reading_time_formatted": "15 min"
       },
       {
         "seq": 278,
@@ -7380,7 +8331,10 @@
         "file": "extra_024.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 224,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2848,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 279,
@@ -7393,7 +8347,10 @@
         "file": "extra_025.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 120,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 1825,
+        "reading_time_minutes": 9,
+        "reading_time_formatted": "9 min"
       },
       {
         "seq": 280,
@@ -7406,7 +8363,10 @@
         "file": "extra_026.json",
         "arc_id": "arc-extra-1",
         "paragraph_count": 64,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 920,
+        "reading_time_minutes": 5,
+        "reading_time_formatted": "5 min"
       },
       {
         "seq": 281,
@@ -7419,7 +8379,10 @@
         "file": "extra_027.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 193,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 2795,
+        "reading_time_minutes": 14,
+        "reading_time_formatted": "14 min"
       },
       {
         "seq": 282,
@@ -7432,7 +8395,10 @@
         "file": "extra_028.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 233,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3613,
+        "reading_time_minutes": 18,
+        "reading_time_formatted": "18 min"
       },
       {
         "seq": 283,
@@ -7445,7 +8411,10 @@
         "file": "extra_029.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 369,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 5229,
+        "reading_time_minutes": 26,
+        "reading_time_formatted": "26 min"
       },
       {
         "seq": 284,
@@ -7458,7 +8427,10 @@
         "file": "extra_030.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 313,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4145,
+        "reading_time_minutes": 21,
+        "reading_time_formatted": "21 min"
       },
       {
         "seq": 285,
@@ -7471,7 +8443,10 @@
         "file": "extra_031.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 266,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3259,
+        "reading_time_minutes": 16,
+        "reading_time_formatted": "16 min"
       },
       {
         "seq": 286,
@@ -7484,7 +8459,10 @@
         "file": "extra_032.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 303,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3882,
+        "reading_time_minutes": 19,
+        "reading_time_formatted": "19 min"
       },
       {
         "seq": 287,
@@ -7497,7 +8475,10 @@
         "file": "extra_033.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 375,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4957,
+        "reading_time_minutes": 25,
+        "reading_time_formatted": "25 min"
       },
       {
         "seq": 288,
@@ -7510,7 +8491,10 @@
         "file": "extra_034.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 331,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4436,
+        "reading_time_minutes": 22,
+        "reading_time_formatted": "22 min"
       },
       {
         "seq": 289,
@@ -7523,7 +8507,10 @@
         "file": "extra_035.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 317,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4561,
+        "reading_time_minutes": 23,
+        "reading_time_formatted": "23 min"
       },
       {
         "seq": 290,
@@ -7536,7 +8523,10 @@
         "file": "extra_036.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 325,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4235,
+        "reading_time_minutes": 21,
+        "reading_time_formatted": "21 min"
       },
       {
         "seq": 291,
@@ -7549,7 +8539,10 @@
         "file": "extra_037.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 343,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4656,
+        "reading_time_minutes": 23,
+        "reading_time_formatted": "23 min"
       },
       {
         "seq": 292,
@@ -7562,7 +8555,10 @@
         "file": "extra_038.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 255,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3500,
+        "reading_time_minutes": 18,
+        "reading_time_formatted": "18 min"
       },
       {
         "seq": 293,
@@ -7575,7 +8571,10 @@
         "file": "extra_039.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 279,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4037,
+        "reading_time_minutes": 20,
+        "reading_time_formatted": "20 min"
       },
       {
         "seq": 294,
@@ -7588,7 +8587,10 @@
         "file": "extra_040.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 278,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4089,
+        "reading_time_minutes": 20,
+        "reading_time_formatted": "20 min"
       },
       {
         "seq": 295,
@@ -7601,7 +8603,10 @@
         "file": "extra_041.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 311,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4088,
+        "reading_time_minutes": 20,
+        "reading_time_formatted": "20 min"
       },
       {
         "seq": 296,
@@ -7614,7 +8619,10 @@
         "file": "extra_042.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 224,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 3373,
+        "reading_time_minutes": 17,
+        "reading_time_formatted": "17 min"
       },
       {
         "seq": 297,
@@ -7627,7 +8635,10 @@
         "file": "extra_043.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 442,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 5842,
+        "reading_time_minutes": 29,
+        "reading_time_formatted": "29 min"
       },
       {
         "seq": 298,
@@ -7640,7 +8651,10 @@
         "file": "extra_044.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 451,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 6023,
+        "reading_time_minutes": 30,
+        "reading_time_formatted": "30 min"
       },
       {
         "seq": 299,
@@ -7653,7 +8667,10 @@
         "file": "extra_045.json",
         "arc_id": "arc-extra-2",
         "paragraph_count": 411,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 5115,
+        "reading_time_minutes": 26,
+        "reading_time_formatted": "26 min"
       },
       {
         "seq": 300,
@@ -7666,7 +8683,10 @@
         "file": "extra_046.json",
         "arc_id": "arc-extra-3",
         "paragraph_count": 62,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 1038,
+        "reading_time_minutes": 5,
+        "reading_time_formatted": "5 min"
       },
       {
         "seq": 301,
@@ -7679,7 +8699,10 @@
         "file": "extra_047.json",
         "arc_id": "arc-extra-3",
         "paragraph_count": 72,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 911,
+        "reading_time_minutes": 5,
+        "reading_time_formatted": "5 min"
       },
       {
         "seq": 302,
@@ -7692,7 +8715,10 @@
         "file": "extra_048.json",
         "arc_id": "arc-extra-3",
         "paragraph_count": 262,
-        "is_downloaded": true
+        "is_downloaded": true,
+        "word_count": 4364,
+        "reading_time_minutes": 22,
+        "reading_time_formatted": "22 min"
       }
     ]
   },
