@@ -21,6 +21,7 @@ const STORAGE_KEYS = {
 const ANIME_ADAPTED_MAX_LN_VOL = 11;
 const POST_ANIME_WN_ARCS = new Set(['arc-8', 'arc-9', 'arc-10', 'arc-extra-1', 'arc-extra-2', 'arc-extra-3']);
 const POST_ANIME_CULTURAL_CONCEPT_IDXS = new Set([3, 4, 6]);
+const APP_BUILD_VERSION = '20261101_v6';
 
 const AppState = {
   catalog: null,
@@ -73,7 +74,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   bindGlobalEvents();
 
   try {
-    const res = await fetch('data/catalog.json');
+    const res = await fetch(`data/catalog.json?v=${APP_BUILD_VERSION}`, { cache: 'no-cache' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     AppState.catalog = await res.json();
 
@@ -1380,7 +1381,7 @@ async function openLightNovel(volumeId, chapterIndex = 0, anchorOrRatio = 0, pre
       ? savedHist.editionId
       : volumeId;
 
-    const res = await fetch(`data/light_novel/${effectiveVolumeId}.json`);
+    const res = await fetch(`data/light_novel/${effectiveVolumeId}.json?v=${APP_BUILD_VERSION}`);
     if (!res.ok) throw new Error(`Volume ${effectiveVolumeId} não encontrado.`);
     const data = await res.json();
 
@@ -1448,7 +1449,7 @@ async function openWebNovelChapter(chapterIdOrNum, anchorOrRatio = 0) {
     const fileName = meta ? meta.file : `capitulo_${String(chapterIdOrNum).padStart(3, '0')}.json`;
     const resolvedId = meta ? meta.id : `cap-${String(chapterIdOrNum).padStart(3, '0')}`;
 
-    const res = await fetch(`data/web_novel/${fileName}`);
+    const res = await fetch(`data/web_novel/${fileName}?v=${APP_BUILD_VERSION}`);
     if (!res.ok) {
       if (meta && meta.url) {
         window.open(meta.url, '_blank', 'noopener');
