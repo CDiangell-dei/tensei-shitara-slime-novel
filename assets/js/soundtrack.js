@@ -1,6 +1,6 @@
 /**
  * soundtrack.js - Player de Trilha Sonora Oficial & Imersiva de Tensura
- * Conecta todos os momentos e conferências da Light Novel e Web Novel às faixas oficiais.
+ * Conecta todos os momentos, conferências e trocas de cena dentro de cada capítulo da obra.
  */
 
 (function () {
@@ -118,6 +118,65 @@
     }
   ];
 
+  // Mapeamento minucioso de transições de cena internas dentro do mesmo capítulo
+  const CHAPTER_SCENE_MAPPINGS = {
+    // Volume 6: Prólogo (Laplace & Sarion -> Castelo de Clayman)
+    'vol-6:1': [
+      { pIndex: 0, trackId: 'sarion_dynasty', title: 'Laplace & O Homúnculo de Sarion' },
+      { pIndex: 220, trackId: 'conspiracy_takurami', title: '🎭 Conspiração no Castelo de Clayman' }
+    ],
+
+    // Volume 6: Capítulo 1 - Encontro entre Homem e Monstro (Clayman -> Gazel -> Sarion -> Grande Reunião)
+    'vol-6:2': [
+      { pIndex: 0, trackId: 'conspiracy_takurami', title: '🎭 Conspiração & Planos de Clayman' },
+      { pIndex: 217, trackId: 'peaceful_village', title: '🌿 Chegada do Rei Gazel & Pégasos' },
+      { pIndex: 355, trackId: 'sarion_dynasty', title: '🏰 Chegada da Comitiva de Sarion' },
+      { pIndex: 467, trackId: 'tempest_meeting_dynamic', title: '🏛️ O Encontro entre Homem e Monstro (A Grande Reunião)' }
+    ],
+
+    // Volume 6: Capítulo 2 - Palavra de Ramiris
+    'vol-6:3': [
+      { pIndex: 0, trackId: 'tempest_meeting_dynamic', title: '🏛️ Continuação da Conferência de Tempest' },
+      { pIndex: 540, trackId: 'conspiracy_takurami', title: '⚡ Alerta de Ramiris: "Tempest vai ser destruída!"' }
+    ],
+
+    // Volume 6: Capítulo 5 - Walpurgis
+    'vol-6:7': [
+      { pIndex: 0, trackId: 'council_diplomacy', title: '⚖️ Walpurgis: O Banquete dos Lordes Demônios' },
+      { pIndex: 600, trackId: 'battle_counterattack', title: '⚔️ O Julgamento de Clayman & Batalha' }
+    ],
+
+    // Volume 7: Capítulo 1 - Um acordo com o diabo
+    'vol-7:2': [
+      { pIndex: 0, trackId: 'primordials_dialogue', title: '🔮 O Acordo de Diablo & Estratégia de Farmus' },
+      { pIndex: 500, trackId: 'council_diplomacy', title: '⚖️ Conferência Militar com Rimuru' }
+    ],
+
+    // Volume 7: Capítulo 4 - O Segundo Confronto
+    'vol-7:6': [
+      { pIndex: 0, trackId: 'conspiracy_takurami', title: '🎭 Tramas dos Cavaleiros Sagrados' },
+      { pIndex: 450, trackId: 'battle_counterattack', title: '⚔️ Santos e Monstros Colidem' }
+    ],
+
+    // Volume 8: Capítulo 2 - O Banquete da Véspera
+    'vol-8:2': [
+      { pIndex: 0, trackId: 'peaceful_village', title: '🌿 Preparativos Finais em Tempest' },
+      { pIndex: 300, trackId: 'festival_banquet', title: '🎊 O Grande Banquete da Véspera' }
+    ],
+
+    // Volume 8: Capítulo 4 - A Inauguração da Masmorra
+    'vol-8:4': [
+      { pIndex: 0, trackId: 'festival_banquet', title: '🎊 Cerimônia do Festival' },
+      { pIndex: 250, trackId: 'dungeon_management', title: '🌀 Abertura Oficial do Labirinto de Ramiris' }
+    ],
+
+    // Volume 10: Capítulo 1 - A Operação Suave do Labirinto
+    'vol-10:2': [
+      { pIndex: 0, trackId: 'dungeon_management', title: '🌀 Administração dos 100 Andares do Labirinto' },
+      { pIndex: 400, trackId: 'conspiracy_takurami', title: '🎭 As Tramas Ocultas da Família Rozzo' }
+    ]
+  };
+
   let ytPlayer = null;
   let isApiReady = false;
   let isApiLoading = false;
@@ -127,8 +186,10 @@
   let isMuted = localStorage.getItem(STORAGE_KEYS.MUTED) === 'true';
   let isCollapsed = localStorage.getItem(STORAGE_KEYS.DOCK_COLLAPSED) === 'true';
   let isAutoSuggest = localStorage.getItem(STORAGE_KEYS.AUTOPLAY_CHAPTER) !== 'false';
-  let isLooping = localStorage.getItem(STORAGE_KEYS.LOOP) !== 'false'; // Padrão: TRUE (repete a atmosfera da cena)
+  let isLooping = localStorage.getItem(STORAGE_KEYS.LOOP) !== 'false'; // Padrão: TRUE
   let loopWatcherInterval = null;
+  let sceneScrollObserver = null;
+  let activeSceneTrackId = null;
 
   function initSoundtrack() {
     createSoundtrackElements();
@@ -249,13 +310,33 @@
         <div class="soundtrack-dock-footer">
           <label class="soundtrack-auto-label">
             <input type="checkbox" id="chk-soundtrack-auto" ${isAutoSuggest ? 'checked' : ''}>
-            <span>Sugerir trilha automaticamente por capítulo</span>
+            <span>Trocar trilha automaticamente ao mudar de cena ou capítulo</span>
           </label>
         </div>
       </div>
     `;
 
     document.body.appendChild(dock);
+
+    // Toast de notificação de troca de cena flutuante
+    if (!document.getElementById('soundtrack-scene-toast')) {
+      const toast = document.createElement('div');
+      toast.id = 'soundtrack-scene-toast';
+      toast.className = 'soundtrack-scene-toast';
+      toast.setAttribute('aria-live', 'polite');
+      document.body.appendChild(toast);
+    }
+  }
+
+  function showSceneToast(message) {
+    const toast = document.getElementById('soundtrack-scene-toast');
+    if (!toast) return;
+    toast.textContent = message;
+    toast.classList.add('is-visible');
+    clearTimeout(toast._timer);
+    toast._timer = setTimeout(() => {
+      toast.classList.remove('is-visible');
+    }, 2800);
   }
 
   function attachGlobalEvents() {
@@ -361,7 +442,7 @@
           ytPlayer.seekTo(currentTrack.start, true);
         }
       } catch (e) {
-        // Ignora pequenos atrasos transitórios da API
+        // Ignora atrasos transitórios da API
       }
     }, 800);
   }
@@ -431,6 +512,7 @@
 
   async function playTrack(track, shouldPlay = true) {
     currentTrack = track;
+    activeSceneTrackId = track.id;
     localStorage.setItem(STORAGE_KEYS.LAST_TRACK, track.id);
     syncUiState();
 
@@ -556,7 +638,7 @@
       btn.classList.toggle('is-active', btn.getAttribute('data-track-id') === currentTrack.id);
     });
 
-    // Atualiza badge de capítulo inline no leitor se existir
+    // Atualiza badge de capítulo inline no topo do leitor
     const inlineBadge = document.getElementById('soundtrack-chapter-badge');
     const inlineBtn = document.getElementById('btn-soundtrack-play-inline');
     if (inlineBadge && inlineBtn) {
@@ -564,76 +646,210 @@
         ? '⏸ Pausar Trilha'
         : '▶ Ouvir Trilha';
     }
+
+    // Atualiza botões de cena no meio do texto
+    const sceneCues = document.querySelectorAll('.soundtrack-scene-cue');
+    sceneCues.forEach(cue => {
+      const isThisActive = cue.getAttribute('data-track-id') === currentTrack.id;
+      cue.classList.toggle('is-active', isThisActive);
+      const btnCue = cue.querySelector('.btn-cue-play');
+      if (btnCue) {
+        btnCue.textContent = isPlaying && isThisActive ? '⏸ Tocando' : '▶ Sintonizar';
+      }
+    });
   }
 
   /**
-   * Classificador universal inteligente para TODOS os capítulos de TODOS os volumes.
+   * Classificador universal inteligente para capítulos.
    */
   function determineChapterTrack(volumeId, chapterIndex, chapterTitle) {
     const t = String(chapterTitle || '').toLowerCase();
     const cleanVol = String(volumeId || '').replace(/-scan$/, '');
     const volNum = parseFloat(cleanVol.replace('vol-', '').replace('-', '.'));
 
-    // 1. Capas, extras, mangás e posfácios
     if (t.includes('capa') || t.includes('ilustraç') || t.includes('mangá') || t.includes('posfácio') || t.includes('nota do autor') || t.includes('notas culturais')) {
       return 'peaceful_village';
     }
-
-    // 2. Dinastia Feiticeira de Sarion
-    if (t.includes('sarion')) {
-      return 'sarion_dynasty';
-    }
-
-    // 3. Labirinto e Dungeon de Ramiris
+    if (t.includes('sarion')) return 'sarion_dynasty';
     if (t.includes('labirinto') || t.includes('dungeon') || (volNum === 10 && chapterIndex <= 2) || (volNum === 8 && t.includes('masmorra'))) {
       return 'dungeon_management';
     }
-
-    // 4. Festival de Fundação e Banquetes
     if (t.includes('festival') || t.includes('banquete') || t.includes('celebração') || t.includes('fundação') || (volNum === 8 && chapterIndex >= 2) || (volNum === 9 && chapterIndex <= 3)) {
       return 'festival_banquet';
     }
-
-    // 5. Primordiais & Demônios Nobres (Diablo, Guy Crimson, Testarossa, Ultima, Carrera)
-    if (t.includes('primordial') || t.includes('diablo') || t.includes('guy crimson') || t.includes('números negros') || t.includes('black numbers') || t.includes('demônios nobres')) {
+    if (t.includes('primordial') || t.includes('diablo') || t.includes('guy crimson') || t.includes('números negros') || t.includes('black numbers')) {
       return 'primordials_dialogue';
     }
-
-    // 6. Conspiração, Palhaços e Tramas Secretas
     if (t.includes('conspiração') || t.includes('palhaço') || t.includes('secreta') || t.includes('esquema') || t.includes('sombra') || t.includes('traição') || t.includes('maquinações') || t.includes('tributo')) {
       return 'conspiracy_takurami';
     }
-
-    // 7. Reuniões Diplomáticas, Conferências e Parlamentos
-    if (t.includes('reunião') || t.includes('conferência') || t.includes('conselho') || t.includes('homem e monstro') || t.includes('palavra de ramiris') || t.includes('acordo') || t.includes('parlamento') || t.includes('tratado') || t.includes('negociação')) {
-      if (t.includes('octagrama') || t.includes('walpurgis') || t.includes('santo') || t.includes('deus')) {
-        return 'council_diplomacy';
-      }
+    if (t.includes('reunião') || t.includes('conferência') || t.includes('conselho') || t.includes('homem e monstro') || t.includes('palavra de ramiris') || t.includes('acordo') || t.includes('parlamento')) {
+      if (t.includes('octagrama') || t.includes('walpurgis') || t.includes('santo') || t.includes('deus')) return 'council_diplomacy';
       return 'tempest_meeting_dynamic';
     }
-
-    // 8. Batalhas, Guerras, Invasões e Confrontos
-    if (t.includes('batalha') || t.includes('guerra') || t.includes('confronto') || t.includes('colidem') || t.includes('ataque') || t.includes('invasão') || t.includes('luta') || t.includes('derrota') || t.includes('massacre') || t.includes('combate') || t.includes('conflito') || t.includes('destino')) {
+    if (t.includes('batalha') || t.includes('guerra') || t.includes('confronto') || t.includes('colidem') || t.includes('ataque') || t.includes('invasão') || t.includes('combate') || t.includes('destino')) {
       return 'battle_counterattack';
     }
-
-    // 9. Reencarnação, Despertar de Lorde Demônio e Origens
-    if (t.includes('reencarnação') || t.includes('despertar') || t.includes('morte') || t.includes('amigo') || t.includes('chamas') || t.includes('dragão') || t.includes('lorde demônio') || (volNum === 1 && chapterIndex <= 2) || (volNum === 5 && chapterIndex >= 4)) {
+    if (t.includes('reencarnação') || t.includes('despertar') || t.includes('amigo') || t.includes('dragão') || t.includes('lorde demônio') || (volNum === 1 && chapterIndex <= 2) || (volNum === 5 && chapterIndex >= 4)) {
       return 'reincarnation_determination';
     }
-
-    // 10. Volumes com foco pesado em guerra nos capítulos avançados (Império e Tenma)
     if ([13, 14, 15, 19, 20, 21, 22].includes(volNum) && chapterIndex >= 3) {
       return 'battle_counterattack';
     }
-
-    // 11. Vida diária, descanso e aldeia
     if (t.includes('vida diária') || t.includes('cotidiano') || t.includes('paz') || t.includes('descanso') || t.includes('aldeia') || t.includes('vila')) {
       return 'peaceful_village';
     }
 
-    // Padrão canônico de Tempest: A dinâmica de debate e estratégia de reunião!
     return 'tempest_meeting_dynamic';
+  }
+
+  /**
+   * Inicializa o observador de rolagem e insere os marcadores visuais de cena no texto.
+   */
+  function setupSceneScrollTransitions(volumeId, chapterIndex, chapterTitle) {
+    if (sceneScrollObserver) {
+      sceneScrollObserver.disconnect();
+      sceneScrollObserver = null;
+    }
+
+    const proseArea = document.getElementById('reader-text-container');
+    if (!proseArea) return;
+
+    const baseVol = String(volumeId || '').replace(/-scan$/, '');
+    const key = `${baseVol}:${chapterIndex}`;
+    const explicitCues = CHAPTER_SCENE_MAPPINGS[key] || [];
+
+    // Se temos mapeamento explícito para este capítulo (ex: Volume 6 Cap 1)
+    if (explicitCues.length > 0) {
+      explicitCues.forEach((cue) => {
+        const targetP = document.getElementById(`p-${cue.pIndex}`);
+        if (targetP && cue.pIndex > 0) { // Não duplica no primeiro parágrafo pois já tem o banner do topo
+          let cueDiv = targetP.previousElementSibling;
+          if (!cueDiv || !cueDiv.classList.contains('soundtrack-scene-cue')) {
+            const track = TRACK_CATALOG.find(t => t.id === cue.trackId) || TRACK_CATALOG[0];
+            cueDiv = document.createElement('div');
+            cueDiv.className = 'soundtrack-scene-cue';
+            cueDiv.setAttribute('data-track-id', track.id);
+            cueDiv.innerHTML = `
+              <div class="scene-cue-left">
+                <span class="scene-cue-icon">🎵</span>
+                <span class="scene-cue-text">Cena: <strong>${escapeHtml(cue.title || track.title)}</strong></span>
+              </div>
+              <button type="button" class="btn-cue-play" aria-label="Sintonizar trilha desta cena">▶ Sintonizar</button>
+            `;
+            targetP.parentNode.insertBefore(cueDiv, targetP);
+          }
+        }
+      });
+    } else {
+      // Detector dinâmico em quebras de cena (<hr class="scene-break">)
+      const hrs = proseArea.querySelectorAll('hr.scene-break');
+      hrs.forEach(hr => {
+        let sample = '';
+        let nextEl = hr.nextElementSibling;
+        let count = 0;
+        while (nextEl && count < 3) {
+          if (nextEl.tagName === 'P') {
+            sample += ' ' + nextEl.textContent;
+            count++;
+          }
+          nextEl = nextEl.nextElementSibling;
+        }
+
+        const sampleLow = sample.toLowerCase();
+        let detectedTrackId = null;
+        let cueTitle = '';
+
+        if (sampleLow.includes('sarion')) {
+          detectedTrackId = 'sarion_dynasty';
+          cueTitle = '🏰 Dinastia Feiticeira de Sarion';
+        } else if (['clayman', 'palhaço', 'conspiração', 'traição', 'laplace'].some(k => sampleLow.includes(k))) {
+          detectedTrackId = 'conspiracy_takurami';
+          cueTitle = '🎭 Conspiração & Mistério';
+        } else if (['reunião', 'conferência', 'conselho', 'sala de reuniões'].some(k => sampleLow.includes(k))) {
+          detectedTrackId = 'tempest_meeting_dynamic';
+          cueTitle = '🏛️ Reunião em Tempest';
+        } else if (['batalha', 'combate', 'ataque', 'espada'].some(k => sampleLow.includes(k))) {
+          detectedTrackId = 'battle_counterattack';
+          cueTitle = '⚔️ Confronto & Batalha';
+        } else if (['labirinto', 'dungeon', 'ramiris'].some(k => sampleLow.includes(k))) {
+          detectedTrackId = 'dungeon_management';
+          cueTitle = '🌀 O Labirinto de Ramiris';
+        } else if (['festa', 'banquete', 'festival'].some(k => sampleLow.includes(k))) {
+          detectedTrackId = 'festival_banquet';
+          cueTitle = '🎊 Banquete do Festival';
+        }
+
+        if (detectedTrackId) {
+          const track = TRACK_CATALOG.find(t => t.id === detectedTrackId);
+          if (track) {
+            let cueDiv = hr.nextElementSibling;
+            if (!cueDiv || !cueDiv.classList.contains('soundtrack-scene-cue')) {
+              cueDiv = document.createElement('div');
+              cueDiv.className = 'soundtrack-scene-cue';
+              cueDiv.setAttribute('data-track-id', track.id);
+              cueDiv.innerHTML = `
+                <div class="scene-cue-left">
+                  <span class="scene-cue-icon">🎵</span>
+                  <span class="scene-cue-text">Cena: <strong>${escapeHtml(cueTitle || track.title)}</strong></span>
+                </div>
+                <button type="button" class="btn-cue-play" aria-label="Sintonizar trilha desta cena">▶ Sintonizar</button>
+              `;
+              hr.parentNode.insertBefore(cueDiv, hr.nextSibling);
+            }
+          }
+        }
+      });
+    }
+
+    // Configura IntersectionObserver para disparar na rolagem
+    const cues = proseArea.querySelectorAll('.soundtrack-scene-cue');
+    if (cues.length > 0 && 'IntersectionObserver' in window) {
+      sceneScrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const trackId = entry.target.getAttribute('data-track-id');
+            if (trackId && trackId !== activeSceneTrackId) {
+              activeSceneTrackId = trackId;
+              const newTrack = TRACK_CATALOG.find(t => t.id === trackId);
+              if (newTrack) {
+                // Se a música está tocando e a opção de troca automática estiver ligada:
+                if (isPlaying && isAutoSuggest && newTrack.id !== currentTrack.id) {
+                  playTrack(newTrack, true);
+                  showSceneToast(`🎵 Mudança de Cena: ${newTrack.title}`);
+                }
+                syncUiState();
+              }
+            }
+          }
+        });
+      }, {
+        root: null,
+        rootMargin: '-15% 0px -65% 0px',
+        threshold: 0
+      });
+
+      cues.forEach(c => sceneScrollObserver.observe(c));
+    }
+
+    // Adiciona evento de clique em todos os botões de cena inline
+    proseArea.querySelectorAll('.soundtrack-scene-cue').forEach(cue => {
+      const btn = cue.querySelector('.btn-cue-play');
+      if (btn) {
+        btn.addEventListener('click', () => {
+          const trackId = cue.getAttribute('data-track-id');
+          const track = TRACK_CATALOG.find(t => t.id === trackId);
+          if (track) {
+            if (currentTrack.id === track.id) {
+              togglePlay();
+            } else {
+              playTrack(track, true);
+              showSceneToast(`🎵 Sintonizado: ${track.title}`);
+            }
+          }
+        });
+      }
+    });
   }
 
   /**
@@ -642,15 +858,29 @@
   function handleChapterChange(volumeId, chapterIndex, chapterTitle) {
     if (!volumeId) return;
 
-    const suggestedTrackId = determineChapterTrack(volumeId, chapterIndex, chapterTitle);
-    const suggestedTrack = TRACK_CATALOG.find(t => t.id === suggestedTrackId) || TRACK_CATALOG[0];
+    const baseVol = String(volumeId || '').replace(/-scan$/, '');
+    const key = `${baseVol}:${chapterIndex}`;
+    const explicitCues = CHAPTER_SCENE_MAPPINGS[key] || [];
 
-    renderChapterSoundtrackBadge(suggestedTrack);
+    // O primeiro tema do capítulo é o primeiro cue da lista ou o classificador geral
+    const initialTrackId = (explicitCues.length > 0 && explicitCues[0].trackId)
+      ? explicitCues[0].trackId
+      : determineChapterTrack(volumeId, chapterIndex, chapterTitle);
+
+    const initialTrack = TRACK_CATALOG.find(t => t.id === initialTrackId) || TRACK_CATALOG[0];
+
+    renderChapterSoundtrackBadge(initialTrack);
 
     // Se o usuário já estava ouvindo música e tem auto-suggest ligado:
-    if (isPlaying && isAutoSuggest && suggestedTrack && suggestedTrack.id !== currentTrack.id) {
-      playTrack(suggestedTrack, true);
+    if (isPlaying && isAutoSuggest && initialTrack && initialTrack.id !== currentTrack.id) {
+      playTrack(initialTrack, true);
+      showSceneToast(`🎵 Capítulo: ${initialTrack.title}`);
     }
+
+    // Configura os observadores de cena no texto
+    setTimeout(() => {
+      setupSceneScrollTransitions(volumeId, chapterIndex, chapterTitle);
+    }, 150);
   }
 
   function renderChapterSoundtrackBadge(track) {
@@ -692,6 +922,7 @@
           togglePlay();
         } else {
           playTrack(track, true);
+          showSceneToast(`🎵 Trilha Iniciada: ${track.title}`);
         }
       });
     }

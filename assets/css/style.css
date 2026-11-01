@@ -3584,3 +3584,121 @@ dialog::backdrop {
 .btn-soundtrack-loop:hover {
   border-color: var(--primary, #2563eb);
 }
+
+
+/* TOAST DE TRANSIÇÃO DE CENA FLUTUANTE */
+.soundtrack-scene-toast {
+  position: fixed;
+  top: 76px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-24px);
+  background: rgba(24, 28, 36, 0.94);
+  color: #ffffff;
+  padding: 0.55rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.soundtrack-scene-toast.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* MARCADOR VISUAL DE TRANSIÇÃO DE CENA DENTRO DO CAPÍTULO */
+.soundtrack-scene-cue {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  background: var(--bg-secondary, #f5efe3);
+  border: 1px dashed var(--border-color, #e2d9c8);
+  border-radius: 10px;
+  padding: 0.55rem 0.95rem;
+  margin: 1.75rem 0 1.5rem;
+  font-size: 0.82rem;
+  color: var(--text-secondary, #64748b);
+  transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .soundtrack-scene-cue {
+  background: #181d27;
+  border-color: #2e384d;
+}
+
+.soundtrack-scene-cue.is-active {
+  border-style: solid;
+  border-color: var(--primary, #2563eb);
+  background: rgba(37, 99, 235, 0.08);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.12);
+}
+
+[data-theme="dark"] .soundtrack-scene-cue.is-active {
+  background: rgba(37, 99, 235, 0.18);
+  border-color: #3b82f6;
+}
+
+.scene-cue-left {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+}
+
+.scene-cue-icon {
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.scene-cue-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scene-cue-text strong {
+  color: var(--text-primary, #1e293b);
+}
+
+.btn-cue-play {
+  background: var(--card-bg, #fffdf8);
+  border: 1px solid var(--border-color, #e2d9c8);
+  border-radius: 9999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--primary, #2563eb);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+[data-theme="dark"] .btn-cue-play {
+  background: #1f2633;
+  border-color: #38445d;
+}
+
+.btn-cue-play:hover {
+  background: var(--primary, #2563eb);
+  color: #ffffff;
+  border-color: var(--primary, #2563eb);
+  transform: translateY(-1px);
+}
+
+.soundtrack-scene-cue.is-active .btn-cue-play {
+  background: var(--primary, #2563eb);
+  color: #ffffff;
+  border-color: var(--primary, #2563eb);
+}
