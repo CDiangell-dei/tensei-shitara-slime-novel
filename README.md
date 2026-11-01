@@ -4,6 +4,8 @@ Aplicação web estática, moderna e 100% em **Português Brasileiro (PT-BR)** d
 
 🔗 **Acesse o Leitor Online:** **https://cdiangell-dei.github.io/tensei-shitara-slime-novel/**
 
+> 💡 **Projeto Livre & Código Aberto:** Este projeto é 100% comunitário, livre e sem fins lucrativos. Qualquer pessoa ou grupo que queira **clonar, modificar e traduzir para outros idiomas** tem total liberdade para fazer um fork e utilizá-lo como base! Veja a [seção de tradução](#-projeto-livre-aberto--tradução-para-outros-idiomas-fork--localização).
+
 Funciona diretamente no navegador (computador, tablet ou celular) pelo **GitHub Pages** ou localmente de forma 100% offline, contando com **salvamento automático de progresso** (`localStorage` + backup `.json`), separação estrita entre **Light Novel** e **Web Novel**, trilha sonora dinâmica por mudança de cena, **123 caixinhas de explicação interativas** (perfeitas para leituras ao vivo e streamers), centenas de ilustrações oficiais em WebP HD e links diretos para as edições oficiais na **Amazon Brasil**.
 
 ---
@@ -116,6 +118,25 @@ Abra o terminal na pasta do projeto e execute:
 python -m http.server 8080
 ```
 Em seguida, acesse **`http://localhost:8080`** no seu navegador favorito.
+
+---
+
+## 🌐 Projeto Livre, Aberto & Tradução para Outros Idiomas (Fork & Localização)
+
+Este projeto foi desenvolvido com uma arquitetura **100% aberta, livre, modular e sem custos de servidor**. Qualquer pessoa, comunidade, tradutor ou grupo ao redor do mundo é **livre e encorajado a clonar (fork), utilizar e traduzir este projeto para qualquer outro idioma** (como Espanhol, Inglês, Francês, Alemão, Italiano, Russo, Indonésio, etc.)!
+
+Toda a engenharia da aplicação foi desacoplada de forma limpa entre código de interface (`assets/`) e dados estruturados (`data/`):
+
+1. **Faça um Fork do Repositório**:
+   - Clique em **Fork** no canto superior direito do GitHub para ter sua própria cópia do leitor.
+2. **Traduza ou Insira seus Arquivos de Texto (JSON)**:
+   - **Light Novel**: Os arquivos ficam em `data/light_novel/` (`vol-1.json` a `vol-23.json`). Basta colocar os parágrafos no seu idioma seguindo o mesmo schema.
+   - **Web Novel**: Ficam em `data/web_novel/` (`capitulo_000.json` a `capitulo_249.json` + extras).
+   - **Catálogo & Guia de Lore**: O arquivo `data/catalog.json` contém as sinopses, títulos de arcos e o dicionário de verbetes explicativos (`cultural_guide.inline_glossary`). Você pode traduzir ou adicionar novos termos que o leitor já destacará automaticamente!
+3. **Mantenha Todas as Tecnologias de Ponta Nativas**:
+   - O player de áudio com troca suave de trilha sonora por cena (`soundtrack.js`), os popups explicativos interativos, as galerias de imagens em WebP HD, o modo anti-spoiler e o salvamento exato de rolagem continuam funcionando 100% de fábrica para o novo idioma.
+4. **Publicação Gratuita no GitHub Pages**:
+   - Vá em `Settings > Pages` do seu fork, aponte a fonte para a branch `main` (raiz `/`) e em menos de 1 minuto seu leitor estará online para a comunidade do seu país, sem pagar hospedagem nem banco de dados.
 
 ---
 
