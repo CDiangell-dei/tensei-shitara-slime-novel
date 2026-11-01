@@ -50,7 +50,7 @@
           <span aria-hidden="true">📜</span> Web Novel
         </button>
         <button type="button" class="nav-tab" data-tab="recap">
-          <span aria-hidden="true">📺</span> Resumo Vol. 1–11
+          <span aria-hidden="true">📺</span> Guia &amp; Resumo
         </button>
         <button type="button" class="nav-tab" data-tab="comparison">
           <span aria-hidden="true">⚖️</span> Comparador
@@ -172,59 +172,135 @@
       <div id="wn-arcs-container" class="arcs-wrapper"></div>
     </section>
 
-    <!-- ABA NOVA: RESUMO DA HISTÓRIA ATÉ O VOLUME 11 (GUIA PÓS-ANIME) -->
+    <!-- ABA NOVA: GUIA PARA INICIANTES & RESUMO DA HISTÓRIA -->
     <section id="view-recap" class="view-section" aria-labelledby="heading-recap">
-      <div class="section-hero hero-recap">
-        <div class="hero-badges">
-          <span class="hero-tag">Guia de Memória Pós-Anime</span>
-          <span class="hero-stat">Volumes 1 a 11 + 8.5 • Zero Spoilers do Vol. 12+</span>
-        </div>
-        <h2 id="heading-recap">Resumo da História até o Volume 11</h2>
-        <p id="recap-subtitle-text">
-          Ideal para quem assistiu ao Anime há algum tempo ou quer refrescar a memória sobre alianças, personagens, habilidades e ganchos antes de continuar na Light Novel — sem nenhum spoiler do Volume 12 em diante.
-        </p>
+      <!-- Seletor de Perfil do Leitor (Iniciante vs Pós-Anime) -->
+      <div class="recap-audience-switcher" role="tablist" aria-label="Escolha seu perfil de leitura">
+        <button type="button" class="recap-audience-btn active" id="btn-recap-audience-beginner" role="tab" aria-selected="true" data-audience="beginner">
+          🌱 Novo por Aqui? (Nunca Vi o Anime)
+        </button>
+        <button type="button" class="recap-audience-btn" id="btn-recap-audience-anime" role="tab" aria-selected="false" data-audience="anime">
+          📺 Já Vi o Anime? (Recapitulação Vol. 1–11)
+        </button>
       </div>
 
-      <div id="recap-zero-spoiler-notice" class="recap-mode-notice" hidden>
-        🛡️ <strong>Modo "Começando do Zero" ativo:</strong> Todas as seções abaixo iniciam recolhidas para você expandir apenas até o volume em que já chegou!
-      </div>
-
-      <section class="recap-block" aria-labelledby="recap-h-start">
-        <h3 id="recap-h-start" class="subsection-heading">🧭 De Onde Começar a Ler na Light Novel?</h3>
-        <div class="recap-start-grid" id="recap-start-grid"></div>
-      </section>
-
-      <details class="arc-details recap-section-details" id="recap-phases-details" open>
-        <summary class="arc-summary">
-          <span>
-            <span class="arc-title-text">⚡ Panorama Geral em 4 Fases (Do Volume 1 ao Volume 11)</span>
-            <span class="arc-desc-text">Visão rápida da evolução de Rimuru, das temporadas do Anime e da transição para a guerra contra o Império Oriental.</span>
-          </span>
-        </summary>
-        <div class="recap-phases-grid" id="recap-phases-grid"></div>
-      </details>
-
-      <section class="recap-block" aria-labelledby="recap-h-vols">
-        <div class="recap-header-row">
-          <h3 id="recap-h-vols" class="subsection-heading">📚 Resumo Detalhado Volume por Volume (Vol. 1 ao Vol. 11)</h3>
-          <div class="wn-controls-row recap-controls-row">
-            <button type="button" class="btn-secondary-pill" id="btn-recap-expand-s3">Expandir Anime T1–T3 (Vols. 1–9)</button>
-            <button type="button" class="btn-secondary-pill" id="btn-recap-expand-all">Expandir Todos (Até Vol. 11)</button>
-            <button type="button" class="btn-secondary-pill" id="btn-recap-collapse-all">Recolher Todos</button>
+      <!-- PAINEL 1: NOVO POR AQUI? (GUIA SEM SPOILER & PROGRESSÃO EM 2 LINHAS) -->
+      <div id="recap-panel-beginner" class="recap-panel active" role="tabpanel" aria-labelledby="btn-recap-audience-beginner">
+        <!-- Hero Pitch para Iniciantes -->
+        <div class="section-hero hero-recap hero-beginner">
+          <div class="hero-badges">
+            <span class="hero-tag">Guia Oficial para Iniciantes</span>
+            <span class="hero-stat">24 Volumes • Da Caverna ao Fim do Universo</span>
           </div>
+          <h2 id="heading-recap-beginner">Novo no Universo de Tensura? Comece por Aqui!</h2>
+          <p id="recap-beginner-tagline" class="recap-tagline-text">
+            De assalariado comum de Tóquio a líder supremo de uma federação de monstros no mundo de fantasia mais rico e cativante já concebido.
+          </p>
         </div>
-        <div id="recap-volumes-container" class="arcs-wrapper recap-volumes-wrapper"></div>
-      </section>
 
-      <details class="arc-details recap-section-details" id="recap-world-details" open>
-        <summary class="arc-summary">
-          <span>
-            <span class="arc-title-text">🗺️ Guia Rápido: Como Está o Mundo no Fim do Volume 11?</span>
-            <span class="arc-desc-text">Poderes de Rimuru, generais de Tempest, Octagrama, Labirinto de 100 Andares, nações aliadas e o gancho para o Volume 12.</span>
-          </span>
-        </summary>
-        <div class="recap-world-grid" id="recap-world-state-grid"></div>
-      </details>
+        <!-- Card de Sinopse & 4 Pilares -->
+        <article class="beginner-pitch-card">
+          <div class="beginner-pitch-body">
+            <h3 class="beginner-pitch-title">📖 O que é Tensei Shitara Slime Datta Ken?</h3>
+            <p id="beginner-synopsis-text" class="beginner-synopsis"></p>
+
+            <div class="beginner-pillars-grid" id="beginner-pillars-grid"></div>
+
+            <div class="beginner-recommendation-box">
+              <div class="recom-icon">💡</div>
+              <div class="recom-content">
+                <strong>Por que ler a Light Novel no Volume 1?</strong>
+                <p id="beginner-recom-text"></p>
+                <div class="beginner-cta-row">
+                  <button type="button" class="btn-primary-glow btn-recap-start" data-action="open-ln" data-vol="vol-01">
+                    📖 Começar Leitura pelo Volume 1 →
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Seção: Como a Trama Vai Crescendo (Vols 1 a 23 + 8.5) -->
+        <section class="recap-block progression-timeline-section" aria-labelledby="progression-heading">
+          <div class="progression-header-wrap">
+            <div>
+              <h3 id="progression-heading" class="subsection-heading">📈 Como a Trama Vai Crescendo (Volumes 1 a 23 + 8.5)</h3>
+              <p class="section-subtext">Veja a evolução da escala de poder, política e nações ao longo de cada livro.</p>
+            </div>
+
+            <!-- Controle Toggle: Sem Spoiler vs Com Spoiler Leve (2 Linhas) -->
+            <div class="progression-toggle-bar">
+              <span class="toggle-bar-label">Modo de Exibição:</span>
+              <div class="segmented-control" role="radiogroup" aria-label="Modo de spoiler da linha de progressão">
+                <button type="button" class="segmented-btn active" id="btn-progression-spoiler-free" role="radio" aria-checked="true" data-mode="free">
+                  🛡️ Sem Spoilers (Apenas Escopo &amp; Temas)
+                </button>
+                <button type="button" class="segmented-btn" id="btn-progression-spoiler-two-lines" role="radio" aria-checked="false" data-mode="two-lines">
+                  👁️ Com Spoiler Leve (Resumo em 2 Linhas)
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="progression-timeline-grid" class="progression-grid mode-spoiler-free"></div>
+        </section>
+      </div>
+
+      <!-- PAINEL 2: JÁ VI O ANIME (RECAPITULAÇÃO PÓS-ANIME EXISTENTE) -->
+      <div id="recap-panel-anime" class="recap-panel" role="tabpanel" aria-labelledby="btn-recap-audience-anime" hidden>
+        <div class="section-hero hero-recap">
+          <div class="hero-badges">
+            <span class="hero-tag">Guia de Memória Pós-Anime</span>
+            <span class="hero-stat">Volumes 1 a 11 + 8.5 • Anime: 4ª Temporada • Zero Spoilers do Vol. 12+</span>
+          </div>
+          <h2 id="heading-recap">Resumo da História até o Volume 11</h2>
+          <p id="recap-subtitle-text">
+            Ideal para quem assistiu ao Anime há algum tempo ou quer refrescar a memória sobre alianças, personagens, habilidades e ganchos antes de continuar na Light Novel — sem nenhum spoiler do Volume 12 em diante.
+          </p>
+        </div>
+
+        <div id="recap-zero-spoiler-notice" class="recap-mode-notice" hidden>
+          🛡️ <strong>Modo "Começando do Zero" ativo:</strong> Todas as seções abaixo iniciam recolhidas para você expandir apenas até o volume em que já chegou!
+        </div>
+
+        <section class="recap-block" aria-labelledby="recap-h-start">
+          <h3 id="recap-h-start" class="subsection-heading">🧭 De Onde Começar a Ler na Light Novel?</h3>
+          <div class="recap-start-grid" id="recap-start-grid"></div>
+        </section>
+
+        <details class="arc-details recap-section-details" id="recap-phases-details" open>
+          <summary class="arc-summary">
+            <span>
+              <span class="arc-title-text">⚡ Panorama Geral em 4 Fases (Do Volume 1 ao Volume 11)</span>
+              <span class="arc-desc-text">Visão rápida da evolução de Rimuru, das temporadas do Anime e da transição para a guerra contra o Império Oriental.</span>
+            </span>
+          </summary>
+          <div class="recap-phases-grid" id="recap-phases-grid"></div>
+        </details>
+
+        <section class="recap-block" aria-labelledby="recap-h-vols">
+          <div class="recap-header-row">
+            <h3 id="recap-h-vols" class="subsection-heading">📚 Resumo Detalhado Volume por Volume (Vol. 1 ao Vol. 11)</h3>
+            <div class="wn-controls-row recap-controls-row">
+              <button type="button" class="btn-secondary-pill" id="btn-recap-expand-s3">Expandir Anime T1–T3 (Vols. 1–9)</button>
+              <button type="button" class="btn-secondary-pill" id="btn-recap-expand-all">Expandir Todos (Até Vol. 11)</button>
+              <button type="button" class="btn-secondary-pill" id="btn-recap-collapse-all">Recolher Todos</button>
+            </div>
+          </div>
+          <div id="recap-volumes-container" class="arcs-wrapper recap-volumes-wrapper"></div>
+        </section>
+
+        <details class="arc-details recap-section-details" id="recap-world-details" open>
+          <summary class="arc-summary">
+            <span>
+              <span class="arc-title-text">🗺️ Guia Rápido: Como Está o Mundo no Fim do Volume 11?</span>
+              <span class="arc-desc-text">Poderes de Rimuru, generais de Tempest, Octagrama, Labirinto de 100 Andares, nações aliadas e o gancho para o Volume 12.</span>
+            </span>
+          </summary>
+          <div class="recap-world-grid" id="recap-world-state-grid"></div>
+        </details>
+      </div>
     </section>
 
     <!-- ABA 3: COMPARADOR (WN x LN + COMPARATIVO DE EDIÇÕES) -->

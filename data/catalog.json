@@ -8593,6 +8593,230 @@
         "title": "Gancho Direto para o Volume 12+",
         "body": "A Leste da Grande Floresta de Jura ergue-se o colossal Império Oriental Unido de Nasca Namrium Ulmeria, governado pelo Imperador Rudra com divisões mecanizadas, aeronaves mágicas e guerreiros de outro mundo. Após perder sua base no Ocidente, Yuuki Kagurazaka, Kagali e a Trupe de Palhaços Moderados infiltram-se no exército imperial — preparando a maior guerra da história da série a partir do Volume 12!"
       }
+    ],
+    "beginner_pitch": {
+      "headline": "Novo no Universo de Tensura? Comece por Aqui!",
+      "tagline": "De assalariado comum de Tóquio a líder supremo de uma federação de monstros no mundo de fantasia mais rico e cativante já concebido.",
+      "synopsis": "Satoru Mikami, um homem de 37 anos, é assassinado em um ataque aleatório e renasce em uma caverna mágica de outro mundo — não como guerreiro ou herói escolhido, mas como o monstro mais fraco da fantasia: um simples **Slime**. Dotado de duas habilidades singulares — o **Predador** (capaz de devorar, analisar e assimilar propriedades e feitiços) e o **Grande Sábio** (uma mente analítica residente) —, ele liberta e faz amizade com o lendário Dragão da Tempestade **Veldora** e assume o nome **Rimuru Tempest**. Em vez de buscar vingança ou destruição, Rimuru decide usar diplomacia perspicaz, engenharia moderna e, quando preciso, um poder avassalador para construir uma nação próspera e acolhedora onde todas as raças possam viver felizes e em harmonia.",
+      "pillars": [
+        {
+          "icon": "🏗️",
+          "title": "Construção de Nação & Engenharia",
+          "desc": "Mais do que batalhas, a saga foca na transformação real de uma pequena aldeia de monstros em uma metrópole com saneamento, termas, estradas pavimentadas, culinária moderna e comércio global."
+        },
+        {
+          "icon": "✨",
+          "title": "O Poder Sagrado dos Nomes",
+          "desc": "Monstros nascem sem identidade. Quando Rimuru lhes concede um nome, eles evoluem física e espiritualmente, ganhando dignidade e jurando lealdade inabalável."
+        },
+        {
+          "icon": "🤝",
+          "title": "Diplomacia & Economia Realistas",
+          "desc": "Tratados bilaterais, disputas cambiais, consórcios econômicos e leis internacionais definem as tensões com reinos humanos e dinastias vizinhas tanto quanto o aço das espadas."
+        },
+        {
+          "icon": "⚔️",
+          "title": "Escala Épica & Sistema de Batalha",
+          "desc": "A progressão escala de embates locais na floresta para intrigas entre Lordes Demônios milenares, guerras mundiais contra impérios mecanizados e confrontos no fim do espaço-tempo."
+        }
+      ],
+      "recommendation": "Se você nunca viu o anime, **começar pela Light Novel no Volume 1** é a melhor experiência possível. Você acompanhará cada reflexão interior de Rimuru com o Grande Sábio, o humor do cotidiano, aprofundamentos táticos e nuances políticas que a animação precisou sintetizar.",
+      "start_cta_vol": "vol-01",
+      "start_cta_label": "Começar Leitura pelo Volume 1"
+    },
+    "progression_timeline": [
+      {
+        "vol_id": "vol-01",
+        "vol_num": "Volume 1",
+        "title": "O Nascimento de Tempest & O Pacto do Dragão",
+        "scale": "Gênese Local • Caverna & Floresta de Jura",
+        "theme_scope": "Apresentação da caverna selada, a física de magículas do novo mundo, primeiras evoluções nominais e a fundação da aldeia de monstros.",
+        "summary_two_lines": "Satoru Mikami renasce como o slime Rimuru, liberta o dragão selado Veldora e une goblins e lobos em uma primeira comunidade pacífica.\nApós absorver Shizu e herdar seu desejo e forma humana, Rimuru descobre as primeiras conspirações que rondam a Floresta de Jura."
+      },
+      {
+        "vol_id": "vol-02",
+        "vol_num": "Volume 2",
+        "title": "O Lorde dos Ogros & O Despertar do Orc Disaster",
+        "scale": "Ameaça Regional • Clãs da Floresta",
+        "theme_scope": "Guerra territorial, sobrevivência contra a fome mágica do Clã Orc e assimilação dos guerreiros Ogros (Kijin) em Tempest.",
+        "summary_two_lines": "Rimuru acolhe seis sobreviventes Ogros que se tornam seus principais comandantes de elite sob o juramento de lealdade.\nAo lado dos Homens-Lagarto, a nascente aliança derrota o Orc Disaster Geld e integra 150 mil monstros famintos à federação."
+      },
+      {
+        "vol_id": "vol-03",
+        "vol_num": "Volume 3",
+        "title": "A Aliança da Floresta & A Chegada de Milim",
+        "scale": "Diplomacia Internacional & Lordes Demônios",
+        "theme_scope": "Reconhecimento geopolítico pelos Reis Anões e o primeiro contato com o cataclísmico poder dos Lordes Demônios ancestrais.",
+        "summary_two_lines": "O Reino Armado de Dwargon reconhece oficialmente a Federação de Tempest, estabelecendo o primeiro tratado entre humanos e monstros.\nA lendária Milim Nava chega por capricho, e Rimuru usa diplomacia, comida e astúcia para transformá-la na mais formidável das aliadas."
+      },
+      {
+        "vol_id": "vol-04",
+        "vol_num": "Volume 4",
+        "title": "O Rei Monstro Charybdis & O Resgate das Crianças",
+        "scale": "Catástrofe Aérea & Tratos Humanos",
+        "theme_scope": "Batalhas aéreas contra calamidades do céu e infiltração no Reino de Ingrassia para cumprir o testamento de Shizu.",
+        "summary_two_lines": "Tempest mobiliza sua frota aérea e os cavaleiros Pegasus para repelir a lenda viva Charybdis antes de uma intervenção esmagadora de Milim.\nRimuru viaja como professor aos reinos humanos e salva cinco crianças invocadas à beira do colapso de mana com a ajuda de espíritos superiores."
+      },
+      {
+        "vol_id": "vol-05",
+        "vol_num": "Volume 5",
+        "title": "A Tragédia de Tempest & O Nascimento do Lorde Demônio",
+        "scale": "Crise Existencial & Despertar Cósmico",
+        "theme_scope": "Colapso do ideal pacifista ingênuo, a invasão militar de Falmuth e a metamorfose que altera a balança de poder mundial.",
+        "summary_two_lines": "Uma invasão combinada massacra cidadãos indefesos em Tempest, quebrando o dogma de Rimuru sobre a inocência humana irrestrita.\nEm resposta, Rimuru aniquila um exército invasor de 20 mil homens sozinho e ascende como um Lorde Demônio Verdadeiro para ressuscitar seu povo."
+      },
+      {
+        "vol_id": "vol-06",
+        "vol_num": "Volume 6",
+        "title": "A Convocação de Walpurgis & A Queda de Clayman",
+        "scale": "Guerra Secreta & Banquete dos Lordes Demônios",
+        "theme_scope": "Manobras militares em múltiplas frentes e a estreia diplomática no banquete dos governantes mais temidos do mundo.",
+        "summary_two_lines": "As forças de Tempest desmantelam o exército de Clayman em Eurazânia enquanto Rimuru comparece ao banquete solene do Walpurgis.\nRimuru executa Clayman em combate público diante de Guy Crimson e funda formalmente a coalizão dos Oito Lordes Demônios: o Octagrama."
+      },
+      {
+        "vol_id": "vol-07",
+        "vol_num": "Volume 7",
+        "title": "Luz e Sombra: A Cruzada da Santa Hinata Sakaguchi",
+        "scale": "Doutrinação Religiosa & Duelo de Titãs",
+        "theme_scope": "Choque de fé entre a Igreja Ocidental e a nação dos monstros, expurgo de manipuladores das sombras e reconciliação militar.",
+        "summary_two_lines": "Manipulações da facção dos Sete Luminares colocam os Cavaleiros Sagrados de Hinata em rota de colisão frontal com o poder de Tempest.\nApós duelos táticos e a revelação da Verdadeira Deusa Luminas Valentine, as nações selam a paz e quebram séculos de preconceito religioso."
+      },
+      {
+        "vol_id": "vol-08",
+        "vol_num": "Volume 8",
+        "title": "O Grande Festival da Fundação: Preparativos & Recepção",
+        "scale": "Diplomacia Cultural, Comércio & Alta Gastronomia",
+        "theme_scope": "Recepção de embaixadores mundiais, abertura econômica, concertos musicais, ciência mística e desmistificação do medo de monstros.",
+        "summary_two_lines": "Tempest recebe monarcas, nobres e mercadores do mundo inteiro para apresentar sua tecnologia, banhos termais e culinária revolucionária.\nRimuru articula a entrada da floresta no sistema financeiro internacional e inaugura o Coliseu e o Labirinto subterrâneo como grandes atrações."
+      },
+      {
+        "vol_id": "vol-8.5",
+        "vol_num": "Volume 8.5",
+        "title": "Enciclopédia & Crônicas de Tempest (Especial)",
+        "scale": "Crônicas Cotidianas, Perfis & Estrutura de Poder",
+        "theme_scope": "Visão aprofundada dos 12 Patronos de Tempest, bastidores do festival, documentos governamentais e humor cotidiano.",
+        "summary_two_lines": "Volume especial que explora os relatórios confidenciais de inteligência, o perfil detalhado dos oficiais e a burocracia hilária da capital.\nUma ponte essencial para entender como a máquina administrativa e científica de Tempest opera por trás dos grandes combates."
+      },
+      {
+        "vol_id": "vol-09",
+        "vol_num": "Volume 9",
+        "title": "O Festival da Fundação: O Labirinto de Ramiris & Economia",
+        "scale": "Engenharia de Dungeons & Conspirações Financeiras",
+        "theme_scope": "Inauguração da masmorra de 100 andares, monetização da exploração de aventureiros e o colapso dos agiotas de Rozzo.",
+        "summary_two_lines": "O Labirinto criado em parceria com Ramiris e Veldora prova ser um sucesso estrondoso de entretenimento, pesquisa e atração de heróis.\nNos bastidores econômicos, Rimuru derrota uma tentativa de monopólio monetário da Casa Rozzo e consolida a moeda forte de Tempest."
+      },
+      {
+        "vol_id": "vol-10",
+        "vol_num": "Volume 10",
+        "title": "As Armadilhas de Mariabell & O Segredo dos Elfos",
+        "scale": "Guerra de Informação & Conspiração dos Cinco Anciãos",
+        "theme_scope": "Manipulação de ganância pela reencarnada Mariabell Rozzo, escândalo da corte elfa e proteção dos reféns espirituais.",
+        "summary_two_lines": "Mariabell Rozzo tenta roubar o controle financeiro do Ocidente usando sua habilidade de manipulação mental sobre reis e consórcios.\nRimuru e Yuuki desarticulam o plano nas ruínas sagradas, mas o misterioso mentor Yuuki revela sua verdadeira ambição revolucionária."
+      },
+      {
+        "vol_id": "vol-11",
+        "vol_num": "Volume 11",
+        "title": "A Ressurreição do Herói Chronoa & O Labirinto do Tempo",
+        "scale": "Paradoxos Temporais & O Destino do Herói Verdadeiro",
+        "theme_scope": "O despertar do sarcófago espiritual do Herói Lendário, anomalias cronológicas de Hinata e Chloe Aubert, e os Primordiais.",
+        "summary_two_lines": "A alma de Hinata e o poder adormecido do Herói convergem em Chloe Aubert, desencadeando um ciclo temporal de dois mil anos.\nRimuru intervém para salvar Chloe da loucura da personificação da destruição Chronoa, reescrevendo o destino trágico da linha do tempo."
+      },
+      {
+        "vol_id": "vol-12",
+        "vol_num": "Volume 12",
+        "title": "A Mobilização do Império Oriental & O Exército Mecanizado",
+        "scale": "Guerra Total Continental • Fase Preparatória",
+        "theme_scope": "Espionagem militar com o Império de Rudra, chegada de refugiados de ponta e o recrutamento dos Demônios Primordiais.",
+        "summary_two_lines": "O colossal Império Oriental mobiliza quase um milhão de soldados armados com rifles mágicos, tanques e aeronaves para marchar contra Tempest.\nRimuru nomeia as temidas Primordiais Carrera, Ultima e Testarossa como diplomatas e oficiais de justiça para blindar sua nação."
+      },
+      {
+        "vol_id": "vol-13",
+        "vol_num": "Volume 13",
+        "title": "O Cerco de Tempest: O Labirinto como Matadouro",
+        "scale": "Aniquilação Estratégica & Defesa Absoluta",
+        "theme_scope": "Invasão imperial de 940 mil soldados, defesa impenetrável da floresta e o teste supremo do Labirinto de 100 andares.",
+        "summary_two_lines": "Quase um milhão de soldados imperiais invadem o território de Tempest e são intencionalmente engolidos pelo labirinto de Ramiris.\nOs Guardiões dos Andares executam a aniquilação completa do exército invasor em uma demonstração estarrecedora de poder absoluto."
+      },
+      {
+        "vol_id": "vol-14",
+        "vol_num": "Volume 14",
+        "title": "A Coroação dos 12 Patronos & O Golpe de Yuuki",
+        "scale": "Evolução em Massa & Conspiração Imperial",
+        "theme_scope": "Ascensão de 12 Lordes Demônios subordinados através das 700 mil almas colhidas, e a rebelião do Corpo Misto no Império.",
+        "summary_two_lines": "Rimuru utiliza as centenas de milhares de almas capturadas para despertar seus Doze Patronos como Lordes Demônios Verdadeiros.\nNo coração do Império, a tentativa de golpe de Yuuki contra o Imperador Rudra desmorona diante dos monstruosos Cavaleiros Reais."
+      },
+      {
+        "vol_id": "vol-15",
+        "vol_num": "Volume 15",
+        "title": "O Duelo com os Dragões Verdadeiros: Rimuru Furioso",
+        "scale": "Batalha Cósmica & Evolução Suprema",
+        "theme_scope": "Captura de Veldora pelo Império, confronto simultâneo contra dois Dragões Verdadeiros e a transfiguração para Ultimate Slime.",
+        "summary_two_lines": "Quando o Império controla e sequestra Veldora, Rimuru perde a calma e enfrenta Velgrynd e Veldora simultaneamente em fúria total.\nRaphael evolui para a Forma de Vida Manas: Ciel, permitindo a Rimuru devorar e evoluir para um Dragão Espiritual Supremo."
+      },
+      {
+        "vol_id": "vol-16",
+        "vol_num": "Volume 16",
+        "title": "O Julgamento de Rudra & O Epílogo da Guerra Imperial",
+        "scale": "Paz Continental & O Passado dos Primórdios",
+        "theme_scope": "Conclusão das hostilidades contra o Império, revelação das origens de Guy Crimson e Rudra, e interrogatórios dos generais.",
+        "summary_two_lines": "A linhagem de Rudra e a verdade sobre a rivalidade de milênios com Guy Crimson são esclarecidas após o colapso dos Cavaleiros Reais.\nRimuru conduz entrevistas pessoais com seus generais e sela um tratado histórico de reconstrução e cooperação com o novo Império."
+      },
+      {
+        "vol_id": "vol-17",
+        "vol_num": "Volume 17",
+        "title": "Crônicas de Outros Mundos (Histórias Paralelas Canônicas)",
+        "scale": "Multiverso & Perspectivas Globais",
+        "theme_scope": "A jornada interdimensional de Velgrynd em busca dos fragmentos de Rudra, conspirações de Phantom e histórias de Myourmiles.",
+        "summary_two_lines": "Velgrynd viaja através de múltiplos universos paralelos — incluindo o mundo de origem de Rimuru — reunindo os fragmentos de alma de seu amado.\nHistórias secundárias revelam os desafios econômicos de Myourmiles e as intrigas políticas da nobreza de Phantom antes da tempestade final."
+      },
+      {
+        "vol_id": "vol-18",
+        "vol_num": "Volume 18",
+        "title": "A Ameaça dos Phantoms & O Banquete de Walpurgis Emergencial",
+        "scale": "Guerra Cósmica Multidimensional",
+        "theme_scope": "Invasão do Reino Celestial pelos Phantoms liderados por Feldway e o despertar iminente do Rei Dragão da Estrela Veldanava.",
+        "summary_two_lines": "O líder angelical Feldway e o traidor Michael iniciam a ofensiva final para exterminar as civilizações e ressuscitar o Deus Criador Veldanava.\nRimuru convoca um Walpurgis extraordinário com todos os Lordes Demônios e o Herói para coordenar a defesa mundial da Criação."
+      },
+      {
+        "vol_id": "vol-19",
+        "vol_num": "Volume 19",
+        "title": "A Queda do Rei Michael & A Defesa da Terra Santa",
+        "scale": "Choque dos Mais Fortes & Aniquilação da Vontade Divina",
+        "theme_scope": "Ofensiva geral em Ingrassia, Eldorado e Sarion, e o combate frontal de Rimuru contra a Habilidade Suprema personificada.",
+        "summary_two_lines": "Os generais de Tempest lideram frentes de batalha globais para defender o continente contra a maré de anjos caídos e criptídeos.\nRimuru confronta o Manas Michael diretamente, neutralizando sua ambição milenar e absorvendo todo o seu arsenal de Virtudes Supremas."
+      },
+      {
+        "vol_id": "vol-20",
+        "vol_num": "Volume 20",
+        "title": "A Fúria de Milim & O Despertar do Rei Inseto",
+        "scale": "Cataclismo Planetário & Descontrole de Milim",
+        "theme_scope": "Manipulação psíquica de Milim por Feldway, combate desesperado para conter a Ira de Asura e a invasão dos Insetóides de Zelanus.",
+        "summary_two_lines": "Feldway utiliza a manipulação de Michael para fazer Milim entrar em frenesi incontrolável, ameaçando varrer o continente do mapa.\nRimuru e seus aliados lutam em desespero para desacelerar o cataclismo enquanto Zelanus e seus generais insetóides atacam o Labirinto."
+      },
+      {
+        "vol_id": "vol-21",
+        "vol_num": "Volume 21",
+        "title": "O Fim do Espaço-Tempo & O Retorno do Soberano",
+        "scale": "Transcendência Além do Fim dos Tempos",
+        "theme_scope": "O banimento de Rimuru para o Nada Primordial, o colapso temporal e a defesa obstinada dos Doze Patronos sem seu líder.",
+        "summary_two_lines": "Feldway bane Rimuru para os confins do espaço-tempo na esperança de vê-lo desaparecer para sempre na eternidade vazia.\nEnquanto o mundo se recusa a sucumbir, Rimuru domina o vazio infinito do Nada Cósmico e realiza o retorno triunfal no clímax da guerra."
+      },
+      {
+        "vol_id": "vol-22",
+        "vol_num": "Volume 22",
+        "title": "O Apocalipse dos Criptídeos & A Conclusão da Guerra Celestial",
+        "scale": "Fim da Guerra Cósmica & Batalha dos Mundos",
+        "theme_scope": "Confronto definitivo contra Ivarage e as hostes celestiais, redenção de Feldway e o restabelecimento da ordem universal.",
+        "summary_two_lines": "A batalha decisiva une demônios, dragões, cavaleiros e impérios na maior frente unificada da história contra as feras do caos primordial.\nRimuru e Guy Crimson impõem o equilíbrio final, decidindo o destino do multiverso e garantindo o futuro eterno de Tempest."
+      },
+      {
+        "vol_id": "vol-23",
+        "vol_num": "Volume 23",
+        "title": "O Banquete da Paz & A Nova Era dos Mundos (Final da Obra)",
+        "scale": "Legado Eterno • Utopia dos Monstros & Humanos",
+        "theme_scope": "Tratados de paz mundial, reconstrução continental, celebração de vitórias e a consolidação do sonho que começou em uma caverna.",
+        "summary_two_lines": "Com a paz conquistada através de alianças e sacrifícios, Tempest celebra o maior festival de sua história unindo todas as raças conhecidas.\nO slime que começou sem nada realiza o sonho de uma utopia harmoniosa, deixando sua marca indelével para a eternidade."
+      }
     ]
   }
 }

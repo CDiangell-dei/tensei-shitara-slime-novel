@@ -2492,6 +2492,401 @@ dialog::backdrop {
   gap: 0.95rem;
 }
 
+/* ==========================================================================
+   GUIA PARA INICIANTES & LINHA DE PROGRESSÃO EM 2 LINHAS
+   ========================================================================== */
+
+/* Seletor de Perfil do Leitor */
+.recap-audience-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--bg-secondary);
+  padding: 0.35rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-color);
+  width: fit-content;
+  max-width: 100%;
+}
+
+.recap-audience-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: var(--radius-full);
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.recap-audience-btn:hover {
+  color: var(--text-primary);
+  background: var(--bg-primary);
+}
+
+.recap-audience-btn.active {
+  background: var(--accent-color);
+  color: var(--accent-contrast);
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.35);
+}
+
+.recap-panel {
+  display: none;
+}
+
+.recap-panel.active {
+  display: block;
+}
+
+/* Hero Beginner */
+.hero-beginner {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.12) 0%, rgba(139, 92, 246, 0.08) 100%);
+  border-left: 4px solid var(--accent-color);
+}
+
+.recap-tagline-text {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+/* Card de Pitch para Iniciantes */
+.beginner-pitch-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.beginner-pitch-title {
+  font-size: 1.35rem;
+  margin-bottom: 0.85rem;
+  color: var(--text-primary);
+}
+
+.beginner-synopsis {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.beginner-synopsis strong {
+  color: var(--text-primary);
+}
+
+/* 4 Pilares */
+.beginner-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pillar-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.1rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-light);
+}
+
+.pillar-icon {
+  font-size: 1.65rem;
+  margin-bottom: 0.5rem;
+}
+
+.pillar-title {
+  font-size: 0.96rem;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+  color: var(--text-primary);
+}
+
+.pillar-desc {
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+/* Recomendação & CTA */
+.beginner-recommendation-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+}
+
+.recom-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.recom-content {
+  flex: 1;
+}
+
+.recom-content strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.recom-content p {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 0.85rem;
+}
+
+.btn-primary-glow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent-color);
+  color: var(--accent-contrast);
+  padding: 0.65rem 1.35rem;
+  border-radius: var(--radius-full);
+  font-size: 0.92rem;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(14, 165, 233, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color var(--transition);
+}
+
+.btn-primary-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.55);
+}
+
+/* Seção de Progressão de Escala */
+.progression-header-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.progression-toggle-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.toggle-bar-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.segmented-control {
+  display: inline-flex;
+  background: var(--bg-secondary);
+  padding: 0.25rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-color);
+  gap: 0.25rem;
+}
+
+.segmented-btn {
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.segmented-btn:hover {
+  color: var(--text-primary);
+}
+
+.segmented-btn.active {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Grid de Cards de Progressão */
+.progression-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.15rem;
+}
+
+.progression-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.progression-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-light);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.progression-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.65rem;
+}
+
+.progression-vol-badge {
+  font-size: 0.76rem;
+  font-weight: 800;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  background: var(--accent-color);
+  color: var(--accent-contrast);
+}
+
+.progression-scale-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.progression-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: var(--text-primary);
+  margin-bottom: 0.55rem;
+}
+
+.progression-theme {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin-bottom: 0.85rem;
+  flex-grow: 1;
+}
+
+.progression-theme-label {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Box de Spoiler em 2 Linhas */
+.progression-spoiler-box {
+  background: rgba(245, 158, 11, 0.08);
+  border-left: 3px solid #f59e0b;
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.85rem;
+  margin-bottom: 0.95rem;
+  animation: fadeIn 0.2s ease;
+}
+
+.progression-spoiler-header {
+  font-size: 0.76rem;
+  color: #d97706;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.progression-two-lines {
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--text-primary);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.p2-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.p2-bullet {
+  color: #f59e0b;
+  font-weight: bold;
+}
+
+.progression-card-footer {
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.75rem;
+  margin-top: 0.4rem;
+}
+
+.btn-progression-read {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.82rem;
+}
+
+/* Modern Web Guidance: Child State Based Styling (:has()) */
+.progression-timeline-section:has(#btn-progression-spoiler-two-lines.active) .progression-spoiler-box,
+.progression-timeline-section.has-spoilers-active .progression-spoiler-box {
+  display: block;
+}
+
+.progression-timeline-section:not(:has(#btn-progression-spoiler-two-lines.active)):not(.has-spoilers-active) .progression-spoiler-box {
+  display: none;
+}
+
+/* Fallback para navegadores sem suporte a :has() */
+@supports not selector(:has(*)) {
+  .progression-grid.mode-spoiler-free .progression-spoiler-box {
+    display: none !important;
+  }
+  .progression-grid.mode-with-spoilers .progression-spoiler-box {
+    display: block !important;
+  }
+}
+
 /* Rodapé */
 .main-footer {
   background-color: var(--bg-secondary);
@@ -2609,6 +3004,50 @@ dialog::backdrop {
     margin-bottom: 0.18rem;
     display: inline-block;
     line-height: 1;
+  }
+
+  /* Seletor de Perfil e Progressão no Celular */
+  .recap-audience-switcher {
+    width: 100%;
+    justify-content: center;
+  }
+  .recap-audience-btn {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.76rem;
+    padding: 0.45rem 0.5rem;
+  }
+  .progression-grid {
+    grid-template-columns: 1fr;
+  }
+  .progression-toggle-bar {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+  .segmented-control {
+    width: 100%;
+    display: flex;
+  }
+  .segmented-btn {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.72rem;
+    padding: 0.38rem 0.45rem;
+    white-space: normal;
+    line-height: 1.2;
+  }
+  .beginner-recommendation-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btn-primary-glow {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 }
 

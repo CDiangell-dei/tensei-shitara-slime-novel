@@ -933,13 +933,82 @@ function renderWebNovelCatalog() {
   }).join('');
 }
 
-// 2.5 Resumo da História até o Volume 11 (Guia Pós-Anime sem Spoilers do Vol. 12+)
+// 2.5 Resumo da História e Guia para Iniciantes / Pós-Anime
 function renderRecapCatalog() {
   if (!AppState.catalog || !AppState.catalog.story_recap) return;
   const recap = AppState.catalog.story_recap;
 
   const isZeroSpoilerMode = AppState.settings.spoilerMode === 'all';
   const hasQuery = Boolean(AppState.searchQuery);
+
+  // 0. Guia para Iniciantes (Nunca Viu o Anime)
+  if (recap.beginner_pitch) {
+    const pitch = recap.beginner_pitch;
+    const tagEl = document.getElementById('recap-beginner-tagline');
+    if (tagEl && pitch.tagline) tagEl.textContent = pitch.tagline;
+
+    const synEl = document.getElementById('beginner-synopsis-text');
+    if (synEl && pitch.synopsis) {
+      synEl.innerHTML = escapeHtml(pitch.synopsis)
+        .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    }
+
+    const recomEl = document.getElementById('beginner-recom-text');
+    if (recomEl && pitch.recommendation) {
+      recomEl.innerHTML = escapeHtml(pitch.recommendation)
+        .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    }
+
+    const pillarsGrid = document.getElementById('beginner-pillars-grid');
+    if (pillarsGrid && Array.isArray(pitch.pillars)) {
+      pillarsGrid.innerHTML = pitch.pillars.map(p => `
+        <div class="pillar-card">
+          <div class="pillar-icon">${escapeHtml(p.icon)}</div>
+          <h4 class="pillar-title">${escapeHtml(p.title)}</h4>
+          <p class="pillar-desc">${escapeHtml(p.desc)}</p>
+        </div>
+      `).join('');
+    }
+  }
+
+  // 0.5 Linha de Progressão de Escala (Volumes 1 a 23 + 8.5)
+  const progGrid = document.getElementById('progression-timeline-grid');
+  if (progGrid && Array.isArray(recap.progression_timeline)) {
+    const filteredProg = recap.progression_timeline.filter(item => {
+      return matchesSearch(`${item.vol_num} ${item.title} ${item.scale} ${item.theme_scope} ${item.summary_two_lines}`);
+    });
+
+    progGrid.innerHTML = filteredProg.map(item => {
+      const lines = (item.summary_two_lines || '').split('\n').filter(Boolean);
+      const line1 = lines[0] || '';
+      const line2 = lines[1] || '';
+
+      return `
+        <article class="progression-card" data-vol-id="${escapeAttr(item.vol_id)}">
+          <div class="progression-card-top">
+            <span class="progression-vol-badge">${escapeHtml(item.vol_num)}</span>
+            <span class="progression-scale-badge">${escapeHtml(item.scale)}</span>
+          </div>
+          <h4 class="progression-title">${escapeHtml(item.title)}</h4>
+          <p class="progression-theme"><span class="progression-theme-label">Escopo &amp; Foco:</span> ${escapeHtml(item.theme_scope)}</p>
+          <div class="progression-spoiler-box" aria-label="Resumo em 2 Linhas com spoiler leve">
+            <div class="progression-spoiler-header">
+              <span aria-hidden="true">👁️</span> <strong>Resumo em 2 Linhas:</strong>
+            </div>
+            <p class="progression-two-lines">
+              <span class="p2-line"><span class="p2-bullet">•</span> ${escapeHtml(line1)}</span>
+              <span class="p2-line"><span class="p2-bullet">•</span> ${escapeHtml(line2)}</span>
+            </p>
+          </div>
+          <div class="progression-card-footer">
+            <button type="button" class="btn-secondary-pill btn-progression-read" data-action="open-ln" data-vol="${escapeAttr(item.vol_id)}">
+              📖 Ler ${escapeHtml(item.vol_num)} →
+            </button>
+          </div>
+        </article>
+      `;
+    }).join('');
+  }
 
   const subEl = document.getElementById('recap-subtitle-text');
   if (subEl && recap.meta && recap.meta.subtitle) {
@@ -2212,6 +2281,93 @@ function bindGlobalEvents() {
   document.getElementById('btn-recap-collapse-all')?.addEventListener('click', () => {
     document.querySelectorAll('#recap-volumes-container details').forEach(d => { d.open = false; });
   });
+
+  // Alternar Público do Guia/Resumo (Iniciante vs Pós-Anime)
+  function setRecapAudience(audience) {
+    const isBeginner = audience === 'beginner';
+    const btnBeg = document.getElementById('btn-recap-audience-beginner');
+    const btnAni = document.getElementById('btn-recap-audience-anime');
+    const panelBeg = document.getElementById('recap-panel-beginner');
+    const panelAni = document.getElementById('recap-panel-anime');
+
+    if (btnBeg) {
+      btnBeg.classList.toggle('active', isBeginner);
+      btnBeg.setAttribute('aria-selected', isBeginner ? 'true' : 'false');
+    }
+    if (btnAni) {
+      btnAni.classList.toggle('active', !isBeginner);
+      btnAni.setAttribute('aria-selected', !isBeginner ? 'true' : 'false');
+    }
+    if (panelBeg) {
+      panelBeg.classList.toggle('active', isBeginner);
+      panelBeg.hidden = !isBeginner;
+    }
+    if (panelAni) {
+      panelAni.classList.toggle('active', !isBeginner);
+      panelAni.hidden = isBeginner;
+    }
+    try {
+      localStorage.setItem('slime_recap_audience', audience);
+    } catch (_) {}
+  }
+
+  document.getElementById('btn-recap-audience-beginner')?.addEventListener('click', () => {
+    setRecapAudience('beginner');
+  });
+  document.getElementById('btn-recap-audience-anime')?.addEventListener('click', () => {
+    setRecapAudience('anime');
+  });
+
+  // Inicializar audiência salva ou padrão (beginner)
+  try {
+    const savedAudience = localStorage.getItem('slime_recap_audience') || 'beginner';
+    setRecapAudience(savedAudience);
+  } catch (_) {
+    setRecapAudience('beginner');
+  }
+
+  // Alternar Modo de Spoiler da Linha de Progressão (Sem Spoilers vs Resumo em 2 Linhas)
+  function setProgressionSpoilerMode(mode) {
+    const isTwoLines = mode === 'two-lines';
+    const btnFree = document.getElementById('btn-progression-spoiler-free');
+    const btnTwo = document.getElementById('btn-progression-spoiler-two-lines');
+    const progGrid = document.getElementById('progression-timeline-grid');
+    const section = document.querySelector('.progression-timeline-section');
+
+    if (btnFree) {
+      btnFree.classList.toggle('active', !isTwoLines);
+      btnFree.setAttribute('aria-checked', !isTwoLines ? 'true' : 'false');
+    }
+    if (btnTwo) {
+      btnTwo.classList.toggle('active', isTwoLines);
+      btnTwo.setAttribute('aria-checked', isTwoLines ? 'true' : 'false');
+    }
+    if (progGrid) {
+      progGrid.classList.toggle('mode-spoiler-free', !isTwoLines);
+      progGrid.classList.toggle('mode-with-spoilers', isTwoLines);
+    }
+    if (section) {
+      section.classList.toggle('has-spoilers-active', isTwoLines);
+    }
+    try {
+      localStorage.setItem('slime_progression_spoiler_mode', mode);
+    } catch (_) {}
+  }
+
+  document.getElementById('btn-progression-spoiler-free')?.addEventListener('click', () => {
+    setProgressionSpoilerMode('free');
+  });
+  document.getElementById('btn-progression-spoiler-two-lines')?.addEventListener('click', () => {
+    setProgressionSpoilerMode('two-lines');
+  });
+
+  // Inicializar modo de progressão salvo ou padrão (free)
+  try {
+    const savedProgMode = localStorage.getItem('slime_progression_spoiler_mode') || 'free';
+    setProgressionSpoilerMode(savedProgMode);
+  } catch (_) {
+    setProgressionSpoilerMode('free');
+  }
 
   // Seletor de capítulo na barra do leitor
   document.getElementById('reader-chapter-select')?.addEventListener('change', (e) => {
