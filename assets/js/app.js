@@ -21,7 +21,7 @@ const STORAGE_KEYS = {
 const ANIME_ADAPTED_MAX_LN_VOL = 11;
 const POST_ANIME_WN_ARCS = new Set(['arc-8', 'arc-9', 'arc-10', 'arc-extra-1', 'arc-extra-2', 'arc-extra-3']);
 const POST_ANIME_CULTURAL_CONCEPT_IDXS = new Set([3, 4, 6]);
-const APP_BUILD_VERSION = '20261101_v16';
+const APP_BUILD_VERSION = '20261101_v17';
 
 const AppState = {
   catalog: null,
@@ -1742,17 +1742,18 @@ function formatRichParagraph(rawText, footnotesMap, inlineGlossary, seenTermsSet
   // 3. Telepatia ‹...›
   safe = safe.replace(/‹([^›]+)›/g, '<span class="voice-telepathy">‹$1›</span>');
 
-  // 4. Glossário cultural discreto (apenas 1ª ocorrência por capítulo se ativo)
+  // 4. Glossário cultural & Guia de Tensura (apenas 1ª ocorrência por capítulo se ativo)
   if (AppState.settings.culturalHints && inlineGlossary) {
-    const terms = Object.keys(inlineGlossary);
+    const terms = Object.keys(inlineGlossary).sort((a, b) => b.length - a.length);
     for (const term of terms) {
-      if (seenTermsSet.has(term)) continue;
-      const isSuffix = ['sama', 'dono', 'sensei'].includes(term);
+      const cleanTerm = term.startsWith('-') ? term.slice(1) : term;
+      if (seenTermsSet.has(cleanTerm.toLowerCase())) continue;
+      const isSuffix = term.startsWith('-');
       const regex = isSuffix
-        ? new RegExp(`(-${term})\\b`, 'i')
-        : new RegExp(`\\b(${term})\\b`, 'i');
+        ? new RegExp(`(-${cleanTerm})\\b`, 'i')
+        : new RegExp(`(?<![A-Za-zÀ-ÿ0-9])(${cleanTerm})(?![A-Za-zÀ-ÿ0-9])`, 'i');
       if (regex.test(safe)) {
-        seenTermsSet.add(term);
+        seenTermsSet.add(cleanTerm.toLowerCase());
         safe = safe.replace(regex, `<button type="button" class="cultural-term" data-action="show-term" data-term="${term}">$1</button>`);
       }
     }
@@ -2534,7 +2535,11 @@ function bindGlobalEvents() {
     } else if (action === 'show-term') {
       const term = target.dataset.term;
       const gl = AppState.catalog?.cultural_guide?.inline_glossary?.[term];
-      if (gl) showCulturalNoteDialog(`🌸 Termo Cultural: ${term}`, gl);
+      if (gl) {
+        const cleanName = term.startsWith('-') ? term.slice(1) : term;
+        const formattedTitle = cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
+        showCulturalNoteDialog(`💡 Guia de Tensura: ${formattedTitle}`, gl);
+      }
     } else if (action === 'jump-bm') {
       const bm = AppState.bookmarks.find(b => String(b.id) === String(target.dataset.bmid));
       if (!bm) return;
