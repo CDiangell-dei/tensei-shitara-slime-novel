@@ -3118,3 +3118,424 @@ dialog::backdrop {
     width: 105px;
   }
 }
+
+
+/* ==========================================================================
+   PLAYER DE TRILHA SONORA OFICIAL & IMERSIVA (TENSURA OST)
+   ========================================================================== */
+
+.soundtrack-chapter-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(14, 165, 233, 0.04) 100%);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  border-radius: 12px;
+  padding: 0.85rem 1.15rem;
+  margin: 1.25rem 0 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+[data-theme="dark"] .soundtrack-chapter-badge {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.16) 0%, rgba(14, 165, 233, 0.08) 100%);
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.soundtrack-badge-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+.soundtrack-badge-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.soundtrack-badge-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.soundtrack-badge-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary, #2563eb);
+}
+
+.soundtrack-badge-title {
+  font-size: 0.98rem;
+  color: var(--text-primary, #1e293b);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.soundtrack-badge-sub {
+  font-size: 0.8rem;
+  color: var(--text-secondary, #64748b);
+}
+
+.btn-soundtrack-play-inline {
+  background: var(--primary, #2563eb);
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.btn-soundtrack-play-inline:hover {
+  background: var(--primary-dark, #1d4ed8);
+  transform: translateY(-1px);
+}
+
+/* FLOATING DOCK */
+.soundtrack-dock {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  max-width: calc(100vw - 28px);
+  background: var(--card-bg, #fffdf8);
+  border: 1px solid var(--border-color, #e2d9c8);
+  border-radius: 16px;
+  box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.18), 0 6px 12px -3px rgba(0, 0, 0, 0.08);
+  z-index: 1050;
+  overflow: hidden;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-radius 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+}
+
+[data-theme="dark"] .soundtrack-dock {
+  background: #181c24;
+  border-color: #2e384d;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+}
+
+.soundtrack-dock.is-collapsed {
+  width: auto;
+  max-width: 290px;
+  border-radius: 9999px;
+}
+
+.soundtrack-dock-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.45rem 0.65rem 0.45rem 0.85rem;
+  background: var(--bg-secondary, #f5efe3);
+  border-bottom: 1px solid var(--border-color, #e2d9c8);
+  cursor: pointer;
+  user-select: none;
+}
+
+[data-theme="dark"] .soundtrack-dock-bar {
+  background: #202632;
+  border-bottom-color: #2e384d;
+}
+
+.soundtrack-dock.is-collapsed .soundtrack-dock-bar {
+  border-bottom: none;
+}
+
+.btn-soundtrack-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  text-align: left;
+  flex: 1;
+  min-width: 0;
+}
+
+.soundtrack-icon-anim {
+  font-size: 1.15rem;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.soundtrack-icon-anim.is-playing {
+  animation: soundtrack-pulse 1.4s infinite ease-in-out;
+}
+
+@keyframes soundtrack-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.22); }
+}
+
+.soundtrack-pill-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary, #1e293b);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 145px;
+}
+
+.soundtrack-pill-time {
+  font-size: 0.72rem;
+  color: var(--text-secondary, #64748b);
+  font-variant-numeric: tabular-nums;
+}
+
+.soundtrack-bar-quick-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+.btn-soundtrack-play,
+.btn-soundtrack-minimize {
+  background: none;
+  border: none;
+  color: var(--text-primary, #1e293b);
+  font-size: 0.85rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn-soundtrack-play:hover,
+.btn-soundtrack-minimize:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .btn-soundtrack-play:hover,
+[data-theme="dark"] .btn-soundtrack-minimize:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.btn-soundtrack-play {
+  background: var(--primary, #2563eb);
+  color: #ffffff;
+}
+
+.btn-soundtrack-play:hover {
+  background: var(--primary-dark, #1d4ed8);
+}
+
+/* CORPO DO DOCK */
+.soundtrack-dock-body {
+  padding: 0.85rem 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.soundtrack-dock.is-collapsed .soundtrack-dock-body {
+  display: none;
+}
+
+.soundtrack-track-card {
+  position: relative;
+  background: var(--bg-primary, #fbf7ee);
+  border: 1px solid var(--border-color, #e2d9c8);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+}
+
+[data-theme="dark"] .soundtrack-track-card {
+  background: #14171f;
+  border-color: #273042;
+}
+
+.soundtrack-season-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--primary, #2563eb);
+  background: rgba(37, 99, 235, 0.1);
+  padding: 0.12rem 0.45rem;
+  border-radius: 4px;
+  margin-bottom: 0.25rem;
+}
+
+.soundtrack-track-title {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary, #1e293b);
+  line-height: 1.25;
+}
+
+.soundtrack-track-desc {
+  margin: 0.25rem 0 0;
+  font-size: 0.76rem;
+  color: var(--text-secondary, #64748b);
+  line-height: 1.35;
+}
+
+/* O player do YouTube precisa de dimensões mínimas para a API funcionar */
+.soundtrack-yt-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0.01;
+  pointer-events: none;
+}
+
+/* CONTROLE DE VOLUME */
+.soundtrack-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.2rem 0;
+}
+
+.btn-soundtrack-mute {
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.soundtrack-vol-slider {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  accent-color: var(--primary, #2563eb);
+  cursor: pointer;
+}
+
+.soundtrack-vol-text {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-secondary, #64748b);
+  min-width: 32px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* PRESETS */
+.soundtrack-presets-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.soundtrack-presets-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary, #64748b);
+}
+
+.soundtrack-presets-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.btn-soundtrack-preset {
+  background: var(--bg-primary, #fbf7ee);
+  border: 1px solid var(--border-color, #e2d9c8);
+  border-radius: 8px;
+  padding: 0.4rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+[data-theme="dark"] .btn-soundtrack-preset {
+  background: #14171f;
+  border-color: #273042;
+}
+
+.btn-soundtrack-preset:hover {
+  border-color: var(--primary, #2563eb);
+  background: rgba(37, 99, 235, 0.04);
+}
+
+.btn-soundtrack-preset.is-active {
+  border-color: var(--primary, #2563eb);
+  background: rgba(37, 99, 235, 0.12);
+}
+
+.preset-name {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--text-primary, #1e293b);
+  line-height: 1.2;
+}
+
+.preset-season {
+  font-size: 0.65rem;
+  color: var(--text-secondary, #64748b);
+  margin-top: 0.15rem;
+}
+
+.soundtrack-dock-footer {
+  padding-top: 0.35rem;
+  border-top: 1px solid var(--border-color, #e2d9c8);
+}
+
+[data-theme="dark"] .soundtrack-dock-footer {
+  border-top-color: #273042;
+}
+
+.soundtrack-auto-label {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.73rem;
+  color: var(--text-secondary, #64748b);
+  cursor: pointer;
+  user-select: none;
+}
+
+.soundtrack-auto-label input[type="checkbox"] {
+  accent-color: var(--primary, #2563eb);
+}
+
+@media (max-width: 600px) {
+  .soundtrack-chapter-badge {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .btn-soundtrack-play-inline {
+    width: 100%;
+    text-align: center;
+  }
+  .soundtrack-dock {
+    bottom: 12px;
+    right: 12px;
+  }
+}

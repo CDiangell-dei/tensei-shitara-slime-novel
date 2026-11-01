@@ -21,7 +21,7 @@ const STORAGE_KEYS = {
 const ANIME_ADAPTED_MAX_LN_VOL = 11;
 const POST_ANIME_WN_ARCS = new Set(['arc-8', 'arc-9', 'arc-10', 'arc-extra-1', 'arc-extra-2', 'arc-extra-3']);
 const POST_ANIME_CULTURAL_CONCEPT_IDXS = new Set([3, 4, 6]);
-const APP_BUILD_VERSION = '20261101_v8';
+const APP_BUILD_VERSION = '20261101_v9';
 
 const AppState = {
   catalog: null,
@@ -1699,6 +1699,17 @@ function renderReaderScreen() {
       const richHtml = formatRichParagraph(p, {}, inlineGlossary, seenTermsInChapter);
       return `<p class="novel-paragraph ${isBm ? 'bookmarked' : ''}" id="p-${pidx}" data-pidx="${pidx}">${richHtml}</p>`;
     }).join('');
+  }
+
+  // Notificar tocador de trilha sonora sobre o capítulo atual
+  if (window.TensuraSoundtrack && window.TensuraSoundtrack.handleChapterChange) {
+    if (cur.type === 'light_novel') {
+      const vol = cur.data;
+      const ch = vol.chapters[cur.chapterIndex] || vol.chapters[0];
+      window.TensuraSoundtrack.handleChapterChange(cur.baseVolumeId || cur.volumeId, cur.chapterIndex, ch.title);
+    } else if (cur.data) {
+      window.TensuraSoundtrack.handleChapterChange('wn', cur.chapterIndex || 0, cur.data.title || '');
+    }
   }
 
   renderReaderFooterNav(footerNav);
