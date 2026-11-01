@@ -583,6 +583,7 @@ function resumeSavedRecord(record) {
 function renderAllCatalogViews() {
   renderLightNovelCatalog();
   renderWebNovelCatalog();
+  renderRecapCatalog();
   renderComparisonCatalog();
   renderCulturalCatalog();
   renderAmazonCatalog();
@@ -834,6 +835,148 @@ function renderWebNovelCatalog() {
       </details>
     `;
   }).join('');
+}
+
+// 2.5 Resumo da História até o Volume 11 (Guia Pós-Anime sem Spoilers do Vol. 12+)
+function renderRecapCatalog() {
+  if (!AppState.catalog || !AppState.catalog.story_recap) return;
+  const recap = AppState.catalog.story_recap;
+
+  const isZeroSpoilerMode = AppState.settings.spoilerMode === 'all';
+  const hasQuery = Boolean(AppState.searchQuery);
+
+  const subEl = document.getElementById('recap-subtitle-text');
+  if (subEl && recap.meta && recap.meta.subtitle) {
+    subEl.textContent = recap.meta.subtitle;
+  }
+
+  const noticeEl = document.getElementById('recap-zero-spoiler-notice');
+  if (noticeEl) {
+    noticeEl.hidden = !isZeroSpoilerMode;
+  }
+
+  // 1. De onde começar a ler
+  const startGrid = document.getElementById('recap-start-grid');
+  if (startGrid && Array.isArray(recap.start_guides)) {
+    startGrid.innerHTML = recap.start_guides
+      .filter(g => matchesSearch(`${g.badge} ${g.title} ${g.desc}`))
+      .map(g => `
+        <article class="recap-start-card">
+          <div>
+            <span class="recap-kicker">${escapeHtml(g.badge)}</span>
+            <h4>${escapeHtml(g.title)}</h4>
+            <p>${escapeHtml(g.desc)}</p>
+          </div>
+          <button type="button" class="btn-continue btn-recap-start" data-action="open-ln" data-vol="${escapeAttr(g.target_vol)}">
+            ${escapeHtml(g.btn_label)}
+          </button>
+        </article>
+      `).join('');
+  }
+
+  // 2. Panorama em 4 Fases
+  const phasesDetails = document.getElementById('recap-phases-details');
+  const phasesGrid = document.getElementById('recap-phases-grid');
+  if (phasesGrid && Array.isArray(recap.phases)) {
+    const filteredPhases = recap.phases.filter(p => matchesSearch(`${p.kicker} ${p.title} ${p.summary}`));
+    if (phasesDetails) {
+      phasesDetails.hidden = hasQuery && filteredPhases.length === 0;
+      phasesDetails.open = hasQuery ? true : !isZeroSpoilerMode;
+    }
+    phasesGrid.innerHTML = filteredPhases.map(p => `
+      <article class="recap-phase-card">
+        <div class="recap-phase-kicker">${escapeHtml(p.kicker)}</div>
+        <h4>${escapeHtml(p.title)}</h4>
+        <p>${escapeHtml(p.summary)}</p>
+      </article>
+    `).join('');
+  }
+
+  // 3. Resumo Volume a Volume (Vol. 1 ao Vol. 11 + 8.5)
+  const volsContainer = document.getElementById('recap-volumes-container');
+  if (volsContainer && Array.isArray(recap.volumes)) {
+    const filteredVols = recap.volumes.filter(v => {
+      const hlText = (v.highlights || []).join(' ');
+      const kfText = (v.key_figures || []).join(' ');
+      return matchesSearch(`${v.num_label} ${v.anime_ref} ${v.title} ${v.summary} ${hlText} ${kfText}`);
+    });
+
+    volsContainer.innerHTML = filteredVols.map((v, idx) => {
+      const shouldOpen = hasQuery
+        ? 'open'
+        : (!isZeroSpoilerMode && idx === 0 ? 'open' : '');
+      const postS3Cls = v.is_post_s3 ? 'is-post-s3' : '';
+      const safeHeaderTitle = isZeroSpoilerMode ? `${v.num_label} — Resumo do Volume` : v.title;
+
+      const highlightsHtml = (v.highlights || []).map(item => `<li>${escapeHtml(item)}</li>`).join('');
+      const figuresHtml = (v.key_figures || []).map(tag => `<span class="recap-tag">${escapeHtml(tag)}</span>`).join('');
+      const nextVolCta = v.id === 'vol-11'
+        ? `<button type="button" class="btn-continue" data-action="open-ln" data-vol="vol-12">🚀 Continuar História no Volume 12 →</button>`
+        : '';
+
+      return `
+        <details class="arc-details recap-vol-details ${postS3Cls}" data-post-s3="${v.is_post_s3 ? 'true' : 'false'}" ${shouldOpen}>
+          <summary class="arc-summary recap-vol-summary">
+            <span class="recap-summary-inner">
+              <span class="recap-summary-badges">
+                <span class="badge-num">${escapeHtml(v.num_label)}</span>
+                <span class="recap-anime-badge ${v.is_post_s3 ? 'is-post-anime-s3' : ''}">${escapeHtml(v.anime_ref)}</span>
+              </span>
+              <span class="arc-title-text">${escapeHtml(safeHeaderTitle)}</span>
+            </span>
+          </summary>
+
+          <div class="recap-vol-body">
+            <div class="recap-vol-layout">
+              <div class="recap-cover-col">
+                <img
+                  src="${escapeAttr(v.cover)}"
+                  alt="Capa de ${escapeAttr(v.title)}"
+                  width="150"
+                  height="215"
+                  loading="lazy"
+                  class="recap-cover-img"
+                >
+              </div>
+              <div class="recap-text-col">
+                <p class="recap-main-summary">${escapeHtml(v.summary)}</p>
+                <h4 class="recap-sub-heading">📌 Acontecimentos Essenciais para Lembrar</h4>
+                <ul class="recap-highlights-list">
+                  ${highlightsHtml}
+                </ul>
+                <div class="recap-tags-row" aria-label="Personagens e elementos-chave">
+                  ${figuresHtml}
+                </div>
+                <div class="recap-actions-row">
+                  <button type="button" class="btn-secondary-pill" data-action="open-ln" data-vol="${escapeAttr(v.id)}">
+                    📘 Abrir ${escapeHtml(v.num_label)} no Leitor →
+                  </button>
+                  ${nextVolCta}
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+      `;
+    }).join('');
+  }
+
+  // 4. Estado do Mundo no Fim do Volume 11
+  const worldDetails = document.getElementById('recap-world-details');
+  const worldGrid = document.getElementById('recap-world-state-grid');
+  if (worldGrid && Array.isArray(recap.world_state)) {
+    const filteredWorld = recap.world_state.filter(w => matchesSearch(`${w.title} ${w.body}`));
+    if (worldDetails) {
+      worldDetails.hidden = hasQuery && filteredWorld.length === 0;
+      worldDetails.open = hasQuery ? true : !isZeroSpoilerMode;
+    }
+    worldGrid.innerHTML = filteredWorld.map(w => `
+      <article class="term-card recap-world-card">
+        <div class="term-name">${escapeHtml(w.icon)} ${escapeHtml(w.title)}</div>
+        <div class="term-desc">${escapeHtml(w.body)}</div>
+      </article>
+    `).join('');
+  }
 }
 
 // 3. Comparador (Edições em Português + Diferenças WN vs LN + Filtro Anti-Spoilers)
@@ -1700,7 +1843,7 @@ function updateBookmarkBadge() {
 // ==========================================================================
 
 function switchTab(tabName) {
-  if (!['light-novel', 'web-novel', 'comparison', 'cultural', 'amazon'].includes(tabName)) return;
+  if (!['light-novel', 'web-novel', 'recap', 'comparison', 'cultural', 'amazon'].includes(tabName)) return;
   AppState.currentTab = tabName;
 
   const siteHeader = document.getElementById('site-header');
@@ -1752,7 +1895,7 @@ async function handleInitialHash(rawHash = null) {
   const hash = rawHash !== null ? rawHash : window.location.hash.replace(/^#/, '');
   if (!hash) return;
 
-  if (['light-novel', 'web-novel', 'comparison', 'cultural', 'amazon'].includes(hash)) {
+  if (['light-novel', 'web-novel', 'recap', 'comparison', 'cultural', 'amazon'].includes(hash)) {
     switchTab(hash);
   } else if (hash.startsWith('ln/')) {
     const [, volId, chStr] = hash.split('/');
@@ -1878,6 +2021,11 @@ function bindGlobalEvents() {
       spoilerDialog?.close();
     });
   });
+  document.getElementById('btn-onboarding-open-recap')?.addEventListener('click', () => {
+    setSpoilerMode('post_anime');
+    spoilerDialog?.close();
+    switchTab('recap');
+  });
 
   document.getElementById('btn-open-bookmarks')?.addEventListener('click', () => openBookmarksModal(null));
   document.getElementById('btn-reader-bookmarks')?.addEventListener('click', () => openBookmarksModal(null));
@@ -1948,6 +2096,23 @@ function bindGlobalEvents() {
   });
   document.getElementById('btn-collapse-all-arcs')?.addEventListener('click', () => {
     document.querySelectorAll('#wn-arcs-container details').forEach(d => { d.open = false; });
+  });
+
+  // Expandir / Recolher Volumes do Resumo (Até Vol. 11)
+  document.getElementById('btn-recap-expand-s3')?.addEventListener('click', () => {
+    document.querySelectorAll('#recap-volumes-container details').forEach(d => {
+      d.open = d.dataset.postS3 !== 'true';
+    });
+  });
+  document.getElementById('btn-recap-expand-all')?.addEventListener('click', () => {
+    document.querySelectorAll('#recap-volumes-container details').forEach(d => { d.open = true; });
+    const pDet = document.getElementById('recap-phases-details');
+    const wDet = document.getElementById('recap-world-details');
+    if (pDet) pDet.open = true;
+    if (wDet) wDet.open = true;
+  });
+  document.getElementById('btn-recap-collapse-all')?.addEventListener('click', () => {
+    document.querySelectorAll('#recap-volumes-container details').forEach(d => { d.open = false; });
   });
 
   // Seletor de capítulo na barra do leitor
@@ -2155,6 +2320,8 @@ function bindGlobalEvents() {
     } else if (action === 'goto-tab-wn') {
       document.getElementById('bookmarks-dialog')?.close();
       switchTab('web-novel');
+    } else if (action === 'goto-tab-recap') {
+      switchTab('recap');
     } else if (action === 'reveal-spoiler') {
       const spId = target.dataset.spoilerId;
       if (spId) {

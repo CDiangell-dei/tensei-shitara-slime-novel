@@ -7900,5 +7900,349 @@
         ]
       }
     ]
+  },
+  "story_recap": {
+    "meta": {
+      "title": "Resumo Completo da História (Volumes 1 a 11)",
+      "subtitle": "Guia de memória ideal para quem veio do Anime ou quer relembrar personagens, facções, poderes e reviravoltas antes de avançar na Light Novel — 100% livre de spoilers do Volume 12 em diante."
+    },
+    "start_guides": [
+      {
+        "badge": "Fim da 3ª Temporada do Anime",
+        "title": "Parou na 3ª Temporada (Festival de Tempest)?",
+        "desc": "A 3ª Temporada adapta até o encerramento do Volume 9. Para continuar exatamente de onde o anime parou, revise abaixo os detalhes finais do Volume 9 e inicie a leitura no Volume 10.",
+        "target_vol": "vol-10",
+        "btn_label": "📘 Começar do Volume 10 →"
+      },
+      {
+        "badge": "Pós-Arco Ocidental (Referência Vol. 11)",
+        "title": "Quer ir direto para a Guerra do Império (Vol. 12)?",
+        "desc": "Se você já conhece ou acabou de ler abaixo o resumo dos Volumes 10 e 11 (conspiração Rosso, chegada de Testarossa/Ultima/Carrera e o despertar de Chloe), pode partir direto para o Volume 12!",
+        "target_vol": "vol-12",
+        "btn_label": "🚀 Ir para o Volume 12 →"
+      },
+      {
+        "badge": "Experiência Literária Completa",
+        "title": "Quer ver cenas e monólogos cortados pelo Anime?",
+        "desc": "A Light Novel traz explicações profundas sobre o sistema mágico, reuniões diplomáticas e contos hilários de bastidores (como o Volume 8.5). Vale muito a pena explorar desde o início!",
+        "target_vol": "vol-1",
+        "btn_label": "📖 Ler desde o Volume 1 →"
+      }
+    ],
+    "phases": [
+      {
+        "kicker": "Fase 1 • Volumes 1 a 4 (Anime: 1ª Temporada)",
+        "title": "Reencarnação, Legado de Shizu e Fundação de Tempest",
+        "summary": "Satoru Mikami reencarna como Slime, sela amizade com o Dragão da Tempestade Veldora e recebe o nome Rimuru Tempest. Herda a máscara e os desejos de Shizu, reúne Goblins, Lobos, Anões, Kijin e Orcs em uma nação próspera, faz amizade com Milim Nava e Ramiris, salva as cinco crianças invocadas em Ingrassia (incluindo Chloe) e sobrevive por pouco à primeira emboscada de Hinata Sakaguchi."
+      },
+      {
+        "kicker": "Fase 2 • Volumes 5 e 6 (Anime: 2ª Temporada)",
+        "title": "Despertar como Lorde Demônio, Veldora Livre e o Octagrama",
+        "summary": "O Reino de Farmas ataca Tempest sob barreiras anti-magia e mata Shion e dezenas de cidadãos. Rimuru aniquila 20 mil soldados invasores com Megiddo, evolui para Verdadeiro Lorde Demônio (despertando Raphael, Belzebu, Uriel e Veldora), ressuscita seus companheiros, invoca o Primordial Negro Diablo e liberta Veldora. No Banquete de Walpurgis, desmascara e devora Clayman, fundando o Octagrama dos 8 Lordes Demônios."
+      },
+      {
+        "kicker": "Fase 3 • Volumes 7 a 9 + 8.5 (Anime: 3ª Temporada)",
+        "title": "Paz com a Igreja Ocidental, Festival Fundador e o Labirinto",
+        "summary": "Enquanto Diablo transforma Farmas no aliado Reino de Farmenas sob o rei Youm, Rimuru vence o segundo duelo contra Hinata, derrota a conspiração dos Sete Dias Celestiais e firma aliança com a deusa/Lorde Demônio Luminas Valentine. Tempest inaugura o Grande Festival de Fundação para líderes do continente inteiro, acolhe o sortudo 'Herói' Masayuki e abre o Labirinto Subterrâneo de 100 Andares com Ramiris e Veldora."
+      },
+      {
+        "kicker": "Fase 4 • Volumes 10 e 11 (Fechamento do Ciclo Ocidental)",
+        "title": "Conspiração Rosso, as Três Primordiais e o Herói do Tempo",
+        "summary": "Tempest ingressa no Conselho Ocidental e derrota as tramas econômicas e militares da reencarnada Mariabell Rosso (cujos poderes são roubados por Yuuki Kagurazaka). Diablo recruta três Demônios Primordiais lendárias — Testarossa, Ultima e Carrera — e, na batalha final de Granbell Rosso em Ruberios, revela-se o emocionante paradoxo temporal de 2.000 anos vivido por Chloe Aubert e Chronoa para salvar Rimuru."
+      }
+    ],
+    "volumes": [
+      {
+        "id": "vol-1",
+        "num_label": "Volume 1",
+        "anime_ref": "Anime: 1ª Temporada (Eps. 1–8)",
+        "is_post_s3": false,
+        "title": "Volume 1: Morte e Reencarnação",
+        "cover": "assets/illustrations/ln/vol-1/img_01.webp",
+        "summary": "Após morrer esfaqueado em Tóquio protegendo um colega mais jovem, o funcionário corporativo Satoru Mikami (37 anos) desperta em uma caverna repleta de minério mágico na forma de um Slime cego, equipado com duas Habilidades Únicas: Predador (absorção, análise e mimetismo) e Grande Sábio (assistente analítico quase onisciente). Na caverna, ele faz amizade com Veldora, o temido Dragão da Tempestade selado há 300 anos por uma misteriosa Herói mascarada. Eles batizam um ao outro como irmãos de alma — surgindo o nome Rimuru Tempest — e Rimuru engole o Prisão Infinita de Veldora com Predador para quebrá-lo por dentro e por fora.",
+        "highlights": [
+          "Fora da caverna, Rimuru salva uma aldeia Goblin, derrota os Lobos da Presa e nomeia todos (Rigurd, Rigur, Gobuta e Ranga), iniciando sua futura cidade.",
+          "Em visita ao Reino Armado de Dwargon, recruta o mestre ferreiro Kaijin, os três irmãos anões e o ex-ministro Vesta para desenvolver tecnologia e poções puras.",
+          "Conhece a aventureira japonesa Shizue Izawa (Shizu), invocada décadas atrás pelo Lorde Demônio Leon Cromwell. Após subjugar o espírito das chamas Ifrit que consumia a vida de Shizu, Rimuru herda sua forma humana, sua Máscara Anti-Magia e a promessa de encontrar Leon e salvar os alunos que ela deixou no continente."
+        ],
+        "key_figures": [
+          "Rimuru Tempest",
+          "Veldora",
+          "Shizu",
+          "Grande Sábio & Predador",
+          "Ranga",
+          "Rigurd & Gobuta",
+          "Kaijin"
+        ]
+      },
+      {
+        "id": "vol-2",
+        "num_label": "Volume 2",
+        "anime_ref": "Anime: 1ª Temporada (Eps. 9–15)",
+        "is_post_s3": false,
+        "title": "Volume 2: O Despertar da Floresta & O Lorde Orc",
+        "cover": "assets/illustrations/ln/vol-2/img_01.webp",
+        "summary": "Seis jovens Ogros sobreviventes da destruição de sua vila atacam Rimuru acreditando que ele liderava os Majins mascarados, mas logo percebem o engano e juram lealdade. Ao receberem nomes de Rimuru, evoluem para a rara linhagem Kijin, tornando-se a espinha dorsal administrativa e militar da cidade. Pouco depois, a dríade Treyni pede socorro a Rimuru: um exército de 200 mil Orcs, movido pela Habilidade Única coletiva 'Faminto' e manipulado pelo Majin Gelmud (subordinado de Clayman), está devorando todas as raças da Grande Floresta de Jura.",
+        "highlights": [
+          "Os seis Kijin assumem seus postos: Benimaru (comandante militar), Shion (guarda-costas/secretária), Shuna (administração/tecelagem), Souei (espionagem), Hakuro (instrutor de espada) e Kurobe (armeiro).",
+          "Após salvar Gabil e a tribo dos Homens-Lagarto de um golpe interno, o Lorde Orc devora o próprio Gelmud e desperta como o Lorde Demônio Semente 'Orc Disaster'.",
+          "Rimuru derrota o Orc Disaster em um duelo de devoração (evoluindo Predador para a Habilidade Única 'Gula'), perdoa os pecados dos Orcs famintos, nomeia seu novo líder como Geld e firma aliança com os Altos Orcs, Homens-Lagarto (Dragonewts) e o Rei Gazel Dwargo."
+        ],
+        "key_figures": [
+          "Benimaru",
+          "Shion & Shuna",
+          "Souei & Hakuro",
+          "Geld",
+          "Gabil",
+          "Treyni",
+          "Rei Gazel Dwargo"
+        ]
+      },
+      {
+        "id": "vol-3",
+        "num_label": "Volume 3",
+        "anime_ref": "Anime: 1ª Temporada (Eps. 16–19)",
+        "is_post_s3": false,
+        "title": "Volume 3: A Ameaça de Charybdis & O Tratado das Bestas",
+        "cover": "assets/illustrations/ln/vol-3/img_01.webp",
+        "summary": "A capital dos monstros recebe oficialmente o nome de Federação de Jura Tempest. Intrigada após assistir de longe à derrota do Orc Disaster (enquanto os Lordes Demônios Clayman, Frey e Carrion tramavam observar Rimuru), a lendária e antiquíssima Lorde Demônio Milim Nava ('A Destruidora') voa pessoalmente até Tempest. Em vez de lutar, Rimuru neutraliza sua hostilidade com mel puro e culinária japonesa — fazendo Milim declarar-se melhor amiga dele e mudar-se para a cidade.",
+        "highlights": [
+          "Tempest recebe a comitiva do Reino Bestial de Eurazania (liderado pelo Lorde Demônio Carrion), mas o impetuoso Phobio ('Pantera Negra') é humilhado por Milim e acaba seduzido pelos palhaços Footman e Tear.",
+          "Enganado pelos palhaços, Phobio torna-se hospedeiro de Charybdis — um colossal monstro voador sem mente nascido das magículas de Veldora, imune a magia comum.",
+          "Com ajuda de uma frota aérea de Cavaleiros Pégaso enviada por Gazel e um golpe contido de Milim que separa Charybdis do corpo de Phobio, a crise termina em um tratado formal de amizade e comércio com Carrion e na amizade com o grupo de aventureiros de Youm."
+        ],
+        "key_figures": [
+          "Milim Nava",
+          "Carrion & Phobio",
+          "Footman & Tear",
+          "Charybdis",
+          "Youm"
+        ]
+      },
+      {
+        "id": "vol-4",
+        "num_label": "Volume 4",
+        "anime_ref": "Anime: 1ª Temporada (Eps. 20–24)",
+        "is_post_s3": false,
+        "title": "Volume 4: Rumo às Terras Humanas & As Crianças Invocadas",
+        "cover": "assets/illustrations/ln/vol-4/img_01.webp",
+        "summary": "Após estabelecer tratados comerciais com o Reino de Blumund (por meio do mestre de guilda Fuze) e fazer amizade com o astuto mercador Mjöllmile, Rimuru viaja ao Reino de Ingrassia para cumprir o último desejo de Shizu. Na capital, conhece Yuuki Kagurazaka — ex-aluno japonês de Shizu e fundador da Associação da Liberdade — e torna-se professor das cinco crianças invocadas incompletas (Kenya, Ryota, Gale, Alice e a quieta Chloe Aubert), cujos corpos infantis seriam destruídos em poucos anos pelo excesso de energia mágica.",
+        "highlights": [
+          "Para estabilizar a energia das crianças assim como Ifrit fazia com Shizu, Rimuru as conduz à Morada dos Espíritos, onde conhece a fada Lorde Demônio do Labirinto Ramiris e constrói para ela o arqui-boneco demoníaco Beretta.",
+          "Quatro crianças recebem espíritos superiores (incluindo o Espírito da Luz para Kenya), mas para Chloe surge do próprio fluxo do tempo uma entidade espiritual luminosa vinda do futuro que se funde a ela — momento em que Rimuru também lhe entrega a Máscara Anti-Magia de Shizu.",
+          "Ao retornar para Tempest, Rimuru cai em uma barreira sagrada armada por Hinata Sakaguchi (Capitã dos Cavaleiros Sagrados e também ex-aluna de Shizu), enganada por um mercador oriental a crer que Rimuru matara sua mestra. Rimuru só escapa da espada 'Arco-Íris Mortal' e da magia 'Desintegração' sacrificando um clone de Gula."
+        ],
+        "key_figures": [
+          "Yuuki Kagurazaka",
+          "Chloe Aubert & Crianças",
+          "Ramiris & Beretta",
+          "Mjöllmile",
+          "Hinata Sakaguchi"
+        ]
+      },
+      {
+        "id": "vol-5",
+        "num_label": "Volume 5",
+        "anime_ref": "Anime: 2ª Temporada Parte 1 (Eps. 25–36)",
+        "is_post_s3": false,
+        "title": "Volume 5: Nascimento do Lorde Demônio & Megiddo",
+        "cover": "assets/illustrations/ln/vol-5/img_01.webp",
+        "summary": "Enquanto Hinata detinha Rimuru longe da cidade, o ambicioso Reino de Farmas — temeroso de perder seu monopólio comercial para Tempest e instigado pelo mercador oriental Damrada — invade a capital usando três jovens invocados brutais (Shogo, Kyoya e Kirara) e duas barreiras sobrepostas: uma anti-magia (mantida pela bruxa Mjurran sob chantagem de Clayman) e outra da Igreja que enfraquece monstros. Obedecendo à ordem anterior de Rimuru de jamais matar humanos, Shion, Gobuzo e dezenas de cidadãos morrem protegendo as crianças.",
+        "highlights": [
+          "Arrasado ao encontrar os corpos, Rimuru ouve da aventureira Eren (na verdade uma nobre élfica da Dinastia Sarion) o conto da Princesa do Caos: evoluir de Semente para Verdadeiro Lorde Demônio ao absorver 10.000 almas humanas pode ressuscitar os mortos cujas almas ainda pairam sob a barreira.",
+          "Rimuru perdoa Mjurran (forjando um coração artificial para libertá-la de Clayman e uni-la a Youm), ordena que Benimaru, Souei, Hakuro e Geld destruam os geradores externos e abate sozinho os 20.000 soldados do exército real de Farmas com feixes solares concentrados pela magia física 'Megiddo', capturando o Rei Edmaris e o Arcebispo Reyhiem.",
+          "No Festival da Colheita, Rimuru desperta como Verdadeiro Lorde Demônio, adquirindo 4 Habilidades Supremas: Rei da Sabedoria Raphael, Rei da Gula Belzebu, Rei do Pacto Uriel e Rei da Tempestade Veldora. Shion e todos os cidadãos revivem sem nenhuma baixa, o Arcanjo/Demônio Primordial Negro invocado como 'Diablo' jura devoção eterna, e Veldora é finalmente libertado do selo em um corpo humanoide!"
+        ],
+        "key_figures": [
+          "Raphael, Belzebu, Uriel & Veldora",
+          "Diablo (Primordial Negro)",
+          "Shion (Cozinheira)",
+          "Youm & Mjurran",
+          "Megiddo"
+        ]
+      },
+      {
+        "id": "vol-6",
+        "num_label": "Volume 6",
+        "anime_ref": "Anime: 2ª Temporada Parte 2 (Eps. 37–48)",
+        "is_post_s3": false,
+        "title": "Volume 6: O Banquete de Walpurgis & O Octagrama",
+        "cover": "assets/illustrations/ln/vol-6/img_01.webp",
+        "summary": "Pouco após o despertar de Rimuru, refugiados de Eurazania chegam trazendo notícias chocantes: Milim aparentemente sob controle mental de Clayman destruiu a capital de Carrion! Ramiris irrompe em Tempest avisando que Clayman convocou o Banquete de Walpurgis (a cúpula dos Dez Grandes Lordes Demônios) para julgar e eliminar Rimuru. Com auxílio de Gazel, Fuze e do Duque Erald de Sarion, Tempest traça uma contraofensiva total em duas frentes simultâneas.",
+        "highlights": [
+          "Na frente militar, Raphael usa teletransporte em massa para enviar o exército de Benimaru, Geld, Gabil e Souei diretamente contra as forças de Clayman em Eurazania, vencendo com zero baixas aliadas e libertando escravos de Clayman como a raposa mística de nove caudas Kumara e o ex-cardeal morto-vivo Adalman.",
+          "No Banquete de Walpurgis (diante de Guy Crimson, Leon Cromwell, Dagruel, Dino, Frey, Ramiris e da misteriosa 'criada' atrás de Roy Valentine), Rimuru e Shion humilham Clayman. Revela-se que Milim jamais esteve controlada — ela e Frey fingiram tudo para arrancar informações dos mandantes de Clayman.",
+          "Rimuru devora o corpo e a alma despertada de Clayman com Belzebu (descobrindo que Kazalim/Kagali e alguém do Oriente agiam por trás dele) e expõe sem querer a verdadeira Lorde Demônio Luminas Valentine. Com Carrion e Frey abdicando de seus títulos para servir Milim, os oito soberanos restantes batizam o grupo de 'Octagrama' — oficializando Rimuru como governante supremo da Floresta de Jura."
+        ],
+        "key_figures": [
+          "Octagrama",
+          "Guy Crimson",
+          "Luminas Valentine",
+          "Leon Cromwell",
+          "Clayman",
+          "Kumara & Adalman"
+        ]
+      },
+      {
+        "id": "vol-7",
+        "num_label": "Volume 7",
+        "anime_ref": "Anime: 3ª Temporada (Eps. 49–55)",
+        "is_post_s3": false,
+        "title": "Volume 7: Confronto entre Santos e Monstros",
+        "cover": "assets/illustrations/ln/vol-7/img_01.webp",
+        "summary": "Enquanto Diablo conclui sem derramamento desnecessário a transição política de Farmas — forçando a nobreza a pagar reparações, abdicando o trono para o nascimento do novo Reino aliado de Farmenas sob o Rei Youm — uma crise fabricada explode no Sacro Império de Ruberios. O mensageiro Reyhiem aparece morto e adulteram a mensagem diplomática de Rimuru para soar como uma declaração de guerra contra Hinata, enquanto o mercador oriental Damrada (da organização secreta Cérbero) e os enigmáticos 'Sete Dias Celestiais' inflamam cavaleiros e jornalistas.",
+        "highlights": [
+          "Hinata viaja a Tempest querendo dialogar, mas cavaleiros sob influência dos Sete Dias atacam a fronteira, forçando o aguardado segundo duelo pessoal entre Hinata e Rimuru.",
+          "Desta vez Rimuru luta de igual para igual, desperta previsão de trajetória com Raphael e sacrifica Belzebu temporariamente para analisar a 'Desintegração' e reparar a espada lendária de Hinata, vencendo com honra.",
+          "Os Sete Dias Celestiais revelam sua traição tentando eliminar Hinata para tomar seu corpo, mas Luminas Valentine — a própria 'Deusa Luminas' venerada pela religião ocidental — aparece em pessoa, executa os Sábios corruptos, ressuscita Hinata e assina um tratado histórico de paz, não-agressão e intercâmbio gastronômico/cultural entre Ruberios e Tempest!"
+        ],
+        "key_figures": [
+          "Hinata Sakaguchi",
+          "Luminas Valentine",
+          "Diablo & Reino de Farmenas",
+          "Damrada (Cérbero)",
+          "Sete Dias Celestiais"
+        ]
+      },
+      {
+        "id": "vol-8",
+        "num_label": "Volume 8",
+        "anime_ref": "Anime: 3ª Temporada (Eps. 56–62)",
+        "is_post_s3": false,
+        "title": "Volume 8: Reconciliação, Pactos e Preparativos",
+        "cover": "assets/illustrations/ln/vol-8/img_01.webp",
+        "summary": "Com a Igreja Ocidental reconhecendo que cidadãos de Tempest não são inimigos da humanidade, Rimuru decide promover o 'Grande Festival da Fundação de Tempest' para apresentar sua capital tecnológica e cultural a reis, nobres e mercadores do mundo inteiro, nomeando Mjöllmile como ministro de finanças e eventos. Convites são enviados de Blumund e Dwargon até a longínqua Dinastia Feiticeira Sarion.",
+        "highlights": [
+          "Para construir a estrada direta até Sarion, Benimaru visita a orgulhosa tribo alada Tengu nas montanhas Kusha, descobre que a jovem líder Momiji é filha de seu mestre Hakuro e conquista a mão e o apoio diplomático dela.",
+          "A lendária Imperadora Elmesia El Ru Sarion visita Tempest pessoalmente, encantando-se com Rimuru e firmando cooperação tecnológica no projeto do Magitrem (ferrovia mágica continental).",
+          "Ramiris muda-se com seu clã para Tempest. Combinando sua habilidade 'Criação de Labirinto', a aura inesgotável de Veldora no 100º andar e a engenharia de Rimuru, nasce o Labirinto Subterrâneo de 100 Andares — onde aventureiros desafiam chefes usando pulseiras de ressurreição sem risco real de morte!"
+        ],
+        "key_figures": [
+          "Imperadora Elmesia",
+          "Momiji & Tribo Tengu",
+          "Ramiris & Labirinto de 100 Andares",
+          "Mjöllmile",
+          "Veldora"
+        ]
+      },
+      {
+        "id": "vol-8-5",
+        "num_label": "Volume 8.5",
+        "anime_ref": "Especial • Contos Oficiais de Tempest",
+        "is_post_s3": false,
+        "title": "Volume 8.5: Histórias Extras & Guia Oficial",
+        "cover": "assets/illustrations/ln/vol-8-5/img_01.webp",
+        "summary": "Coletânea especial escrita por Fuse reunindo 13 histórias curtas canônicas sobre a vida diária em Jura Tempest entre as grandes batalhas. Mostra o lado humano, bem-humorado e acolhedor da cidade sob o olhar dos próprios subordinados, aventureiros visitantes e aliados.",
+        "highlights": [
+          "Aventuras cômicas de Gobuta (do cabaré das elfas aos treinamentos espartanos com Hakuro e Milim) e a rotina de Kaval, Eren e Gido em Tempest.",
+          "O orgulho e carinho da divisão de engenharia de Geld na construção das estradas e praças da cidade, além da colheita do mel real da abelha Apito para Milim.",
+          "Bastidores da hospedagem dos Cavaleiros Sagrados de Hinata em Tempest — completamente rendidos às fontes termais (onsen), camas macias e ramen!"
+        ],
+        "key_figures": [
+          "Gobuta",
+          "Geld",
+          "Milim & Apito",
+          "Eren, Kaval & Gido",
+          "Cavaleiros Sagrados"
+        ]
+      },
+      {
+        "id": "vol-9",
+        "num_label": "Volume 9",
+        "anime_ref": "Anime: 3ª Temporada (Eps. 63–72)",
+        "is_post_s3": false,
+        "title": "Volume 9: O Grande Festival da Fundação de Tempest",
+        "cover": "assets/illustrations/ln/vol-9/img_01.webp",
+        "summary": "Tempest abre suas portas para delegações reais, mercadores internacionais, Yuuki Kagurazaka, Hinata, as cinco crianças e aventureiros de todas as guildas. O Festival impressiona a nobreza humana com concertos de orquestra sinfônica, gastronomia sofisticada, projeções mágicas gigantes e demonstrações científicas de Vesta e Gabil.",
+        "highlights": [
+          "No Torneio Marcial estreia Masayuki Honjou, jovem japonês loiro cuja Habilidade Única 'Escolhido' faz todos ao redor interpretarem qualquer gesto seu como ato heroico genial — levando Masayuki a desistir na final contra Gobuta (fundido a Ranga) e tornar-se aliado sincero e conterrâneo amigo de Rimuru!",
+          "A transmissão ao vivo da estreia do Labirinto de 100 Andares (com o golem de Beretta derrotando o time de Masayuki sem matá-los) transforma a masmorra de Tempest na maior febre econômica do continente.",
+          "Nos bastidores, mercadores manipulados pela poderosa Família Rosso tentam quebrar a reputação de Tempest recusando notas bancárias e exigindo pagamento imediato em moedas de ouro anãs. Prevenido, Rimuru paga cada moeda à vista com ajuda de Gazel e Elmesia — despertando a atenção direta de Granbell e Mariabell Rosso no epílogo."
+        ],
+        "key_figures": [
+          "Masayuki ('Herói' Escolhido)",
+          "Gobuta & Ranga",
+          "Família Rosso",
+          "Beretta & Labirinto",
+          "Elmesia & Gazel"
+        ]
+      },
+      {
+        "id": "vol-10",
+        "num_label": "Volume 10",
+        "anime_ref": "Pós-3ª Temporada • Arco Conselho & Rosso",
+        "is_post_s3": true,
+        "title": "Volume 10: O Labirinto e a Armadilha da Ganância",
+        "cover": "assets/illustrations/ln/vol-10/img_01.webp",
+        "summary": "Com o sucesso estrondoso do Labirinto — agora reforçado por guardiões de elite como o insetoide Zegion, a rainha-abelha Apito, a raposa Kumara, o lorde imortal Adalman e Veldora no 100º andar — Rimuru recebe convite para ingressar no Conselho das Nações Ocidentais em Ingrassia. Quem controla a política e a economia do Ocidente nas sombras é a Família Rosso: o patriarca Granbell Rosso e sua neta Mariabell Rosso, uma reencarnada calculista de outro mundo portadora da Habilidade Única 'Ganância', capaz de escravizar ou matar qualquer pessoa dominada pela ambição.",
+        "highlights": [
+          "Na assembleia do Conselho Ocidental, nobres controlados por Mariabell tentam humilhar e criminalizar Rimuru, mas o tiro sai pela culatra diante de Hinata, Gazel e dos reis aliados, consolidando a entrada oficial de Tempest no Conselho.",
+          "Desesperada para eliminar Rimuru antes que Tempest domine toda a economia ocidental, Mariabell alia-se a Yuuki Kagurazaka e à elfa morta-viva Kagali (a antiga Lorde Demônio Kazalim) para atrair Rimuru às Ruínas de Amrita usando o 'Dragão do Caos' — a carcaça amaldiçoada do antigo dragão de estimação de Milim.",
+          "Rimuru purifica a alma do dragão de Milim (que renasce como o pequeno dragão 'Gaia' para alegria de Milim) e derrota Mariabell. Nas sombras da retirada, porém, Yuuki Kagurazaka trai e mata a própria Mariabell para roubar sua Habilidade Única 'Ganância' — confirmando a Rimuru e Raphael que Yuuki é um inimigo perigoso operando nos bastidores!"
+        ],
+        "key_figures": [
+          "Mariabell Rosso (Ganância)",
+          "Granbell Rosso",
+          "Yuuki & Kagali (Kazalim)",
+          "Gaia (Dragão de Milim)",
+          "Zegion, Apito & Kumara",
+          "Conselho Ocidental"
+        ]
+      },
+      {
+        "id": "vol-11",
+        "num_label": "Volume 11",
+        "anime_ref": "Fechamento Ocidental • Ponte Direta p/ o Vol. 12",
+        "is_post_s3": true,
+        "title": "Volume 11: A Melancolia Dourada & O Herói do Tempo",
+        "cover": "assets/illustrations/ln/vol-11/img_01.webp",
+        "summary": "Diablo retorna triunfante de sua viagem de recrutamento no Submundo trazendo centenas de demônios — liderados por ninguém menos que três Demônios Primordiais lendárias (Branca, Violeta e Amarela)! Sem ter noção do pavor continental que elas causam, Rimuru as batiza como Testarossa, Ultima e Carrera (o 'Trio Demoníaco'), evoluindo-as em Lordes Demônios subordinadas e deixando Guy Crimson e Leon Cromwell atônitos em uma visita de Rimuru a El Dorado. Logo em seguida, Granbell Rosso joga sua última cartada atacando o Sacro Império de Ruberios ao lado de Yuuki, Laplace e Kagali para tomar a 'Arca Sagrada' guardada por Luminas.",
+        "highlights": [
+          "Dentro da Arca Sagrada repousava o corpo físico selado de Chloe Aubert do futuro! Quando Hinata leva um golpe fatal para proteger Chloe durante o confronto contra Granbell, ativa-se o salto temporal que explica o maior mistério da obra até aqui.",
+          "Revela-se que Chloe (junto à alma de Hinata habitando seu interior e ao manas/personalidade protetora 'Chronoa') viveu um loop temporal repetido de 2.000 anos tentando impedir uma linha do tempo trágica em que Rimuru morria diante do Império Oriental! Foi a própria Chloe viajante do tempo quem selou Veldora 300 anos atrás, treinou Hinata e entregou a Máscara do Infinito a Shizu.",
+          "Entrando no mundo espiritual com ajuda de Raphael e Veldora, Rimuru acalma a furiosa Chronoa, salva tanto Chloe quanto Hinata no presente e quebra o destino sombrio! Derrotado em um duelo honrado contra Luminas, Granbell Rosso parte em paz após reencontrar o espírito de sua falecida esposa Maria, confiando a Chloe a Habilidade Suprema 'Rei da Esperança Sariel'. Com o Ocidente unido a Tempest, Yuuki e a Trupe de Palhaços fogem para o Leste — abrindo caminho direto para a guerra contra o Império Oriental no Volume 12!"
+        ],
+        "key_figures": [
+          "Chloe Aubert & Chronoa",
+          "Testarossa, Ultima & Carrera",
+          "Luminas & Granbell Rosso",
+          "Hinata Sakaguchi",
+          "Rei da Esperança Sariel",
+          "Fuga de Yuuki p/ o Império"
+        ]
+      }
+    ],
+    "world_state": [
+      {
+        "icon": "💧",
+        "title": "Rimuru no Fim do Volume 11",
+        "body": "Verdadeiro Slime Demoníaco (Lorde Demônio do Octagrama) e Chanceler da Federação de Jura Tempest. Possui 4 Habilidades Supremas ativas: Rei da Sabedoria Raphael (análise e gestão), Rei da Gula Belzebu (predação e estoque), Rei do Pacto Uriel (defesa absoluta e controle espacial) e Rei da Tempestade Veldora (invocação e restauração do Dragão da Tempestade)."
+      },
+      {
+        "icon": "⚔️",
+        "title": "Alto Comando Militar de Tempest",
+        "body": "Benimaru (Comandante-Geral), Diablo (Primordial Negro / Mordomo-Chefe), Shion (Guarda Yomigaeri com 'Cozinheira'), Souei (Inteligência), Geld (Defesa Pesada), Gabil (Força Aérea Hiryuu), Ranga, Gobuta, Hakuro e a recém-criada Legião Negra com as 3 Demônios Primordiais: Testarossa (diplomacia/militar), Ultima (promotoria) e Carrera (suprema corte)."
+      },
+      {
+        "icon": "🏰",
+        "title": "O Labirinto Subterrâneo de 100 Andares",
+        "body": "Administrado por Ramiris, Dino (como 'pesquisador' preguiçoso) e Veldora (Chefe Final do 100º andar). Guardado pelos 'Dez Senhores do Labirinto', incluindo Zegion (insetoide supremo treinado por Veldora), Apito, Kumara, o lorde morto-vivo Adalman (com Albert e Wenti), Beretta e os quatro Reis Dragões Elementais — além de poder isolar toda a cidade de Rimuru dentro do subsolo em caso de guerra!"
+      },
+      {
+        "icon": "🌟",
+        "title": "O Octagrama (Os 8 Lordes Demônios)",
+        "body": "Composto por: Guy Crimson (Primordial Vermelho, Senhor da Escuridão no Norte), Milim Nava (Dragonoide ancestral aliada de Rimuru, servida por Frey e Carrion), Ramiris (Fada do Labirinto morando em Tempest), Luminas Valentine (Rainha dos Vampiros e Deusa de Ruberios), Leon Cromwell (ex-Herói em El Dorado que buscava invocar Chloe), Dagruel (Rei dos Gigantes), Dino (Anjo Caído Adormecido) e Rimuru Tempest."
+      },
+      {
+        "icon": "🤝",
+        "title": "Nações Humanas & Aliadas do Ocidente",
+        "body": "Tempest tem alianças sólidas com o Reino Armado de Dwargon (Rei Gazel), a Dinastia Feiticeira Sarion (Imperadora Elmesia), o Sacro Império de Ruberios (Luminas & Hinata), o Reino de Farmenas (Rei Youm & Mjurran), Blumund, Ingrassia / Conselho das Nações Ocidentais e o carismático 'Herói' Masayuki Honjou."
+      },
+      {
+        "icon": "🔥",
+        "title": "Gancho Direto para o Volume 12+",
+        "body": "A Leste da Grande Floresta de Jura ergue-se o colossal Império Oriental Unido de Nasca Namrium Ulmeria, governado pelo Imperador Rudra com divisões mecanizadas, aeronaves mágicas e guerreiros de outro mundo. Após perder sua base no Ocidente, Yuuki Kagurazaka, Kagali e a Trupe de Palhaços Moderados infiltram-se no exército imperial — preparando a maior guerra da história da série a partir do Volume 12!"
+      }
+    ]
   }
 }

@@ -32,8 +32,9 @@ As edições públicas em EPUB dos Volumes 6 a 20 apresentavam erros típicos de
 - Aba dedicada explicando honoríficos japoneses (`-sama`, `-san`, `-kun`, `-chan`, `-dono`, `-sensei`, `Senpai/Kouhai`, `Danna/Aniki`), conceitos originais (`Majin`, `Kijin`, `Naming`, `Dragões Verdadeiros`, `Primordiais`, `Manas: Ciel`, `EP`) e aspectos culturais (`Onsen`, culinária diplomática, `Wa`, `Matsuri` e sincretismo mitológico).
 - Durante a leitura, basta clicar em qualquer selo **`[Nota N]`** ou termo cultural pontilhado para abrir a explicação sem perder a posição no capítulo.
 
-### 5. 🛡️ Proteção Contra Spoilers, Progresso Automático & Alternância LN ↔ WN
+### 5. 🛡️ Proteção Contra Spoilers, Resumo até o Vol. 11 & Progresso Automático
 - **Filtro Anti-Spoilers ao Abrir o Site**: No primeiro acesso, o site pergunta se a pessoa já conhece os acontecimentos pós-Anime (**referência: até o Volume 11 da Light Novel**) e permite ocultar automaticamente as sinopses e os subtítulos reveladores a partir do Volume 12 (ou ocultar todas as sinopses desde o Volume 1), com opção de revelar itens individuais com 1 clique.
+- **Resumo Completo até o Volume 11 (`📺 Resumo Vol. 1–11`)**: Aba dedicada com panorama por temporadas/fases, resumo detalhado volume por volume (`Volumes 1 a 11 + 8.5`) e painel do estado do mundo, poderes e alianças ao fim do Volume 11 — ideal para quem assistiu ao Anime há tempos relembrar tudo sem spoilers do Volume 12+.
 - **Salvamento 100% Automático**: A página salva sozinha a seção e o parágrafo exato durante a leitura — ao fechar o navegador e abrir o site novamente mais tarde, a leitura retoma automaticamente do ponto exato onde parou, sem precisar clicar em nada.
 - **Troca Independente entre Light Novel e Web Novel (`🔖 Trocar LN ↔ WN`)**: Os pontos de leitura da Light Novel e da Web Novel ficam guardados separadamente, permitindo consultar como determinado arco acontece na outra versão e voltar com 1 clique para onde estava lendo.
 - **Exportar / Importar JSON**: Em `⚙️ Configurações`, é possível exportar o progresso em `.json` para sincronizar entre computador e celular.

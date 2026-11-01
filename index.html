@@ -49,6 +49,9 @@
         <button type="button" class="nav-tab" data-tab="web-novel">
           <span aria-hidden="true">📜</span> Web Novel
         </button>
+        <button type="button" class="nav-tab" data-tab="recap">
+          <span aria-hidden="true">📺</span> Resumo Vol. 1–11
+        </button>
         <button type="button" class="nav-tab" data-tab="comparison">
           <span aria-hidden="true">⚖️</span> Comparador
         </button>
@@ -130,6 +133,12 @@
         <p>
           A edição definitiva escrita por <strong>Fuse</strong> e ilustrada por <strong>Mitz Vah</strong>. Inclui os <strong>Volumes 1 a 20 + Volume 8.5</strong> completos em Português Brasileiro, com todas as ilustrações coloridas e em preto e branco posicionadas nos pontos exatos dos capítulos, notas culturais interativas, padronização terminológica completa e opção de alternar entre a <em>Edição Ilustrada Revisada</em> e a <em>Tradução de Fã (TSSDK Scan)</em> nos Volumes 6 a 13.
         </p>
+        <div class="hero-recap-cta">
+          <span>📺 <strong>Veio do Anime ou esqueceu detalhes da história?</strong> Relembre acontecimentos, personagens, alianças e poderes até o Volume 11 antes de ler.</span>
+          <button type="button" class="btn-secondary-pill btn-hero-recap" data-action="goto-tab-recap">
+            Ver Resumo até o Vol. 11 →
+          </button>
+        </div>
         <div class="hero-track-resume" id="ln-specific-resume" hidden></div>
       </div>
 
@@ -161,6 +170,61 @@
       </div>
 
       <div id="wn-arcs-container" class="arcs-wrapper"></div>
+    </section>
+
+    <!-- ABA NOVA: RESUMO DA HISTÓRIA ATÉ O VOLUME 11 (GUIA PÓS-ANIME) -->
+    <section id="view-recap" class="view-section" aria-labelledby="heading-recap">
+      <div class="section-hero hero-recap">
+        <div class="hero-badges">
+          <span class="hero-tag">Guia de Memória Pós-Anime</span>
+          <span class="hero-stat">Volumes 1 a 11 + 8.5 • Zero Spoilers do Vol. 12+</span>
+        </div>
+        <h2 id="heading-recap">Resumo da História até o Volume 11</h2>
+        <p id="recap-subtitle-text">
+          Ideal para quem assistiu ao Anime há algum tempo ou quer refrescar a memória sobre alianças, personagens, habilidades e ganchos antes de continuar na Light Novel — sem nenhum spoiler do Volume 12 em diante.
+        </p>
+      </div>
+
+      <div id="recap-zero-spoiler-notice" class="recap-mode-notice" hidden>
+        🛡️ <strong>Modo "Começando do Zero" ativo:</strong> Todas as seções abaixo iniciam recolhidas para você expandir apenas até o volume em que já chegou!
+      </div>
+
+      <section class="recap-block" aria-labelledby="recap-h-start">
+        <h3 id="recap-h-start" class="subsection-heading">🧭 De Onde Começar a Ler na Light Novel?</h3>
+        <div class="recap-start-grid" id="recap-start-grid"></div>
+      </section>
+
+      <details class="arc-details recap-section-details" id="recap-phases-details" open>
+        <summary class="arc-summary">
+          <span>
+            <span class="arc-title-text">⚡ Panorama Geral em 4 Fases (Do Volume 1 ao Volume 11)</span>
+            <span class="arc-desc-text">Visão rápida da evolução de Rimuru, das temporadas do Anime e da transição para a guerra contra o Império Oriental.</span>
+          </span>
+        </summary>
+        <div class="recap-phases-grid" id="recap-phases-grid"></div>
+      </details>
+
+      <section class="recap-block" aria-labelledby="recap-h-vols">
+        <div class="recap-header-row">
+          <h3 id="recap-h-vols" class="subsection-heading">📚 Resumo Detalhado Volume por Volume (Vol. 1 ao Vol. 11)</h3>
+          <div class="wn-controls-row recap-controls-row">
+            <button type="button" class="btn-secondary-pill" id="btn-recap-expand-s3">Expandir Anime T1–T3 (Vols. 1–9)</button>
+            <button type="button" class="btn-secondary-pill" id="btn-recap-expand-all">Expandir Todos (Até Vol. 11)</button>
+            <button type="button" class="btn-secondary-pill" id="btn-recap-collapse-all">Recolher Todos</button>
+          </div>
+        </div>
+        <div id="recap-volumes-container" class="arcs-wrapper recap-volumes-wrapper"></div>
+      </section>
+
+      <details class="arc-details recap-section-details" id="recap-world-details" open>
+        <summary class="arc-summary">
+          <span>
+            <span class="arc-title-text">🗺️ Guia Rápido: Como Está o Mundo no Fim do Volume 11?</span>
+            <span class="arc-desc-text">Poderes de Rimuru, generais de Tempest, Octagrama, Labirinto de 100 Andares, nações aliadas e o gancho para o Volume 12.</span>
+          </span>
+        </summary>
+        <div class="recap-world-grid" id="recap-world-state-grid"></div>
+      </details>
     </section>
 
     <!-- ABA 3: COMPARADOR (WN x LN + COMPARATIVO DE EDIÇÕES) -->
@@ -504,6 +568,12 @@
           <span class="choice-badge choice-badge-open">Leitor veterano</span>
           <strong>👁️ Já conheço o pós-Anime — Mostrar todas as sinopses</strong>
           <small>Mostra livremente todas as sinopses completas, subtítulos e comparativos de todos os volumes.</small>
+        </button>
+      </div>
+
+      <div class="onboarding-recap-row">
+        <button type="button" class="btn-secondary-pill btn-onboarding-recap" id="btn-onboarding-open-recap">
+          📺 Esqueceu partes do Anime? Ocultar spoilers (Vol. 12+) e abrir o Resumo até o Vol. 11 →
         </button>
       </div>
 
