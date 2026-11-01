@@ -1,8 +1,8 @@
 """
 GERADOR DO CATÁLOGO MESTRE - TENSEI SHITARA SLIME DATTA KEN
-Consolida Light Novel (Volumes 1 a 20 + 8.5, incluindo edições alternativas da Scan nos Vols 6-13),
+Consolida Light Novel 100% completa (Volumes 1 a 23 + 8.5, incluindo edições alternativas da Scan nos Vols 6-13),
 Web Novel completa (Capítulos 0 a 249 + Intermissões .5 + 48 Capítulos Extras),
-Comparador Duplo (WN vs LN + Drive Original vs Scan vs Edição Revisada),
+Resumo até o Volume 11 (Guia Pós-Anime), Comparador Duplo (WN vs LN + Fontes da Comunidade),
 Guia Cultural expandido com Glossário Inline e Catálogo Oficial da Amazon Brasil.
 """
 
@@ -185,7 +185,10 @@ def build_catalog():
         {"id": "vol-17", "num": 17, "title": "Volume 17: Memórias Distantes — Contos Paralelos", "kanji": "転生したらスライムだった件 17", "desc": "Quatro grandes histórias que expandem o multiverso de Tensura: a ascensão comercial de Myourmiles, a jornada dimensional de Velgrynd em busca dos fragmentos da alma de Rudra, os bastidores da corte imperial e o hilário monólogo da Primordial Azul Rain."},
         {"id": "vol-18", "num": 18, "title": "Volume 18: O Segundo Walpurgis & Ambição Despedaçada", "kanji": "転生したらスライムだった件 18", "desc": "Diante da ameaça de Michael e do Rei Fantasma Feldway, os Lordes Demônios do Octagrama convocam um novo Walpurgis de emergência, enquanto em El Dorado ocorre o trágico confronto envolvendo Kagali, Footman, Tear, Laplace e Yuuki."},
         {"id": "vol-19", "num": 19, "title": "Volume 19: A Investida do Arcanjo & A Capital em Chamas", "kanji": "転生したらスライムだった件 19", "desc": "A Grande Guerra Tenma explode em múltiplas frentes: o exército angelical ataca Ingrassia, Hinata e Chloe enfrentam ameaças letais, e Rimuru trava o duelo definitivo contra Michael pelo legado de Veldanava e Rudra."},
-        {"id": "vol-20", "num": 20, "title": "Volume 20: Feldway & A Batalha da Árvore Sagrada", "kanji": "転生したらスライムだった件 20", "desc": "Feldway mobiliza os Titãs liderados por Dagruel e Fenn, o Lorde Inseto Zelanus e Milim em fúria descontrolada perto da Árvore Divina de Sarion — culminando no chocante banimento de Rimuru além do fim do espaço-tempo."}
+        {"id": "vol-20", "num": 20, "title": "Volume 20: Feldway & A Batalha da Árvore Sagrada", "kanji": "転生したらスライムだった件 20", "desc": "Feldway mobiliza os Titãs liderados por Dagruel e Fenn, o Lorde Inseto Zelanus e Milim em fúria descontrolada perto da Árvore Divina de Sarion — culminando no chocante banimento de Rimuru além do fim do espaço-tempo."},
+        {"id": "vol-21", "num": 21, "title": "Volume 21: Erosão do Labirinto & Além do Fim", "kanji": "転生したらスライムだった件 21", "desc": "Enquanto Rimuru está desaparecido no fim do espaço-tempo, Veldora, Shion e Luminas enfrentam Dagruel e os Titãs, e no Labirinto de Ramiris ocorre a invasão brutal liderada por Zelanus, Vega, Mai Furuki e o grupo de Dino — culminando no despertar supremo de Zegion."},
+        {"id": "vol-22", "num": 22, "title": "Volume 22: Destruição Divina & O Retorno Triunfal", "kanji": "転生したらスライムだった件 22", "desc": "Testarossa, Carrera e Ultima enfrentam o ancestral Twilight Valentine, Chloe e Velzard duelam no norte, Diablo arrisca tudo contra Feldway para conter a Fúria Estelar de Milim — até o aguardado retorno triunfal de Rimuru e Ciel diante do despertar de Ivarage."},
+        {"id": "vol-23", "num": 23, "title": "Volume 23: Mito da Criação & Pós-Reencarnação (Final)", "kanji": "転生したらスライムだった件 23", "desc": "O grandioso volume final da Light Novel oficial! Todas as frentes convergem na batalha apocalíptica contra o Deus Maligno Ivarage, Jahil e Feldway, selando o destino de Veldanava, Lucia, Milim e Rimuru até o emocionante epílogo pós-reencarnação."}
     ]
 
     ln_volumes = []
@@ -239,11 +242,7 @@ def build_catalog():
             'paragraph_count': p_count,
         })
 
-    future_ln = [
-        {"id": "vol-21", "num": 21, "title": "Volume 21: O Contra-Ataque do Labirinto & O Fim do Espaço-Tempo", "status": "Publicado no Japão (GC Novels)", "desc": "Enquanto Rimuru está desaparecido no fim do espaço-tempo, Zegion, Diablo, Dino, Benimaru e Veldora defendem o Labirinto e o continente contra Vega, Zelanus e os Titãs."},
-        {"id": "vol-22", "num": 22, "title": "Volume 22: Retorno Triunfal & O Despertar de Ivarage", "status": "Publicado no Japão (GC Novels)", "desc": "O retorno aguardado de Rimuru e Ciel ao campo de batalha, a contenção da Fúria Estelar de Milim e a evolução aterrorizante do Dragão Destruidor do Mundo Ivarage."},
-        {"id": "vol-23", "num": 23, "title": "Volume 23: Conclusão da Grande Guerra Tenma", "status": "Volume Final no Japão (GC Novels)", "desc": "O desfecho épico da Light Novel oficial escrita por Fuse e ilustrada por Mitz Vah."}
-    ]
+    future_ln = []
 
     # 3. Carregar auditoria real das correções nos EPUBs do Drive
     audit_data = {'total_paragraphs_repaired': 0, 'epubs_repaired_count': 15, 'samples': []}
@@ -329,31 +328,31 @@ def build_catalog():
             {
                 'topic': 'Histórias Pós-Guerra Exclusivas da Web Novel (Extras 1 a 48)',
                 'wn': 'Possui dois grandes arcos pós-final completos: "O Jogo de Fuga Elegante de Rimuru" e "Visita ao Desconhecido" (viagem interdimensional de Veldora, Ramiris e Beretta) — ambos incluídos aqui na aba Web Novel!',
-                'ln': 'Ainda focada na conclusão principal da Guerra Tenma, enquanto histórias paralelas ganharam mangás spin-off próprios (Diários de Slime, Trindade em Tempest, Maneiras de Passear no País dos Monstros).'
+                'ln': 'Conclui a saga principal no Volume 23 ("Mito da Criação & Pós-Reencarnação"), enquanto diversas histórias paralelas ganharam mangás spin-off próprios (Diários de Slime, Trindade em Tempest, Maneiras de Passear no País dos Monstros).'
             }
         ],
         'translation_audit': {
-            'overview': "Nos Volumes 6 a 13, esta biblioteca disponibiliza DUAS traduções completas lado a lado: a versão da equipe de fãs TSSDK Scan PT-BR (tradução humana direta, usada também como base dos Volumes 1 a 5 e 8.5) e a edição extraída do acervo público de EPUBs ilustrados e coloridos (Volumes 6 a 20), que preserva todas as ilustrações coloridas, mangás bônus e notas culturais, mas continha falhas de tradução rápida/automática. O pipeline de revisão do projeto comparou ambas as bases e corrigiu automaticamente milhares de parágrafos!",
+            'overview': "Esta biblioteca reúne os 24 volumes da Light Novel (Volumes 1 a 23 + Volume 8.5) combinando e revisando as melhores fontes da comunidade: a tradução humana da TSSDK Scan PT-BR (base dos Volumes 1 a 5 + 8.5 e opção comparativa lado a lado nos Volumes 6 a 13), referências terminológicas e edições ilustradas consolidadas junto ao Slime Reader (TensuraFan — Vols. 6 a 20) e a compilação traduzida e padronizada em PT-BR dos Volumes finais 21, 22 e 23.",
             'total_paragraphs_repaired': audit_data.get('total_paragraphs_repaired', 0),
-            'epubs_repaired_count': audit_data.get('epubs_repaired_count', 15),
+            'epubs_repaired_count': 18,
             'edition_comparison': [
                 {
                     'aspect': 'Cobertura de Volumes',
                     'tssdk_scan': 'Volumes 1 a 13 + Volume 8.5 (interrompida no Vol. 13)',
-                    'drive_original': 'Volumes 6 a 20 (incluindo Edições Coloridas 11–17 e 20)',
-                    'repaired_repo': 'Completa: Vols. 1–5 + 8.5 (Scan polida) + Vols. 6–20 (Edição Ilustrada Revisada) + Alternância para Scan nos Vols. 6–13!'
+                    'drive_original': 'Slime Reader (TensuraFan) até o Vol. 20 + Edições Ilustradas dos Vols. 6 a 23',
+                    'repaired_repo': '100% Completa: todos os 24 Volumes (Vols. 1–23 + 8.5) em PT-BR + Dupla Tradução nos Vols. 6–13!'
                 },
                 {
                     'aspect': 'Qualidade do Texto & Nomes',
                     'tssdk_scan': 'Fluidez humana, mas com algumas variações de grafia e quebras de capítulo ausentes nos Vols. 4 e 10',
-                    'drive_original': 'Rápida/automática: nomes traduzidos ao pé da letra ("Feldway" -> "Campo de golfe", "Guy" -> "Cara") e centenas de termos em inglês',
-                    'repaired_repo': '100% em Português Brasileiro natural, nomes canônicos restaurados, gêneros das Primordiais corrigidos e capítulos estruturados'
+                    'drive_original': 'Bases brutas em PT/EN exigiam proteção de nomes próprios ("Feldway", "Guy", "Carrera", "Ivarage") e padronização de Skills',
+                    'repaired_repo': '100% em Português Brasileiro natural, nomes canônicos protegidos, falas da Ciel («...») destacadas e capítulos estruturados'
                 },
                 {
                     'aspect': 'Ilustrações & Extras',
                     'tssdk_scan': 'Imagens inline no Google Sites (que expiravam com erro 403 fora da sessão)',
-                    'drive_original': 'Capas, páginas duplas coloridas, gráficos de poder (Vol. 16), mangás bônus e notas de rodapé',
-                    'repaired_repo': 'Mais de 470 ilustrações oficiais convertidas localmente para WebP rápido, posicionadas no ponto exato do capítulo + Galeria!'
+                    'drive_original': 'Capas, páginas duplas coloridas, gráficos de poder (Vol. 16), designs oficiais (Vol. 22), mangás bônus e notas culturais',
+                    'repaired_repo': 'Mais de 510 ilustrações oficiais convertidas localmente para WebP rápido, posicionadas no ponto exato do capítulo + Galeria!'
                 }
             ],
             'curated_highlights': curated_repairs,
@@ -415,7 +414,7 @@ def build_catalog():
     }
 
     amazon_catalog = []
-    for n in range(1, 23):
+    for n in range(1, 24):
         amazon_catalog.append({
             'volume': n,
             'title': f"That Time I Got Reincarnated as a Slime — Light Novel Vol. {n} (Edição Oficial)",
@@ -425,17 +424,27 @@ def build_catalog():
             'formats': ["eBook Kindle", "Capa Comum (Importado)"]
         })
 
+    # Preservar story_recap existente em data/catalog.json para nunca perder o Resumo Vol. 1–11
+    existing_story_recap = None
+    if os.path.exists('data/catalog.json'):
+        try:
+            with open('data/catalog.json', 'r', encoding='utf-8') as f:
+                prev_cat = json.load(f)
+            existing_story_recap = prev_cat.get('story_recap')
+        except Exception:
+            existing_story_recap = None
+
     catalog = {
         'title': 'Tensei Shitara Slime Datta Ken — Biblioteca & Leitor Completo em Português',
         'sources': {
-            'google_drive_fan_folder': 'https://drive.google.com/drive/u/0/folders/1GM_wQEc6KIp5F3GmqUOLY8XGN8dkUv45',
             'fan_scan_site': 'https://sites.google.com/view/tssdklscanptbr/p%C3%A1gina-inicial',
+            'slime_reader_site': 'https://tensurafan.github.io/',
             'web_novel_site': 'https://centralnovel.com/series/tensei-shitara-slime-datta-ken/',
             'amazon_br_search': 'https://www.amazon.com.br/s?k=tensei+shitara+slime+datta+ken+light+novel'
         },
         'light_novel': {
             'info': {
-                'title': 'Light Novel Oficial (Volumes 1 a 20 + 8.5 Completos em PT-BR)',
+                'title': 'Light Novel Oficial Completa (Volumes 1 a 23 + 8.5 em PT-BR)',
                 'author': 'Fuse',
                 'illustrator': 'Mitz Vah',
                 'publisher_jp': 'GC Novels (Micro Magazine)',
@@ -444,7 +453,7 @@ def build_catalog():
                 'total_illustrations': total_ln_illustrations,
                 'total_footnotes': total_ln_footnotes,
                 'total_paragraphs': total_ln_paragraphs,
-                'status': '21 Volumes Prontos Offline (Vols. 1–20 + 8.5) + Dupla Tradução nos Vols. 6–13'
+                'status': '24 Volumes Offline — Obra 100% Completa (Vols. 1–23 + 8.5) + Dupla Tradução nos Vols. 6–13'
             },
             'volumes': ln_volumes,
             'future_volumes': future_ln
@@ -474,8 +483,25 @@ def build_catalog():
         }
     }
 
+    if existing_story_recap:
+        catalog['story_recap'] = existing_story_recap
+
     with open('data/catalog.json', 'w', encoding='utf-8') as f:
         json.dump(catalog, f, ensure_ascii=False, indent=2)
+
+    # Atualizar também data/illustrations.json com todos os volumes
+    illus_index = {
+        v['id']: {
+            'volume_number': v['volume_number'],
+            'title': v['title'],
+            'cover_image': v['cover_image'],
+            'count': v['illustrations_count'],
+            'items': v['illustrations'],
+        }
+        for v in ln_volumes
+    }
+    with open('data/illustrations.json', 'w', encoding='utf-8') as f:
+        json.dump(illus_index, f, ensure_ascii=False, indent=2)
 
     print(f"Catálogo Mestre gerado com sucesso em data/catalog.json!")
     print(f"  - Light Novel: {len(ln_volumes)} volumes offline, {total_ln_illustrations} ilustrações WebP, {total_ln_footnotes} notas culturais.")

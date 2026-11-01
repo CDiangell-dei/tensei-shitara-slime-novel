@@ -594,9 +594,10 @@ function matchesSearch(text) {
   return String(text || '').toLowerCase().includes(AppState.searchQuery);
 }
 
-// 1. Catálogo da Light Novel (21 Volumes Offline + Capas WebP + Barra de Progresso + Filtro Anti-Spoilers)
+// 1. Catálogo da Light Novel (24 Volumes Offline + Capas WebP + Barra de Progresso + Filtro Anti-Spoilers)
 function renderLightNovelCatalog() {
   const grid = document.getElementById('ln-volumes-grid');
+  const futureSection = document.getElementById('ln-future-section');
   const futureGrid = document.getElementById('ln-future-grid');
   const statsEl = document.getElementById('ln-hero-stats');
   if (!grid || !AppState.catalog) return;
@@ -626,9 +627,13 @@ function renderLightNovelCatalog() {
     const isManuallyRevealed = isLnVolumeNormallyProtected(vol.volume_number) && AppState.revealedSpoilers.has(spKey);
     const displayTitle = isHidden ? `Volume ${vol.volume_number}` : vol.title;
 
+    const imgPriorityAttr = idx === 0
+      ? 'fetchpriority="high"'
+      : (idx >= 4 ? 'loading="lazy"' : '');
+
     const coverHtml = vol.cover_image
       ? `<div class="vol-cover-wrap" data-action="open-ln" data-vol="${vol.id}">
-           <img src="${escapeAttr(vol.cover_image)}" alt="Capa oficial — ${escapeAttr(displayTitle)}" width="192" height="288" ${idx >= 4 ? 'loading="lazy"' : ''}>
+           <img src="${escapeAttr(vol.cover_image)}" alt="Capa oficial — ${escapeAttr(displayTitle)}" width="192" height="288" ${imgPriorityAttr}>
          </div>`
       : '';
 
@@ -704,6 +709,9 @@ function renderLightNovelCatalog() {
       const hidden = isLnVolumeSpoilerHidden(f.num, spKey);
       return matchesSearch(hidden ? `Volume ${f.num} ${f.status}` : `${f.title} ${f.desc} ${f.status}`);
     });
+    if (futureSection) {
+      futureSection.hidden = fut.length === 0;
+    }
     futureGrid.innerHTML = fut.map(f => {
       const spKey = `fut:${f.id}`;
       const isHidden = isLnVolumeSpoilerHidden(f.num, spKey);
@@ -906,6 +914,7 @@ function renderRecapCatalog() {
         ? 'open'
         : (!isZeroSpoilerMode && idx === 0 ? 'open' : '');
       const postS3Cls = v.is_post_s3 ? 'is-post-s3' : '';
+      const deferredRecapCls = idx >= 4 ? 'deferred-card' : '';
       const safeHeaderTitle = isZeroSpoilerMode ? `${v.num_label} — Resumo do Volume` : v.title;
 
       const highlightsHtml = (v.highlights || []).map(item => `<li>${escapeHtml(item)}</li>`).join('');
@@ -915,7 +924,7 @@ function renderRecapCatalog() {
         : '';
 
       return `
-        <details class="arc-details recap-vol-details ${postS3Cls}" data-post-s3="${v.is_post_s3 ? 'true' : 'false'}" ${shouldOpen}>
+        <details class="arc-details recap-vol-details ${postS3Cls} ${deferredRecapCls}" data-post-s3="${v.is_post_s3 ? 'true' : 'false'}" ${shouldOpen}>
           <summary class="arc-summary recap-vol-summary">
             <span class="recap-summary-inner">
               <span class="recap-summary-badges">
@@ -993,7 +1002,7 @@ function renderComparisonCatalog() {
     const aOv = document.getElementById('audit-overview-text');
     if (aOv) {
       const countTxt = audit.total_paragraphs_repaired
-        ? ` Mais de ${audit.total_paragraphs_repaired.toLocaleString('pt-BR')} parágrafos e títulos foram revisados automaticamente nos 15 EPUBs.`
+        ? ` Mais de ${audit.total_paragraphs_repaired.toLocaleString('pt-BR')} parágrafos e títulos foram revisados e padronizados automaticamente ao longo da coleção.`
         : '';
       aOv.textContent = audit.overview + countTxt;
     }
@@ -1470,7 +1479,7 @@ function renderReaderScreen() {
       : (ch.paragraphs || []).map(t => ({ type: 'p', text: t }));
 
     let pCounter = 0;
-    proseArea.innerHTML = blocks.map(block => {
+    proseArea.innerHTML = blocks.map((block, bIdx) => {
       if (block.type === 'hr') {
         const hardCls = block.variant === 'hard' ? 'scene-break-hard' : '';
         return `<hr class="scene-break ${hardCls}">`;
@@ -1479,6 +1488,7 @@ function renderReaderScreen() {
         const imgIdx = illusList.findIndex(it => it.src === block.src);
         const w = block.width || 800;
         const h = block.height || 1100;
+        const inlineLoadAttr = bIdx === 0 ? 'fetchpriority="high"' : 'loading="lazy"';
         return `
           <figure class="novel-illustration">
             <img
@@ -1486,7 +1496,7 @@ function renderReaderScreen() {
               alt="${escapeAttr(block.alt || block.caption || 'Ilustração oficial')}"
               width="${w}"
               height="${h}"
-              loading="lazy"
+              ${inlineLoadAttr}
               data-action="zoom-inline-img"
               data-imgidx="${imgIdx >= 0 ? imgIdx : 0}"
               data-src="${escapeAttr(block.src)}"

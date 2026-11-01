@@ -1,23 +1,23 @@
 {
   "title": "Tensei Shitara Slime Datta Ken — Biblioteca & Leitor Completo em Português",
   "sources": {
-    "google_drive_fan_folder": "https://drive.google.com/drive/u/0/folders/1GM_wQEc6KIp5F3GmqUOLY8XGN8dkUv45",
     "fan_scan_site": "https://sites.google.com/view/tssdklscanptbr/p%C3%A1gina-inicial",
+    "slime_reader_site": "https://tensurafan.github.io/",
     "web_novel_site": "https://centralnovel.com/series/tensei-shitara-slime-datta-ken/",
     "amazon_br_search": "https://www.amazon.com.br/s?k=tensei+shitara+slime+datta+ken+light+novel"
   },
   "light_novel": {
     "info": {
-      "title": "Light Novel Oficial (Volumes 1 a 20 + 8.5 Completos em PT-BR)",
+      "title": "Light Novel Oficial Completa (Volumes 1 a 23 + 8.5 em PT-BR)",
       "author": "Fuse",
       "illustrator": "Mitz Vah",
       "publisher_jp": "GC Novels (Micro Magazine)",
       "publisher_en": "Yen Press",
-      "available_volumes_count": 21,
-      "total_illustrations": 399,
+      "available_volumes_count": 24,
+      "total_illustrations": 442,
       "total_footnotes": 570,
-      "total_paragraphs": 84470,
-      "status": "21 Volumes Prontos Offline (Vols. 1–20 + 8.5) + Dupla Tradução nos Vols. 6–13"
+      "total_paragraphs": 100903,
+      "status": "24 Volumes Offline — Obra 100% Completa (Vols. 1–23 + 8.5) + Dupla Tradução nos Vols. 6–13"
     },
     "volumes": [
       {
@@ -3232,31 +3232,370 @@
         "footnotes_count": 42,
         "chapter_count": 9,
         "paragraph_count": 3044
-      }
-    ],
-    "future_volumes": [
+      },
       {
         "id": "vol-21",
         "num": 21,
-        "title": "Volume 21: O Contra-Ataque do Labirinto & O Fim do Espaço-Tempo",
-        "status": "Publicado no Japão (GC Novels)",
-        "desc": "Enquanto Rimuru está desaparecido no fim do espaço-tempo, Zegion, Diablo, Dino, Benimaru e Veldora defendem o Labirinto e o continente contra Vega, Zelanus e os Titãs."
+        "title": "Volume 21: Erosão do Labirinto & Além do Fim",
+        "kanji": "転生したらスライムだった件 21",
+        "desc": "Enquanto Rimuru está desaparecido no fim do espaço-tempo, Veldora, Shion e Luminas enfrentam Dagruel e os Titãs, e no Labirinto de Ramiris ocorre a invasão brutal liderada por Zelanus, Vega, Mai Furuki e o grupo de Dino — culminando no despertar supremo de Zegion.",
+        "volume_number": 21,
+        "is_downloaded": true,
+        "edition": "Edição Ilustrada Completa — Revisada PT-BR",
+        "is_colored_edition": false,
+        "has_scan_alternative": false,
+        "scan_alternative_id": null,
+        "cover_image": "assets/illustrations/ln/vol-21/img_01.webp",
+        "illustrations_count": 14,
+        "illustrations": [
+          {
+            "src": "assets/illustrations/ln/vol-21/img_01.webp",
+            "width": 900,
+            "height": 1280,
+            "category": "cover",
+            "caption": "Capa Oficial — Volume 21: Erosão do Labirinto & Além do Fim (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-21/img_02.webp",
+            "width": 1400,
+            "height": 996,
+            "category": "insert",
+            "caption": "Ilustração Colorida Dupla (#1) — Volume 21: Erosão do Labirinto & Além do Fim (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-21/img_03.webp",
+            "width": 900,
+            "height": 1280,
+            "category": "insert",
+            "caption": "Ilustração Colorida (#2) — Volume 21: Erosão do Labirinto & Além do Fim (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-21/img_04.webp",
+            "width": 1400,
+            "height": 996,
+            "category": "insert",
+            "caption": "Arte Completa da Sobrecapa — Volume 21: Erosão do Labirinto & Além do Fim (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-21/img_05.webp",
+            "width": 900,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial — Veldora vs. Dagruel — Volume 21: Erosão do Labirinto & Além do Fim (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-21/img_06.webp",
+            "width": 900,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial — O Despertar de Ashura — Volume 21: Erosão do Labirinto & Além do Fim (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-21/img_07.webp",
+            "width": 900,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial — Sala de Controle do Labirinto — Volume 21: Erosão do Labirinto & Além do Fim (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-21/img_08.webp",
+            "width": 900,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial — Apito vs. Mai Furuki — Volume 21: Erosão do Labirinto & Além do Fim (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-21/img_09.webp",
+            "width": 900,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial — A Determinação de Shuna — Volume 21: Erosão do Labirinto & Além do Fim (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-21/img_10.webp",
+            "width": 900,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial — Diablo & Zegion — Volume 21: Erosão do Labirinto & Além do Fim (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-21/img_11.webp",
+            "width": 900,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial — Zegion vs. Zelanus — Volume 21: Erosão do Labirinto & Além do Fim (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-21/img_12.webp",
+            "width": 900,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial — Os Quatro Reis Dragões — Volume 21: Erosão do Labirinto & Além do Fim (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-21/img_13.webp",
+            "width": 900,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial — A Queda de Vega — Volume 21: Erosão do Labirinto & Além do Fim (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-21/img_14.webp",
+            "width": 900,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial — Rimuru no Fim do Espaço-Tempo — Volume 21: Erosão do Labirinto & Além do Fim (Arte: Mitz Vah)"
+          }
+        ],
+        "footnotes_count": 0,
+        "chapter_count": 9,
+        "paragraph_count": 2734
       },
       {
         "id": "vol-22",
         "num": 22,
-        "title": "Volume 22: Retorno Triunfal & O Despertar de Ivarage",
-        "status": "Publicado no Japão (GC Novels)",
-        "desc": "O retorno aguardado de Rimuru e Ciel ao campo de batalha, a contenção da Fúria Estelar de Milim e a evolução aterrorizante do Dragão Destruidor do Mundo Ivarage."
+        "title": "Volume 22: Destruição Divina & O Retorno Triunfal",
+        "kanji": "転生したらスライムだった件 22",
+        "desc": "Testarossa, Carrera e Ultima enfrentam o ancestral Twilight Valentine, Chloe e Velzard duelam no norte, Diablo arrisca tudo contra Feldway para conter a Fúria Estelar de Milim — até o aguardado retorno triunfal de Rimuru e Ciel diante do despertar de Ivarage.",
+        "volume_number": 22,
+        "is_downloaded": true,
+        "edition": "Edição Ilustrada Completa — Revisada PT-BR",
+        "is_colored_edition": false,
+        "has_scan_alternative": false,
+        "scan_alternative_id": null,
+        "cover_image": "assets/illustrations/ln/vol-22/img_01.webp",
+        "illustrations_count": 15,
+        "illustrations": [
+          {
+            "src": "assets/illustrations/ln/vol-22/img_01.webp",
+            "width": 833,
+            "height": 1186,
+            "category": "cover",
+            "caption": "Capa Oficial — Volume 22: Destruição Divina & O Retorno Triunfal (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-22/img_02.webp",
+            "width": 780,
+            "height": 600,
+            "category": "insert",
+            "caption": "Ilustração Colorida de Abertura (#1) — Volume 22: Destruição Divina & O Retorno Triunfal (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-22/img_03.webp",
+            "width": 1000,
+            "height": 773,
+            "category": "insert",
+            "caption": "Ilustração Colorida Dupla (#2 — Guy vs. Velzard) — Volume 22: Destruição Divina & O Retorno Triunfal (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-22/img_04.webp",
+            "width": 777,
+            "height": 1111,
+            "category": "inline",
+            "caption": "Ilustração Oficial 4 — Volume 22: Destruição Divina & O Retorno Triunfal (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-22/img_05.webp",
+            "width": 834,
+            "height": 1186,
+            "category": "inline",
+            "caption": "Ilustração Oficial 5 — Volume 22: Destruição Divina & O Retorno Triunfal (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-22/img_06.webp",
+            "width": 834,
+            "height": 1186,
+            "category": "inline",
+            "caption": "Ilustração Oficial 6 — Volume 22: Destruição Divina & O Retorno Triunfal (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-22/img_07.webp",
+            "width": 834,
+            "height": 1186,
+            "category": "inline",
+            "caption": "Ilustração Oficial 7 — Volume 22: Destruição Divina & O Retorno Triunfal (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-22/img_08.webp",
+            "width": 834,
+            "height": 1186,
+            "category": "inline",
+            "caption": "Ilustração Oficial 8 — Volume 22: Destruição Divina & O Retorno Triunfal (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-22/img_09.webp",
+            "width": 834,
+            "height": 1186,
+            "category": "inline",
+            "caption": "Ilustração Oficial 9 — Volume 22: Destruição Divina & O Retorno Triunfal (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-22/img_10.webp",
+            "width": 834,
+            "height": 1186,
+            "category": "inline",
+            "caption": "Ilustração Oficial 10 — Volume 22: Destruição Divina & O Retorno Triunfal (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-22/img_11.webp",
+            "width": 834,
+            "height": 1186,
+            "category": "inline",
+            "caption": "Ilustração Oficial 11 — Volume 22: Destruição Divina & O Retorno Triunfal (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-22/img_12.webp",
+            "width": 834,
+            "height": 1186,
+            "category": "inline",
+            "caption": "Ilustração Oficial 12 — Volume 22: Destruição Divina & O Retorno Triunfal (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-22/img_13.webp",
+            "width": 834,
+            "height": 1186,
+            "category": "inline",
+            "caption": "Ilustração Oficial 13 — Volume 22: Destruição Divina & O Retorno Triunfal (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-22/img_14.webp",
+            "width": 834,
+            "height": 1186,
+            "category": "chart",
+            "caption": "Design Oficial de Personagens (Mitz Vah) — Volume 22: Destruição Divina & O Retorno Triunfal (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-22/img_15.webp",
+            "width": 834,
+            "height": 1186,
+            "category": "chart",
+            "caption": "Design Oficial de Personagens (Mitz Vah) — Volume 22: Destruição Divina & O Retorno Triunfal (Arte: Mitz Vah)"
+          }
+        ],
+        "footnotes_count": 0,
+        "chapter_count": 6,
+        "paragraph_count": 4102
       },
       {
         "id": "vol-23",
         "num": 23,
-        "title": "Volume 23: Conclusão da Grande Guerra Tenma",
-        "status": "Volume Final no Japão (GC Novels)",
-        "desc": "O desfecho épico da Light Novel oficial escrita por Fuse e ilustrada por Mitz Vah."
+        "title": "Volume 23: Mito da Criação & Pós-Reencarnação (Final)",
+        "kanji": "転生したらスライムだった件 23",
+        "desc": "O grandioso volume final da Light Novel oficial! Todas as frentes convergem na batalha apocalíptica contra o Deus Maligno Ivarage, Jahil e Feldway, selando o destino de Veldanava, Lucia, Milim e Rimuru até o emocionante epílogo pós-reencarnação.",
+        "volume_number": 23,
+        "is_downloaded": true,
+        "edition": "Edição Ilustrada Completa — Revisada PT-BR",
+        "is_colored_edition": false,
+        "has_scan_alternative": false,
+        "scan_alternative_id": null,
+        "cover_image": "assets/illustrations/ln/vol-23/img_01.webp",
+        "illustrations_count": 14,
+        "illustrations": [
+          {
+            "src": "assets/illustrations/ln/vol-23/img_01.webp",
+            "width": 901,
+            "height": 1280,
+            "category": "cover",
+            "caption": "Capa Oficial do Volume Final — Volume 23: Mito da Criação & Pós-Reencarnação (Final) (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-23/img_02.webp",
+            "width": 1400,
+            "height": 1087,
+            "category": "insert",
+            "caption": "Ilustração Colorida Dupla (#1 — Batalha Final) — Volume 23: Mito da Criação & Pós-Reencarnação (Final) (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-23/img_03.webp",
+            "width": 1400,
+            "height": 1062,
+            "category": "insert",
+            "caption": "Ilustração Colorida Dupla (#2 — A Espada de Rimuru) — Volume 23: Mito da Criação & Pós-Reencarnação (Final) (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-23/img_04.webp",
+            "width": 902,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial 4 — Volume 23: Mito da Criação & Pós-Reencarnação (Final) (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-23/img_05.webp",
+            "width": 920,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial 5 — Volume 23: Mito da Criação & Pós-Reencarnação (Final) (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-23/img_06.webp",
+            "width": 925,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial 6 — Volume 23: Mito da Criação & Pós-Reencarnação (Final) (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-23/img_07.webp",
+            "width": 898,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial 7 — Volume 23: Mito da Criação & Pós-Reencarnação (Final) (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-23/img_08.webp",
+            "width": 971,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial 8 — Volume 23: Mito da Criação & Pós-Reencarnação (Final) (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-23/img_09.webp",
+            "width": 955,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial 9 — Volume 23: Mito da Criação & Pós-Reencarnação (Final) (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-23/img_10.webp",
+            "width": 908,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial 10 — Volume 23: Mito da Criação & Pós-Reencarnação (Final) (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-23/img_11.webp",
+            "width": 896,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial 11 — Volume 23: Mito da Criação & Pós-Reencarnação (Final) (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-23/img_12.webp",
+            "width": 926,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial 12 — Volume 23: Mito da Criação & Pós-Reencarnação (Final) (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-23/img_13.webp",
+            "width": 867,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial 13 — Volume 23: Mito da Criação & Pós-Reencarnação (Final) (Arte: Mitz Vah)"
+          },
+          {
+            "src": "assets/illustrations/ln/vol-23/img_14.webp",
+            "width": 990,
+            "height": 1280,
+            "category": "inline",
+            "caption": "Ilustração Oficial 14 — Volume 23: Mito da Criação & Pós-Reencarnação (Final) (Arte: Mitz Vah)"
+          }
+        ],
+        "footnotes_count": 0,
+        "chapter_count": 10,
+        "paragraph_count": 9597
       }
-    ]
+    ],
+    "future_volumes": []
   },
   "web_novel": {
     "info": {
@@ -7408,31 +7747,31 @@
       {
         "topic": "Histórias Pós-Guerra Exclusivas da Web Novel (Extras 1 a 48)",
         "wn": "Possui dois grandes arcos pós-final completos: \"O Jogo de Fuga Elegante de Rimuru\" e \"Visita ao Desconhecido\" (viagem interdimensional de Veldora, Ramiris e Beretta) — ambos incluídos aqui na aba Web Novel!",
-        "ln": "Ainda focada na conclusão principal da Guerra Tenma, enquanto histórias paralelas ganharam mangás spin-off próprios (Diários de Slime, Trindade em Tempest, Maneiras de Passear no País dos Monstros)."
+        "ln": "Conclui a saga principal no Volume 23 (\"Mito da Criação & Pós-Reencarnação\"), enquanto diversas histórias paralelas ganharam mangás spin-off próprios (Diários de Slime, Trindade em Tempest, Maneiras de Passear no País dos Monstros)."
       }
     ],
     "translation_audit": {
-      "overview": "Nos Volumes 6 a 13, esta biblioteca disponibiliza DUAS traduções completas lado a lado: a versão da equipe de fãs TSSDK Scan PT-BR (tradução humana direta, usada também como base dos Volumes 1 a 5 e 8.5) e a edição extraída do acervo público de EPUBs ilustrados e coloridos (Volumes 6 a 20), que preserva todas as ilustrações coloridas, mangás bônus e notas culturais, mas continha falhas de tradução rápida/automática. O pipeline de revisão do projeto comparou ambas as bases e corrigiu automaticamente milhares de parágrafos!",
+      "overview": "Esta biblioteca reúne os 24 volumes da Light Novel (Volumes 1 a 23 + Volume 8.5) combinando e revisando as melhores fontes da comunidade: a tradução humana da TSSDK Scan PT-BR (base dos Volumes 1 a 5 + 8.5 e opção comparativa lado a lado nos Volumes 6 a 13), referências terminológicas e edições ilustradas consolidadas junto ao Slime Reader (TensuraFan — Vols. 6 a 20) e a compilação traduzida e padronizada em PT-BR dos Volumes finais 21, 22 e 23.",
       "total_paragraphs_repaired": 2386,
-      "epubs_repaired_count": 15,
+      "epubs_repaired_count": 18,
       "edition_comparison": [
         {
           "aspect": "Cobertura de Volumes",
           "tssdk_scan": "Volumes 1 a 13 + Volume 8.5 (interrompida no Vol. 13)",
-          "drive_original": "Volumes 6 a 20 (incluindo Edições Coloridas 11–17 e 20)",
-          "repaired_repo": "Completa: Vols. 1–5 + 8.5 (Scan polida) + Vols. 6–20 (Edição Ilustrada Revisada) + Alternância para Scan nos Vols. 6–13!"
+          "drive_original": "Slime Reader (TensuraFan) até o Vol. 20 + Edições Ilustradas dos Vols. 6 a 23",
+          "repaired_repo": "100% Completa: todos os 24 Volumes (Vols. 1–23 + 8.5) em PT-BR + Dupla Tradução nos Vols. 6–13!"
         },
         {
           "aspect": "Qualidade do Texto & Nomes",
           "tssdk_scan": "Fluidez humana, mas com algumas variações de grafia e quebras de capítulo ausentes nos Vols. 4 e 10",
-          "drive_original": "Rápida/automática: nomes traduzidos ao pé da letra (\"Feldway\" -> \"Campo de golfe\", \"Guy\" -> \"Cara\") e centenas de termos em inglês",
-          "repaired_repo": "100% em Português Brasileiro natural, nomes canônicos restaurados, gêneros das Primordiais corrigidos e capítulos estruturados"
+          "drive_original": "Bases brutas em PT/EN exigiam proteção de nomes próprios (\"Feldway\", \"Guy\", \"Carrera\", \"Ivarage\") e padronização de Skills",
+          "repaired_repo": "100% em Português Brasileiro natural, nomes canônicos protegidos, falas da Ciel («...») destacadas e capítulos estruturados"
         },
         {
           "aspect": "Ilustrações & Extras",
           "tssdk_scan": "Imagens inline no Google Sites (que expiravam com erro 403 fora da sessão)",
-          "drive_original": "Capas, páginas duplas coloridas, gráficos de poder (Vol. 16), mangás bônus e notas de rodapé",
-          "repaired_repo": "Mais de 470 ilustrações oficiais convertidas localmente para WebP rápido, posicionadas no ponto exato do capítulo + Galeria!"
+          "drive_original": "Capas, páginas duplas coloridas, gráficos de poder (Vol. 16), designs oficiais (Vol. 22), mangás bônus e notas culturais",
+          "repaired_repo": "Mais de 510 ilustrações oficiais convertidas localmente para WebP rápido, posicionadas no ponto exato do capítulo + Galeria!"
         }
       ],
       "curated_highlights": [
@@ -7893,6 +8232,17 @@
         "title": "That Time I Got Reincarnated as a Slime — Light Novel Vol. 22 (Edição Oficial)",
         "search_url": "https://www.amazon.com.br/s?k=That+Time+I+Got+Reincarnated+as+a+Slime+Vol+22+light+novel",
         "direct_search": "https://www.amazon.com.br/s?k=tensei+shitara+slime+datta+ken+volume+22+light+novel",
+        "publisher": "Micro Magazine (JP) / Yen Press (Oficial)",
+        "formats": [
+          "eBook Kindle",
+          "Capa Comum (Importado)"
+        ]
+      },
+      {
+        "volume": 23,
+        "title": "That Time I Got Reincarnated as a Slime — Light Novel Vol. 23 (Edição Oficial)",
+        "search_url": "https://www.amazon.com.br/s?k=That+Time+I+Got+Reincarnated+as+a+Slime+Vol+23+light+novel",
+        "direct_search": "https://www.amazon.com.br/s?k=tensei+shitara+slime+datta+ken+volume+23+light+novel",
         "publisher": "Micro Magazine (JP) / Yen Press (Oficial)",
         "formats": [
           "eBook Kindle",

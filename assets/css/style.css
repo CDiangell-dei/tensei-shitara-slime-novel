@@ -212,6 +212,10 @@ button, select, input {
   contain-intrinsic-size: auto none auto 340px;
 }
 
+.recap-vol-details.deferred-card {
+  contain-intrinsic-size: auto none auto 92px;
+}
+
 /* ==========================================================================
    CABEÇALHO E NAVEGAÇÃO PRINCIPAL
    ========================================================================== */

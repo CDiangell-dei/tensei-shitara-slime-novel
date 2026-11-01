@@ -10,10 +10,11 @@ Funciona diretamente no navegador (computador, tablet ou celular) pelo **GitHub 
 
 ## ✨ Conteúdo & Funcionalidades
 
-### 1. 📘 Light Novel Completa & Ilustrada (Separada da Web Novel)
-- **21 Volumes Disponíveis Offline (`Volumes 1 a 20 + Volume 8.5`)**:
+### 1. 📘 Light Novel 100% Completa & Ilustrada (Separada da Web Novel)
+- **24 Volumes Disponíveis Offline (`Volumes 1 a 23 + Volume 8.5 — Obra Principal Completa`)**:
   - **Volumes 1 a 5 + 8.5**: Compilados a partir da tradução de fã da *TSSDK Scan PT-BR*, higienizados e padronizados com todas as ilustrações oficiais posicionadas dentro dos capítulos.
-  - **Volumes 6 a 20 (incluindo Edições Coloridas 11–17 e 20)**: Compilados e revisados a partir do acervo público de EPUBs ilustrados, preservando capas, ilustrações duplas coloridas, páginas de mangá bônus, os **13 Gráficos Oficiais de Poder do Volume 16**, posfácios do autor e **570 notas culturais e de tradução interativas** (`[Nota N]`).
+  - **Volumes 6 a 20 (incluindo Edições Coloridas 11–17 e 20)**: Compilados e revisados em Português Brasileiro com referências terminológicas consolidadas junto ao *Slime Reader (TensuraFan)*, preservando capas, ilustrações duplas coloridas, páginas de mangá bônus, os **13 Gráficos Oficiais de Poder do Volume 16**, posfácios do autor e **570 notas culturais e de tradução interativas** (`[Nota N]`).
+  - **Volumes 21, 22 e 23 (Arco Final Completo)**: Compilados e traduzidos integralmente para Português Brasileiro com proteção canônica de nomes próprios, falas da Ciel (`«...»`), capas e todas as ilustrações oficiais em alta definição de Mitz Vah (incluindo as fichas de design do Vol. 22 e o epílogo pós-reencarnação do Vol. 23).
 - **Alternância Dupla de Tradução (`Volumes 6 a 13`)**:
   - Nos volumes em que ambas as traduções da comunidade existem, há um seletor no topo do leitor para alternar instantaneamente entre a **✨ Edição Ilustrada Revisada** e a **👥 Tradução de Fã (TSSDK Scan)** mantendo o mesmo capítulo e ponto de leitura.
 
@@ -23,7 +24,7 @@ Funciona diretamente no navegador (computador, tablet ou celular) pelo **GitHub 
   - **48 Capítulos Extras Pós-Final** (`Extra 01` a `Extra 48`), abrangendo *O Jogo de Fuga Elegante de Rimuru*, *Visita ao Desconhecido* e *Histórias Especiais de Tempest*, organizados em **3 Arcos Extras**.
 
 ### 3. 🛠️ Padronização Canônica & Revisão Textual
-As edições públicas em EPUB dos Volumes 6 a 20 apresentavam erros típicos de tradução rápida/automática. Mais de **2.380 blocos** foram corrigidos automaticamente com base no cânone da obra e na terminologia consolidada pelos fãs:
+As edições ilustradas dos Volumes 6 a 23 passaram por revisão e padronização automática em Português Brasileiro com base no cânone da obra e na terminologia consolidada pela comunidade:
 - **Nomes Próprios Restaurados**: `Fusível` → `Fuse`, `Campo de golfe` → `Feldway`, `Cara` / `Cara Carmesim` → `Guy` / `Guy Crimson`, `Carreira` → `Carrera`, `Lacaio` → `Footman`, `Rasgue a 'Lágrima'` → `Tear`, `Musgo` → `Moss`, `Espírito` → `Esprit`, `Nome: Diabo` → `Nome: Diablo`, `Zegião` → `Zegion`.
 - **Fichas de Status & Concordância**: `Corrida:` (*Race*) → `Raça:`, `Classificação de Contagem` (*Count Rank*) → `Classe Conde`, `Nove Caldas` → `Nove Caudas`, `Primordial Branco/Amarelo/Violeta` → `Primordial Branca/Amarela/Violeta` (Testarossa, Carrera e Ultima).
 - **100% em Português**: Tradução de mais de 60 *Ultimate Skills*, títulos e patentes deixados em inglês (*Void God Azathoth* → *Deus do Vazio Azathoth*, *Gluttonous King Beelzebuth* → *Rei da Gula Beelzebuth*, *Soul Corridor* → *Corredor da Alma*), além de falsos cognatos (*"O gol de um santo"* → *"O Objetivo de um Santo"*, *"fotografar"* → *"atirar"*).
@@ -54,16 +55,17 @@ Tensei Shitara Slime Novel/
 │   ├── css/style.css                 # Temas (Sistema, Dia, Noite, Sépia, OLED) e tipografia literária
 │   ├── js/app.js                     # Motor do leitor, galerias, notas culturais e LocalStorage
 │   ├── images/slime.svg              # Ícone vetorial do Rimuru
-│   └── illustrations/ln/             # 590 ilustrações oficiais otimizadas em WebP
+│   └── illustrations/ln/             # Mais de 630 ilustrações oficiais otimizadas em WebP
 ├── data/
-│   ├── catalog.json                  # Catálogo mestre (LN, WN, Comparador, Guia Cultural e Amazon BR)
+│   ├── catalog.json                  # Catálogo mestre (LN, WN, Resumo Vol. 1–11, Comparador, Guia Cultural e Amazon BR)
 │   ├── illustrations.json            # Índice consolidado de ilustrações por volume
 │   ├── translation_comparison.json   # Relatório de auditoria Antes vs. Revisado
-│   ├── light_novel/                  # 29 arquivos JSON (Vols. 1–20 + 8.5 + alternativas Scan 6–13)
+│   ├── light_novel/                  # 32 arquivos JSON (Vols. 1–23 + 8.5 + alternativas Scan 6–13)
 │   └── web_novel/                    # 303 capítulos completos em JSON (0–249 + 48 Extras)
 └── scripts/
     ├── fix_translation.py            # Motor corretor PT-BR (.epub, .json e .txt)
-    ├── build_light_novel.py          # Pipeline unificado da Light Novel + WebP + notas culturais
+    ├── build_light_novel.py          # Pipeline unificado da Light Novel (Vols. 1–20 + 8.5)
+    ├── compile_final_volumes.py      # Compilador e tradutor PT-BR dos Volumes 21, 22 e 23 + WebP HD
     ├── compile_wn.py                 # Compilador completo da Web Novel
     ├── polish_all_data.py            # Padronização em lote dos JSONs
     └── generate_master_catalog.py    # Gerador do data/catalog.json
@@ -90,6 +92,6 @@ Em seguida, acesse **`http://localhost:8080`** no navegador.
 
 - **Autor Original**: Fuse (伏瀬) • **Ilustrações Oficiais**: Mitz Vah (みっつばー)
 - **Light Novel (Tradução de Fã Vols. 1–13 + 8.5)**: [TSSDK Scan PT-BR](https://sites.google.com/view/tssdklscanptbr/p%C3%A1gina-inicial)
-- **Acervo Público de EPUBs (Vols. 6–20)**: [Acervo Comunitário](https://drive.google.com/drive/u/0/folders/1GM_wQEc6KIp5F3GmqUOLY8XGN8dkUv45)
+- **Light Novel (Referência & Edições Fan-Translated Vols. 6–20)**: [Slime Reader — TensuraFan](https://tensurafan.github.io/)
 - **Web Novel em Português**: [Central Novel](https://centralnovel.com/series/tensei-shitara-slime-datta-ken/)
 - **Loja Oficial**: [Amazon Brasil](https://www.amazon.com.br/s?k=tensei+shitara+slime+datta+ken+light+novel)
