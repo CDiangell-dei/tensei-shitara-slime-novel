@@ -8254,22 +8254,22 @@
   "story_recap": {
     "meta": {
       "title": "Resumo Completo da História (Volumes 1 a 11)",
-      "subtitle": "Guia de memória ideal para quem veio do Anime ou quer relembrar personagens, facções, poderes e reviravoltas antes de avançar na Light Novel — 100% livre de spoilers do Volume 12 em diante."
+      "subtitle": "Guia de memória ideal para quem veio do Anime (1ª a 4ª Temporadas) ou quer relembrar personagens, facções, poderes e reviravoltas antes de avançar na Light Novel — 100% livre de spoilers do Volume 12 em diante."
     },
     "start_guides": [
       {
-        "badge": "Fim da 3ª Temporada do Anime",
+        "badge": "Fim da 3ª Temporada (Volume 9)",
         "title": "Parou na 3ª Temporada (Festival de Tempest)?",
-        "desc": "A 3ª Temporada adapta até o encerramento do Volume 9. Para continuar exatamente de onde o anime parou, revise abaixo os detalhes finais do Volume 9 e inicie a leitura no Volume 10.",
+        "desc": "A 3ª Temporada adapta até o encerramento do Volume 9. Para continuar acompanhando os acontecimentos da 4ª Temporada, revise abaixo os detalhes do Volume 9 e inicie a leitura no Volume 10.",
         "target_vol": "vol-10",
         "btn_label": "📘 Começar do Volume 10 →"
       },
       {
-        "badge": "Pós-Arco Ocidental (Referência Vol. 11)",
-        "title": "Quer ir direto para a Guerra do Império (Vol. 12)?",
-        "desc": "Se você já conhece ou acabou de ler abaixo o resumo dos Volumes 10 e 11 (conspiração Rosso, chegada de Testarossa/Ultima/Carrera e o despertar de Chloe), pode partir direto para o Volume 12!",
+        "badge": "Fim da 4ª Temporada do Anime (Volume 11)",
+        "title": "Parou na 4ª Temporada ou quer ir direto p/ o Volume 12?",
+        "desc": "O anime adapta até o Volume 11 da Light Novel (4ª Temporada). Para continuar a história inédita diretamente pós-anime (Guerra do Império Oriental), inicie a leitura no Volume 12!",
         "target_vol": "vol-12",
-        "btn_label": "🚀 Ir para o Volume 12 →"
+        "btn_label": "🚀 Começar do Volume 12 →"
       },
       {
         "badge": "Experiência Literária Completa",
@@ -8296,7 +8296,7 @@
         "summary": "Enquanto Diablo transforma Farmas no aliado Reino de Farmenas sob o rei Youm, Rimuru vence o segundo duelo contra Hinata, derrota a conspiração dos Sete Dias Celestiais e firma aliança com a deusa/Lorde Demônio Luminas Valentine. Tempest inaugura o Grande Festival de Fundação para líderes do continente inteiro, acolhe o sortudo 'Herói' Masayuki e abre o Labirinto Subterrâneo de 100 Andares com Ramiris e Veldora."
       },
       {
-        "kicker": "Fase 4 • Volumes 10 e 11 (Fechamento do Ciclo Ocidental)",
+        "kicker": "Fase 4 • Volumes 10 e 11 (Anime: 4ª Temporada)",
         "title": "Conspiração Rosso, as Três Primordiais e o Herói do Tempo",
         "summary": "Tempest ingressa no Conselho Ocidental e derrota as tramas econômicas e militares da reencarnada Mariabell Rosso (cujos poderes são roubados por Yuuki Kagurazaka). Diablo recruta três Demônios Primordiais lendárias — Testarossa, Ultima e Carrera — e, na batalha final de Granbell Rosso em Ruberios, revela-se o emocionante paradoxo temporal de 2.000 anos vivido por Chloe Aubert e Chronoa para salvar Rimuru."
       }
@@ -8520,7 +8520,7 @@
       {
         "id": "vol-10",
         "num_label": "Volume 10",
-        "anime_ref": "Pós-3ª Temporada • Arco Conselho & Rosso",
+        "anime_ref": "Anime: 4ª Temporada (Conselho Ocidental & Família Rosso)",
         "is_post_s3": true,
         "title": "Volume 10: O Labirinto e a Armadilha da Ganância",
         "cover": "assets/illustrations/ln/vol-10/img_01.webp",
@@ -8542,7 +8542,7 @@
       {
         "id": "vol-11",
         "num_label": "Volume 11",
-        "anime_ref": "Fechamento Ocidental • Ponte Direta p/ o Vol. 12",
+        "anime_ref": "Anime: 4ª Temporada (Chloe Aubert & Herói do Tempo)",
         "is_post_s3": true,
         "title": "Volume 11: A Melancolia Dourada & O Herói do Tempo",
         "cover": "assets/illustrations/ln/vol-11/img_01.webp",

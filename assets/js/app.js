@@ -29,6 +29,7 @@ const AppState = {
   isRestoringScroll: false,
   restoreTimer: null,
   revealedSpoilers: new Set(),
+  manuallyHiddenSpoilers: new Set(),
   currentReading: {
     type: null,          // 'light_novel' | 'web_novel'
     id: null,            // ex: 'vol-6', 'vol-6-scan', 'cap-018-5', 'extra-001'
@@ -288,6 +289,7 @@ function setSpoilerMode(mode) {
   if (!['post_anime', 'all', 'none'].includes(mode)) return;
   AppState.settings.spoilerMode = mode;
   AppState.revealedSpoilers.clear();
+  AppState.manuallyHiddenSpoilers.clear();
   try {
     localStorage.setItem(STORAGE_KEYS.SPOILER_ONBOARDED, '1');
   } catch (_) {}
@@ -316,9 +318,38 @@ function isLnVolumeNormallyProtected(volNum) {
   return Number(volNum) > ANIME_ADAPTED_MAX_LN_VOL;
 }
 
-function isLnVolumeSpoilerHidden(volNum, spoilerKey) {
+function getLnVolumeProgressPct(volId) {
+  if (!volId || !AppState.history) return 0;
+  const baseKey = `ln:${volId.replace('-scan', '')}`;
+  const hist = AppState.history[baseKey];
+  return (hist && typeof hist.pct === 'number') ? hist.pct : 0;
+}
+
+function isLnVolumeProgressUnlocked(volNum, volId) {
+  // Desbloqueia sinopse se o leitor já leu pelo menos 75% deste volume ou o concluiu
+  const pct = getLnVolumeProgressPct(volId);
+  if (pct >= 75) return true;
+
+  // Se o leitor já começou a ler qualquer volume posterior na Light Novel
+  const targetNum = Number(volNum);
+  if (!isNaN(targetNum) && AppState.catalog?.light_novel?.volumes) {
+    for (const v of AppState.catalog.light_novel.volumes) {
+      const vNum = Number(v.volume_number);
+      if (!isNaN(vNum) && vNum > targetNum) {
+        const vPct = getLnVolumeProgressPct(v.id);
+        if (vPct >= 10) return true;
+      }
+    }
+  }
+  return false;
+}
+
+function isLnVolumeSpoilerHidden(volNum, spoilerKey, volId) {
   if (!isLnVolumeNormallyProtected(volNum)) return false;
-  return !AppState.revealedSpoilers.has(spoilerKey);
+  if (AppState.manuallyHiddenSpoilers && AppState.manuallyHiddenSpoilers.has(spoilerKey)) return true;
+  if (AppState.revealedSpoilers.has(spoilerKey)) return false;
+  if (volId && isLnVolumeProgressUnlocked(volNum, volId)) return false;
+  return true;
 }
 
 function isWnArcNormallyProtected(arcId) {
@@ -328,9 +359,42 @@ function isWnArcNormallyProtected(arcId) {
   return POST_ANIME_WN_ARCS.has(arcId);
 }
 
+function isWnArcProgressUnlocked(arcId) {
+  if (!AppState.catalog?.web_novel?.arcs) return false;
+  const arc = AppState.catalog.web_novel.arcs.find(a => a.id === arcId);
+  if (!arc || !Array.isArray(arc.chapters) || arc.chapters.length === 0) return false;
+
+  let readCount = 0;
+  for (const ch of arc.chapters) {
+    const hist = AppState.history[`wn:${ch.id}`];
+    if (hist && typeof hist.pct === 'number' && hist.pct >= 50) {
+      readCount++;
+    }
+  }
+  if ((readCount / arc.chapters.length) >= 0.75) return true;
+
+  // Se o usuário já avançou para qualquer arco posterior
+  const arcs = AppState.catalog.web_novel.arcs;
+  const arcIdx = arcs.findIndex(a => a.id === arcId);
+  if (arcIdx >= 0) {
+    for (let i = arcIdx + 1; i < arcs.length; i++) {
+      const nextArc = arcs[i];
+      if (Array.isArray(nextArc.chapters) && nextArc.chapters.length > 0) {
+        const firstCh = nextArc.chapters[0];
+        const h = AppState.history[`wn:${firstCh.id}`];
+        if (h && typeof h.pct === 'number' && h.pct >= 10) return true;
+      }
+    }
+  }
+  return false;
+}
+
 function isWnArcSpoilerHidden(arcId, spoilerKey) {
   if (!isWnArcNormallyProtected(arcId)) return false;
-  return !AppState.revealedSpoilers.has(spoilerKey);
+  if (AppState.manuallyHiddenSpoilers && AppState.manuallyHiddenSpoilers.has(spoilerKey)) return true;
+  if (AppState.revealedSpoilers.has(spoilerKey)) return false;
+  if (isWnArcProgressUnlocked(arcId)) return false;
+  return true;
 }
 
 function isComparisonDiffNormallyProtected(diffIdx) {
@@ -609,7 +673,7 @@ function renderLightNovelCatalog() {
 
   const volumes = (AppState.catalog.light_novel.volumes || []).filter(v => {
     const spKey = `ln:${v.id}`;
-    const hidden = isLnVolumeSpoilerHidden(v.volume_number, spKey);
+    const hidden = isLnVolumeSpoilerHidden(v.volume_number, spKey, v.id);
     const searchable = hidden
       ? `Volume ${v.volume_number} ${v.edition} vol ${v.volume_number}`
       : `${v.title} ${v.desc} ${v.edition} volume ${v.volume_number}`;
@@ -623,8 +687,9 @@ function renderLightNovelCatalog() {
     const readBtnLabel = hist ? `Continuar (${pct}%) →` : 'Ler Volume →';
 
     const spKey = `ln:${vol.id}`;
-    const isHidden = isLnVolumeSpoilerHidden(vol.volume_number, spKey);
-    const isManuallyRevealed = isLnVolumeNormallyProtected(vol.volume_number) && AppState.revealedSpoilers.has(spKey);
+    const isHidden = isLnVolumeSpoilerHidden(vol.volume_number, spKey, vol.id);
+    const isProgressUnlocked = !isHidden && isLnVolumeNormallyProtected(vol.volume_number) && isLnVolumeProgressUnlocked(vol.volume_number, vol.id);
+    const isManuallyRevealed = !isHidden && isLnVolumeNormallyProtected(vol.volume_number) && AppState.revealedSpoilers.has(spKey) && !isProgressUnlocked;
     const displayTitle = isHidden ? `Volume ${vol.volume_number}` : vol.title;
 
     const imgPriorityAttr = idx === 0
@@ -652,6 +717,18 @@ function renderLightNovelCatalog() {
       ? 'Sinopse e subtítulo ocultados (Pós-Anime • Vol. 12+)'
       : 'Sinopse e subtítulo ocultados (Modo Sem Spoilers)';
 
+    const unlockedNotice = isProgressUnlocked
+      ? `
+        <div class="spoiler-unlocked-note">
+          <span class="badge-unlocked-pill">✓ ${pct >= 100 ? 'Volume Concluído' : `${pct}% Lido`} • Sinopse Desbloqueada</span>
+          <button type="button" class="btn-text-subtle" data-action="hide-spoiler" data-spoiler-id="${escapeAttr(spKey)}" title="Ocultar sinopse">🙈 Ocultar</button>
+        </div>
+      `
+      : '';
+    const manualNotice = isManuallyRevealed
+      ? `<div class="spoiler-revealed-note"><button type="button" class="btn-reveal-item" data-action="hide-spoiler" data-spoiler-id="${escapeAttr(spKey)}">🙈 Ocultar novamente</button></div>`
+      : '';
+
     const descBlockHtml = isHidden
       ? `
         <div class="spoiler-shield-box">
@@ -662,8 +739,9 @@ function renderLightNovelCatalog() {
         </div>
       `
       : `
+        ${unlockedNotice}
         <p class="volume-desc">${escapeHtml(vol.desc)}</p>
-        ${isManuallyRevealed ? `<div class="spoiler-revealed-note"><button type="button" class="btn-reveal-item" data-action="hide-spoiler" data-spoiler-id="${escapeAttr(spKey)}">🙈 Ocultar novamente</button></div>` : ''}
+        ${manualNotice}
       `;
 
     return `
@@ -706,7 +784,7 @@ function renderLightNovelCatalog() {
   if (futureGrid) {
     const fut = (AppState.catalog.light_novel.future_volumes || []).filter(f => {
       const spKey = `fut:${f.id}`;
-      const hidden = isLnVolumeSpoilerHidden(f.num, spKey);
+      const hidden = isLnVolumeSpoilerHidden(f.num, spKey, f.id);
       return matchesSearch(hidden ? `Volume ${f.num} ${f.status}` : `${f.title} ${f.desc} ${f.status}`);
     });
     if (futureSection) {
@@ -714,7 +792,7 @@ function renderLightNovelCatalog() {
     }
     futureGrid.innerHTML = fut.map(f => {
       const spKey = `fut:${f.id}`;
-      const isHidden = isLnVolumeSpoilerHidden(f.num, spKey);
+      const isHidden = isLnVolumeSpoilerHidden(f.num, spKey, f.id);
       const isManuallyRevealed = isLnVolumeNormallyProtected(f.num) && AppState.revealedSpoilers.has(spKey);
 
       if (isHidden) {
@@ -761,7 +839,8 @@ function renderWebNovelCatalog() {
   container.innerHTML = arcs.map((arc, idx) => {
     const spKey = `wn:${arc.id}`;
     const isHidden = isWnArcSpoilerHidden(arc.id, spKey);
-    const isManuallyRevealed = isWnArcNormallyProtected(arc.id) && AppState.revealedSpoilers.has(spKey);
+    const isProgressUnlocked = !isHidden && isWnArcNormallyProtected(arc.id) && isWnArcProgressUnlocked(arc.id);
+    const isManuallyRevealed = !isHidden && isWnArcNormallyProtected(arc.id) && AppState.revealedSpoilers.has(spKey) && !isProgressUnlocked;
 
     let safeArcTitle = arc.title;
     if (isHidden) {
@@ -797,16 +876,25 @@ function renderWebNovelCatalog() {
           </button>
         </div>
       `
-      : (isManuallyRevealed
+      : (isProgressUnlocked
           ? `
             <div class="wn-arc-spoiler-bar">
-              <span>👁️ Sinopse e títulos revelados temporariamente.</span>
+              <span>✓ <strong>Progresso:</strong> Você já leu 75%+ deste arco ou capítulos posteriores. Sinopse e títulos liberados!</span>
               <button type="button" class="btn-reveal-item" data-action="hide-spoiler" data-spoiler-id="${escapeAttr(spKey)}">
-                🙈 Ocultar novamente
+                🙈 Ocultar
               </button>
             </div>
           `
-          : '');
+          : (isManuallyRevealed
+              ? `
+                <div class="wn-arc-spoiler-bar">
+                  <span>👁️ Sinopse e títulos revelados temporariamente.</span>
+                  <button type="button" class="btn-reveal-item" data-action="hide-spoiler" data-spoiler-id="${escapeAttr(spKey)}">
+                    🙈 Ocultar novamente
+                  </button>
+                </div>
+              `
+              : ''));
 
     const chButtons = arcChs.map(ch => {
       const chId = ch.id || `cap-${String(ch.num).padStart(3, '0')}`;
@@ -2336,12 +2424,14 @@ function bindGlobalEvents() {
       const spId = target.dataset.spoilerId;
       if (spId) {
         AppState.revealedSpoilers.add(spId);
+        AppState.manuallyHiddenSpoilers?.delete(spId);
         renderAllCatalogViews();
       }
     } else if (action === 'hide-spoiler') {
       const spId = target.dataset.spoilerId;
       if (spId) {
         AppState.revealedSpoilers.delete(spId);
+        AppState.manuallyHiddenSpoilers?.add(spId);
         renderAllCatalogViews();
       }
     } else if (action === 'close-reader') {
