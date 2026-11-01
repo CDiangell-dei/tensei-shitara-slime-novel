@@ -21,7 +21,7 @@ const STORAGE_KEYS = {
 const ANIME_ADAPTED_MAX_LN_VOL = 11;
 const POST_ANIME_WN_ARCS = new Set(['arc-8', 'arc-9', 'arc-10', 'arc-extra-1', 'arc-extra-2', 'arc-extra-3']);
 const POST_ANIME_CULTURAL_CONCEPT_IDXS = new Set([3, 4, 6]);
-const APP_BUILD_VERSION = '20261101_v20';
+const APP_BUILD_VERSION = '20261101_v21';
 
 const AppState = {
   catalog: null,
@@ -1657,6 +1657,19 @@ function renderReaderScreen() {
             >
             ${block.caption ? `<figcaption>${escapeHtml(block.caption)} — clique na imagem para ampliar</figcaption>` : ''}
           </figure>
+        `;
+      }
+      if (block.type === 'callout') {
+        return `
+          <aside class="reader-callout reader-callout-${escapeAttr(block.variant || 'lore')}" role="note">
+            <div class="reader-callout-header">
+              <span class="reader-callout-icon">${escapeHtml(block.icon || '🧭')}</span>
+              <strong class="reader-callout-title">${escapeHtml(block.title || 'Nota Explicativa')}</strong>
+            </div>
+            <div class="reader-callout-content">
+              ${escapeHtml(block.text)}
+            </div>
+          </aside>
         `;
       }
       const pidx = pCounter++;

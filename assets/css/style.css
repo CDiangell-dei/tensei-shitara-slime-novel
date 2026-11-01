@@ -1608,6 +1608,49 @@ button, select, input {
   color: var(--accent-contrast);
 }
 
+/* Caixinha de Explicação & Notas de Lore no Leitor */
+.reader-callout {
+  margin: 1.5rem 0 1.7rem;
+  padding: 1.05rem 1.3rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--reader-font, inherit);
+  transition: background-color var(--transition), border-color var(--transition);
+}
+
+.reader-callout-lore {
+  border-left-color: #8b5cf6;
+  background: color-mix(in srgb, #8b5cf6 7%, var(--bg-card));
+}
+
+.reader-callout-header {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.55rem;
+}
+
+.reader-callout-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.reader-callout-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.reader-callout-content {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
 /* Termo Cultural Japonês Destacado */
 .cultural-term {
   background: none;
