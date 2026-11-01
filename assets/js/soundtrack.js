@@ -1,6 +1,6 @@
 /**
  * soundtrack.js - Player de Trilha Sonora Oficial & Imersiva de Tensura
- * Conecta momentos e conferências da Light Novel às faixas oficiais das temporadas 1, 2, 4 e Tensura Nikki.
+ * Conecta todos os momentos e conferências da Light Novel e Web Novel às faixas oficiais.
  */
 
 (function () {
@@ -37,6 +37,26 @@
       desc: 'Trilha solene e séria para conferências diplomáticas e políticas de alto escalão.'
     },
     {
+      id: 'dungeon_management',
+      title: '🌀 Gerenciamento do Labirinto',
+      subtitle: 'Dungeon Unei / ダンジョン運営 (14:48)',
+      season: '4ª Temporada',
+      videoId: 'JFKlCKKI3hU',
+      start: 888,  // 14:48
+      end: 991,    // 16:31
+      desc: 'Tema divertido e focado de Rimuru e Ramiris administrando as armadilhas da Dungeon.'
+    },
+    {
+      id: 'festival_banquet',
+      title: '🎊 Banquete & Festival',
+      subtitle: 'Sōen / 奏宴 (01:48:01)',
+      season: '4ª Temporada',
+      videoId: 'JFKlCKKI3hU',
+      start: 6481, // 01:48:01
+      end: 6617,   // 01:50:17
+      desc: 'O clima alegre e festivo das celebrações e do Festival de Fundação de Tempest.'
+    },
+    {
       id: 'sarion_dynasty',
       title: '🏰 Dinastia Feiticeira de Sarion',
       subtitle: 'Sarion no Monogatari (41:42)',
@@ -57,6 +77,16 @@
       desc: 'Trilha suave de descanso, colheita, agricultura e vida pacífica na federação.'
     },
     {
+      id: 'primordials_dialogue',
+      title: '🔮 Conversa dos Primordiais',
+      subtitle: 'Gensho no Danshō (01:23:21)',
+      season: '4ª Temporada',
+      videoId: 'JFKlCKKI3hU',
+      start: 5001, // 01:23:21
+      end: 5110,   // 01:25:10
+      desc: 'Tema nobre e imponente para diálogos com Diablo, Guy Crimson e demônios primordiais.'
+    },
+    {
       id: 'battle_counterattack',
       title: '⚔️ Contra-Ataque & Batalha',
       subtitle: 'Counterattack (30:55)',
@@ -75,32 +105,18 @@
       start: 120,  // 02:00
       end: 220,    // 03:40
       desc: 'Tema de conspirações secretas, palhaços moderados e acordos sombrios.'
+    },
+    {
+      id: 'reincarnation_determination',
+      title: '🌌 Determinação & Origem',
+      subtitle: 'Reincarnation & Determination (00:00)',
+      season: '1ª Temporada',
+      videoId: 'ty5HNb8yYS0',
+      start: 0,    // 00:00
+      end: 172,    // 02:52
+      desc: 'A clássica trilha de abertura onde tudo começa, na caverna selada com Veldora.'
     }
   ];
-
-  // Mapeamento de capítulos sugeridos para o teste inicial (Volume 6 e Volume 7)
-  const CHAPTER_SUGGESTIONS = {
-    // Volume 6
-    'vol-6:0': 'peaceful_village', // Capa / Ilustrações
-    'vol-6:1': 'conspiracy_takurami', // Prólogo: A Conspiração dos Majins (Laplace & Sarion)
-    'vol-6:2': 'tempest_meeting_dynamic', // Cap. 1: Encontro entre Homem e Monstro (A Grande Reunião)
-    'vol-6:3': 'tempest_meeting_dynamic', // Cap. 2: Palavra de Ramiris (Ramiris invade a reunião)
-    'vol-6:4': 'council_diplomacy', // Cap. 3: Véspera da Batalha
-    'vol-6:5': 'conspiracy_takurami', // Interlúdio: Os Lordes Demônios
-    'vol-6:6': 'battle_counterattack', // Cap. 4: No Lugar do Destino
-    'vol-6:7': 'council_diplomacy', // Cap. 5: Walpurgis
-    'vol-6:8': 'council_diplomacy', // Cap. 6: O Octagrama
-
-    // Volume 7
-    'vol-7:1': 'conspiracy_takurami', // Prólogo
-    'vol-7:2': 'council_diplomacy', // Cap. 1: Um acordo com o diabo
-    'vol-7:3': 'tempest_meeting_dynamic', // Cap. 2: Funções a serem mantidas
-    'vol-7:4': 'council_diplomacy', // Cap. 3: O Objetivo de um Santo
-    'vol-7:5': 'conspiracy_takurami', // Interlúdio: A Reunião Secreta
-    'vol-7:6': 'battle_counterattack', // Cap. 4: O Segundo Confronto
-    'vol-7:7': 'battle_counterattack', // Cap. 5: Santos e Monstros Colidem
-    'vol-7:8': 'battle_counterattack'  // Cap. 6: Deus e Lorde Demônio
-  };
 
   let ytPlayer = null;
   let isApiReady = false;
@@ -111,7 +127,7 @@
   let isMuted = localStorage.getItem(STORAGE_KEYS.MUTED) === 'true';
   let isCollapsed = localStorage.getItem(STORAGE_KEYS.DOCK_COLLAPSED) === 'true';
   let isAutoSuggest = localStorage.getItem(STORAGE_KEYS.AUTOPLAY_CHAPTER) !== 'false';
-  let isLooping = localStorage.getItem(STORAGE_KEYS.LOOP) !== 'false'; // Padrão: TRUE (repete a cena para manter atmosfera)
+  let isLooping = localStorage.getItem(STORAGE_KEYS.LOOP) !== 'false'; // Padrão: TRUE (repete a atmosfera da cena)
   let loopWatcherInterval = null;
 
   function initSoundtrack() {
@@ -188,7 +204,7 @@
             <div class="soundtrack-meta-line">
               <span class="soundtrack-season-tag" id="soundtrack-season-tag">${escapeHtml(currentTrack.season)}</span>
               <span class="soundtrack-loop-indicator" id="soundtrack-loop-indicator" title="Status de repetição">
-                ${isLooping ? '🔂 Loop da cena ativo' : '⏭ Modo contínuo'}
+                ${isLooping ? '🔂 Loop ativo' : '⏭ Modo contínuo'}
               </span>
             </div>
             <h4 class="soundtrack-track-title" id="soundtrack-track-title">${escapeHtml(currentTrack.title)}</h4>
@@ -219,7 +235,7 @@
 
         <!-- Seletor Rápido de Atmosferas / Trilhas -->
         <div class="soundtrack-presets-section">
-          <span class="soundtrack-presets-label">Escolher Atmosfera da Cena:</span>
+          <span class="soundtrack-presets-label">Escolher Atmosfera da Cena (10 Temas Canônicos):</span>
           <div class="soundtrack-presets-grid" id="soundtrack-presets-grid">
             ${TRACK_CATALOG.map(t => `
               <button type="button" class="btn-soundtrack-preset ${t.id === currentTrack.id ? 'is-active' : ''}" data-track-id="${t.id}" title="${escapeHtml(t.desc)}">
@@ -551,34 +567,84 @@
   }
 
   /**
+   * Classificador universal inteligente para TODOS os capítulos de TODOS os volumes.
+   */
+  function determineChapterTrack(volumeId, chapterIndex, chapterTitle) {
+    const t = String(chapterTitle || '').toLowerCase();
+    const cleanVol = String(volumeId || '').replace(/-scan$/, '');
+    const volNum = parseFloat(cleanVol.replace('vol-', '').replace('-', '.'));
+
+    // 1. Capas, extras, mangás e posfácios
+    if (t.includes('capa') || t.includes('ilustraç') || t.includes('mangá') || t.includes('posfácio') || t.includes('nota do autor') || t.includes('notas culturais')) {
+      return 'peaceful_village';
+    }
+
+    // 2. Dinastia Feiticeira de Sarion
+    if (t.includes('sarion')) {
+      return 'sarion_dynasty';
+    }
+
+    // 3. Labirinto e Dungeon de Ramiris
+    if (t.includes('labirinto') || t.includes('dungeon') || (volNum === 10 && chapterIndex <= 2) || (volNum === 8 && t.includes('masmorra'))) {
+      return 'dungeon_management';
+    }
+
+    // 4. Festival de Fundação e Banquetes
+    if (t.includes('festival') || t.includes('banquete') || t.includes('celebração') || t.includes('fundação') || (volNum === 8 && chapterIndex >= 2) || (volNum === 9 && chapterIndex <= 3)) {
+      return 'festival_banquet';
+    }
+
+    // 5. Primordiais & Demônios Nobres (Diablo, Guy Crimson, Testarossa, Ultima, Carrera)
+    if (t.includes('primordial') || t.includes('diablo') || t.includes('guy crimson') || t.includes('números negros') || t.includes('black numbers') || t.includes('demônios nobres')) {
+      return 'primordials_dialogue';
+    }
+
+    // 6. Conspiração, Palhaços e Tramas Secretas
+    if (t.includes('conspiração') || t.includes('palhaço') || t.includes('secreta') || t.includes('esquema') || t.includes('sombra') || t.includes('traição') || t.includes('maquinações') || t.includes('tributo')) {
+      return 'conspiracy_takurami';
+    }
+
+    // 7. Reuniões Diplomáticas, Conferências e Parlamentos
+    if (t.includes('reunião') || t.includes('conferência') || t.includes('conselho') || t.includes('homem e monstro') || t.includes('palavra de ramiris') || t.includes('acordo') || t.includes('parlamento') || t.includes('tratado') || t.includes('negociação')) {
+      if (t.includes('octagrama') || t.includes('walpurgis') || t.includes('santo') || t.includes('deus')) {
+        return 'council_diplomacy';
+      }
+      return 'tempest_meeting_dynamic';
+    }
+
+    // 8. Batalhas, Guerras, Invasões e Confrontos
+    if (t.includes('batalha') || t.includes('guerra') || t.includes('confronto') || t.includes('colidem') || t.includes('ataque') || t.includes('invasão') || t.includes('luta') || t.includes('derrota') || t.includes('massacre') || t.includes('combate') || t.includes('conflito') || t.includes('destino')) {
+      return 'battle_counterattack';
+    }
+
+    // 9. Reencarnação, Despertar de Lorde Demônio e Origens
+    if (t.includes('reencarnação') || t.includes('despertar') || t.includes('morte') || t.includes('amigo') || t.includes('chamas') || t.includes('dragão') || t.includes('lorde demônio') || (volNum === 1 && chapterIndex <= 2) || (volNum === 5 && chapterIndex >= 4)) {
+      return 'reincarnation_determination';
+    }
+
+    // 10. Volumes com foco pesado em guerra nos capítulos avançados (Império e Tenma)
+    if ([13, 14, 15, 19, 20, 21, 22].includes(volNum) && chapterIndex >= 3) {
+      return 'battle_counterattack';
+    }
+
+    // 11. Vida diária, descanso e aldeia
+    if (t.includes('vida diária') || t.includes('cotidiano') || t.includes('paz') || t.includes('descanso') || t.includes('aldeia') || t.includes('vila')) {
+      return 'peaceful_village';
+    }
+
+    // Padrão canônico de Tempest: A dinâmica de debate e estratégia de reunião!
+    return 'tempest_meeting_dynamic';
+  }
+
+  /**
    * Chamado pelo leitor (app.js) quando o usuário abre ou troca de capítulo.
    */
   function handleChapterChange(volumeId, chapterIndex, chapterTitle) {
     if (!volumeId) return;
 
-    const baseVol = String(volumeId).replace(/-scan$/, '');
-    const keyWithIdx = `${baseVol}:${chapterIndex}`;
-    
-    // Tenta encontrar uma sugestão específica para este capítulo
-    let suggestedTrackId = CHAPTER_SUGGESTIONS[keyWithIdx];
+    const suggestedTrackId = determineChapterTrack(volumeId, chapterIndex, chapterTitle);
+    const suggestedTrack = TRACK_CATALOG.find(t => t.id === suggestedTrackId) || TRACK_CATALOG[0];
 
-    // Se não encontrou por índice, tenta por palavras-chave do título
-    if (!suggestedTrackId && chapterTitle) {
-      const lower = chapterTitle.toLowerCase();
-      if (lower.includes('reunião') || lower.includes('encontro entre homem e monstro') || lower.includes('conferência') || lower.includes('conselho')) {
-        suggestedTrackId = 'tempest_meeting_dynamic';
-      } else if (lower.includes('sarion')) {
-        suggestedTrackId = 'sarion_dynasty';
-      } else if (lower.includes('palhaço') || lower.includes('conspiração') || lower.includes('majins')) {
-        suggestedTrackId = 'conspiracy_takurami';
-      } else if (lower.includes('walpurgis') || lower.includes('octagrama') || lower.includes('lorde demônio')) {
-        suggestedTrackId = 'council_diplomacy';
-      } else if (lower.includes('batalha') || lower.includes('confronto') || lower.includes('colidem')) {
-        suggestedTrackId = 'battle_counterattack';
-      }
-    }
-
-    const suggestedTrack = suggestedTrackId ? TRACK_CATALOG.find(t => t.id === suggestedTrackId) : null;
     renderChapterSoundtrackBadge(suggestedTrack);
 
     // Se o usuário já estava ouvindo música e tem auto-suggest ligado:
