@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=20261103_v29">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261103_v30">
   <link rel="icon" type="image/svg+xml" href="assets/images/slime.svg">
 </head>
 <body>
@@ -1234,6 +1234,23 @@
     </div>
   </dialog>
 
+  <!-- DIALOG 7: CONFIRMAÇÃO DE ALTERNÂNCIA ENTRE LIGHT NOVEL E WEB NOVEL -->
+  <dialog id="switch-track-dialog" class="app-dialog switch-track-dialog" closedby="any" aria-labelledby="switch-track-title">
+    <div class="dialog-header">
+      <h2 id="switch-track-title">⇄ Alternar Obra</h2>
+      <form method="dialog">
+        <button type="submit" value="close" class="btn-dialog-close" aria-label="Fechar janela">✕</button>
+      </form>
+    </div>
+    <div class="dialog-body">
+      <p id="switch-track-message" class="switch-track-message"></p>
+      <div class="switch-track-actions">
+        <button type="button" class="btn-secondary-pill" id="btn-cancel-switch-track">Continuar lendo</button>
+        <button type="button" class="btn-continue" id="btn-confirm-switch-track">Sim, alternar</button>
+      </div>
+    </div>
+  </dialog>
+
   <!-- Rodapé -->
   <footer class="main-footer">
     <div class="footer-container">
@@ -1251,7 +1268,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/soundtrack.js?v=20261103_v29" defer></script>
-  <script src="assets/js/app.js?v=20261103_v29" defer></script>
+  <script src="assets/js/soundtrack.js?v=20261103_v30" defer></script>
+  <script src="assets/js/app.js?v=20261103_v30" defer></script>
 </body>
 </html>

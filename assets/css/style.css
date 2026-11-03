@@ -1806,6 +1806,24 @@ dialog::backdrop {
   width: min(92vw, 480px);
 }
 
+.switch-track-dialog {
+  width: min(92vw, 500px);
+}
+
+.switch-track-message {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.switch-track-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  margin-top: 1.35rem;
+  flex-wrap: wrap;
+}
+
 .dialog-header {
   padding: 1rem 1.25rem;
   border-bottom: 1px solid var(--border-color);

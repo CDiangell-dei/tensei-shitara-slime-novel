@@ -21,7 +21,7 @@ const STORAGE_KEYS = {
 const ANIME_ADAPTED_MAX_LN_VOL = 11;
 const POST_ANIME_WN_ARCS = new Set(['arc-8', 'arc-9', 'arc-10', 'arc-extra-1', 'arc-extra-2', 'arc-extra-3']);
 const POST_ANIME_CULTURAL_CONCEPT_IDXS = new Set([3, 4, 6]);
-const APP_BUILD_VERSION = '20261103_v29';
+const APP_BUILD_VERSION = '20261103_v30';
 
 const AppState = {
   catalog: null,
@@ -641,7 +641,7 @@ function refreshContinueBanners() {
   }
 }
 
-function resumeSavedRecord(record) {
+function resumeSavedRecord(record, options = {}) {
   if (!record) return Promise.resolve();
   const anchor = {
     scrollRatio: record.scrollRatio || 0,
@@ -649,10 +649,10 @@ function resumeSavedRecord(record) {
     pOffsetPx: typeof record.pOffsetPx === 'number' ? record.pOffsetPx : null
   };
   if (record.type === 'light_novel') {
-    return openLightNovel(record.id, record.chapterIndex || 0, anchor);
+    return openLightNovel(record.id, record.chapterIndex || 0, anchor, '', options);
   }
   if (record.type === 'web_novel') {
-    return openWebNovelChapter(record.id, anchor);
+    return openWebNovelChapter(record.id, anchor, options);
   }
   return Promise.resolve();
 }
@@ -1396,8 +1396,18 @@ function renderAmazonCatalog() {
 // MOTOR DE LEITURA (LIGHT NOVEL & WEB NOVEL)
 // ==========================================================================
 
-async function openLightNovel(volumeId, chapterIndex = 0, anchorOrRatio = 0, preferredChapterTitle = '') {
+async function openLightNovel(volumeId, chapterIndex = 0, anchorOrRatio = 0, preferredChapterTitle = '', options = {}) {
   try {
+    if (typeof preferredChapterTitle === 'object' && preferredChapterTitle !== null) {
+      options = preferredChapterTitle;
+      preferredChapterTitle = options.preferredChapterTitle || '';
+    }
+
+    // Salvar progresso do capítulo anterior se já estava lendo
+    if (AppState.currentReading.type && !options.fromPopState) {
+      persistReadingProgress({ force: true, inReader: true });
+    }
+
     const initialBaseGuess = String(volumeId).replace(/-scan$/, '');
     const savedHist = AppState.history[`ln:${initialBaseGuess}`];
     const effectiveVolumeId = initialBaseGuess;
@@ -1435,6 +1445,7 @@ async function openLightNovel(volumeId, chapterIndex = 0, anchorOrRatio = 0, pre
       }
     }
 
+    AppState.currentTab = 'light-novel';
     AppState.currentReading = {
       type: 'light_novel',
       id: effectiveVolumeId,
@@ -1448,15 +1459,28 @@ async function openLightNovel(volumeId, chapterIndex = 0, anchorOrRatio = 0, pre
     };
 
     renderReaderScreen();
-    history.replaceState(null, '', `#ln/${effectiveVolumeId}/${targetIdx}`);
+
+    const targetHash = `#ln/${effectiveVolumeId}/${targetIdx}`;
+    if (options.fromPopState) {
+      history.replaceState({ route: targetHash }, '', targetHash);
+    } else if (options.replace || window.location.hash === targetHash) {
+      history.replaceState({ route: targetHash }, '', targetHash);
+    } else {
+      history.pushState({ route: targetHash }, '', targetHash);
+    }
   } catch (err) {
     console.error('Erro ao abrir Light Novel:', err);
     showCulturalNoteDialog('Erro ao Carregar Volume', err.message);
   }
 }
 
-async function openWebNovelChapter(chapterIdOrNum, anchorOrRatio = 0) {
+async function openWebNovelChapter(chapterIdOrNum, anchorOrRatio = 0, options = {}) {
   try {
+    // Salvar progresso do capítulo anterior se já estava lendo
+    if (AppState.currentReading.type && !options.fromPopState) {
+      persistReadingProgress({ force: true, inReader: true });
+    }
+
     const chList = AppState.catalog ? AppState.catalog.web_novel.chapters : [];
     let meta = null;
 
@@ -1490,6 +1514,7 @@ async function openWebNovelChapter(chapterIdOrNum, anchorOrRatio = 0) {
       }
     }
 
+    AppState.currentTab = 'web-novel';
     AppState.currentReading = {
       type: 'web_novel',
       id: resolvedId,
@@ -1503,7 +1528,15 @@ async function openWebNovelChapter(chapterIdOrNum, anchorOrRatio = 0) {
     };
 
     renderReaderScreen();
-    history.replaceState(null, '', `#wn/${resolvedId}`);
+
+    const targetHash = `#wn/${resolvedId}`;
+    if (options.fromPopState) {
+      history.replaceState({ route: targetHash }, '', targetHash);
+    } else if (options.replace || window.location.hash === targetHash) {
+      history.replaceState({ route: targetHash }, '', targetHash);
+    } else {
+      history.pushState({ route: targetHash }, '', targetHash);
+    }
   } catch (err) {
     console.error('Erro ao abrir Web Novel:', err);
     showCulturalNoteDialog('Erro ao Carregar Capítulo', err.message);
@@ -1848,10 +1881,17 @@ function renderReaderFooterNav(footerNav) {
   }
 }
 
-function closeReader() {
+function closeReader(options = {}) {
   clearTimeout(AppState.restoreTimer);
   AppState.isRestoringScroll = false;
   persistReadingProgress({ force: true, inReader: false });
+
+  const curType = AppState.currentReading.type;
+  if (curType === 'web_novel') {
+    AppState.currentTab = 'web-novel';
+  } else if (curType === 'light_novel') {
+    AppState.currentTab = 'light-novel';
+  }
 
   const siteHeader = document.getElementById('site-header');
   const readerView = document.getElementById('reader-view');
@@ -1863,7 +1903,17 @@ function closeReader() {
   AppState.currentReading.type = null;
   renderAllCatalogViews();
   refreshContinueBanners();
-  history.replaceState(null, '', `#${AppState.currentTab}`);
+
+  const targetTab = AppState.currentTab || 'light-novel';
+  const targetHash = `#${targetTab}`;
+  if (options.fromPopState) {
+    history.replaceState({ route: targetTab }, '', targetHash);
+  } else if (options.replace || window.location.hash === targetHash) {
+    history.replaceState({ route: targetTab }, '', targetHash);
+  } else {
+    history.pushState({ route: targetTab }, '', targetHash);
+  }
+
   maybePromptSpoilerOnboarding();
 }
 
@@ -2046,7 +2096,7 @@ function updateBookmarkBadge() {
 // NAVEGAÇÃO DE ABAS E ROTEAMENTO DE INICIALIZAÇÃO / REABERTURA DO NAVEGADOR
 // ==========================================================================
 
-function switchTab(tabName) {
+function switchTab(tabName, options = {}) {
   if (!['light-novel', 'web-novel', 'recap', 'comparison', 'cultural', 'amazon'].includes(tabName)) return;
   AppState.currentTab = tabName;
 
@@ -2074,49 +2124,74 @@ function switchTab(tabName) {
 
   renderAllCatalogViews();
   refreshContinueBanners();
-  history.replaceState(null, '', `#${tabName}`);
+
+  const targetHash = `#${tabName}`;
+  if (options.fromPopState) {
+    history.replaceState({ route: tabName }, '', targetHash);
+  } else if (options.replace || window.location.hash === targetHash) {
+    history.replaceState({ route: tabName }, '', targetHash);
+  } else {
+    history.pushState({ route: tabName }, '', targetHash);
+  }
+
   window.scrollTo({ top: 0, behavior: 'smooth' });
   maybePromptSpoilerOnboarding();
 }
 
-async function handleInitialStartupRoute() {
-  const hash = window.location.hash.replace(/^#/, '');
-  if (hash) {
-    await handleInitialHash(hash);
+async function handleRouteNavigation(rawHash = null, options = {}) {
+  const hash = rawHash !== null ? rawHash : window.location.hash.replace(/^#/, '');
+
+  if (!hash) {
+    if (AppState.currentReading.type) {
+      closeReader({ ...options, replace: true });
+    } else {
+      switchTab(AppState.currentTab || 'light-novel', { ...options, replace: true });
+    }
     return;
   }
 
-  // Sem hash na URL: ao reabrir o navegador/site, retomar automaticamente onde parou se a opção estiver ativa
-  if (AppState.settings.autoResumeOnOpen !== false) {
-    const last = getSavedTrackProgress(STORAGE_KEYS.PROGRESS_LAST);
-    if (last && last.type && last.inReader !== false) {
-      await resumeSavedRecord(last);
-    }
-  }
-}
-
-async function handleInitialHash(rawHash = null) {
-  const hash = rawHash !== null ? rawHash : window.location.hash.replace(/^#/, '');
-  if (!hash) return;
-
   if (['light-novel', 'web-novel', 'recap', 'comparison', 'cultural', 'amazon'].includes(hash)) {
-    switchTab(hash);
-  } else if (hash.startsWith('ln/')) {
+    if (AppState.currentReading.type) {
+      closeReader({ ...options, replace: true });
+    }
+    switchTab(hash, options);
+    return;
+  }
+
+  if (hash.startsWith('ln/')) {
     const [, volId, chStr] = hash.split('/');
     const targetCh = Number(chStr) || 0;
     const baseId = String(volId || '').replace(/-scan$/, '');
+
+    // Se já está exatamente neste volume e capítulo no leitor, evitar reload desnecessário
+    if (
+      AppState.currentReading.type === 'light_novel' &&
+      AppState.currentReading.id === baseId &&
+      AppState.currentReading.chapterIndex === targetCh
+    ) {
+      return;
+    }
+
     const lnSave = getSavedTrackProgress(STORAGE_KEYS.PROGRESS_LN);
     const hist = AppState.history[`ln:${baseId}`];
 
     let anchor = 0;
-    if (lnSave && lnSave.id === volId && Number(lnSave.chapterIndex) === targetCh) {
+    if (lnSave && lnSave.id === baseId && Number(lnSave.chapterIndex) === targetCh) {
       anchor = normalizeScrollAnchor(lnSave);
     } else if (hist && Number(hist.chapterIndex) === targetCh) {
       anchor = normalizeScrollAnchor(hist);
     }
-    await openLightNovel(volId, targetCh, anchor);
-  } else if (hash.startsWith('wn/')) {
+    await openLightNovel(volId, targetCh, anchor, '', options);
+    return;
+  }
+
+  if (hash.startsWith('wn/')) {
     const [, chId] = hash.split('/');
+
+    if (AppState.currentReading.type === 'web_novel' && AppState.currentReading.id === chId) {
+      return;
+    }
+
     const wnSave = getSavedTrackProgress(STORAGE_KEYS.PROGRESS_WN);
     const hist = AppState.history[`wn:${chId}`];
 
@@ -2126,8 +2201,32 @@ async function handleInitialHash(rawHash = null) {
     } else if (hist) {
       anchor = normalizeScrollAnchor(hist);
     }
-    await openWebNovelChapter(chId, anchor);
+    await openWebNovelChapter(chId, anchor, options);
+    return;
   }
+}
+
+async function handleInitialStartupRoute() {
+  const hash = window.location.hash.replace(/^#/, '');
+  if (hash) {
+    await handleRouteNavigation(hash, { replace: true });
+    return;
+  }
+
+  // Sem hash na URL: ao reabrir o navegador/site, retomar automaticamente onde parou se a opção estiver ativa
+  if (AppState.settings.autoResumeOnOpen !== false) {
+    const last = getSavedTrackProgress(STORAGE_KEYS.PROGRESS_LAST);
+    if (last && last.type && last.inReader !== false) {
+      await resumeSavedRecord(last, { replace: true });
+      return;
+    }
+  }
+
+  switchTab(AppState.currentTab || 'light-novel', { replace: true });
+}
+
+async function handleInitialHash(rawHash = null) {
+  await handleRouteNavigation(rawHash, { replace: true });
 }
 
 // ==========================================================================
@@ -2193,6 +2292,100 @@ function importUserProgressJson(file) {
 // EVENT DELEGATION CENTRALIZADA (ZERO INLINE ONCLICK)
 // ==========================================================================
 
+
+function promptSwitchTrackConfirmation() {
+  const cur = AppState.currentReading;
+  if (!cur.type) return;
+
+  const dialog = document.getElementById('switch-track-dialog');
+  const titleEl = document.getElementById('switch-track-title');
+  const msgEl = document.getElementById('switch-track-message');
+  const btnConfirm = document.getElementById('btn-confirm-switch-track');
+
+  if (!dialog || !msgEl || !btnConfirm) {
+    executeSwitchTrack();
+    return;
+  }
+
+  if (cur.type === 'light_novel') {
+    const wnSave = getSavedTrackProgress(STORAGE_KEYS.PROGRESS_WN);
+    titleEl.textContent = '⇄ Alternar para a Web Novel';
+    if (wnSave && wnSave.title) {
+      const pct = Math.round((wnSave.scrollRatio || 0) * 100);
+      msgEl.innerHTML = `
+        Você está lendo a <strong>Light Novel</strong>. Deseja alternar a leitura para a <strong>Web Novel</strong>?
+        <br><br>
+        📍 <strong>Onde você parou na Web Novel:</strong><br>
+        <em>${escapeHtml(wnSave.title)}</em> (~${pct}%)
+        <br><br>
+        <small style="opacity: 0.85;">💡 Seu progresso atual na Light Novel continuará salvo com segurança.</small>
+      `;
+    } else {
+      msgEl.innerHTML = `
+        Você está lendo a <strong>Light Novel</strong>. Deseja abrir o catálogo da <strong>Web Novel</strong>?
+        <br><br>
+        <small style="opacity: 0.85;">💡 Seu progresso atual na Light Novel continuará salvo com segurança.</small>
+      `;
+    }
+    btnConfirm.textContent = 'Sim, ir para a Web Novel';
+  } else {
+    const lnSave = getSavedTrackProgress(STORAGE_KEYS.PROGRESS_LN);
+    titleEl.textContent = '⇄ Alternar para a Light Novel';
+    if (lnSave && lnSave.title) {
+      const pct = Math.round((lnSave.scrollRatio || 0) * 100);
+      msgEl.innerHTML = `
+        Você está lendo a <strong>Web Novel</strong>. Deseja alternar a leitura para a <strong>Light Novel</strong>?
+        <br><br>
+        📍 <strong>Onde você parou na Light Novel:</strong><br>
+        <em>${escapeHtml(lnSave.title)}</em> (~${pct}%)
+        <br><br>
+        <small style="opacity: 0.85;">💡 Seu progresso atual na Web Novel continuará salvo com segurança.</small>
+      `;
+    } else {
+      msgEl.innerHTML = `
+        Você está lendo a <strong>Web Novel</strong>. Deseja abrir a biblioteca da <strong>Light Novel</strong>?
+        <br><br>
+        <small style="opacity: 0.85;">💡 Seu progresso atual na Web Novel continuará salvo com segurança.</small>
+      `;
+    }
+    btnConfirm.textContent = 'Sim, ir para a Light Novel';
+  }
+
+  if (!dialog.open) {
+    dialog.showModal();
+  }
+}
+
+function executeSwitchTrack() {
+  const curType = AppState.currentReading.type;
+  if (!curType) return;
+
+  clearTimeout(AppState.restoreTimer);
+  AppState.isRestoringScroll = false;
+  persistReadingProgress({ force: true, inReader: true });
+
+  const dialog = document.getElementById('switch-track-dialog');
+  if (dialog && dialog.open) {
+    dialog.close();
+  }
+
+  if (curType === 'light_novel') {
+    const wnSave = getSavedTrackProgress(STORAGE_KEYS.PROGRESS_WN);
+    if (wnSave && wnSave.id) {
+      resumeSavedRecord(wnSave);
+    } else {
+      switchTab('web-novel');
+    }
+  } else {
+    const lnSave = getSavedTrackProgress(STORAGE_KEYS.PROGRESS_LN);
+    if (lnSave && lnSave.id) {
+      resumeSavedRecord(lnSave);
+    } else {
+      switchTab('light-novel');
+    }
+  }
+}
+
 function bindGlobalEvents() {
   // Abas principais
   document.querySelectorAll('.nav-tab').forEach(btn => {
@@ -2239,30 +2432,17 @@ function bindGlobalEvents() {
     openVolumeGalleryModal(e.currentTarget.dataset.vol);
   });
 
-  // Botão rápido na barra do leitor para alternar entre Light Novel <-> Web Novel
-  document.getElementById('btn-reader-switch-track')?.addEventListener('click', () => {
-    const curType = AppState.currentReading.type;
-    if (!curType) return;
+  // Confirmação ao alternar entre Light Novel <-> Web Novel (evita cliques acidentais no celular)
+  document.getElementById('btn-reader-switch-track')?.addEventListener('click', promptSwitchTrackConfirmation);
+  document.getElementById('btn-cancel-switch-track')?.addEventListener('click', () => {
+    document.getElementById('switch-track-dialog')?.close();
+  });
+  document.getElementById('btn-confirm-switch-track')?.addEventListener('click', executeSwitchTrack);
 
-    clearTimeout(AppState.restoreTimer);
-    AppState.isRestoringScroll = false;
-    persistReadingProgress({ force: true, inReader: true });
-
-    if (curType === 'light_novel') {
-      const wnSave = getSavedTrackProgress(STORAGE_KEYS.PROGRESS_WN);
-      if (wnSave && wnSave.id) {
-        resumeSavedRecord(wnSave);
-      } else {
-        switchTab('web-novel');
-      }
-    } else {
-      const lnSave = getSavedTrackProgress(STORAGE_KEYS.PROGRESS_LN);
-      if (lnSave && lnSave.id) {
-        resumeSavedRecord(lnSave);
-      } else {
-        switchTab('light-novel');
-      }
-    }
+  // Histórico de navegação real do navegador (suporte a avançar/voltar e gestos no celular)
+  window.addEventListener('popstate', async () => {
+    const hash = window.location.hash.replace(/^#/, '');
+    await handleRouteNavigation(hash, { fromPopState: true });
   });
 
   // Banner Continuar Leitura
