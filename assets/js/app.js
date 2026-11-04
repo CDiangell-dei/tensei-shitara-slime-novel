@@ -21,7 +21,7 @@ const STORAGE_KEYS = {
 const ANIME_ADAPTED_MAX_LN_VOL = 11;
 const POST_ANIME_WN_ARCS = new Set(['arc-8', 'arc-9', 'arc-10', 'arc-extra-1', 'arc-extra-2', 'arc-extra-3']);
 const POST_ANIME_CULTURAL_CONCEPT_IDXS = new Set([3, 4, 6]);
-const APP_BUILD_VERSION = '20261103_v30';
+const APP_BUILD_VERSION = '20261104_v31';
 
 const AppState = {
   catalog: null,
